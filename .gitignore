@@ -1,0 +1,24 @@
+/.mps/workspace.xml
+
+# -----------------------------------------------------------
+# * build
+build/*/build
+
+_spreferences
+
+# -----------------------------------------------------------
+# * lib - here we seem to need the generated sources.
+code/languages/*/lib/*/classes_gen
+code/languages/*/lib/*/source_gen.caches
+
+# -----------------------------------------------------------
+# * tests
+test_gen
+test_gen.caches
+analyses_results
+
+classes_gen
+source_gen
+source_gen.caches
+
+.DS_Store
