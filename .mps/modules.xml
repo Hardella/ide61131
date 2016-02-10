@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="MPSProject">
+    <projectModules>
+      <modulePath path="$PROJECT_DIR$/languages/com.github.vlsi.iec61131.executors/com.github.vlsi.iec61131.executors.mpl" folder="" />
+      <modulePath path="$PROJECT_DIR$/languages/com.github.vlsi.iec61131.executors/runtime/com.github.vlsi.iec61131.executors.runtime.msd" folder="" />
+      <modulePath path="$PROJECT_DIR$/languages/com.github.vlsi.iec61131.types/com.github.vlsi.iec61131.types.mpl" folder="" />
+      <modulePath path="$PROJECT_DIR$/languages/st61131/runtime/st61131.runtime.msd" folder="" />
+      <modulePath path="$PROJECT_DIR$/languages/st61131/sandbox/st61131.sandbox.msd" folder="" />
+      <modulePath path="$PROJECT_DIR$/languages/st61131/st61131.mpl" folder="" />
+      <modulePath path="$PROJECT_DIR$/solutions/com.github.vlsi.iec61131.libimport/com.github.vlsi.iec61131.libimport.msd" folder="" />
+      <modulePath path="$PROJECT_DIR$/solutions/com.github.vlsi.iec61131.parser/com.github.vlsi.iec61131.parser.msd" folder="" />
+      <modulePath path="$PROJECT_DIR$/solutions/com.github.vlsi.iec61131.standard_lib/com.github.vlsi.iec61131.standard_lib.msd" folder="" />
+      <modulePath path="$PROJECT_DIR$/solutions/st61131.build/st61131.build.msd" folder="" />
+    </projectModules>
+  </component>
+</project>
