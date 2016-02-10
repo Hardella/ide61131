@@ -14,6 +14,8 @@ Install mbeddr, clone ide61131, build somehow
 Sample
 ------
 
+![sample program](/doc/sample_program.png)
+
 ```
 PROGRAM PLC_PRG
   variables:
