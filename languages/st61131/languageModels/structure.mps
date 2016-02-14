@@ -244,5 +244,48 @@
       <ref role="PrY4T" to="tpck:1_TrU5E6oyb" resolve="IDontSubstituteByDefault" />
     </node>
   </node>
+  <node concept="1TIwiD" id="3Sw88MmutA3">
+    <property role="1pbfSe" value="728106481" />
+    <property role="3GE5qa" value="statements" />
+    <property role="TrG5h" value="CaseStatement" />
+    <property role="34LRSv" value="case" />
+    <property role="R4oN_" value="case statement" />
+    <ref role="1TJDcQ" node="5fgiBbrRfI2" resolve="Statement" />
+    <node concept="1TJgyj" id="3Sw88Mmv5Iu" role="1TKVEi">
+      <property role="20lmBu" value="aggregation" />
+      <property role="20kJfa" value="caseExpression" />
+      <property role="20lbJX" value="1" />
+      <ref role="20lvS9" to="933e:5fgiBbs2NXn" resolve="Expression" />
+    </node>
+    <node concept="1TJgyj" id="3Sw88MmutAb" role="1TKVEi">
+      <property role="20lmBu" value="aggregation" />
+      <property role="20kJfa" value="caseClause" />
+      <property role="20lbJX" value="1..n" />
+      <ref role="20lvS9" node="3Sw88MmutAl" resolve="CaseItem" />
+    </node>
+    <node concept="1TJgyj" id="3Sw88MmutAh" role="1TKVEi">
+      <property role="20lmBu" value="aggregation" />
+      <property role="20kJfa" value="elseClause" />
+      <ref role="20lvS9" node="5fgiBbrReet" resolve="StatementList" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="3Sw88MmutAl">
+    <property role="1pbfSe" value="728106463" />
+    <property role="3GE5qa" value="statements" />
+    <property role="TrG5h" value="CaseItem" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
+    <node concept="1TJgyj" id="3Sw88MmutDH" role="1TKVEi">
+      <property role="20lmBu" value="aggregation" />
+      <property role="20kJfa" value="values" />
+      <property role="20lbJX" value="1..n" />
+      <ref role="20lvS9" to="933e:5fgiBbs2NXn" resolve="Expression" />
+    </node>
+    <node concept="1TJgyj" id="3Sw88MmutDJ" role="1TKVEi">
+      <property role="20lmBu" value="aggregation" />
+      <property role="20kJfa" value="statements" />
+      <property role="20lbJX" value="1" />
+      <ref role="20lvS9" node="5fgiBbrReet" resolve="StatementList" />
+    </node>
+  </node>
 </model>
 

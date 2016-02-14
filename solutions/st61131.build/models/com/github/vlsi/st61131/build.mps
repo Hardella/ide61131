@@ -348,7 +348,7 @@
       <node concept="aVJcg" id="3$sDymgFgwo" role="aVJcv">
         <node concept="NbPM2" id="3$sDymgFgwp" role="aVJcq">
           <node concept="3Mxwew" id="3$sDymgFgwq" role="3MwsjC">
-            <property role="3MwjfP" value="st61131-143.SNAPSHOT" />
+            <property role="3MwjfP" value="st61131-144" />
           </node>
         </node>
       </node>
@@ -619,7 +619,7 @@
           <property role="1TblLn" value="version" />
           <node concept="NbPM2" id="3$sDymgFgyL" role="1TblLm">
             <node concept="3Mxwew" id="3$sDymgFgyM" role="3MwsjC">
-              <property role="3MwjfP" value="1.0" />
+              <property role="3MwjfP" value="1.1.0" />
             </node>
           </node>
         </node>
@@ -702,6 +702,30 @@
           <node concept="3bR9La" id="5EBmM4DUFOp" role="1SiIV1">
             <property role="3bR36h" value="false" />
             <ref role="3bR37D" to="ffeo:1d41uYMTVPB" resolve="jetbrains.mps.lang.scopes.runtime" />
+          </node>
+        </node>
+        <node concept="1SiIV0" id="1GwckiU0PFo" role="3bR37C">
+          <node concept="3bR9La" id="1GwckiU0PFp" role="1SiIV1">
+            <property role="3bR36h" value="false" />
+            <ref role="3bR37D" to="ffeo:7Kfy9QB6Lc2" resolve="jetbrains.mps.lang.typesystem" />
+          </node>
+        </node>
+        <node concept="1SiIV0" id="1GwckiU0PFq" role="3bR37C">
+          <node concept="3bR9La" id="1GwckiU0PFr" role="1SiIV1">
+            <property role="3bR36h" value="false" />
+            <ref role="3bR37D" to="ffeo:1H905DlDUSw" resolve="MPS.OpenAPI" />
+          </node>
+        </node>
+        <node concept="1SiIV0" id="1GwckiU0PFs" role="3bR37C">
+          <node concept="3bR9La" id="1GwckiU0PFt" role="1SiIV1">
+            <property role="3bR36h" value="false" />
+            <ref role="3bR37D" to="ffeo:mXGwHwhVPj" resolve="JDK" />
+          </node>
+        </node>
+        <node concept="1SiIV0" id="1GwckiU0PFu" role="3bR37C">
+          <node concept="3bR9La" id="1GwckiU0PFv" role="1SiIV1">
+            <property role="3bR36h" value="false" />
+            <ref role="3bR37D" to="ffeo:1TaHNgiIbIQ" resolve="MPS.Core" />
           </node>
         </node>
       </node>

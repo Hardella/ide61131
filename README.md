@@ -47,7 +47,12 @@ This IDE is distributed under terms of MIT license.
 Changelog
 ---------
 
-No releases yet
+Next:
+Array, struct, enum: typesystem, initializers
+pointers: ADR, ^ dereference
+
+v1.0.0
+Proof of concept release
 
 Author
 ------
