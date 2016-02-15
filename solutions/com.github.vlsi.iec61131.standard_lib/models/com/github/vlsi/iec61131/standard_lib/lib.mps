@@ -10,7 +10,7 @@
       <concept id="6039408957479248769" name="com.github.vlsi.iec61131.types.structure.VariableDeclaration" flags="ng" index="283aBN">
         <property id="6039408957482848394" name="input" index="2fKTFS" />
         <property id="6039408957482848397" name="output" index="2fKTFZ" />
-        <child id="6039408957482286918" name="type" index="2fQRkO" />
+        <child id="6039408957482286918" name="typeDecl" index="2fQRkO" />
       </concept>
       <concept id="6039408957479237368" name="com.github.vlsi.iec61131.types.structure.FunctionBlockPOU" flags="ng" index="283fMa" />
       <concept id="6039408957482290485" name="com.github.vlsi.iec61131.types.structure.WORD" flags="ng" index="2fQKt7" />

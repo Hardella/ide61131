@@ -2,6 +2,7 @@
 <project version="4">
   <component name="MPSProject">
     <projectModules>
+      <modulePath path="$PROJECT_DIR$/languages/com.github.vlsi.iec61131.cfc/com.github.vlsi.iec61131.cfc.mpl" folder="" />
       <modulePath path="$PROJECT_DIR$/languages/com.github.vlsi.iec61131.executors/com.github.vlsi.iec61131.executors.mpl" folder="" />
       <modulePath path="$PROJECT_DIR$/languages/com.github.vlsi.iec61131.executors/runtime/com.github.vlsi.iec61131.executors.runtime.msd" folder="" />
       <modulePath path="$PROJECT_DIR$/languages/com.github.vlsi.iec61131.types/com.github.vlsi.iec61131.types.mpl" folder="" />

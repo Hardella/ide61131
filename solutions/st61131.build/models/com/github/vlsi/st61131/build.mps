@@ -179,6 +179,7 @@
         <child id="6108265972537372848" name="fullName" index="2EtHGT" />
         <child id="8795525031433238889" name="textColor" index="HFo83" />
         <child id="781140262677914381" name="company" index="IuKBz" />
+        <child id="781140262677906594" name="whatsnew" index="IuMTc" />
         <child id="8877724874822185910" name="feedbackUrl" index="2Mmf0a" />
         <child id="3497141547781549827" name="codename" index="2OjNyQ" />
         <child id="1462305029084462472" name="buildDate" index="R$TG_" />
@@ -219,7 +220,7 @@
     <node concept="10PD9b" id="3$sDymgFgwj" role="10PD9s" />
     <node concept="3b7kt6" id="3$sDymgFgwk" role="10PD9s" />
     <node concept="1zClus" id="3$sDymgFgwx" role="3989C9">
-      <property role="2OjLBK" value="0" />
+      <property role="2OjLBK" value="2" />
       <property role="TrG5h" value="MPS" />
       <property role="2OjLBL" value="1" />
       <property role="2OjLBN" value="true" />
@@ -336,6 +337,11 @@
           <property role="3MwjfP" value="https://github.com/vlsi/ide61131/issues" />
         </node>
       </node>
+      <node concept="NbPM2" id="1GwckiU99Dr" role="IuMTc">
+        <node concept="3Mxwew" id="1GwckiU99Er" role="3MwsjC">
+          <property role="3MwjfP" value="CFC diagram" />
+        </node>
+      </node>
     </node>
     <node concept="2kB4xC" id="3$sDymgFgwl" role="1l3spd">
       <property role="TrG5h" value="date" />
@@ -348,7 +354,7 @@
       <node concept="aVJcg" id="3$sDymgFgwo" role="aVJcv">
         <node concept="NbPM2" id="3$sDymgFgwp" role="aVJcq">
           <node concept="3Mxwew" id="3$sDymgFgwq" role="3MwsjC">
-            <property role="3MwjfP" value="st61131-144" />
+            <property role="3MwjfP" value="st61131-145" />
           </node>
         </node>
       </node>
@@ -568,18 +574,6 @@
         </node>
         <node concept="3ygNvl" id="6KesM0sXtv7" role="39821P">
           <ref role="3ygNvj" to="al5i:6ucYLjol1aP" resolve="com.mbeddr.mpsutil.zip" />
-          <node concept="3LWZYq" id="42y0Rn59lJ7" role="1juEy9">
-            <property role="3LWZYl" value="**/smack/**" />
-          </node>
-          <node concept="3LWZYq" id="42y0Rn59lMp" role="1juEy9">
-            <property role="3LWZYl" value="**/jdom-**-javadoc.jar" />
-          </node>
-          <node concept="3LWZYq" id="42y0Rn59lOQ" role="1juEy9">
-            <property role="3LWZYl" value="**/jdom-**-junit.jar" />
-          </node>
-          <node concept="3LWZYq" id="42y0Rn59lSW" role="1juEy9">
-            <property role="3LWZYl" value="**/jdom-**-sources.jar" />
-          </node>
         </node>
         <node concept="3ygNvl" id="6nBCAMoxOfS" role="39821P">
           <ref role="3ygNvj" to="90a9:2Xjt3l59CSm" resolve="mps-sl-all.zip" />
@@ -619,7 +613,7 @@
           <property role="1TblLn" value="version" />
           <node concept="NbPM2" id="3$sDymgFgyL" role="1TblLm">
             <node concept="3Mxwew" id="3$sDymgFgyM" role="3MwsjC">
-              <property role="3MwjfP" value="1.1.0" />
+              <property role="3MwjfP" value="1.2.0" />
             </node>
           </node>
         </node>
@@ -651,6 +645,9 @@
       </node>
       <node concept="m$_yC" id="1ZQb2BDgLuq" role="m$_yJ">
         <ref role="m$_y1" to="ffeo:5CFKsRWVb8B" resolve="jetbrains.mps.execution.configurations" />
+      </node>
+      <node concept="m$_yC" id="1GwckiU97sc" role="m$_yJ">
+        <ref role="m$_y1" to="90a9:4be$WTb1MZD" resolve="de.itemis.mps.editor.diagram" />
       </node>
       <node concept="3_J27D" id="3$sDymgFgxY" role="m_cZH">
         <node concept="3Mxwew" id="3$sDymgFgxZ" role="3MwsjC">
@@ -941,12 +938,6 @@
             <ref role="3bR37D" to="ffeo:7Kfy9QB6LgV" resolve="jetbrains.mps.make.runtime" />
           </node>
         </node>
-        <node concept="1SiIV0" id="5EBmM4DXjRM" role="3bR37C">
-          <node concept="3bR9La" id="5EBmM4DXjRN" role="1SiIV1">
-            <property role="3bR36h" value="false" />
-            <ref role="3bR37D" to="ffeo:sx8XDLCp97" resolve="jetbrains.mps.execution.util" />
-          </node>
-        </node>
         <node concept="1SiIV0" id="5EBmM4DXjRO" role="3bR37C">
           <node concept="3bR9La" id="5EBmM4DXjRP" role="1SiIV1">
             <property role="3bR36h" value="false" />
@@ -1016,6 +1007,58 @@
               </node>
             </node>
           </node>
+        </node>
+      </node>
+      <node concept="1E1JtD" id="1GwckiU97aH" role="2G$12L">
+        <property role="BnDLt" value="true" />
+        <property role="TrG5h" value="com.github.vlsi.iec61131.cfc" />
+        <property role="3LESm3" value="7cae3606-2859-42f2-a1bc-fb96ab480b0b" />
+        <property role="2GAjPV" value="false" />
+        <node concept="55IIr" id="1GwckiU97aK" role="3LF7KH">
+          <node concept="2Ry0Ak" id="1GwckiU97g1" role="iGT6I">
+            <property role="2Ry0Am" value="languages" />
+            <node concept="2Ry0Ak" id="1GwckiU97hK" role="2Ry0An">
+              <property role="2Ry0Am" value="com.github.vlsi.iec61131.cfc" />
+              <node concept="2Ry0Ak" id="1GwckiU97iF" role="2Ry0An">
+                <property role="2Ry0Am" value="com.github.vlsi.iec61131.cfc.mpl" />
+              </node>
+            </node>
+          </node>
+        </node>
+        <node concept="1SiIV0" id="1GwckiU97jy" role="3bR37C">
+          <node concept="3bR9La" id="1GwckiU97jz" role="1SiIV1">
+            <property role="3bR36h" value="false" />
+            <ref role="3bR37D" to="ffeo:mXGwHwhVPj" resolve="JDK" />
+          </node>
+        </node>
+        <node concept="1SiIV0" id="1GwckiU97j$" role="3bR37C">
+          <node concept="3bR9La" id="1GwckiU97j_" role="1SiIV1">
+            <property role="3bR36h" value="false" />
+            <ref role="3bR37D" to="90a9:4be$WTb1AQa" resolve="de.itemis.mps.editor.diagram.runtime" />
+          </node>
+        </node>
+        <node concept="1SiIV0" id="1GwckiU97jA" role="3bR37C">
+          <node concept="3bR9La" id="1GwckiU97jB" role="1SiIV1">
+            <property role="3bR36h" value="false" />
+            <ref role="3bR37D" to="90a9:6wEeo$QJAsB" resolve="de.itemis.mps.editor.diagram.shapes" />
+          </node>
+        </node>
+        <node concept="1SiIV0" id="1GwckiU97jC" role="3bR37C">
+          <node concept="3bR9La" id="1GwckiU97jD" role="1SiIV1">
+            <property role="3bR36h" value="false" />
+            <ref role="3bR37D" node="5EBmM4DM4FE" resolve="com.github.vlsi.iec61131.types" />
+          </node>
+        </node>
+        <node concept="1SiIV0" id="1GwckiU97jE" role="3bR37C">
+          <node concept="3bR9La" id="1GwckiU97jF" role="1SiIV1">
+            <property role="3bR36h" value="true" />
+            <ref role="3bR37D" to="90a9:56Tfdun3uan" resolve="de.itemis.mps.editor.diagram.layout" />
+          </node>
+        </node>
+        <node concept="1yeLz9" id="1GwckiU97jG" role="1TViLv">
+          <property role="TrG5h" value="com.github.vlsi.iec61131.cfc#1954616409527170363" />
+          <property role="3LESm3" value="f9870f24-517f-438a-a29b-efcbee3abbf1" />
+          <property role="2GAjPV" value="false" />
         </node>
       </node>
     </node>

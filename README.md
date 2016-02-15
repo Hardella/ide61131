@@ -9,10 +9,26 @@ The main aim is to provide reasonable ST support.
 Usage
 -----
 
-Install mbeddr, clone ide61131, build somehow 
+Download a release from "releases" section: https://github.com/vlsi/ide61131/releases
+
+To update previous version, you can download "update...zip". For instance, `st61131-update-from-143-win.zip` would update 143 or newer to the relevant release version.
+
+Videos
+------
+
+- Pointers: http://recordit.co/U6TTCkqOI4
+- Arrays, structs, enums: http://recordit.co/ijjFqJuiZv
+- Integration with CoDeSys: http://recordit.co/xzAv3BGlzS
+- Library imports: http://recordit.co/kSuJuPbMSA
+- Find usages: http://recordit.co/rx38caMeIA
+- Rename variable: http://recordit.co/g1qQlwj1Co
 
 Sample
 ------
+
+![Autocomplete](/doc/autocomplete.png)
+
+![Diagram editor](/doc/cfc_sample.png)
 
 ![sample program](/doc/sample_program.png)
 
@@ -44,15 +60,23 @@ License
 
 This IDE is distributed under terms of MIT license.
 
+Development
+-----------
+
+Install mbeddr, clone ide61131, hack as required.
+
 Changelog
 ---------
 
-Next:
-Array, struct, enum: typesystem, initializers
-pointers: ADR, ^ dereference
+v1.2.0: 15 February 2016
+- Simple CFC editor
+
+v1.1.0: 14 February 2016
+- Array, struct, enum: typesystem, initializers
+- pointers: ADR, ^ dereference
 
 v1.0.0
-Proof of concept release
+- Proof of concept release
 
 Author
 ------
