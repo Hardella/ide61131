@@ -22,6 +22,7 @@ Videos
 - Library imports: http://recordit.co/kSuJuPbMSA
 - Find usages: http://recordit.co/rx38caMeIA
 - Rename variable: http://recordit.co/g1qQlwj1Co
+- CFC diagram: http://recordit.co/2Itr7umnlo
 
 Sample
 ------
