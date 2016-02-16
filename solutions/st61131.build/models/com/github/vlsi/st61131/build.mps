@@ -354,7 +354,17 @@
       <node concept="aVJcg" id="3$sDymgFgwo" role="aVJcv">
         <node concept="NbPM2" id="3$sDymgFgwp" role="aVJcq">
           <node concept="3Mxwew" id="3$sDymgFgwq" role="3MwsjC">
-            <property role="3MwjfP" value="st61131-145" />
+            <property role="3MwjfP" value="143.4" />
+          </node>
+        </node>
+      </node>
+    </node>
+    <node concept="2kB4xC" id="25DDf3bBhMW" role="1l3spd">
+      <property role="TrG5h" value="version" />
+      <node concept="aVJcg" id="25DDf3bBi2W" role="aVJcv">
+        <node concept="NbPM2" id="25DDf3bBi2V" role="aVJcq">
+          <node concept="3Mxwew" id="25DDf3bBi2U" role="3MwsjC">
+            <property role="3MwjfP" value="1.2.0" />
           </node>
         </node>
       </node>
@@ -478,10 +488,16 @@
             <property role="1688n3" value="\.MPS(\w+)" />
             <node concept="NbPM2" id="3$sDymgFgyi" role="1688n0">
               <node concept="3Mxwew" id="3$sDymgFgyj" role="3MwsjC">
-                <property role="3MwjfP" value="\." />
+                <property role="3MwjfP" value="\.IDE61131-10" />
               </node>
-              <node concept="3Mxwey" id="3$sDymgFgyk" role="3MwsjC">
-                <ref role="3Mxwex" node="3$sDymgFgwn" resolve="build.number" />
+            </node>
+          </node>
+          <node concept="1688n2" id="25DDf3bBlsY" role="28jJR8">
+            <property role="1688n3" value="# (idea\.\w+\.path)" />
+            <property role="1688n6" value="g" />
+            <node concept="NbPM2" id="25DDf3bBlt0" role="1688n0">
+              <node concept="3Mxwew" id="25DDf3bBl$O" role="3MwsjC">
+                <property role="3MwjfP" value="\1" />
               </node>
             </node>
           </node>
@@ -612,8 +628,8 @@
         <node concept="1TblLo" id="3$sDymgFgyK" role="1TblLl">
           <property role="1TblLn" value="version" />
           <node concept="NbPM2" id="3$sDymgFgyL" role="1TblLm">
-            <node concept="3Mxwew" id="3$sDymgFgyM" role="3MwsjC">
-              <property role="3MwjfP" value="1.2.0" />
+            <node concept="3Mxwey" id="25DDf3bBiPf" role="3MwsjC">
+              <ref role="3Mxwex" node="25DDf3bBhMW" resolve="version" />
             </node>
           </node>
         </node>
@@ -1185,18 +1201,21 @@
           </node>
           <node concept="3_J27D" id="3$sDymgFg$G" role="Nbhlr">
             <node concept="3Mxwew" id="3$sDymgFg$H" role="3MwsjC">
-              <property role="3MwjfP" value="st61131 " />
+              <property role="3MwjfP" value="ide61131 " />
             </node>
             <node concept="3Mxwey" id="3$sDymgFg$I" role="3MwsjC">
-              <ref role="3Mxwex" node="3$sDymgFgzJ" resolve="version" />
+              <ref role="3Mxwex" node="25DDf3bBhMW" resolve="version" />
             </node>
           </node>
         </node>
         <node concept="3_J27D" id="3$sDymgFg$J" role="Nbhlr">
-          <node concept="3Mxwey" id="3$sDymgFg$K" role="3MwsjC">
-            <ref role="3Mxwex" node="3$sDymgFgwn" resolve="build.number" />
+          <node concept="3Mxwew" id="25DDf3bBicH" role="3MwsjC">
+            <property role="3MwjfP" value="ide61131-" />
           </node>
-          <node concept="3Mxwew" id="3$sDymgFg$L" role="3MwsjC">
+          <node concept="3Mxwey" id="25DDf3bBj3h" role="3MwsjC">
+            <ref role="3Mxwex" node="25DDf3bBhMW" resolve="version" />
+          </node>
+          <node concept="3Mxwew" id="25DDf3bBj3s" role="3MwsjC">
             <property role="3MwjfP" value="-linux.tar.gz" />
           </node>
         </node>
@@ -1576,29 +1595,35 @@
           </node>
           <node concept="3_J27D" id="3$sDymgFgC6" role="Nbhlr">
             <node concept="3Mxwew" id="3$sDymgFgC7" role="3MwsjC">
-              <property role="3MwjfP" value="st61131 " />
+              <property role="3MwjfP" value="ide61131 " />
             </node>
             <node concept="3Mxwey" id="3$sDymgFgC8" role="3MwsjC">
-              <ref role="3Mxwex" node="3$sDymgFgzJ" resolve="version" />
+              <ref role="3Mxwex" node="25DDf3bBhMW" resolve="version" />
             </node>
           </node>
         </node>
         <node concept="3_J27D" id="3$sDymgFgC9" role="Nbhlr">
-          <node concept="3Mxwey" id="3$sDymgFgCa" role="3MwsjC">
-            <ref role="3Mxwex" node="3$sDymgFgwn" resolve="build.number" />
-          </node>
           <node concept="3Mxwew" id="3$sDymgFgCb" role="3MwsjC">
-            <property role="3MwjfP" value=".zip" />
+            <property role="3MwjfP" value="ide61131-" />
+          </node>
+          <node concept="3Mxwey" id="25DDf3bBj3x" role="3MwsjC">
+            <ref role="3Mxwex" node="25DDf3bBhMW" resolve="version" />
+          </node>
+          <node concept="3Mxwew" id="25DDf3bBj3_" role="3MwsjC">
+            <property role="3MwjfP" value="-win.zip" />
           </node>
         </node>
       </node>
       <node concept="3981dG" id="3$sDymgFgDM" role="39821P">
         <node concept="3_J27D" id="3$sDymgFgDN" role="Nbhlr">
-          <node concept="3Mxwey" id="3$sDymgFgDO" role="3MwsjC">
-            <ref role="3Mxwex" node="3$sDymgFgwn" resolve="build.number" />
+          <node concept="3Mxwew" id="25DDf3bBj3E" role="3MwsjC">
+            <property role="3MwjfP" value="ide61131-" />
           </node>
-          <node concept="3Mxwew" id="3$sDymgFgDP" role="3MwsjC">
-            <property role="3MwjfP" value="-macos.zip" />
+          <node concept="3Mxwey" id="25DDf3bBj3G" role="3MwsjC">
+            <ref role="3Mxwex" node="25DDf3bBhMW" resolve="version" />
+          </node>
+          <node concept="3Mxwew" id="25DDf3bBj3K" role="3MwsjC">
+            <property role="3MwjfP" value="-mac.zip" />
           </node>
         </node>
         <node concept="398223" id="3$sDymgFgDQ" role="39821P">
@@ -1843,10 +1868,10 @@
           </node>
           <node concept="3_J27D" id="3$sDymgFgEk" role="Nbhlr">
             <node concept="3Mxwew" id="3$sDymgFgEl" role="3MwsjC">
-              <property role="3MwjfP" value="st61131 " />
+              <property role="3MwjfP" value="ide61131 " />
             </node>
             <node concept="3Mxwey" id="3$sDymgFgEm" role="3MwsjC">
-              <ref role="3Mxwex" node="3$sDymgFgzJ" resolve="version" />
+              <ref role="3Mxwex" node="25DDf3bBhMW" resolve="version" />
             </node>
             <node concept="3Mxwew" id="3$sDymgFgEn" role="3MwsjC">
               <property role="3MwjfP" value=".app" />
@@ -1871,16 +1896,6 @@
                 </node>
               </node>
             </node>
-          </node>
-        </node>
-      </node>
-    </node>
-    <node concept="2kB4xC" id="3$sDymgFgzJ" role="1l3spd">
-      <property role="TrG5h" value="version" />
-      <node concept="aVJcg" id="3$sDymgFgzK" role="aVJcv">
-        <node concept="NbPM2" id="3$sDymgFgzL" role="aVJcq">
-          <node concept="3Mxwew" id="3$sDymgFgzM" role="3MwsjC">
-            <property role="3MwjfP" value="3.3.1" />
           </node>
         </node>
       </node>

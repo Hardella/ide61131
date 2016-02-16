@@ -6,7 +6,8 @@
   <tstamp>
     <format property="date" pattern="yyyyMMdd" />
   </tstamp>
-  <property name="build.number" value="st61131-145" />
+  <property name="build.number" value="143.4" />
+  <property name="version" value="1.2.0" />
   <property name="mps_home" location="${basedir}/../../Documents/work/MPS 3.3" />
   <property name="mbeddr.github.core.home" location="${basedir}/../../Documents/work/mbeddr.core" />
   <property name="artifacts.mpsStandalone" location="${mps_home}" />
@@ -59,7 +60,10 @@
       <fileset file="${mps_home}/bin/idea.properties" />
       <filterchain>
         <tokenfilter>
-          <replaceregex pattern="\.MPS(\w+)" replace="\.${build.number}" flags="g" />
+          <replaceregex pattern="\.MPS(\w+)" replace="\.IDE61131-10" flags="g" />
+        </tokenfilter>
+        <tokenfilter>
+          <replaceregex pattern="# (idea\.\w+\.path)" replace="\1" flags="g" />
         </tokenfilter>
       </filterchain>
     </copy>
@@ -560,8 +564,8 @@
       <zipfileset dir="${build.tmp}/customProcessors/copyModels/languages-com.github.vlsi.iec61131.cfc-generator-template" prefix="module/generator/template" />
       <zipfileset dir="${build.tmp}/customProcessors/copyModels/languages-com.github.vlsi.iec61131.cfc-models" prefix="module/models" />
     </jar>
-    <echo file="${build.layout}/build.number">build.number=${build.number}${line.separator}date=${date}${line.separator}version=1.2.0</echo>
-    <echo file="${build.layout}/build.properties">st61131.date=${date}${line.separator}st61131.build.number=${build.number}${line.separator}mpsBootstrapCore.version=${mpsBootstrapCore.version}${line.separator}mps.build.number=${mps.build.number}${line.separator}mps.date=${mps.date}${line.separator}mps.build.vcs.number=${mps.build.vcs.number}${line.separator}mps.teamcity.buildConfName=${mps.teamcity.buildConfName}${line.separator}mps.idea.platform.build.number=${mps.idea.platform.build.number}${line.separator}mps-sl-all.versionNumber=${mps-sl-all.versionNumber}${line.separator}com.mbeddr.platform.major.version=${com.mbeddr.platform.major.version}${line.separator}com.mbeddr.platform.minor.version=${com.mbeddr.platform.minor.version}${line.separator}com.mbeddr.platform.build=${com.mbeddr.platform.build}${line.separator}com.mbeddr.platform.mbeddr.version=${com.mbeddr.platform.mbeddr.version}</echo>
+    <echo file="${build.layout}/build.number">build.number=${build.number}${line.separator}date=${date}${line.separator}version=${version}</echo>
+    <echo file="${build.layout}/build.properties">st61131.date=${date}${line.separator}st61131.build.number=${build.number}${line.separator}st61131.version=${version}${line.separator}mpsBootstrapCore.version=${mpsBootstrapCore.version}${line.separator}mps.build.number=${mps.build.number}${line.separator}mps.date=${mps.date}${line.separator}mps.build.vcs.number=${mps.build.vcs.number}${line.separator}mps.teamcity.buildConfName=${mps.teamcity.buildConfName}${line.separator}mps.idea.platform.build.number=${mps.idea.platform.build.number}${line.separator}mps-sl-all.versionNumber=${mps-sl-all.versionNumber}${line.separator}com.mbeddr.platform.major.version=${com.mbeddr.platform.major.version}${line.separator}com.mbeddr.platform.minor.version=${com.mbeddr.platform.minor.version}${line.separator}com.mbeddr.platform.build=${com.mbeddr.platform.build}${line.separator}com.mbeddr.platform.mbeddr.version=${com.mbeddr.platform.mbeddr.version}</echo>
   </target>
   
   <target name="buildDependents" />
