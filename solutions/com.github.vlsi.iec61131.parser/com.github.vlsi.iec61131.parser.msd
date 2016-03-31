@@ -5,11 +5,11 @@
       <sourceRoot location="models" />
     </modelRoot>
     <modelRoot contentPath="/Users/vladimirsitnikov/MPSProjects/st61131/lib" type="java_classes">
-      <sourceRoot location="parser-1.0.0-SNAPSHOT-complete.jar" />
+      <sourceRoot location="parser-1.1.0-complete.jar" />
     </modelRoot>
   </models>
   <stubModelEntries>
-    <stubModelEntry path="/Users/vladimirsitnikov/MPSProjects/st61131/lib/parser-1.0.0-SNAPSHOT-complete.jar" />
+    <stubModelEntry path="/Users/vladimirsitnikov/MPSProjects/st61131/lib/parser-1.1.0-complete.jar" />
   </stubModelEntries>
   <sourcePath />
   <dependencies>

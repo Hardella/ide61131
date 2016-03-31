@@ -59,6 +59,7 @@
         <property id="1071599776563" name="role" index="20kJfa" />
         <property id="1071599893252" name="sourceCardinality" index="20lbJX" />
         <property id="1071599937831" name="metaClass" index="20lmBu" />
+        <reference id="1071599698500" name="specializedLink" index="20ksaX" />
         <reference id="1071599976176" name="target" index="20lvS9" />
       </concept>
     </language>
@@ -156,7 +157,7 @@
   <node concept="1TIwiD" id="1scnkI2sT0j">
     <property role="3GE5qa" value="types" />
     <property role="TrG5h" value="DINT" />
-    <property role="34LRSv" value="UINT" />
+    <property role="34LRSv" value="DINT" />
     <property role="R4oN_" value="signed double int type (-2147483648..2147483647)" />
     <property role="1pbfSe" value="1719669410" />
     <ref role="1TJDcQ" node="1scnkI2sNcm" resolve="PrimitiveIntegralType" />
@@ -507,6 +508,9 @@
     <node concept="PrWs8" id="1scnkI2$A7k" role="PzmwI">
       <ref role="PrY4T" to="tpck:3fifI_xCcJN" resolve="ScopeProvider" />
     </node>
+    <node concept="PrWs8" id="68fOLzcDg2z" role="PzmwI">
+      <ref role="PrY4T" node="6PcEEFB6Kf" resolve="ICommentable" />
+    </node>
     <node concept="1TJgyi" id="5fgiBbs4X1n" role="1TKVEl">
       <property role="TrG5h" value="retain" />
       <ref role="AX2Wp" to="tpck:fKAQMTB" resolve="boolean" />
@@ -531,6 +535,9 @@
       <property role="20kJfa" value="variableDeclaration" />
       <property role="20lbJX" value="1" />
       <ref role="20lvS9" node="5fgiBbrRee1" resolve="VariableDeclaration" />
+    </node>
+    <node concept="PrWs8" id="4FDhPh_f0Yr" role="PzmwI">
+      <ref role="PrY4T" to="tpck:hLJPP0O" resolve="IWrapper" />
     </node>
   </node>
   <node concept="1TIwiD" id="5fgiBbs2NXn">
@@ -1300,6 +1307,878 @@
       <property role="20lmBu" value="aggregation" />
       <property role="20kJfa" value="indices" />
       <property role="20lbJX" value="1..n" />
+      <ref role="20lvS9" node="5fgiBbs2NXn" resolve="Expression" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="25DDf3bBYa1">
+    <property role="1pbfSe" value="318142607" />
+    <property role="TrG5h" value="GlobalVariables" />
+    <property role="19KtqR" value="true" />
+    <ref role="1TJDcQ" node="7Bb7ds4OrWV" resolve="POU" />
+  </node>
+  <node concept="1TIwiD" id="25DDf3bYieh">
+    <property role="1pbfSe" value="312293247" />
+    <property role="3GE5qa" value="plcconfig.instance" />
+    <property role="TrG5h" value="ConfigModule" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
+    <node concept="1TJgyj" id="3cChPJbZ$gT" role="1TKVEi">
+      <property role="20lmBu" value="aggregation" />
+      <property role="20kJfa" value="channels" />
+      <property role="20lbJX" value="0..n" />
+      <ref role="20lvS9" node="3cChPJbZ$gZ" resolve="Channel" />
+    </node>
+    <node concept="1TJgyj" id="25DDf3bYiei" role="1TKVEi">
+      <property role="20lmBu" value="aggregation" />
+      <property role="20kJfa" value="subModules" />
+      <property role="20lbJX" value="0..n" />
+      <ref role="20lvS9" node="25DDf3bYieh" resolve="ConfigModule" />
+    </node>
+    <node concept="1TJgyj" id="74JURXIvg_k" role="1TKVEi">
+      <property role="20lmBu" value="aggregation" />
+      <property role="20kJfa" value="params" />
+      <property role="20lbJX" value="0..n" />
+      <ref role="20lvS9" node="74JURXIvg_v" resolve="ParameterValue" />
+    </node>
+    <node concept="1TJgyj" id="3cChPJbRvfH" role="1TKVEi">
+      <property role="20lmBu" value="reference" />
+      <property role="20kJfa" value="klass" />
+      <property role="20lbJX" value="1" />
+      <ref role="20lvS9" node="25DDf3bZYrI" resolve="ConfigModuleClass" />
+    </node>
+    <node concept="1TJgyj" id="3cChPJbZ$DR" role="1TKVEi">
+      <property role="20lmBu" value="reference" />
+      <property role="20kJfa" value="submoduleKlass" />
+      <ref role="20lvS9" node="25DDf3c1DB9" resolve="SubmoduleClass" />
+    </node>
+    <node concept="PrWs8" id="6PcEEFB6Ki" role="PzmwI">
+      <ref role="PrY4T" node="6PcEEFB6Kf" resolve="ICommentable" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="25DDf3bZYrI">
+    <property role="1pbfSe" value="311850018" />
+    <property role="3GE5qa" value="plcconfig.module" />
+    <property role="TrG5h" value="ConfigModuleClass" />
+    <property role="19KtqR" value="true" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
+    <node concept="1TJgyi" id="25DDf3bZYrJ" role="1TKVEl">
+      <property role="TrG5h" value="id" />
+      <ref role="AX2Wp" to="tpck:fKAQMTA" resolve="integer" />
+    </node>
+    <node concept="1TJgyi" id="25DDf3bZYrR" role="1TKVEl">
+      <property role="TrG5h" value="idEditable" />
+      <ref role="AX2Wp" to="tpck:fKAQMTB" resolve="boolean" />
+    </node>
+    <node concept="1TJgyi" id="25DDf3bZYrU" role="1TKVEl">
+      <property role="TrG5h" value="adrEditable" />
+      <ref role="AX2Wp" to="tpck:fKAQMTB" resolve="boolean" />
+    </node>
+    <node concept="1TJgyi" id="3cChPJbX$Q4" role="1TKVEl">
+      <property role="TrG5h" value="createBitChannels" />
+      <ref role="AX2Wp" to="tpck:fKAQMTB" resolve="boolean" />
+    </node>
+    <node concept="1TJgyi" id="25DDf3cQqJi" role="1TKVEl">
+      <property role="TrG5h" value="detailedName" />
+      <ref role="AX2Wp" to="tpck:fKAOsGN" resolve="string" />
+    </node>
+    <node concept="1TJgyi" id="25DDf3cR8lY" role="1TKVEl">
+      <property role="TrG5h" value="alignment" />
+      <ref role="AX2Wp" to="tpck:fKAQMTA" resolve="integer" />
+    </node>
+    <node concept="1TJgyi" id="25DDf3cRzfA" role="1TKVEl">
+      <property role="TrG5h" value="moduleAlignment" />
+      <ref role="AX2Wp" to="tpck:fKAQMTA" resolve="integer" />
+    </node>
+    <node concept="PrWs8" id="25DDf3bZYrO" role="PzmwI">
+      <ref role="PrY4T" to="tpck:h0TrEE$" resolve="INamedConcept" />
+    </node>
+    <node concept="1TJgyj" id="25DDf3bZYs6" role="1TKVEi">
+      <property role="20lmBu" value="aggregation" />
+      <property role="20kJfa" value="channels" />
+      <property role="20lbJX" value="0..n" />
+      <ref role="20lvS9" node="25DDf3daALP" resolve="ChannelClassReference" />
+    </node>
+    <node concept="1TJgyj" id="25DDf3bZYs8" role="1TKVEi">
+      <property role="20lmBu" value="aggregation" />
+      <property role="20kJfa" value="submodules" />
+      <property role="20lbJX" value="0..n" />
+      <ref role="20lvS9" node="25DDf3c1DB9" resolve="SubmoduleClass" />
+    </node>
+    <node concept="1TJgyj" id="25DDf3c3kRw" role="1TKVEi">
+      <property role="20lmBu" value="aggregation" />
+      <property role="20kJfa" value="params" />
+      <property role="20lbJX" value="0..n" />
+      <ref role="20lvS9" node="25DDf3c3kQY" resolve="ParameterDescriptorReference" />
+    </node>
+    <node concept="1TJgyj" id="25DDf3c1DBh" role="1TKVEi">
+      <property role="20lmBu" value="reference" />
+      <property role="20kJfa" value="klass" />
+      <property role="20lbJX" value="1" />
+      <ref role="20lvS9" node="25DDf3cTvNR" resolve="ModuleClassClass" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="25DDf3bZYsb">
+    <property role="1pbfSe" value="311849989" />
+    <property role="3GE5qa" value="plcconfig" />
+    <property role="TrG5h" value="ConfigChannelDescriptor" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
+    <node concept="1TJgyi" id="25DDf3bZYsl" role="1TKVEl">
+      <property role="TrG5h" value="id" />
+      <ref role="AX2Wp" to="tpck:fKAQMTA" resolve="integer" />
+    </node>
+    <node concept="1TJgyi" id="25DDf3bZYsn" role="1TKVEl">
+      <property role="TrG5h" value="adrType" />
+      <ref role="AX2Wp" node="25DDf3bZYsq" resolve="AdrType" />
+    </node>
+    <node concept="1TJgyi" id="25DDf3bZYsH" role="1TKVEl">
+      <property role="TrG5h" value="memoryClass" />
+      <ref role="AX2Wp" node="25DDf3bZYsC" resolve="MemoryClass" />
+    </node>
+    <node concept="1TJgyj" id="25DDf3bZYsA" role="1TKVEi">
+      <property role="20lmBu" value="aggregation" />
+      <property role="20kJfa" value="type" />
+      <property role="20lbJX" value="1" />
+      <ref role="20lvS9" node="3gaOo01mTUw" resolve="PrimitiveType" />
+    </node>
+  </node>
+  <node concept="AxPO7" id="25DDf3bZYsc">
+    <property role="3GE5qa" value="plcconfig.module" />
+    <property role="TrG5h" value="ConfigModuleType" />
+    <ref role="M4eZT" to="tpck:fKAOsGN" resolve="string" />
+    <node concept="M4N5e" id="25DDf3bZYsd" role="M5hS2">
+      <property role="1uS6qv" value="Slot" />
+      <property role="1uS6qo" value="Slot" />
+    </node>
+    <node concept="M4N5e" id="25DDf3bZYse" role="M5hS2">
+      <property role="1uS6qo" value="Variable" />
+      <property role="1uS6qv" value="Variable" />
+    </node>
+    <node concept="M4N5e" id="25DDf3bZYsh" role="M5hS2">
+      <property role="1uS6qo" value="Fix" />
+      <property role="1uS6qv" value="Fix" />
+    </node>
+  </node>
+  <node concept="AxPO7" id="25DDf3bZYsq">
+    <property role="3GE5qa" value="plcconfig" />
+    <property role="TrG5h" value="AdrType" />
+    <ref role="M4eZT" to="tpck:fKAOsGN" resolve="string" />
+    <node concept="M4N5e" id="25DDf3bZYsr" role="M5hS2">
+      <property role="1uS6qv" value="B" />
+      <property role="1uS6qo" value="Byte" />
+    </node>
+    <node concept="M4N5e" id="25DDf3czN5z" role="M5hS2">
+      <property role="1uS6qv" value="X" />
+      <property role="1uS6qo" value="Bool" />
+    </node>
+    <node concept="M4N5e" id="25DDf3czN5A" role="M5hS2">
+      <property role="1uS6qv" value="D" />
+      <property role="1uS6qo" value="Real" />
+    </node>
+  </node>
+  <node concept="AxPO7" id="25DDf3bZYsC">
+    <property role="3GE5qa" value="plcconfig" />
+    <property role="TrG5h" value="MemoryClass" />
+    <ref role="M4eZT" to="tpck:fKAOsGN" resolve="string" />
+    <node concept="M4N5e" id="25DDf3bZYsD" role="M5hS2">
+      <property role="1uS6qv" value="Q" />
+      <property role="1uS6qo" value="Q" />
+    </node>
+    <node concept="M4N5e" id="25DDf3bZYsE" role="M5hS2">
+      <property role="1uS6qv" value="I" />
+      <property role="1uS6qo" value="I" />
+    </node>
+    <node concept="M4N5e" id="25DDf3czN4p" role="M5hS2">
+      <property role="1uS6qo" value="I&amp;Q" />
+      <property role="1uS6qv" value="I&amp;Q" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="25DDf3c1DB9">
+    <property role="1pbfSe" value="311411015" />
+    <property role="3GE5qa" value="plcconfig.module" />
+    <property role="TrG5h" value="SubmoduleClass" />
+    <property role="R5$K7" value="true" />
+    <property role="R5$K2" value="false" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
+    <node concept="1TJgyj" id="25DDf3d5Ilc" role="1TKVEi">
+      <property role="20lmBu" value="reference" />
+      <property role="20kJfa" value="default" />
+      <property role="20lbJX" value="0..1" />
+      <ref role="20lvS9" node="25DDf3bZYrI" resolve="ConfigModuleClass" />
+    </node>
+    <node concept="1TJgyi" id="25DDf3cQqJu" role="1TKVEl">
+      <property role="TrG5h" value="submoduleIndex" />
+      <ref role="AX2Wp" to="tpck:fKAQMTA" resolve="integer" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="25DDf3c3kQY">
+    <property role="1pbfSe" value="310971730" />
+    <property role="3GE5qa" value="plcconfig" />
+    <property role="TrG5h" value="ParameterDescriptorReference" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
+    <node concept="1TJgyi" id="25DDf3c3kR_" role="1TKVEl">
+      <property role="TrG5h" value="index" />
+      <ref role="AX2Wp" to="tpck:fKAQMTA" resolve="integer" />
+    </node>
+    <node concept="1TJgyi" id="25DDf3c3kR5" role="1TKVEl">
+      <property role="TrG5h" value="name" />
+      <ref role="AX2Wp" to="tpck:fKAOsGN" resolve="string" />
+    </node>
+    <node concept="1TJgyi" id="25DDf3c3kRa" role="1TKVEl">
+      <property role="TrG5h" value="visible" />
+      <ref role="AX2Wp" to="tpck:fKAQMTB" resolve="boolean" />
+    </node>
+    <node concept="1TJgyi" id="25DDf3c3kRr" role="1TKVEl">
+      <property role="TrG5h" value="access" />
+      <ref role="AX2Wp" node="25DDf3c3kRm" resolve="ParameterAccess" />
+    </node>
+    <node concept="1TJgyj" id="25DDf3c3kR8" role="1TKVEi">
+      <property role="20lmBu" value="reference" />
+      <property role="20kJfa" value="klass" />
+      <property role="20lbJX" value="1" />
+      <ref role="20lvS9" node="25DDf3c3kRF" resolve="ParameterClass" />
+    </node>
+  </node>
+  <node concept="AxPO7" id="25DDf3c3kRm">
+    <property role="3GE5qa" value="plcconfig" />
+    <property role="TrG5h" value="ParameterAccess" />
+    <ref role="M4eZT" to="tpck:fKAOsGN" resolve="string" />
+    <node concept="M4N5e" id="25DDf3c3kRn" role="M5hS2">
+      <property role="1uS6qv" value="RW" />
+      <property role="1uS6qo" value="RW" />
+    </node>
+    <node concept="M4N5e" id="25DDf3c3kRo" role="M5hS2">
+      <property role="1uS6qv" value="RO" />
+      <property role="1uS6qo" value="RO" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="25DDf3c3kRF">
+    <property role="1pbfSe" value="310971685" />
+    <property role="3GE5qa" value="plcconfig" />
+    <property role="TrG5h" value="ParameterClass" />
+    <property role="19KtqR" value="true" />
+    <property role="R5$K7" value="true" />
+    <property role="R5$K2" value="false" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
+    <node concept="1TJgyi" id="25DDf3c3kRG" role="1TKVEl">
+      <property role="TrG5h" value="id" />
+      <ref role="AX2Wp" to="tpck:fKAQMTA" resolve="integer" />
+    </node>
+    <node concept="1TJgyj" id="25DDf3c3kRR" role="1TKVEi">
+      <property role="20lmBu" value="aggregation" />
+      <property role="20kJfa" value="dataType" />
+      <property role="20lbJX" value="1" />
+      <ref role="20lvS9" node="5fgiBbs2NWo" resolve="AnyType" />
+    </node>
+    <node concept="PrWs8" id="25DDf3c5f79" role="PzmwI">
+      <ref role="PrY4T" node="42bSzUqWpBr" resolve="IValidIdentifier" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="25DDf3c3kRT">
+    <property role="1pbfSe" value="310971671" />
+    <property role="3GE5qa" value="plcconfig.param" />
+    <property role="TrG5h" value="SimpleParameterClass" />
+    <property role="34LRSv" value="simple parameter class" />
+    <property role="19KtqR" value="true" />
+    <ref role="1TJDcQ" node="25DDf3c3kRF" resolve="ParameterClass" />
+    <node concept="1TJgyi" id="25DDf3c3kRU" role="1TKVEl">
+      <property role="TrG5h" value="min" />
+      <ref role="AX2Wp" to="tpck:fKAQMTA" resolve="integer" />
+    </node>
+    <node concept="1TJgyi" id="25DDf3c3kRW" role="1TKVEl">
+      <property role="TrG5h" value="max" />
+      <ref role="AX2Wp" to="tpck:fKAQMTA" resolve="integer" />
+    </node>
+    <node concept="1TJgyj" id="25DDf3cu1Fu" role="1TKVEi">
+      <property role="20lmBu" value="aggregation" />
+      <property role="20kJfa" value="default" />
+      <ref role="20lvS9" node="5fgiBbs2NXn" resolve="Expression" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="25DDf3c3kS3">
+    <property role="1pbfSe" value="310971661" />
+    <property role="3GE5qa" value="plcconfig.param" />
+    <property role="TrG5h" value="EnumParameterClass" />
+    <property role="34LRSv" value="enum parameter class" />
+    <property role="19KtqR" value="true" />
+    <ref role="1TJDcQ" node="25DDf3c3kRF" resolve="ParameterClass" />
+    <node concept="1TJgyj" id="25DDf3c3kS4" role="1TKVEi">
+      <property role="20lmBu" value="reference" />
+      <property role="20kJfa" value="default" />
+      <property role="20lbJX" value="1" />
+      <ref role="20lvS9" node="25DDf3c3kS6" resolve="EnumParameterEntry" />
+    </node>
+    <node concept="1TJgyj" id="25DDf3c3kSc" role="1TKVEi">
+      <property role="20lmBu" value="aggregation" />
+      <property role="20kJfa" value="values" />
+      <property role="20lbJX" value="1..n" />
+      <ref role="20lvS9" node="25DDf3c3kS6" resolve="EnumParameterEntry" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="25DDf3c3kS6">
+    <property role="1pbfSe" value="310971658" />
+    <property role="3GE5qa" value="plcconfig" />
+    <property role="TrG5h" value="EnumParameterEntry" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
+    <node concept="1TJgyj" id="25DDf3cI7Un" role="1TKVEi">
+      <property role="20lmBu" value="aggregation" />
+      <property role="20kJfa" value="value" />
+      <property role="20lbJX" value="1" />
+      <ref role="20lvS9" node="5fgiBbs2NXn" resolve="Expression" />
+    </node>
+    <node concept="PrWs8" id="4avoz_NEDG8" role="PzmwI">
+      <ref role="PrY4T" to="tpck:h0TrEE$" resolve="INamedConcept" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="25DDf3cxFa3">
+    <property role="1pbfSe" value="303016077" />
+    <property role="3GE5qa" value="expressions.literals" />
+    <property role="TrG5h" value="RealLiteral" />
+    <ref role="1TJDcQ" node="5fgiBbs2NXn" resolve="Expression" />
+    <node concept="1TJgyi" id="25DDf3cxFa4" role="1TKVEl">
+      <property role="TrG5h" value="vaule" />
+      <ref role="AX2Wp" node="25DDf3cI0Kh" resolve="_RealValue" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="25DDf3czN4c">
+    <property role="1pbfSe" value="302459396" />
+    <property role="3GE5qa" value="plcconfig.param" />
+    <property role="TrG5h" value="StringParameterClass" />
+    <property role="19KtqR" value="true" />
+    <ref role="1TJDcQ" node="25DDf3c3kRF" resolve="ParameterClass" />
+    <node concept="1TJgyi" id="25DDf3czN4d" role="1TKVEl">
+      <property role="TrG5h" value="default" />
+      <ref role="AX2Wp" to="tpck:fKAOsGN" resolve="string" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="25DDf3czN4f">
+    <property role="1pbfSe" value="302459393" />
+    <property role="3GE5qa" value="plcconfig.param" />
+    <property role="TrG5h" value="RealParameterClass" />
+    <property role="19KtqR" value="true" />
+    <ref role="1TJDcQ" node="25DDf3c3kRF" resolve="ParameterClass" />
+    <node concept="1TJgyj" id="25DDf3czN4C" role="1TKVEi">
+      <property role="20lmBu" value="aggregation" />
+      <property role="20kJfa" value="min" />
+      <ref role="20lvS9" node="25DDf3cxFa3" resolve="RealLiteral" />
+    </node>
+    <node concept="1TJgyj" id="25DDf3czN4E" role="1TKVEi">
+      <property role="20lmBu" value="aggregation" />
+      <property role="20kJfa" value="max" />
+      <ref role="20lvS9" node="25DDf3cxFa3" resolve="RealLiteral" />
+    </node>
+    <node concept="1TJgyj" id="25DDf3cA9GR" role="1TKVEi">
+      <property role="20lmBu" value="aggregation" />
+      <property role="20kJfa" value="default" />
+      <ref role="20lvS9" node="25DDf3cxFa3" resolve="RealLiteral" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="25DDf3czN4O">
+    <property role="1pbfSe" value="302459356" />
+    <property role="3GE5qa" value="plcconfig.param" />
+    <property role="TrG5h" value="BoolParameterClass" />
+    <property role="19KtqR" value="true" />
+    <ref role="1TJDcQ" node="25DDf3c3kRF" resolve="ParameterClass" />
+    <node concept="1TJgyi" id="25DDf3czN5b" role="1TKVEl">
+      <property role="TrG5h" value="default" />
+      <ref role="AX2Wp" to="tpck:fKAQMTB" resolve="boolean" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="25DDf3cAqoM">
+    <property role="1pbfSe" value="301774046" />
+    <property role="3GE5qa" value="plcconfig.param" />
+    <property role="TrG5h" value="IntegerParameterClass" />
+    <property role="19KtqR" value="true" />
+    <ref role="1TJDcQ" node="25DDf3c3kRF" resolve="ParameterClass" />
+    <node concept="1TJgyj" id="25DDf3cE3iU" role="1TKVEi">
+      <property role="20lmBu" value="aggregation" />
+      <property role="20kJfa" value="min" />
+      <ref role="20lvS9" node="5fgiBbs34Ms" resolve="IntegerLiteral" />
+    </node>
+    <node concept="1TJgyj" id="25DDf3cE3iW" role="1TKVEi">
+      <property role="20lmBu" value="aggregation" />
+      <property role="20kJfa" value="max" />
+      <ref role="20lvS9" node="5fgiBbs34Ms" resolve="IntegerLiteral" />
+    </node>
+    <node concept="1TJgyj" id="25DDf3cE3iZ" role="1TKVEi">
+      <property role="20lmBu" value="aggregation" />
+      <property role="20kJfa" value="default" />
+      <ref role="20lvS9" node="5fgiBbs34Ms" resolve="IntegerLiteral" />
+    </node>
+  </node>
+  <node concept="Az7Fb" id="25DDf3cI0Kh">
+    <property role="3GE5qa" value="types" />
+    <property role="TrG5h" value="_RealValue" />
+    <property role="FLfZY" value="-?[0-9]*(\\.[0-9]*([Ee][\\+\\-]?[0-9]+)?)?" />
+  </node>
+  <node concept="1TIwiD" id="25DDf3cLMHg">
+    <property role="1pbfSe" value="298790848" />
+    <property role="3GE5qa" value="plcconfig.channel" />
+    <property role="TrG5h" value="ChannelClass" />
+    <property role="19KtqR" value="true" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
+    <node concept="1TJgyi" id="25DDf3cLMHi" role="1TKVEl">
+      <property role="TrG5h" value="id" />
+      <ref role="AX2Wp" to="tpck:fKAQMTA" resolve="integer" />
+    </node>
+    <node concept="1TJgyi" id="25DDf3cLMHk" role="1TKVEl">
+      <property role="TrG5h" value="adrType" />
+      <ref role="AX2Wp" node="25DDf3bZYsq" resolve="AdrType" />
+    </node>
+    <node concept="1TJgyi" id="25DDf3cLMHz" role="1TKVEl">
+      <property role="TrG5h" value="memoryClass" />
+      <ref role="AX2Wp" node="25DDf3bZYsC" resolve="MemoryClass" />
+    </node>
+    <node concept="1TJgyi" id="25DDf3cMZjl" role="1TKVEl">
+      <property role="TrG5h" value="size" />
+      <ref role="AX2Wp" to="tpck:fKAQMTA" resolve="integer" />
+    </node>
+    <node concept="1TJgyj" id="25DDf3cLMHH" role="1TKVEi">
+      <property role="20lmBu" value="aggregation" />
+      <property role="20kJfa" value="dataType" />
+      <property role="20lbJX" value="1" />
+      <ref role="20lvS9" node="5fgiBbs2NWo" resolve="AnyType" />
+    </node>
+    <node concept="PrWs8" id="25DDf3cM2ea" role="PzmwI">
+      <ref role="PrY4T" node="42bSzUqWpBr" resolve="IValidIdentifier" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="25DDf3cTvNR">
+    <property role="1pbfSe" value="296771097" />
+    <property role="3GE5qa" value="plcconfig.module" />
+    <property role="TrG5h" value="ModuleClassClass" />
+    <property role="19KtqR" value="true" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
+    <node concept="PrWs8" id="25DDf3cTvNU" role="PzmwI">
+      <ref role="PrY4T" node="42bSzUqWpBr" resolve="IValidIdentifier" />
+    </node>
+    <node concept="1TJgyj" id="4avoz_OkmKx" role="1TKVEi">
+      <property role="20lmBu" value="aggregation" />
+      <property role="20kJfa" value="modules" />
+      <property role="20lbJX" value="0..n" />
+      <ref role="20lvS9" node="4avoz_OkmKu" resolve="ConfigModuleClassReference" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="25DDf3d5Ilb">
+    <property role="1pbfSe" value="293565893" />
+    <property role="3GE5qa" value="plcconfig.module" />
+    <property role="TrG5h" value="FixSubmoduleClass" />
+    <ref role="1TJDcQ" node="25DDf3c1DB9" resolve="SubmoduleClass" />
+  </node>
+  <node concept="1TIwiD" id="25DDf3d5Ile">
+    <property role="1pbfSe" value="293565890" />
+    <property role="3GE5qa" value="plcconfig.module" />
+    <property role="TrG5h" value="VaryingSubmoduleClass" />
+    <ref role="1TJDcQ" node="25DDf3c1DB9" resolve="SubmoduleClass" />
+    <node concept="1TJgyi" id="25DDf3cTrvI" role="1TKVEl">
+      <property role="TrG5h" value="moduleType" />
+      <ref role="AX2Wp" node="25DDf3bZYsc" resolve="ConfigModuleType" />
+    </node>
+    <node concept="1TJgyi" id="25DDf3cQqJB" role="1TKVEl">
+      <property role="TrG5h" value="maxNum" />
+      <ref role="AX2Wp" to="tpck:fKAQMTA" resolve="integer" />
+    </node>
+    <node concept="1TJgyj" id="25DDf3c1DBp" role="1TKVEi">
+      <property role="20lmBu" value="reference" />
+      <property role="20kJfa" value="klass" />
+      <property role="20lbJX" value="1" />
+      <ref role="20lvS9" node="25DDf3cTvNR" resolve="ModuleClassClass" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="25DDf3daALP">
+    <property role="1pbfSe" value="292286107" />
+    <property role="3GE5qa" value="plcconfig.channel" />
+    <property role="TrG5h" value="ChannelClassReference" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
+    <node concept="1TJgyj" id="25DDf3daALQ" role="1TKVEi">
+      <property role="20lmBu" value="reference" />
+      <property role="20kJfa" value="channel" />
+      <property role="20lbJX" value="1" />
+      <ref role="20lvS9" node="25DDf3cLMHg" resolve="ChannelClass" />
+    </node>
+    <node concept="1TJgyi" id="25DDf3daALS" role="1TKVEl">
+      <property role="TrG5h" value="comment" />
+      <ref role="AX2Wp" to="tpck:fKAOsGN" resolve="string" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="3cChPJbRrtM">
+    <property role="1pbfSe" value="16384307" />
+    <property role="3GE5qa" value="plcconfig.instance" />
+    <property role="TrG5h" value="PlcConfiguration" />
+    <property role="19KtqR" value="true" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
+    <node concept="1TJgyj" id="3cChPJbRrtP" role="1TKVEi">
+      <property role="20lmBu" value="aggregation" />
+      <property role="20kJfa" value="rootModule" />
+      <property role="20lbJX" value="0..1" />
+      <ref role="20lvS9" node="25DDf3bYieh" resolve="ConfigModule" />
+    </node>
+    <node concept="PrWs8" id="6PcEEFQ_5y" role="PzmwI">
+      <ref role="PrY4T" to="tpck:h0TrEE$" resolve="INamedConcept" />
+    </node>
+    <node concept="PrWs8" id="4FDhPh$Z44g" role="PzmwI">
+      <ref role="PrY4T" to="tpck:3fifI_xCcJN" resolve="ScopeProvider" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="3cChPJbZ$gZ">
+    <property role="1pbfSe" value="14251110" />
+    <property role="3GE5qa" value="plcconfig.instance" />
+    <property role="TrG5h" value="Channel" />
+    <property role="R5$K7" value="true" />
+    <property role="R5$K2" value="false" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
+    <node concept="1TJgyj" id="4FDhPh$VB2u" role="1TKVEi">
+      <property role="20lmBu" value="aggregation" />
+      <property role="20kJfa" value="variable" />
+      <property role="20lbJX" value="0..1" />
+      <ref role="20lvS9" node="5fgiBbs3nBe" resolve="VariableReference" />
+    </node>
+    <node concept="PrWs8" id="3cChPJbZ$h2" role="PzmwI">
+      <ref role="PrY4T" to="tpck:1_TrU5E6oyb" resolve="IDontSubstituteByDefault" />
+    </node>
+    <node concept="PrWs8" id="6PcEEFCNmC" role="PzmwI">
+      <ref role="PrY4T" node="6PcEEFB6Kf" resolve="ICommentable" />
+    </node>
+    <node concept="PrWs8" id="2tBq2I4PuK$" role="PzmwI">
+      <ref role="PrY4T" to="tpck:3fifI_xCcJN" resolve="ScopeProvider" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="3cChPJc1inS">
+    <property role="1pbfSe" value="13800109" />
+    <property role="3GE5qa" value="plcconfig.instance" />
+    <property role="TrG5h" value="BitChannel" />
+    <ref role="1TJDcQ" node="3cChPJbZ$gZ" resolve="Channel" />
+    <node concept="PrWs8" id="6PcEEFCMZK" role="PzmwI">
+      <ref role="PrY4T" node="6PcEEFB6Kf" resolve="ICommentable" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="3cChPJc1inT">
+    <property role="1pbfSe" value="13800108" />
+    <property role="3GE5qa" value="plcconfig.instance" />
+    <property role="TrG5h" value="ParentChannel" />
+    <ref role="1TJDcQ" node="3cChPJbZ$gZ" resolve="Channel" />
+    <node concept="1TJgyj" id="3cChPJc1hBo" role="1TKVEi">
+      <property role="20lmBu" value="reference" />
+      <property role="20kJfa" value="klass" />
+      <property role="20lbJX" value="1" />
+      <ref role="20lvS9" node="25DDf3daALP" resolve="ChannelClassReference" />
+    </node>
+    <node concept="1TJgyj" id="3cChPJbZ$h0" role="1TKVEi">
+      <property role="20lmBu" value="aggregation" />
+      <property role="20kJfa" value="subChannels" />
+      <property role="20lbJX" value="0..n" />
+      <ref role="20lvS9" node="3cChPJbZ$gZ" resolve="Channel" />
+    </node>
+    <node concept="PrWs8" id="6PcEEFCMZt" role="PzmwI">
+      <ref role="PrY4T" node="6PcEEFB6Kf" resolve="ICommentable" />
+    </node>
+    <node concept="1TJgyi" id="6PcEEG4d9M" role="1TKVEl">
+      <property role="TrG5h" value="createBitChannels" />
+      <ref role="AX2Wp" to="tpck:fKAQMTB" resolve="boolean" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="74JURXIvg_v">
+    <property role="1pbfSe" value="542313250" />
+    <property role="3GE5qa" value="plcconfig.instance" />
+    <property role="TrG5h" value="ParameterValue" />
+    <property role="R5$K7" value="true" />
+    <property role="R5$K2" value="false" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
+    <node concept="1TJgyj" id="74JURXIvnKV" role="1TKVEi">
+      <property role="20lmBu" value="reference" />
+      <property role="20kJfa" value="attribute" />
+      <property role="20lbJX" value="1" />
+      <ref role="20lvS9" node="25DDf3c3kQY" resolve="ParameterDescriptorReference" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="74JURXIvnKU">
+    <property role="1pbfSe" value="542283847" />
+    <property role="3GE5qa" value="plcconfig.instance" />
+    <property role="TrG5h" value="StringParameterValue" />
+    <ref role="1TJDcQ" node="74JURXIvg_v" resolve="ParameterValue" />
+    <node concept="1TJgyi" id="74JURXIvr70" role="1TKVEl">
+      <property role="TrG5h" value="value" />
+      <ref role="AX2Wp" to="tpck:fKAOsGN" resolve="string" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="74JURXIDM19">
+    <property role="1pbfSe" value="539554872" />
+    <property role="3GE5qa" value="plcconfig.instance" />
+    <property role="TrG5h" value="BoolParameterValue" />
+    <ref role="1TJDcQ" node="74JURXIvg_v" resolve="ParameterValue" />
+    <node concept="1TJgyi" id="74JURXIDM1a" role="1TKVEl">
+      <property role="TrG5h" value="value" />
+      <ref role="AX2Wp" to="tpck:fKAQMTB" resolve="boolean" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="74JURXIDOIg">
+    <property role="1pbfSe" value="539543793" />
+    <property role="3GE5qa" value="plcconfig.instance" />
+    <property role="TrG5h" value="IntegerParameterValue" />
+    <ref role="1TJDcQ" node="74JURXIvg_v" resolve="ParameterValue" />
+    <node concept="1TJgyj" id="4avoz_NsmXq" role="1TKVEi">
+      <property role="20lmBu" value="aggregation" />
+      <property role="20kJfa" value="value" />
+      <property role="20lbJX" value="1" />
+      <ref role="20lvS9" node="5fgiBbs34Ms" resolve="IntegerLiteral" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="4avoz_NxkEa">
+    <property role="1pbfSe" value="1239110461" />
+    <property role="3GE5qa" value="plcconfig.instance" />
+    <property role="TrG5h" value="EnumParameterItemReference" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
+    <node concept="1TJgyj" id="4avoz_NxkEb" role="1TKVEi">
+      <property role="20lmBu" value="reference" />
+      <property role="20kJfa" value="item" />
+      <property role="20lbJX" value="1" />
+      <ref role="20lvS9" node="25DDf3c3kS6" resolve="EnumParameterEntry" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="4avoz_NxkEN">
+    <property role="1pbfSe" value="1239110420" />
+    <property role="3GE5qa" value="plcconfig.instance" />
+    <property role="TrG5h" value="EnumParameterValue" />
+    <ref role="1TJDcQ" node="74JURXIvg_v" resolve="ParameterValue" />
+    <node concept="1TJgyj" id="33OqLGtDNkz" role="1TKVEi">
+      <property role="20lmBu" value="reference" />
+      <property role="20kJfa" value="attribute" />
+      <ref role="20lvS9" node="33OqLGtedKj" resolve="EnumParameterDescriptorReference" />
+      <ref role="20ksaX" node="74JURXIvnKV" />
+    </node>
+    <node concept="1TJgyj" id="4avoz_NzcEl" role="1TKVEi">
+      <property role="20lmBu" value="reference" />
+      <property role="20kJfa" value="value" />
+      <property role="20lbJX" value="1" />
+      <ref role="20lvS9" node="25DDf3c3kS6" resolve="EnumParameterEntry" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="4avoz_OkmKu">
+    <property role="1pbfSe" value="1225732521" />
+    <property role="3GE5qa" value="plcconfig.module" />
+    <property role="TrG5h" value="ConfigModuleClassReference" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
+    <node concept="1TJgyj" id="4avoz_OkmKv" role="1TKVEi">
+      <property role="20lmBu" value="reference" />
+      <property role="20kJfa" value="value" />
+      <property role="20lbJX" value="1" />
+      <ref role="20lvS9" node="25DDf3bZYrI" resolve="ConfigModuleClass" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="33OqLGsEDUJ">
+    <property role="1pbfSe" value="1302268362" />
+    <property role="3GE5qa" value="plcconfig" />
+    <property role="TrG5h" value="IntegerParameterDescriptorReference" />
+    <ref role="1TJDcQ" node="25DDf3c3kQY" resolve="ParameterDescriptorReference" />
+    <node concept="1TJgyj" id="33OqLGsE6tO" role="1TKVEi">
+      <property role="20lmBu" value="aggregation" />
+      <property role="20kJfa" value="default" />
+      <ref role="20lvS9" node="5fgiBbs34Ms" resolve="IntegerLiteral" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="33OqLGtedKj">
+    <property role="1pbfSe" value="1311590190" />
+    <property role="3GE5qa" value="plcconfig" />
+    <property role="TrG5h" value="EnumParameterDescriptorReference" />
+    <ref role="1TJDcQ" node="25DDf3c3kQY" resolve="ParameterDescriptorReference" />
+    <node concept="1TJgyj" id="33OqLGtedKk" role="1TKVEi">
+      <property role="20lmBu" value="reference" />
+      <property role="20kJfa" value="default" />
+      <property role="20lbJX" value="0..1" />
+      <ref role="20lvS9" node="25DDf3c3kS6" resolve="EnumParameterEntry" />
+    </node>
+    <node concept="1TJgyj" id="33OqLGtwfK$" role="1TKVEi">
+      <property role="20lmBu" value="reference" />
+      <property role="20kJfa" value="klass" />
+      <ref role="20lvS9" node="25DDf3c3kS3" resolve="EnumParameterClass" />
+      <ref role="20ksaX" node="25DDf3c3kR8" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="33OqLGu9_Dc">
+    <property role="1pbfSe" value="1327154535" />
+    <property role="3GE5qa" value="types" />
+    <property role="TrG5h" value="FileType" />
+    <property role="34LRSv" value="FILE" />
+    <ref role="1TJDcQ" node="5fgiBbs2NWo" resolve="AnyType" />
+  </node>
+  <node concept="1TIwiD" id="6PcEEFnKt8">
+    <property role="1pbfSe" value="1391183374" />
+    <property role="3GE5qa" value="plcconfig.param" />
+    <property role="TrG5h" value="FileParameterClass" />
+    <property role="19KtqR" value="true" />
+    <ref role="1TJDcQ" node="25DDf3c3kRF" resolve="ParameterClass" />
+    <node concept="1TJgyi" id="6PcEEFnKt9" role="1TKVEl">
+      <property role="TrG5h" value="default" />
+      <ref role="AX2Wp" to="tpck:fKAOsGN" resolve="string" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="6PcEEFnKwi">
+    <property role="1pbfSe" value="1391183172" />
+    <property role="3GE5qa" value="plcconfig.instance" />
+    <property role="TrG5h" value="FileParameterValue" />
+    <ref role="1TJDcQ" node="74JURXIvg_v" resolve="ParameterValue" />
+    <node concept="1TJgyi" id="6PcEEFnKNu" role="1TKVEl">
+      <property role="TrG5h" value="value" />
+      <ref role="AX2Wp" to="tpck:fKAOsGN" resolve="string" />
+    </node>
+  </node>
+  <node concept="PlHQZ" id="6PcEEFB6Kf">
+    <property role="1pbfSe" value="1387159879" />
+    <property role="3GE5qa" value="plcconfig.instance" />
+    <property role="TrG5h" value="ICommentable" />
+    <node concept="1TJgyi" id="6PcEEFB6Kg" role="1TKVEl">
+      <property role="TrG5h" value="comment" />
+      <ref role="AX2Wp" to="tpck:fKAOsGN" resolve="string" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="6PcEEFYB$y">
+    <property role="1pbfSe" value="1380996148" />
+    <property role="3GE5qa" value="plcconfig" />
+    <property role="TrG5h" value="StringParameterDescriptorReference" />
+    <ref role="1TJDcQ" node="25DDf3c3kQY" resolve="ParameterDescriptorReference" />
+    <node concept="1TJgyj" id="6PcEEFYB$z" role="1TKVEi">
+      <property role="20lmBu" value="reference" />
+      <property role="20kJfa" value="klass" />
+      <ref role="20lvS9" node="25DDf3czN4c" resolve="StringParameterClass" />
+      <ref role="20ksaX" node="25DDf3c3kR8" />
+    </node>
+    <node concept="1TJgyi" id="6PcEEFYB$B" role="1TKVEl">
+      <property role="TrG5h" value="default" />
+      <ref role="AX2Wp" to="tpck:fKAOsGN" resolve="string" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="6PcEEG4d3s">
+    <property role="1pbfSe" value="1379531898" />
+    <property role="3GE5qa" value="plcconfig" />
+    <property role="TrG5h" value="ReferenceToPlc" />
+    <property role="34LRSv" value="reference to PLC" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
+    <node concept="1TJgyj" id="6PcEEG4d3t" role="1TKVEi">
+      <property role="20lmBu" value="reference" />
+      <property role="20kJfa" value="plc" />
+      <property role="20lbJX" value="1" />
+      <ref role="20lvS9" node="25DDf3bYieh" resolve="ConfigModule" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="bMI9tMde$$">
+    <property role="1pbfSe" value="1965531579" />
+    <property role="TrG5h" value="TaskConfiguration" />
+    <property role="3GE5qa" value="taskconfig" />
+    <property role="19KtqR" value="true" />
+    <property role="34LRSv" value="task configuration" />
+    <property role="R4oN_" value="task configuration" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
+    <node concept="1TJgyj" id="bMI9tMde$_" role="1TKVEi">
+      <property role="20lmBu" value="aggregation" />
+      <property role="20kJfa" value="tasks" />
+      <property role="20lbJX" value="0..n" />
+      <ref role="20lvS9" node="bMI9tMde$B" resolve="Task" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="bMI9tMde$B">
+    <property role="1pbfSe" value="1965531582" />
+    <property role="3GE5qa" value="taskconfig" />
+    <property role="TrG5h" value="Task" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
+    <node concept="1TJgyi" id="bMI9tMde$C" role="1TKVEl">
+      <property role="TrG5h" value="priority" />
+      <ref role="AX2Wp" to="tpck:fKAQMTA" resolve="integer" />
+    </node>
+    <node concept="1TJgyj" id="bMI9tMfVng" role="1TKVEi">
+      <property role="20lmBu" value="aggregation" />
+      <property role="20kJfa" value="trigger" />
+      <ref role="20lvS9" node="bMI9tMfVns" resolve="TaskTrigger" />
+    </node>
+    <node concept="1TJgyj" id="bMI9tMde$J" role="1TKVEi">
+      <property role="20lmBu" value="aggregation" />
+      <property role="20kJfa" value="watchdog" />
+      <ref role="20lvS9" node="bMI9tMde$E" resolve="WatchdogConfiguration" />
+    </node>
+    <node concept="1TJgyj" id="bMI9tMde$L" role="1TKVEi">
+      <property role="20lmBu" value="aggregation" />
+      <property role="20kJfa" value="programCall" />
+      <property role="20lbJX" value="0..n" />
+      <ref role="20lvS9" node="4wOfIPsj8S7" resolve="FunctionCall" />
+    </node>
+    <node concept="PrWs8" id="2tBq2I4J7T5" role="PzmwI">
+      <ref role="PrY4T" node="42bSzUqWpBr" resolve="IValidIdentifier" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="bMI9tMde$E">
+    <property role="1pbfSe" value="1965531585" />
+    <property role="3GE5qa" value="taskconfig" />
+    <property role="TrG5h" value="WatchdogConfiguration" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
+    <node concept="1TJgyj" id="bMI9tMde$F" role="1TKVEi">
+      <property role="20lmBu" value="aggregation" />
+      <property role="20kJfa" value="time" />
+      <property role="20lbJX" value="1" />
+      <ref role="20lvS9" node="4qXNmAZ8hGt" resolve="TimeLiteral" />
+    </node>
+    <node concept="1TJgyi" id="bMI9tMde$H" role="1TKVEl">
+      <property role="TrG5h" value="sensitivity" />
+      <ref role="AX2Wp" to="tpck:fKAQMTA" resolve="integer" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="bMI9tMfVns">
+    <property role="1pbfSe" value="1966239347" />
+    <property role="3GE5qa" value="taskconfig" />
+    <property role="TrG5h" value="TaskTrigger" />
+    <property role="R5$K7" value="true" />
+    <property role="R5$K2" value="false" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
+  </node>
+  <node concept="1TIwiD" id="bMI9tMfVnt">
+    <property role="1pbfSe" value="1966239348" />
+    <property role="3GE5qa" value="taskconfig" />
+    <property role="TrG5h" value="Freewheeling" />
+    <property role="34LRSv" value="freewheeling" />
+    <property role="R4oN_" value="freewheeling task" />
+    <ref role="1TJDcQ" node="bMI9tMfVns" resolve="TaskTrigger" />
+  </node>
+  <node concept="1TIwiD" id="bMI9tMfVnu">
+    <property role="1pbfSe" value="1966239349" />
+    <property role="3GE5qa" value="taskconfig" />
+    <property role="TrG5h" value="CyclicTrigger" />
+    <property role="34LRSv" value="cyclic" />
+    <property role="R4oN_" value="cyclic trigger" />
+    <ref role="1TJDcQ" node="bMI9tMfVns" resolve="TaskTrigger" />
+    <node concept="1TJgyj" id="bMI9tMfVn_" role="1TKVEi">
+      <property role="20lmBu" value="aggregation" />
+      <property role="20kJfa" value="interval" />
+      <property role="20lbJX" value="1" />
+      <ref role="20lvS9" node="4qXNmAZ8hGt" resolve="TimeLiteral" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="2tBq2I4LStr">
+    <property role="1pbfSe" value="1406210170" />
+    <property role="3GE5qa" value="expressions" />
+    <property role="TrG5h" value="XorExpression" />
+    <property role="34LRSv" value="XOR" />
+    <property role="R4oN_" value="xor expression" />
+    <ref role="1TJDcQ" node="5fgiBbs6kiv" resolve="BinaryOperation" />
+  </node>
+  <node concept="1TIwiD" id="4iJnKFErfw8">
+    <property role="1pbfSe" value="790386450" />
+    <property role="3GE5qa" value="expressions.methods" />
+    <property role="TrG5h" value="SelFunction" />
+    <property role="34LRSv" value="SEL" />
+    <property role="R4oN_" value="select function" />
+    <ref role="1TJDcQ" node="3gaOo01zA9z" resolve="InternalMethodCall" />
+    <node concept="1TJgyj" id="4iJnKFErfwb" role="1TKVEi">
+      <property role="20lmBu" value="aggregation" />
+      <property role="20kJfa" value="condition" />
+      <property role="20lbJX" value="1" />
+      <ref role="20lvS9" node="5fgiBbs2NXn" resolve="Expression" />
+    </node>
+    <node concept="1TJgyj" id="4iJnKFErfwd" role="1TKVEi">
+      <property role="20lmBu" value="aggregation" />
+      <property role="20kJfa" value="ifFalse" />
+      <property role="20lbJX" value="1" />
+      <ref role="20lvS9" node="5fgiBbs2NXn" resolve="Expression" />
+    </node>
+    <node concept="1TJgyj" id="4iJnKFErfwg" role="1TKVEi">
+      <property role="20lmBu" value="aggregation" />
+      <property role="20kJfa" value="ifTrue" />
+      <property role="20lbJX" value="1" />
       <ref role="20lvS9" node="5fgiBbs2NXn" resolve="Expression" />
     </node>
   </node>

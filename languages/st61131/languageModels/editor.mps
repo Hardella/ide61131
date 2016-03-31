@@ -2,7 +2,7 @@
 <model ref="r:ef0c5d23-a005-41ab-bea1-5fb2f1b0bf32(com.github.vlsi.iec61131.st.editor)">
   <persistence version="9" />
   <languages>
-    <use id="18bc6592-03a6-4e29-a83a-7ff23bde13ba" name="jetbrains.mps.lang.editor" version="2" />
+    <use id="18bc6592-03a6-4e29-a83a-7ff23bde13ba" name="jetbrains.mps.lang.editor" version="3" />
     <use id="9d69e719-78c8-4286-90db-fb19c107d049" name="com.mbeddr.mpsutil.grammarcells" version="0" />
     <devkit ref="fbc25dd2-5da4-483a-8b19-70928e1b62d7(jetbrains.mps.devkit.general-purpose)" />
   </languages>
@@ -11,6 +11,7 @@
     <import index="jzle" ref="r:644ffd4a-ede9-44f8-96c1-13c9da57c489(com.github.vlsi.iec61131.st.structure)" />
     <import index="tpch" ref="r:00000000-0000-4000-0000-011c8959028d(jetbrains.mps.lang.structure.editor)" implicit="true" />
     <import index="o572" ref="r:2dbfc5b9-463d-4979-b8ea-4697e43c9219(com.github.vlsi.iec61131.st.behavior)" implicit="true" />
+    <import index="ic7y" ref="r:8ea4f830-f7cd-439f-b719-214608b9c8b7(com.github.vlsi.iec61131.types.editor)" implicit="true" />
   </imports>
   <registry>
     <language id="18bc6592-03a6-4e29-a83a-7ff23bde13ba" name="jetbrains.mps.lang.editor">
@@ -33,6 +34,9 @@
       </concept>
       <concept id="1164824717996" name="jetbrains.mps.lang.editor.structure.CellMenuDescriptor" flags="ng" index="OXEIz">
         <child id="1164824815888" name="cellMenuPart" index="OY2wv" />
+      </concept>
+      <concept id="1078939183254" name="jetbrains.mps.lang.editor.structure.CellModel_Component" flags="sg" stub="3162947552742194261" index="PMmxH">
+        <reference id="1078939183255" name="editorComponent" index="PMmxG" />
       </concept>
       <concept id="1164914519156" name="jetbrains.mps.lang.editor.structure.CellMenuPart_ReplaceNode_CustomNodeConcept" flags="ng" index="UkePV">
         <reference id="1164914727930" name="replacementConcept" index="Ul1FP" />
@@ -875,6 +879,13 @@
         </node>
         <node concept="2iRkQZ" id="3Sw88MmwtM3" role="2iSdaV" />
       </node>
+    </node>
+  </node>
+  <node concept="24kQdi" id="4iJnKFEowep">
+    <property role="3GE5qa" value="statements" />
+    <ref role="1XX52x" to="jzle:4iJnKFEowdY" resolve="CommentStatement" />
+    <node concept="PMmxH" id="4iJnKFEpll2" role="2wV5jI">
+      <ref role="PMmxG" to="ic7y:6PcEEFBbhF" resolve="Comment" />
     </node>
   </node>
 </model>

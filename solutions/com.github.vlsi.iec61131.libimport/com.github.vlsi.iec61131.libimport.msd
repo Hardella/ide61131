@@ -10,6 +10,8 @@
     <dependency reexport="false">4d1c59f7-8f87-4192-a752-a98136f0b57c(com.github.vlsi.iec61131.types)</dependency>
     <dependency reexport="false">6ad9d944-fc50-4dd6-b81c-6ccc934e5eb0(com.github.vlsi.iec61131.parser)</dependency>
     <dependency reexport="false">742f6602-5a2f-4313-aa6e-ae1cd4ffdc61(MPS.Platform)</dependency>
+    <dependency reexport="false">ceab5195-25ea-4f22-9b92-103b95ca8c0c(jetbrains.mps.lang.core)</dependency>
+    <dependency reexport="false">6354ebe7-c22a-4a0f-ac54-50b52ab9b065(JDK)</dependency>
   </dependencies>
   <languageVersions>
     <language id="63e0e566-5131-447e-90e3-12ea330e1a00" fqName="com.mbeddr.mpsutil.blutil" version="1" />

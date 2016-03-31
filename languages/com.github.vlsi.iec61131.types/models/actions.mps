@@ -13,7 +13,6 @@
     <use id="ed6d7656-532c-4bc2-81d1-af945aeb8280" name="jetbrains.mps.baseLanguage.blTypes" version="0" />
     <use id="fd392034-7849-419d-9071-12563d152375" name="jetbrains.mps.baseLanguage.closures" version="0" />
     <use id="3a13115c-633c-4c5c-bbcc-75c4219e9555" name="jetbrains.mps.lang.quotation" version="0" />
-    <use id="3f4bc5f5-c6c1-4a28-8b10-c83066ffa4a1" name="jetbrains.mps.lang.constraints" version="0" />
     <devkit ref="fbc25dd2-5da4-483a-8b19-70928e1b62d7(jetbrains.mps.devkit.general-purpose)" />
   </languages>
   <imports>
@@ -78,6 +77,7 @@
         <reference id="1068581517664" name="variableDeclaration" index="3cqZAo" />
       </concept>
       <concept id="1068498886294" name="jetbrains.mps.baseLanguage.structure.AssignmentExpression" flags="nn" index="37vLTI" />
+      <concept id="1225271369338" name="jetbrains.mps.baseLanguage.structure.IsEmptyOperation" flags="nn" index="17RlXB" />
       <concept id="1225271408483" name="jetbrains.mps.baseLanguage.structure.IsNotEmptyOperation" flags="nn" index="17RvpY" />
       <concept id="1225271546410" name="jetbrains.mps.baseLanguage.structure.TrimOperation" flags="nn" index="17S1cR" />
       <concept id="4972933694980447171" name="jetbrains.mps.baseLanguage.structure.BaseVariableDeclaration" flags="ng" index="19Szcq">
@@ -2149,7 +2149,7 @@
       <ref role="3FOWKa" to="933e:5fgiBbs2NXn" resolve="Expression" />
       <node concept="JjB3i" id="3Sw88Mndapi" role="tZc4B" />
       <node concept="35xCft" id="3Sw88MmfFhK" role="tZc4B">
-        <ref role="35y72J" to="933e:3Sw88MmcC5t" resolve="FunctionBlockInitializer" />
+        <ref role="35y72J" to="933e:3Sw88MmcC5t" resolve="StructInitializer" />
       </node>
       <node concept="3buRE8" id="3Sw88MmfpCW" role="3bvWUf">
         <node concept="3clFbS" id="3Sw88MmfpCX" role="2VODD2">
@@ -2308,6 +2308,57 @@
                   </node>
                 </node>
               </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+  </node>
+  <node concept="3UOs0u" id="25DDf3bRc9Y">
+    <property role="3GE5qa" value="sidetransform" />
+    <property role="TrG5h" value="variabledeclaration_comment" />
+    <node concept="3UNGvq" id="25DDf3bRc9Z" role="3UOs0v">
+      <property role="2uHTBK" value="ext_1_RTransform" />
+      <ref role="3UNGvu" to="933e:5fgiBbrRee1" resolve="VariableDeclaration" />
+      <node concept="tYCnQ" id="25DDf3bRcI6" role="_1QTJ">
+        <ref role="uz4UX" to="933e:5fgiBbrRee1" resolve="VariableDeclaration" />
+        <node concept="Cmt7Y" id="25DDf3bRcMn" role="uz6Si">
+          <node concept="Cnhdc" id="25DDf3bRcMp" role="Cncma">
+            <node concept="3clFbS" id="25DDf3bRcMr" role="2VODD2">
+              <node concept="3clFbF" id="25DDf3bRcNe" role="3cqZAp">
+                <node concept="37vLTI" id="25DDf3bRdac" role="3clFbG">
+                  <node concept="2OqwBi" id="25DDf3bRcR1" role="37vLTJ">
+                    <node concept="Cj7Ep" id="25DDf3bRcNd" role="2Oq$k0" />
+                    <node concept="3TrcHB" id="68fOLzcDjiM" role="2OqNvi">
+                      <ref role="3TsBF5" to="933e:6PcEEFB6Kg" resolve="comment" />
+                    </node>
+                  </node>
+                  <node concept="Xl_RD" id="25DDf3bSvT$" role="37vLTx">
+                    <property role="Xl_RC" value="" />
+                  </node>
+                </node>
+              </node>
+              <node concept="3clFbF" id="25DDf3bRdpb" role="3cqZAp">
+                <node concept="10Nm6u" id="25DDf3bRdp9" role="3clFbG" />
+              </node>
+            </node>
+          </node>
+          <node concept="2h1dTh" id="25DDf3bRcNb" role="Cn2iK">
+            <property role="2h1i$Z" value="(" />
+          </node>
+        </node>
+      </node>
+      <node concept="3kRJcU" id="25DDf3bRca1" role="3kShCk">
+        <node concept="3clFbS" id="25DDf3bRca2" role="2VODD2">
+          <node concept="3clFbF" id="25DDf3bRcb7" role="3cqZAp">
+            <node concept="2OqwBi" id="25DDf3bRcxW" role="3clFbG">
+              <node concept="2OqwBi" id="25DDf3bRcfc" role="2Oq$k0">
+                <node concept="Cj7Ep" id="25DDf3bRcb6" role="2Oq$k0" />
+                <node concept="3TrcHB" id="68fOLzcDj7T" role="2OqNvi">
+                  <ref role="3TsBF5" to="933e:6PcEEFB6Kg" resolve="comment" />
+                </node>
+              </node>
+              <node concept="17RlXB" id="25DDf3bRcDM" role="2OqNvi" />
             </node>
           </node>
         </node>

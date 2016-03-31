@@ -287,5 +287,16 @@
       <ref role="20lvS9" node="5fgiBbrReet" resolve="StatementList" />
     </node>
   </node>
+  <node concept="1TIwiD" id="4iJnKFEowdY">
+    <property role="1pbfSe" value="789668488" />
+    <property role="3GE5qa" value="statements" />
+    <property role="TrG5h" value="CommentStatement" />
+    <property role="34LRSv" value="(* comment *)" />
+    <property role="R4oN_" value="comment" />
+    <ref role="1TJDcQ" node="5fgiBbrRfI2" resolve="Statement" />
+    <node concept="PrWs8" id="4iJnKFEplkH" role="PzmwI">
+      <ref role="PrY4T" to="933e:6PcEEFB6Kf" resolve="ICommentable" />
+    </node>
+  </node>
 </model>
 

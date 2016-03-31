@@ -6,6 +6,7 @@
       <modulePath path="$PROJECT_DIR$/languages/com.github.vlsi.iec61131.executors/com.github.vlsi.iec61131.executors.mpl" folder="" />
       <modulePath path="$PROJECT_DIR$/languages/com.github.vlsi.iec61131.executors/runtime/com.github.vlsi.iec61131.executors.runtime.msd" folder="" />
       <modulePath path="$PROJECT_DIR$/languages/com.github.vlsi.iec61131.types/com.github.vlsi.iec61131.types.mpl" folder="" />
+      <modulePath path="$PROJECT_DIR$/languages/com.github.vlsi.iec61131.unittest/com.github.vlsi.iec61131.unittest.mpl" folder="" />
       <modulePath path="$PROJECT_DIR$/languages/st61131/runtime/st61131.runtime.msd" folder="" />
       <modulePath path="$PROJECT_DIR$/languages/st61131/sandbox/st61131.sandbox.msd" folder="" />
       <modulePath path="$PROJECT_DIR$/languages/st61131/st61131.mpl" folder="" />

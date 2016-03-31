@@ -15,6 +15,7 @@
     <language id="df1f98e7-cf94-4627-979f-8c615791cbf3" fqName="com.github.vlsi.iec61131.executors" version="0" />
     <language id="d28e7e4d-b627-42fa-82d5-c7472b85c5f6" fqName="com.github.vlsi.iec61131.st" version="0" />
     <language id="4d1c59f7-8f87-4192-a752-a98136f0b57c" fqName="com.github.vlsi.iec61131.types" version="0" />
+    <language id="3439bd3b-eb74-4688-8e1a-f30479479a8f" fqName="com.github.vlsi.iec61131.unittest" version="0" />
     <language id="8ca79d43-eb45-4791-bdd4-0d6130ff895b" fqName="de.itemis.mps.editor.diagram.layout" version="0" />
     <language id="f3061a53-9226-4cc5-a443-f952ceaf5816" fqName="jetbrains.mps.baseLanguage" version="4" />
     <language id="ed6d7656-532c-4bc2-81d1-af945aeb8280" fqName="jetbrains.mps.baseLanguage.blTypes" version="0" />
