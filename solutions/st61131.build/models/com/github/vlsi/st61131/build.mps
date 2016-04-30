@@ -339,7 +339,7 @@
       </node>
       <node concept="NbPM2" id="1GwckiU99Dr" role="IuMTc">
         <node concept="3Mxwew" id="1GwckiU99Er" role="3MwsjC">
-          <property role="3MwjfP" value="CFC diagram" />
+          <property role="3MwjfP" value="New project wizard" />
         </node>
       </node>
     </node>
@@ -460,6 +460,12 @@
         </node>
       </node>
     </node>
+    <node concept="2sgV4H" id="5Z_5VvhkBJy" role="1l3spa">
+      <ref role="1l3spb" to="ffeo:1lMM4owFq4Y" resolve="mpsVcs" />
+      <node concept="398BVA" id="5Z_5VvhkBKX" role="2JcizS">
+        <ref role="398BVh" node="3$sDymgFgwr" resolve="mps_home" />
+      </node>
+    </node>
     <node concept="1l3spV" id="3$sDymgFgy0" role="1l3spN">
       <node concept="3_I8Xc" id="3$sDymgFgy8" role="39821P">
         <ref role="3_I8Xa" to="ffeo:1diLdO26H79" resolve="languages" />
@@ -537,6 +543,46 @@
             </node>
           </node>
         </node>
+        <node concept="28jJK3" id="5Z_5Vvhk0Xj" role="39821P">
+          <node concept="55IIr" id="5Z_5Vvhk0Xl" role="28jJRO">
+            <node concept="2Ry0Ak" id="5Z_5Vvhk0YG" role="iGT6I">
+              <property role="2Ry0Am" value="lib" />
+              <node concept="2Ry0Ak" id="5Z_5Vvhk0YL" role="2Ry0An">
+                <property role="2Ry0Am" value="miglayout-core-5.0.jar" />
+              </node>
+            </node>
+          </node>
+        </node>
+        <node concept="28jJK3" id="5Z_5Vvhk10b" role="39821P">
+          <node concept="55IIr" id="5Z_5Vvhk10d" role="28jJRO">
+            <node concept="2Ry0Ak" id="5Z_5Vvhk11E" role="iGT6I">
+              <property role="2Ry0Am" value="lib" />
+              <node concept="2Ry0Ak" id="5Z_5Vvhk11J" role="2Ry0An">
+                <property role="2Ry0Am" value="miglayout-swing-5.0.jar" />
+              </node>
+            </node>
+          </node>
+        </node>
+        <node concept="28jJK3" id="7o69NaMVK6k" role="39821P">
+          <node concept="55IIr" id="7o69NaMVK6m" role="28jJRO">
+            <node concept="2Ry0Ak" id="7o69NaMVK7W" role="iGT6I">
+              <property role="2Ry0Am" value="lib" />
+              <node concept="2Ry0Ak" id="7o69NaMVK81" role="2Ry0An">
+                <property role="2Ry0Am" value="jna-4.2.2.jar" />
+              </node>
+            </node>
+          </node>
+        </node>
+        <node concept="28jJK3" id="7o69NaMVK83" role="39821P">
+          <node concept="55IIr" id="7o69NaMVK85" role="28jJRO">
+            <node concept="2Ry0Ak" id="7o69NaMVK9I" role="iGT6I">
+              <property role="2Ry0Am" value="lib" />
+              <node concept="2Ry0Ak" id="7o69NaMVK9N" role="2Ry0An">
+                <property role="2Ry0Am" value="jna-platform-4.2.2.jar" />
+              </node>
+            </node>
+          </node>
+        </node>
         <node concept="3981dx" id="3$sDymgFgyr" role="39821P">
           <node concept="3_J27D" id="3$sDymgFgys" role="Nbhlr">
             <node concept="3Mxwew" id="3$sDymgFgyt" role="3MwsjC">
@@ -584,6 +630,9 @@
         </node>
         <node concept="3_I8Xc" id="2V7xNJmiOpF" role="39821P">
           <ref role="3_I8Xa" to="ffeo:ymnOULAZ8H" resolve="mps-testing" />
+        </node>
+        <node concept="3_I8Xc" id="5Z_5VvhkEeK" role="39821P">
+          <ref role="3_I8Xa" to="ffeo:RJsmGEig2V" resolve="mps-vcs" />
         </node>
         <node concept="3ygNvl" id="6KesM0sXtjf" role="39821P">
           <ref role="3ygNvj" to="al5i:6ucYLjolh0E" resolve="com.mbeddr.platform.zip" />
@@ -765,6 +814,30 @@
                 <property role="2Ry0Am" value="lib" />
                 <node concept="2Ry0Ak" id="68fOLzcJUa$" role="2Ry0An">
                   <property role="2Ry0Am" value="parser-1.1.0-complete.jar" />
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+        <node concept="1SiIV0" id="7o69NaMVDYF" role="3bR37C">
+          <node concept="1BurEX" id="7o69NaMVDYG" role="1SiIV1">
+            <node concept="55IIr" id="7o69NaMVDYC" role="1BurEY">
+              <node concept="2Ry0Ak" id="7o69NaMVDYD" role="iGT6I">
+                <property role="2Ry0Am" value="lib" />
+                <node concept="2Ry0Ak" id="7o69NaMVDYE" role="2Ry0An">
+                  <property role="2Ry0Am" value="jna-4.2.2.jar" />
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+        <node concept="1SiIV0" id="7o69NaMVDYK" role="3bR37C">
+          <node concept="1BurEX" id="7o69NaMVDYL" role="1SiIV1">
+            <node concept="55IIr" id="7o69NaMVDYH" role="1BurEY">
+              <node concept="2Ry0Ak" id="7o69NaMVDYI" role="iGT6I">
+                <property role="2Ry0Am" value="lib" />
+                <node concept="2Ry0Ak" id="7o69NaMVDYJ" role="2Ry0An">
+                  <property role="2Ry0Am" value="jna-platform-4.2.2.jar" />
                 </node>
               </node>
             </node>
@@ -966,6 +1039,18 @@
             <ref role="3bR37D" node="5EBmM4DXjUE" resolve="com.github.vlsi.iec61131.executors" />
           </node>
         </node>
+        <node concept="1SiIV0" id="5Z_5VvhjYpA" role="3bR37C">
+          <node concept="3bR9La" id="5Z_5VvhjYpB" role="1SiIV1">
+            <property role="3bR36h" value="false" />
+            <ref role="3bR37D" to="ffeo:1ia2VB5guYy" resolve="MPS.IDEA" />
+          </node>
+        </node>
+        <node concept="1SiIV0" id="5Z_5VvhjYpC" role="3bR37C">
+          <node concept="3bR9La" id="5Z_5VvhjYpD" role="1SiIV1">
+            <property role="3bR36h" value="false" />
+            <ref role="3bR37D" node="5EBmM4DM4FE" resolve="com.github.vlsi.iec61131.types" />
+          </node>
+        </node>
       </node>
       <node concept="1E1JtA" id="5EBmM4DXkbL" role="2G$12L">
         <property role="BnDLt" value="true" />
@@ -1026,6 +1111,131 @@
               <property role="2Ry0Am" value="com.github.vlsi.iec61131.standard_lib" />
               <node concept="2Ry0Ak" id="5EBmM4DXnbc" role="2Ry0An">
                 <property role="2Ry0Am" value="com.github.vlsi.iec61131.standard_lib.msd" />
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+      <node concept="1E1JtA" id="5Z_5Vvhk0Mp" role="2G$12L">
+        <property role="BnDLt" value="true" />
+        <property role="TrG5h" value="com.github.vlsi.iec61131.quickstart.pluginSolution" />
+        <property role="3LESm3" value="cfcf3140-ab0f-445f-9330-6445d686c9d0" />
+        <property role="2GAjPV" value="false" />
+        <node concept="55IIr" id="5Z_5Vvhk0Rq" role="3LF7KH">
+          <node concept="2Ry0Ak" id="5Z_5Vvhk0Rw" role="iGT6I">
+            <property role="2Ry0Am" value="solutions" />
+            <node concept="2Ry0Ak" id="5Z_5Vvhk0R_" role="2Ry0An">
+              <property role="2Ry0Am" value="com.github.vlsi.iec61131.quickstart.pluginSolution" />
+              <node concept="2Ry0Ak" id="5Z_5Vvhk0RE" role="2Ry0An">
+                <property role="2Ry0Am" value="com.github.vlsi.iec61131.quickstart.pluginSolution.msd" />
+              </node>
+            </node>
+          </node>
+        </node>
+        <node concept="1SiIV0" id="5Z_5Vvhk0RI" role="3bR37C">
+          <node concept="3bR9La" id="5Z_5Vvhk0RJ" role="1SiIV1">
+            <property role="3bR36h" value="false" />
+            <ref role="3bR37D" to="ffeo:1ia2VB5guYy" resolve="MPS.IDEA" />
+          </node>
+        </node>
+        <node concept="1SiIV0" id="5Z_5Vvhk0RM" role="3bR37C">
+          <node concept="3bR9La" id="5Z_5Vvhk0RN" role="1SiIV1">
+            <property role="3bR36h" value="false" />
+            <ref role="3bR37D" to="ffeo:1TaHNgiIbJb" resolve="MPS.Platform" />
+          </node>
+        </node>
+        <node concept="1SiIV0" id="5Z_5Vvhk0RO" role="3bR37C">
+          <node concept="3bR9La" id="5Z_5Vvhk0RP" role="1SiIV1">
+            <property role="3bR36h" value="false" />
+            <ref role="3bR37D" node="5EBmM4DXn4C" resolve="com.github.vlsi.iec61131.standard_lib" />
+          </node>
+        </node>
+        <node concept="1SiIV0" id="5Z_5Vvhk0RQ" role="3bR37C">
+          <node concept="3bR9La" id="5Z_5Vvhk0RR" role="1SiIV1">
+            <property role="3bR36h" value="false" />
+            <ref role="3bR37D" node="3$sDymgJKcK" resolve="com.github.vlsi.iec61131.parser" />
+          </node>
+        </node>
+        <node concept="1SiIV0" id="5Z_5Vvhk0RS" role="3bR37C">
+          <node concept="3bR9La" id="5Z_5Vvhk0RT" role="1SiIV1">
+            <property role="3bR36h" value="false" />
+            <ref role="3bR37D" to="ffeo:2eDSGe9d1qi" resolve="jetbrains.mps.ide" />
+          </node>
+        </node>
+        <node concept="1SiIV0" id="5Z_5Vvhk0RU" role="3bR37C">
+          <node concept="3bR9La" id="5Z_5Vvhk0RV" role="1SiIV1">
+            <property role="3bR36h" value="false" />
+            <ref role="3bR37D" to="ffeo:1H905DlDUSw" resolve="MPS.OpenAPI" />
+          </node>
+        </node>
+        <node concept="1SiIV0" id="5Z_5Vvhk0RW" role="3bR37C">
+          <node concept="3bR9La" id="5Z_5Vvhk0RX" role="1SiIV1">
+            <property role="3bR36h" value="false" />
+            <ref role="3bR37D" to="ffeo:mXGwHwhVPj" resolve="JDK" />
+          </node>
+        </node>
+        <node concept="1SiIV0" id="5Z_5Vvhk0RY" role="3bR37C">
+          <node concept="3bR9La" id="5Z_5Vvhk0RZ" role="1SiIV1">
+            <property role="3bR36h" value="false" />
+            <ref role="3bR37D" to="ffeo:7Kfy9QB6KXW" resolve="jetbrains.mps.lang.core" />
+          </node>
+        </node>
+        <node concept="1SiIV0" id="5Z_5Vvhk0S0" role="3bR37C">
+          <node concept="3bR9La" id="5Z_5Vvhk0S1" role="1SiIV1">
+            <property role="3bR36h" value="false" />
+            <ref role="3bR37D" node="5EBmM4DXjAY" resolve="com.github.vlsi.iec61131.st" />
+          </node>
+        </node>
+        <node concept="1SiIV0" id="5Z_5Vvhk6g4" role="3bR37C">
+          <node concept="3bR9La" id="5Z_5Vvhk6g5" role="1SiIV1">
+            <property role="3bR36h" value="false" />
+            <ref role="3bR37D" node="5EBmM4DXkbL" resolve="com.github.vlsi.iec61131.libimport" />
+          </node>
+        </node>
+        <node concept="1SiIV0" id="5Z_5Vvhk6g6" role="3bR37C">
+          <node concept="3bR9La" id="5Z_5Vvhk6g7" role="1SiIV1">
+            <property role="3bR36h" value="false" />
+            <ref role="3bR37D" node="5EBmM4DM4FE" resolve="com.github.vlsi.iec61131.types" />
+          </node>
+        </node>
+        <node concept="1SiIV0" id="5Z_5Vvhk6g8" role="3bR37C">
+          <node concept="3bR9La" id="5Z_5Vvhk6g9" role="1SiIV1">
+            <property role="3bR36h" value="false" />
+            <ref role="3bR37D" to="ffeo:2eDSGe9d1q1" resolve="MPS.Workbench" />
+          </node>
+        </node>
+        <node concept="1SiIV0" id="5Z_5Vvhk6ga" role="3bR37C">
+          <node concept="3bR9La" id="5Z_5Vvhk6gb" role="1SiIV1">
+            <property role="3bR36h" value="false" />
+            <ref role="3bR37D" to="ffeo:7KapL9OABnm" resolve="jetbrains.mps.ide.ui" />
+          </node>
+        </node>
+        <node concept="1SiIV0" id="5Z_5Vvhk6gc" role="3bR37C">
+          <node concept="3bR9La" id="5Z_5Vvhk6gd" role="1SiIV1">
+            <property role="3bR36h" value="false" />
+            <ref role="3bR37D" node="5EBmM4DXjUE" resolve="com.github.vlsi.iec61131.executors" />
+          </node>
+        </node>
+        <node concept="1SiIV0" id="5Z_5Vvhk6gh" role="3bR37C">
+          <node concept="1BurEX" id="5Z_5Vvhk6gi" role="1SiIV1">
+            <node concept="55IIr" id="5Z_5Vvhk6ge" role="1BurEY">
+              <node concept="2Ry0Ak" id="5Z_5Vvhk6gf" role="iGT6I">
+                <property role="2Ry0Am" value="lib" />
+                <node concept="2Ry0Ak" id="5Z_5Vvhk6gg" role="2Ry0An">
+                  <property role="2Ry0Am" value="miglayout-core-5.0.jar" />
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+        <node concept="1SiIV0" id="5Z_5Vvhk6gm" role="3bR37C">
+          <node concept="1BurEX" id="5Z_5Vvhk6gn" role="1SiIV1">
+            <node concept="55IIr" id="5Z_5Vvhk6gj" role="1BurEY">
+              <node concept="2Ry0Ak" id="5Z_5Vvhk6gk" role="iGT6I">
+                <property role="2Ry0Am" value="lib" />
+                <node concept="2Ry0Ak" id="5Z_5Vvhk6gl" role="2Ry0An">
+                  <property role="2Ry0Am" value="miglayout-swing-5.0.jar" />
+                </node>
               </node>
             </node>
           </node>

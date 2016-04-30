@@ -902,8 +902,19 @@
                   <ref role="kub3w" to="ax34:1uGpoaRwjrp" resolve="TOF" />
                   <node concept="kub3x" id="4iJnKFEqXAl" role="3Ty3gA">
                     <ref role="kuaWX" to="ax34:1uGpoaRwjrr" resolve="IN" />
-                    <node concept="2fRjeW" id="4iJnKFEqXBo" role="kuaX2">
-                      <ref role="2fRto5" node="4iJnKFEqWH4" resolve="presence" />
+                    <node concept="2gtbcv" id="URLPCNCjii" role="kuaX2">
+                      <node concept="3TXI8J" id="URLPCNCjnE" role="2gt4X0">
+                        <ref role="3TXI8W" to="ax34:1uGpoaRwjqO" resolve="Q" />
+                      </node>
+                      <node concept="kub3E" id="URLPCNCjcK" role="2gt4X2">
+                        <ref role="kub3w" to="ax34:1uGpoaRwjqK" resolve="R_TRIG" />
+                        <node concept="kub3x" id="URLPCNCjfL" role="3Ty3gA">
+                          <ref role="kuaWX" to="ax34:1uGpoaRwjqM" resolve="CLK" />
+                          <node concept="2fRjeW" id="URLPCNCji6" role="kuaX2">
+                            <ref role="2fRto5" node="4iJnKFEqWH4" resolve="presence" />
+                          </node>
+                        </node>
+                      </node>
                     </node>
                   </node>
                   <node concept="kub3x" id="4iJnKFEqXPu" role="3Ty3gA">

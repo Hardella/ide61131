@@ -37,6 +37,8 @@
       </concept>
       <concept id="1088185857835" name="jetbrains.mps.lang.editor.structure.InlineEditorComponent" flags="ig" index="1sVBvm" />
       <concept id="1139848536355" name="jetbrains.mps.lang.editor.structure.CellModel_WithRole" flags="ng" index="1$h60E">
+        <property id="1139852716018" name="noTargetText" index="1$x2rV" />
+        <property id="1140114345053" name="allowEmptyText" index="1O74Pk" />
         <reference id="1140103550593" name="relationDeclaration" index="1NtTu8" />
       </concept>
       <concept id="1073389446423" name="jetbrains.mps.lang.editor.structure.CellModel_Collection" flags="sn" stub="3013115976261988961" index="3EZMnI">
@@ -73,9 +75,11 @@
       </node>
       <node concept="3EZMnI" id="4qXNmAZpxg7" role="3EZMnx">
         <node concept="3F0ifn" id="2ePB$VDPFfI" role="3EZMnx">
-          <property role="3F0ifm" value="CoDeSys project:" />
+          <property role="3F0ifm" value="CoDeSys bootstrap project:" />
         </node>
         <node concept="3F0A7n" id="2ePB$VDPFgq" role="3EZMnx">
+          <property role="1O74Pk" value="true" />
+          <property role="1$x2rV" value="create new CoDeSys project" />
           <ref role="1NtTu8" to="r757:2ePB$VDPFfj" resolve="projectToLoad" />
           <node concept="ljvvj" id="2ePB$VDPFip" role="3F10Kt">
             <property role="VOm3f" value="true" />
@@ -95,6 +99,14 @@
         </node>
         <node concept="VPM3Z" id="4qXNmAZpxg9" role="3F10Kt">
           <property role="VOm3f" value="false" />
+        </node>
+        <node concept="3F0ifn" id="5m_LCZkgy9B" role="3EZMnx">
+          <node concept="ljvvj" id="5m_LCZkgy9C" role="3F10Kt">
+            <property role="VOm3f" value="true" />
+          </node>
+          <node concept="VPM3Z" id="5m_LCZkgy9D" role="3F10Kt">
+            <property role="VOm3f" value="false" />
+          </node>
         </node>
         <node concept="3F0ifn" id="4qXNmAZpxgD" role="3EZMnx">
           <property role="3F0ifm" value="types:" />

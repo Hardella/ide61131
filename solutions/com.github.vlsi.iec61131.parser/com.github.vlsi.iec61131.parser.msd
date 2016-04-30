@@ -6,10 +6,14 @@
     </modelRoot>
     <modelRoot contentPath="/Users/vladimirsitnikov/MPSProjects/st61131/lib" type="java_classes">
       <sourceRoot location="parser-1.1.0-complete.jar" />
+      <sourceRoot location="jna-4.2.2.jar" />
+      <sourceRoot location="jna-platform-4.2.2.jar" />
     </modelRoot>
   </models>
   <stubModelEntries>
     <stubModelEntry path="/Users/vladimirsitnikov/MPSProjects/st61131/lib/parser-1.1.0-complete.jar" />
+    <stubModelEntry path="/Users/vladimirsitnikov/MPSProjects/st61131/lib/jna-4.2.2.jar" />
+    <stubModelEntry path="/Users/vladimirsitnikov/MPSProjects/st61131/lib/jna-platform-4.2.2.jar" />
   </stubModelEntries>
   <sourcePath />
   <dependencies>
