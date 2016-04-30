@@ -16,6 +16,7 @@ To update previous version, you can download "update...zip". For instance, `st61
 Videos
 ------
 
+- Creating new project: https://youtu.be/zCULGT3yZwA
 - Pointers: http://recordit.co/U6TTCkqOI4
 - Arrays, structs, enums: http://recordit.co/ijjFqJuiZv
 - Integration with CoDeSys: http://recordit.co/xzAv3BGlzS
@@ -68,6 +69,9 @@ Install mbeddr, clone ide61131, hack as required.
 
 Changelog
 ---------
+
+v1.3.0: 30 April 2016
+- New project wizard: https://youtu.be/zCULGT3yZwA
 
 v1.2.0: 15 February 2016
 - Simple CFC editor
