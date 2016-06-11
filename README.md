@@ -9,12 +9,17 @@ Hardella is an IDE for programmable logic controllers (PLC).
 The main aim is to provide reasonable ST (61131-3) support (autocomplete, refactoring, etc).
 The IDE is based on [JetBrains MPS](https://www.jetbrains.com/mps/) and [mbeddr](http://mbeddr.com/).
 
+Download
+--------
+
+Just grab the latest version here: https://github.com/vlsi/ide61131/releases/latest
+
+To update previous version, you can download "update...zip". For instance, `Hardella-update-from-143-win.zip` would update 143 or newer to the relevant release version.
+
 Usage
 -----
 
-Download a release from "releases" section: https://github.com/vlsi/ide61131/releases
-
-To update previous version, you can download "update...zip". For instance, `st61131-update-from-143-win.zip` would update 143 or newer to the relevant release version.
+In order to run Hardella, Java 1.8+ is require. Grab one here: https://www.java.com/en/download
 
 Videos
 ------
