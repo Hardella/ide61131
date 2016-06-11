@@ -6,8 +6,9 @@
   <tstamp>
     <format property="date" pattern="yyyyMMdd" />
   </tstamp>
-  <property name="build.number" value="143.4" />
-  <property name="version" value="1.3.0" />
+  <property name="build.number" value="143.5" />
+  <property name="version" value="1.4.0" />
+  <property name="appName" value="Hardella" />
   <property name="mps_home" location="${basedir}/../../Documents/work/MPS 3.3" />
   <property name="mbeddr.github.core.home" location="${basedir}/../../Documents/work/mbeddr.core" />
   <property name="artifacts.mpsStandalone" location="${mps_home}" />
@@ -68,6 +69,20 @@
         </tokenfilter>
       </filterchain>
     </copy>
+    <copy todir="${build.layout}/bin">
+      <fileset file="${basedir}/bin/mac/Contents/Info.plist" />
+      <filterchain>
+        <replacetokens>
+          <token key="CFBundleGetInfoString" value="Hardella IDE ${version}" />
+        </replacetokens>
+        <replacetokens>
+          <token key="CFBundleShortVersionString" value="${version}" />
+        </replacetokens>
+        <replacetokens>
+          <token key="CFBundleVersion" value="Hardella-${version}" />
+        </replacetokens>
+      </filterchain>
+    </copy>
     <mkdir dir="${build.layout}/lib" />
     <copy todir="${build.layout}/lib">
       <fileset dir="${artifacts.mpsWorkbench}/lib">
@@ -94,34 +109,44 @@
     <mkdir dir="${build.tmp}/default/branding.jar/idea" />
     <echoxml file="${build.tmp}/default/branding.jar/idea/IdeaApplicationInfo.xml">
       <component>
-        <version codename="IDE 61131" major="1" minor="3" eap="true" />
+        <version codename="" major="1" minor="4.0" eap="false" />
         <company name="Vladimir Sitnikov" url="https://twitter.com/VladimirSitnikv" />
         <build number="${build.number}" date="${date}" />
-        <logo url="/splash.png" textcolor="002387" />
+        <logo url="/splash.png" textcolor="002387" progressColor="4269bc" progressY="394" progressHeight="3" />
         <about url="/about.png" />
-        <icon size32="/MPS32.png" size16="/MPS16.png" size32opaque="/MPS32.png" />
+        <icon size32="/icon_32x32.png" size16="/icon_16x16.png" size32opaque="/icon_32x32.png" size12="/icon_32x32.png" size128="/icon_128x128.png" ico="/icon_128x128.png" />
         <dialogs-image url="/dialogImage.png" />
         <package code="code" />
-        <names product="IDE 61131" fullname="IDE 61131" />
+        <names product="Hardella" fullname="Hardella IDE 61131" />
         
-        <welcome-screen logo-url="/logo.png" />
+        <welcome-screen logo-url="/icon_80x80.png" />
         
         <plugins url="" />
         
         <documentation url="https://github.com/vlsi/ide61131" />
         <support url="https://github.com/vlsi/ide61131/issues" />
-        <feedback eap-url="https://github.com/vlsi/ide61131/issues" />
-        <whatsnew url="New project wizard" />
+        <feedback release-url="https://github.com/vlsi/ide61131/issues" />
+        <whatsnew url="https://github.com/vlsi/ide61131#changelog" />
+        <third-party url="https://github.com/vlsi/ide61131" />
         
       </component>
     </echoxml>
     <jar destfile="${build.layout}/lib/branding.jar" duplicate="preserve">
-      <fileset file="${basedir}/icons/MPS16.png" />
-      <fileset file="${basedir}/icons/MPS32.png" />
-      <fileset file="${basedir}/icons/logo.png" />
+      <fileset file="${basedir}/icons/hardella.iconset/icon_16x16.png" />
+      <fileset file="${basedir}/icons/hardella.iconset/icon_32x32.png" />
+      <fileset file="${basedir}/icons/hardella.iconset/icon_128x128.png" />
+      <fileset file="${basedir}/icons/hardella.iconset/icon_128x128.png" />
+      <fileset file="${basedir}/icons/hardella.iconset/icon_32x32.png" />
+      <fileset file="${basedir}/icons/icon_80x80.png" />
       <fileset file="${basedir}/icons/splash.png" />
       <fileset file="${basedir}/icons/about.png" />
       <fileset file="${basedir}/icons/dialogImage.png" />
+      <fileset file="${basedir}/icons/splash@2x.png" />
+      <fileset file="${basedir}/icons/about@2x.png" />
+      <fileset file="${basedir}/icons/icon_80x80@2x.png" />
+      <fileset file="${basedir}/icons/hardella.iconset/icon_16x16@2x.png" />
+      <fileset file="${basedir}/icons/hardella.iconset/icon_32x32@2x.png" />
+      <fileset file="${basedir}/icons/hardella.iconset/icon_128x128@2x.png" />
       <fileset dir="${build.tmp}/default/branding.jar" />
     </jar>
     <mkdir dir="${build.layout}/plugins" />
@@ -191,9 +216,10 @@
     <echoxml file="${build.layout}/plugins/st61131/META-INF/plugin.xml">
       <idea-plugin version="2" xmlns:xi="http://www.w3.org/2001/XInclude">
         <id>st61131</id>
-        <name>st61131</name>
+        <name>IDE 61131</name>
         <description>ST language support</description>
-        <version>1.3</version>
+        <version>${version}</version>
+        <vendor url="https://github.com/vlsi/ide61131" logo="/icon_16x16.png">Vladimir Sitnikov</vendor>
         <depends>jetbrains.mps.core</depends>
         <depends>jetbrains.mps.debugger.api</depends>
         <depends>jetbrains.mps.debugger.java</depends>
@@ -635,8 +661,12 @@
       <zipfileset dir="${build.tmp}/customProcessors/copyModels/languages-com.github.vlsi.iec61131.cfc-generator-template" prefix="module/generator/template" />
       <zipfileset dir="${build.tmp}/customProcessors/copyModels/languages-com.github.vlsi.iec61131.cfc-models" prefix="module/models" />
     </jar>
+    <mkdir dir="${build.layout}/plugins/st61131/lib" />
+    <jar destfile="${build.layout}/plugins/st61131/lib/icons.jar" duplicate="preserve">
+      <fileset file="${basedir}/icons/hardella.iconset/icon_16x16.png" />
+    </jar>
     <echo file="${build.layout}/build.number">build.number=${build.number}${line.separator}date=${date}${line.separator}version=${version}</echo>
-    <echo file="${build.layout}/build.properties">st61131.date=${date}${line.separator}st61131.build.number=${build.number}${line.separator}st61131.version=${version}${line.separator}mpsBootstrapCore.version=${mpsBootstrapCore.version}${line.separator}mps.build.number=${mps.build.number}${line.separator}mps.date=${mps.date}${line.separator}mps.build.vcs.number=${mps.build.vcs.number}${line.separator}mps.teamcity.buildConfName=${mps.teamcity.buildConfName}${line.separator}mps.idea.platform.build.number=${mps.idea.platform.build.number}${line.separator}mps-sl-all.versionNumber=${mps-sl-all.versionNumber}${line.separator}com.mbeddr.platform.major.version=${com.mbeddr.platform.major.version}${line.separator}com.mbeddr.platform.minor.version=${com.mbeddr.platform.minor.version}${line.separator}com.mbeddr.platform.build=${com.mbeddr.platform.build}${line.separator}com.mbeddr.platform.mbeddr.version=${com.mbeddr.platform.mbeddr.version}</echo>
+    <echo file="${build.layout}/build.properties">st61131.date=${date}${line.separator}st61131.build.number=${build.number}${line.separator}st61131.version=${version}${line.separator}st61131.appName=${appName}${line.separator}mpsBootstrapCore.version=${mpsBootstrapCore.version}${line.separator}mps.build.number=${mps.build.number}${line.separator}mps.date=${mps.date}${line.separator}mps.build.vcs.number=${mps.build.vcs.number}${line.separator}mps.teamcity.buildConfName=${mps.teamcity.buildConfName}${line.separator}mps.idea.platform.build.number=${mps.idea.platform.build.number}${line.separator}mps-sl-all.versionNumber=${mps-sl-all.versionNumber}${line.separator}com.mbeddr.platform.major.version=${com.mbeddr.platform.major.version}${line.separator}com.mbeddr.platform.minor.version=${com.mbeddr.platform.minor.version}${line.separator}com.mbeddr.platform.build=${com.mbeddr.platform.build}${line.separator}com.mbeddr.platform.mbeddr.version=${com.mbeddr.platform.mbeddr.version}</echo>
   </target>
   
   <target name="buildDependents" />

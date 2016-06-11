@@ -1,10 +1,13 @@
-IDE for ST 61131
-================
+<img src="icons/logo_with_text_436x206.png" width="218" height="103" alt="Hardella IDE logo"/>
+
+Hardella: IDE for PLC
+=====================
 
 About
 -----
-This is an MPS-based IDE for IEC61131-3.
-The main aim is to provide reasonable ST support.
+Hardella is an IDE for programmable logic controllers (PLC).
+The main aim is to provide reasonable ST (61131-3) support (autocomplete, refactoring, etc).
+The IDE is based on [JetBrains MPS](https://www.jetbrains.com/mps/) and [mbeddr](http://mbeddr.com/).
 
 Usage
 -----
@@ -25,14 +28,20 @@ Videos
 - Rename variable: http://recordit.co/g1qQlwj1Co
 - CFC diagram: http://recordit.co/2Itr7umnlo
 
-Sample
-------
+Samples
+-------
 
-![Autocomplete](/doc/autocomplete.png)
+#### Autocomplete menu
 
-![Diagram editor](/doc/cfc_sample.png)
+<img src="/doc/autocomplete.png" alt="autocomplete" width="537" height="103">
 
-![sample program](/doc/sample_program.png)
+#### Diagram editor
+
+<img src="/doc/cfc_sample.png" alt="diagram editor" width="750" height="460">
+
+#### Sample ST program
+
+<img src="/doc/sample_program.png" alt="sample ST program" width="371" height="412">
 
 ```
 PROGRAM PLC_PRG
@@ -69,6 +78,9 @@ Install mbeddr, clone ide61131, hack as required.
 
 Changelog
 ---------
+
+v1.4.0: 12 June 2016
+- New project name and logo
 
 v1.3.0: 30 April 2016
 - New project wizard: https://youtu.be/zCULGT3yZwA
