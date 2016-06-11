@@ -85,7 +85,7 @@ Changelog
 ---------
 
 v1.4.0: 12 June 2016
-- New project name and logo
+- New project name and logo. Great thanks to [Sasha Karachinsky](http://karachinsky.ru) for the artwork.
 
 v1.3.0: 30 April 2016
 - New project wizard: https://youtu.be/zCULGT3yZwA
