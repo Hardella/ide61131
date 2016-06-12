@@ -19,7 +19,7 @@ To update previous version, you can download "update...zip". For instance, `Hard
 Usage
 -----
 
-In order to run Hardella, Java 1.8+ is require. Grab one here: https://www.java.com/en/download
+In order to run Hardella, Java 1.8+ is required. Grab one here: https://www.java.com/en/download
 
 Videos
 ------
