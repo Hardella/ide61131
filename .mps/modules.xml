@@ -5,9 +5,9 @@
       <modulePath path="$PROJECT_DIR$/languages/com.github.vlsi.iec61131.cfc/com.github.vlsi.iec61131.cfc.mpl" folder="" />
       <modulePath path="$PROJECT_DIR$/languages/com.github.vlsi.iec61131.executors/com.github.vlsi.iec61131.executors.mpl" folder="" />
       <modulePath path="$PROJECT_DIR$/languages/com.github.vlsi.iec61131.executors/runtime/com.github.vlsi.iec61131.executors.runtime.msd" folder="" />
-      <modulePath path="$PROJECT_DIR$/languages/com.github.vlsi.iec61131.st2ti1208/com.github.vlsi.iec61131.st2ti1208.mpl" folder="" />
-      <modulePath path="$PROJECT_DIR$/languages/com.github.vlsi.iec61131.ti1208.cfc/com.github.vlsi.iec61131.ti1208.cfc.mpl" folder="" />
-      <modulePath path="$PROJECT_DIR$/languages/com.github.vlsi.iec61131.ti1208/com.github.vlsi.iec61131.ti1208.mpl" folder="" />
+      <modulePath path="$PROJECT_DIR$/languages/com.github.vlsi.iec61131.st2ti1808/com.github.vlsi.iec61131.st2ti1808.mpl" folder="" />
+      <modulePath path="$PROJECT_DIR$/languages/com.github.vlsi.iec61131.ti1808.cfc/com.github.vlsi.iec61131.ti1808.cfc.mpl" folder="" />
+      <modulePath path="$PROJECT_DIR$/languages/com.github.vlsi.iec61131.ti1808/com.github.vlsi.iec61131.ti1808.mpl" folder="" />
       <modulePath path="$PROJECT_DIR$/languages/com.github.vlsi.iec61131.types/com.github.vlsi.iec61131.types.mpl" folder="" />
       <modulePath path="$PROJECT_DIR$/languages/com.github.vlsi.iec61131.unittest/com.github.vlsi.iec61131.unittest.mpl" folder="" />
       <modulePath path="$PROJECT_DIR$/languages/st61131/runtime/st61131.runtime.msd" folder="" />
@@ -16,7 +16,7 @@
       <modulePath path="$PROJECT_DIR$/solutions/com.github.vlsi.iec61131.libimport/com.github.vlsi.iec61131.libimport.msd" folder="" />
       <modulePath path="$PROJECT_DIR$/solutions/com.github.vlsi.iec61131.parser/com.github.vlsi.iec61131.parser.msd" folder="" />
       <modulePath path="$PROJECT_DIR$/solutions/com.github.vlsi.iec61131.quickstart.pluginSolution/com.github.vlsi.iec61131.quickstart.pluginSolution.msd" folder="" />
-      <modulePath path="$PROJECT_DIR$/solutions/com.github.vlsi.iec61131.st2ti1208.runtime/com.github.vlsi.iec61131.st2ti1208.runtime.msd" folder="" />
+      <modulePath path="$PROJECT_DIR$/solutions/com.github.vlsi.iec61131.st2ti1808.runtime/com.github.vlsi.iec61131.st2ti1808.runtime.msd" folder="" />
       <modulePath path="$PROJECT_DIR$/solutions/com.github.vlsi.iec61131.standard_lib/com.github.vlsi.iec61131.standard_lib.msd" folder="" />
       <modulePath path="$PROJECT_DIR$/solutions/st61131.build/st61131.build.msd" folder="" />
     </projectModules>

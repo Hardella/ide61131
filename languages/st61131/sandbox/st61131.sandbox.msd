@@ -14,9 +14,9 @@
     <language id="7cae3606-2859-42f2-a1bc-fb96ab480b0b" fqName="com.github.vlsi.iec61131.cfc" version="0" />
     <language id="df1f98e7-cf94-4627-979f-8c615791cbf3" fqName="com.github.vlsi.iec61131.executors" version="0" />
     <language id="d28e7e4d-b627-42fa-82d5-c7472b85c5f6" fqName="com.github.vlsi.iec61131.st" version="0" />
-    <language id="d1aef6cd-5477-486f-bcbd-34728b246566" fqName="com.github.vlsi.iec61131.st2ti1208" version="-1" />
-    <language id="d7601ad3-513b-4e38-a483-fb62b3afe145" fqName="com.github.vlsi.iec61131.ti1208" version="-1" />
-    <language id="0c570d36-bf70-48a5-9f6a-2285d6b3b400" fqName="com.github.vlsi.iec61131.ti1208.cfc" version="-1" />
+    <language id="d1aef6cd-5477-486f-bcbd-34728b246566" fqName="com.github.vlsi.iec61131.st2ti1808" version="-1" />
+    <language id="d7601ad3-513b-4e38-a483-fb62b3afe145" fqName="com.github.vlsi.iec61131.ti1808" version="-1" />
+    <language id="0c570d36-bf70-48a5-9f6a-2285d6b3b400" fqName="com.github.vlsi.iec61131.ti1808.cfc" version="-1" />
     <language id="4d1c59f7-8f87-4192-a752-a98136f0b57c" fqName="com.github.vlsi.iec61131.types" version="0" />
     <language id="3439bd3b-eb74-4688-8e1a-f30479479a8f" fqName="com.github.vlsi.iec61131.unittest" version="0" />
     <language id="8ca79d43-eb45-4791-bdd4-0d6130ff895b" fqName="de.itemis.mps.editor.diagram.layout" version="0" />

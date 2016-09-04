@@ -4,11 +4,11 @@
   <languages>
     <use id="d28e7e4d-b627-42fa-82d5-c7472b85c5f6" name="com.github.vlsi.iec61131.st" version="0" />
     <use id="4d1c59f7-8f87-4192-a752-a98136f0b57c" name="com.github.vlsi.iec61131.types" version="0" />
-    <use id="d7601ad3-513b-4e38-a483-fb62b3afe145" name="com.github.vlsi.iec61131.ti1208" version="-1" />
-    <use id="d1aef6cd-5477-486f-bcbd-34728b246566" name="com.github.vlsi.iec61131.st2ti1208" version="-1" />
-    <use id="0c570d36-bf70-48a5-9f6a-2285d6b3b400" name="com.github.vlsi.iec61131.ti1208.cfc" version="-1" />
+    <use id="d7601ad3-513b-4e38-a483-fb62b3afe145" name="com.github.vlsi.iec61131.ti1808" version="-1" />
+    <use id="d1aef6cd-5477-486f-bcbd-34728b246566" name="com.github.vlsi.iec61131.st2ti1808" version="-1" />
+    <use id="0c570d36-bf70-48a5-9f6a-2285d6b3b400" name="com.github.vlsi.iec61131.ti1808.cfc" version="-1" />
     <use id="8ca79d43-eb45-4791-bdd4-0d6130ff895b" name="de.itemis.mps.editor.diagram.layout" version="0" />
-    <generationPart ref="d1aef6cd-5477-486f-bcbd-34728b246566(com.github.vlsi.iec61131.st2ti1208)" />
+    <generationPart ref="d1aef6cd-5477-486f-bcbd-34728b246566(com.github.vlsi.iec61131.st2ti1808)" />
   </languages>
   <imports />
   <registry>
