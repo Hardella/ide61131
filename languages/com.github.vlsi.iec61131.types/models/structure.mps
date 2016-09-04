@@ -1181,7 +1181,7 @@
     <property role="34LRSv" value="&lt;" />
     <property role="R4oN_" value="less than operation" />
     <property role="1pbfSe" value="803888700" />
-    <ref role="1TJDcQ" node="5fgiBbs6kiv" resolve="BinaryOperation" />
+    <ref role="1TJDcQ" node="5fgiBbs6xPf" resolve="BinaryCompareOperation" />
   </node>
   <node concept="1TIwiD" id="5fgiBbs6kiv">
     <property role="3GE5qa" value="expressions" />
@@ -1707,7 +1707,7 @@
   <node concept="Az7Fb" id="25DDf3cI0Kh">
     <property role="3GE5qa" value="types" />
     <property role="TrG5h" value="_RealValue" />
-    <property role="FLfZY" value="-?[0-9]*(\\.[0-9]*([Ee][\\+\\-]?[0-9]+)?)?" />
+    <property role="FLfZY" value="-?[0-9]*\\.([0-9]*([Ee][\\+\\-]?[0-9]+)?)?" />
   </node>
   <node concept="1TIwiD" id="25DDf3cLMHg">
     <property role="1pbfSe" value="298790848" />
@@ -2182,6 +2182,46 @@
     <node concept="1TJgyj" id="4iJnKFErfwg" role="1TKVEi">
       <property role="20lmBu" value="aggregation" />
       <property role="20kJfa" value="ifTrue" />
+      <property role="20lbJX" value="1" />
+      <ref role="20lvS9" node="5fgiBbs2NXn" resolve="Expression" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="5qOIvv2738z">
+    <property role="1pbfSe" value="416345114" />
+    <property role="3GE5qa" value="expressions.methods" />
+    <property role="TrG5h" value="ShlFunction" />
+    <property role="34LRSv" value="SHL" />
+    <property role="R4oN_" value="binary shift left" />
+    <ref role="1TJDcQ" node="3gaOo01zA9z" resolve="InternalMethodCall" />
+    <node concept="1TJgyj" id="5qOIvv273aT" role="1TKVEi">
+      <property role="20lmBu" value="aggregation" />
+      <property role="20kJfa" value="operand" />
+      <property role="20lbJX" value="1" />
+      <ref role="20lvS9" node="5fgiBbs2NXn" resolve="Expression" />
+    </node>
+    <node concept="1TJgyj" id="5qOIvv273aV" role="1TKVEi">
+      <property role="20lmBu" value="aggregation" />
+      <property role="20kJfa" value="shift" />
+      <property role="20lbJX" value="1" />
+      <ref role="20lvS9" node="5fgiBbs2NXn" resolve="Expression" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="5qOIvv2738$">
+    <property role="1pbfSe" value="416345115" />
+    <property role="3GE5qa" value="expressions.methods" />
+    <property role="TrG5h" value="ShrFunction" />
+    <property role="34LRSv" value="SHR" />
+    <property role="R4oN_" value="binary shift right" />
+    <ref role="1TJDcQ" node="3gaOo01zA9z" resolve="InternalMethodCall" />
+    <node concept="1TJgyj" id="5qOIvv2bP_v" role="1TKVEi">
+      <property role="20lmBu" value="aggregation" />
+      <property role="20kJfa" value="operand" />
+      <property role="20lbJX" value="1" />
+      <ref role="20lvS9" node="5fgiBbs2NXn" resolve="Expression" />
+    </node>
+    <node concept="1TJgyj" id="5qOIvv2bP_x" role="1TKVEi">
+      <property role="20lmBu" value="aggregation" />
+      <property role="20kJfa" value="shift" />
       <property role="20lbJX" value="1" />
       <ref role="20lvS9" node="5fgiBbs2NXn" resolve="Expression" />
     </node>

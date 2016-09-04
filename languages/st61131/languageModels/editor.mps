@@ -461,6 +461,9 @@
         <node concept="VPxyj" id="5MdVxrFVZ1B" role="3F10Kt">
           <property role="VOm3f" value="true" />
         </node>
+        <node concept="3mYdg7" id="6VooDTgXLh" role="3F10Kt">
+          <property role="1413C4" value="body-brace" />
+        </node>
       </node>
       <node concept="3F1sOY" id="5fgiBbs5gN1" role="3EZMnx">
         <ref role="1NtTu8" to="jzle:5fgiBbs5e85" />
