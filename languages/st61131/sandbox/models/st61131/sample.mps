@@ -19,9 +19,6 @@
         <child id="6039408957482663992" name="lValue" index="2fKkDa" />
         <child id="6039408957482663996" name="rValue" index="2fKkDe" />
       </concept>
-      <concept id="6039408957482454237" name="com.github.vlsi.iec61131.st.structure.ExpressionStatement" flags="ng" index="2fRoqJ">
-        <child id="6039408957482454986" name="expression" index="2fRomS" />
-      </concept>
     </language>
     <language id="df1f98e7-cf94-4627-979f-8c615791cbf3" name="com.github.vlsi.iec61131.executors">
       <concept id="5097456207319667256" name="com.github.vlsi.iec61131.executors.structure.CoDeSysExportConfiguration" flags="ng" index="3TQXXh">
@@ -154,11 +151,6 @@
         </node>
         <node concept="2fRjeW" id="4FDhPh_kEdx" role="2fKkDa">
           <ref role="2fRto5" node="4FDhPh_kEcO" resolve="lamp" />
-        </node>
-      </node>
-      <node concept="2fRoqJ" id="bMI9tMde_q" role="283bkg">
-        <node concept="kub3E" id="bMI9tMde_o" role="2fRomS">
-          <ref role="kub3w" node="4FDhPh$VAX7" resolve="PLC_PRG" />
         </node>
       </node>
     </node>

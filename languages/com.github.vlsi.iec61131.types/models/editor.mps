@@ -4501,5 +4501,66 @@
       <node concept="l2Vlx" id="5qOIvv2bPtK" role="2iSdaV" />
     </node>
   </node>
+  <node concept="24kQdi" id="74nadn9bgMV">
+    <property role="3GE5qa" value="expressions.methods" />
+    <ref role="1XX52x" to="933e:74nadn9bgJW" resolve="MaxFunction" />
+    <node concept="3EZMnI" id="74nadn9bgMX" role="2wV5jI">
+      <node concept="3F0ifn" id="74nadn9bgMY" role="3EZMnx">
+        <property role="3F0ifm" value="MAX" />
+        <ref role="1k5W1q" to="tpch:24YP6ZDyde4" resolve="Keyword" />
+        <node concept="11LMrY" id="74nadn9bgMZ" role="3F10Kt">
+          <property role="VOm3f" value="true" />
+        </node>
+      </node>
+      <node concept="3F0ifn" id="74nadn9bgN0" role="3EZMnx">
+        <property role="3F0ifm" value="(" />
+        <ref role="1k5W1q" to="tpen:hFCSAw$" resolve="LeftParen" />
+        <node concept="11L4FC" id="74nadn9bgN1" role="3F10Kt">
+          <property role="VOm3f" value="true" />
+        </node>
+        <node concept="11LMrY" id="74nadn9bgN2" role="3F10Kt">
+          <property role="VOm3f" value="true" />
+        </node>
+      </node>
+      <node concept="1kIj98" id="74nadn9bgN3" role="3EZMnx">
+        <node concept="3F1sOY" id="74nadn9bgN4" role="1kIj9b">
+          <ref role="1NtTu8" to="933e:74nadn9bgMu" />
+        </node>
+        <node concept="2ee1ZP" id="74nadn9bgN5" role="2ee7bq">
+          <node concept="3clFbS" id="74nadn9bgN6" role="2VODD2">
+            <node concept="3clFbF" id="74nadn9bgN7" role="3cqZAp">
+              <node concept="Xl_RD" id="74nadn9bgN8" role="3clFbG">
+                <property role="Xl_RC" value="MAX" />
+              </node>
+            </node>
+          </node>
+        </node>
+        <node concept="2ee1ZP" id="74nadn9bgN9" role="2ee62g">
+          <node concept="3clFbS" id="74nadn9bgNa" role="2VODD2">
+            <node concept="3clFbF" id="74nadn9bgNb" role="3cqZAp">
+              <node concept="10Nm6u" id="74nadn9bgNc" role="3clFbG" />
+            </node>
+          </node>
+        </node>
+      </node>
+      <node concept="3F0ifn" id="74nadn9bgNd" role="3EZMnx">
+        <property role="3F0ifm" value="," />
+        <node concept="11L4FC" id="74nadn9bgNe" role="3F10Kt">
+          <property role="VOm3f" value="true" />
+        </node>
+      </node>
+      <node concept="3F1sOY" id="74nadn9bgNf" role="3EZMnx">
+        <ref role="1NtTu8" to="933e:74nadn9bgMw" />
+      </node>
+      <node concept="3F0ifn" id="74nadn9bgNg" role="3EZMnx">
+        <property role="3F0ifm" value=")" />
+        <ref role="1k5W1q" to="tpen:hFCSUmN" resolve="RightParen" />
+        <node concept="11L4FC" id="74nadn9bgNh" role="3F10Kt">
+          <property role="VOm3f" value="true" />
+        </node>
+      </node>
+      <node concept="l2Vlx" id="74nadn9bgNi" role="2iSdaV" />
+    </node>
+  </node>
 </model>
 

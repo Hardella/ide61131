@@ -65,7 +65,6 @@
     <property role="R5$K2" value="false" />
     <property role="3GE5qa" value="statements" />
     <property role="34LRSv" value="&lt;statement&gt;" />
-    <property role="R4oN_" value="statement" />
     <property role="1pbfSe" value="799884788" />
     <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
     <node concept="PrWs8" id="5fgiBbs4ch2" role="PzmwI">

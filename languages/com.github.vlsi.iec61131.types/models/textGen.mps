@@ -2884,5 +2884,40 @@
       </node>
     </node>
   </node>
+  <node concept="WtQ9Q" id="74nadn9bhCp">
+    <property role="3GE5qa" value="expressions.methods" />
+    <ref role="WuzLi" to="933e:74nadn9bgJW" resolve="MaxFunction" />
+    <node concept="11bSqf" id="74nadn9bhCq" role="11c4hB">
+      <node concept="3clFbS" id="74nadn9bhCr" role="2VODD2">
+        <node concept="lc7rE" id="74nadn9bhCB" role="3cqZAp">
+          <node concept="la8eA" id="74nadn9bhCC" role="lcghm">
+            <property role="lacIc" value="MAX(" />
+          </node>
+          <node concept="l9hG8" id="74nadn9bhCD" role="lcghm">
+            <node concept="2OqwBi" id="74nadn9bhCE" role="lb14g">
+              <node concept="117lpO" id="74nadn9bhCF" role="2Oq$k0" />
+              <node concept="3TrEf2" id="74nadn9bhJl" role="2OqNvi">
+                <ref role="3Tt5mk" to="933e:74nadn9bgMu" />
+              </node>
+            </node>
+          </node>
+          <node concept="la8eA" id="74nadn9bhCH" role="lcghm">
+            <property role="lacIc" value=", " />
+          </node>
+          <node concept="l9hG8" id="74nadn9bhCI" role="lcghm">
+            <node concept="2OqwBi" id="74nadn9bhCJ" role="lb14g">
+              <node concept="117lpO" id="74nadn9bhCK" role="2Oq$k0" />
+              <node concept="3TrEf2" id="74nadn9bhOX" role="2OqNvi">
+                <ref role="3Tt5mk" to="933e:74nadn9bgMw" />
+              </node>
+            </node>
+          </node>
+          <node concept="la8eA" id="74nadn9bhCM" role="lcghm">
+            <property role="lacIc" value=")" />
+          </node>
+        </node>
+      </node>
+    </node>
+  </node>
 </model>
 

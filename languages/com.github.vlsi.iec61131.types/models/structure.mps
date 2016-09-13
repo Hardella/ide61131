@@ -2226,5 +2226,25 @@
       <ref role="20lvS9" node="5fgiBbs2NXn" resolve="Expression" />
     </node>
   </node>
+  <node concept="1TIwiD" id="74nadn9bgJW">
+    <property role="1pbfSe" value="977548497" />
+    <property role="3GE5qa" value="expressions.methods" />
+    <property role="TrG5h" value="MaxFunction" />
+    <property role="34LRSv" value="MAX" />
+    <property role="R4oN_" value="calculate maximum" />
+    <ref role="1TJDcQ" node="3gaOo01zA9z" resolve="InternalMethodCall" />
+    <node concept="1TJgyj" id="74nadn9bgMu" role="1TKVEi">
+      <property role="20lmBu" value="aggregation" />
+      <property role="20kJfa" value="a" />
+      <property role="20lbJX" value="1" />
+      <ref role="20lvS9" node="5fgiBbs2NXn" resolve="Expression" />
+    </node>
+    <node concept="1TJgyj" id="74nadn9bgMw" role="1TKVEi">
+      <property role="20lmBu" value="aggregation" />
+      <property role="20kJfa" value="b" />
+      <property role="20lbJX" value="1" />
+      <ref role="20lvS9" node="5fgiBbs2NXn" resolve="Expression" />
+    </node>
+  </node>
 </model>
 
