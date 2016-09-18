@@ -9,7 +9,6 @@
   <dependencies>
     <dependency reexport="false">0041b19a-d72e-4eff-909f-c9935bfd4e88(com.github.vlsi.iec61131.standard_lib)</dependency>
     <dependency reexport="false">8ca79d43-eb45-4791-bdd4-0d6130ff895b(de.itemis.mps.editor.diagram.layout)</dependency>
-    <dependency reexport="false">1323ea85-b20f-4e73-a50e-95759a9c57c1(com.github.vlsi.iec61131.st.sandbox@transient142)</dependency>
     <dependency reexport="false">d1aef6cd-5477-486f-bcbd-34728b246566(com.github.vlsi.iec61131.st2ti1808)</dependency>
     <dependency reexport="false">642f71f8-327a-425b-84f9-44ad58786d27(jetbrains.mps.lang.project.modules)</dependency>
     <dependency reexport="false">44ae5b95-6c91-4767-a63c-505721ea4c11(com.github.vlsi.iec61131.ti1808.libcompiler)</dependency>

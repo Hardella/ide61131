@@ -183,7 +183,7 @@
     <node concept="283aBN" id="6VooDTcVxk" role="2fQKEM">
       <property role="TrG5h" value="quantity" />
       <property role="2fKTFS" value="true" />
-      <node concept="2fQKt7" id="6VooDTcVxT" role="2fQRkO" />
+      <node concept="2fQKs2" id="312iJfFmmFy" role="2fQRkO" />
     </node>
     <node concept="283aBN" id="6VooDTcVzk" role="2fQKEM">
       <property role="TrG5h" value="out" />
@@ -199,7 +199,7 @@
       <property role="TrG5h" value="qtyLeft" />
       <property role="2fKTFZ" value="true" />
       <property role="2fKTC_" value="true" />
-      <node concept="2fQKt7" id="6VooDTcVyn" role="2fQRkO" />
+      <node concept="2fQKs2" id="312iJfFmmJj" role="2fQRkO" />
     </node>
     <node concept="283aBJ" id="6VooDTcV$9" role="283bkm">
       <node concept="2fLe5g" id="6VooDTcVEu" role="283bkg">
@@ -950,15 +950,54 @@
         <ref role="3T_mE6" node="6VooDTcVws" resolve="PRU_GENER_BURST" />
       </node>
     </node>
+    <node concept="283aBN" id="312iJfFmlUZ" role="2fQKEM">
+      <property role="TrG5h" value="enable" />
+      <node concept="PkkMJ" id="312iJfFmlVs" role="2fQRkO" />
+    </node>
     <node concept="283aBN" id="74nadn9bbCw" role="2fQKEM">
       <property role="TrG5h" value="cycleLength" />
       <node concept="2fQKt7" id="74nadn9bbCV" role="2fQRkO" />
     </node>
     <node concept="283aBN" id="74nadn96BQn" role="2fQKEM">
       <property role="TrG5h" value="quantity" />
-      <node concept="2fQKt7" id="74nadn96BQW" role="2fQRkO" />
+      <node concept="2fQKs2" id="312iJfFmmMU" role="2fQRkO" />
+    </node>
+    <node concept="283aBN" id="312iJfFmmfI" role="2fQKEM">
+      <property role="TrG5h" value="ready" />
+      <node concept="PkkMJ" id="312iJfFmmg5" role="2fQRkO" />
+    </node>
+    <node concept="283aBN" id="312iJfFmmBg" role="2fQKEM">
+      <property role="TrG5h" value="qtyLeft" />
+      <node concept="2fQKs2" id="312iJfFmmN9" role="2fQRkO" />
     </node>
     <node concept="283aBJ" id="7l3WX474Zko" role="283bkm">
+      <node concept="2INlLO" id="312iJfFmmba" role="283bkg">
+        <property role="2EalUU" value="безопасные значения" />
+      </node>
+      <node concept="2fKkDk" id="312iJfFmlWP" role="283bkg">
+        <node concept="2fLVyO" id="312iJfFmlZ4" role="2fKkDe">
+          <property role="2fLV_C" value="false" />
+        </node>
+        <node concept="2fRjeW" id="312iJfFmlVS" role="2fKkDa">
+          <ref role="2fRto5" node="312iJfFmlUZ" resolve="enable" />
+        </node>
+      </node>
+      <node concept="2fKkDk" id="312iJfFmm8e" role="283bkg">
+        <node concept="2fQMEq" id="312iJfFmm9_" role="2fKkDe">
+          <property role="2fVhNJ" value="100" />
+        </node>
+        <node concept="2fRjeW" id="312iJfFmm6w" role="2fKkDa">
+          <ref role="2fRto5" node="74nadn9bbCw" resolve="cycleLength" />
+        </node>
+      </node>
+      <node concept="2fKkDk" id="312iJfFmneh" role="283bkg">
+        <node concept="2fQMEq" id="312iJfFmng1" role="2fKkDe">
+          <property role="2fVhNJ" value="0" />
+        </node>
+        <node concept="2fRjeW" id="312iJfFmnch" role="2fKkDa">
+          <ref role="2fRto5" node="74nadn96BQn" resolve="quantity" />
+        </node>
+      </node>
       <node concept="2f$z1j" id="1l2OrOTevb4" role="283bkg">
         <node concept="2fLVyO" id="1l2OrOTevbG" role="2f$z13">
           <property role="2fLV_C" value="true" />
@@ -967,27 +1006,6 @@
           <node concept="2INlLO" id="1l2OrOTevhd" role="283bkg">
             <property role="2EalUU" value="собственно полезная работа" />
           </node>
-          <node concept="3NXZbc" id="74nadn96BY5" role="283bkg">
-            <node concept="1SZpTx" id="74nadn96BY6" role="3NXZbf">
-              <node concept="1SZUJe" id="74nadn96BYC" role="1SZ66K">
-                <property role="1SZV$o" value="LBCO" />
-                <property role="3N2JDk" value="Считаем, что по нулевому адресу в DRAM находится quantity" />
-                <node concept="3NXsbA" id="74nadn96BYW" role="1SZVuN">
-                  <ref role="3NXsbE" node="74nadn96BQn" resolve="quantity" />
-                </node>
-                <node concept="3NKoA0" id="74nadn96BZ4" role="1SZVuN">
-                  <property role="3NKoA3" value="3" />
-                </node>
-                <node concept="3NKoA0" id="74nadn96BZe" role="1SZVuN">
-                  <property role="3NKoA3" value="0" />
-                </node>
-                <node concept="3NKoA0" id="74nadn96BZq" role="1SZVuN">
-                  <property role="3NKoA3" value="2" />
-                </node>
-              </node>
-            </node>
-          </node>
-          <node concept="283b7K" id="74nadn9iZ9w" role="283bkg" />
           <node concept="2fRoqJ" id="74nadn96BLi" role="283bkg">
             <node concept="3Ty29G" id="74nadn96BLO" role="2fRomS">
               <node concept="2fRjeW" id="74nadn96BLg" role="3Ty3gz">
@@ -995,13 +1013,8 @@
               </node>
               <node concept="kub3x" id="74nadn96BM2" role="3Ty3gA">
                 <ref role="kuaWX" node="6VooDTcVwY" resolve="enable" />
-                <node concept="2gtbcv" id="74nadn9j5qI" role="kuaX2">
-                  <node concept="3TXI8J" id="74nadn9j5re" role="2gt4X0">
-                    <ref role="3TXI8W" node="6LAvc6vNp0w" resolve="Q" />
-                  </node>
-                  <node concept="kub3E" id="74nadn9j5qn" role="2gt4X2">
-                    <ref role="kub3w" node="6LAvc6vNoZP" resolve="PRU_IN1" />
-                  </node>
+                <node concept="2fRjeW" id="312iJfFmn7U" role="kuaX2">
+                  <ref role="2fRto5" node="312iJfFmlUZ" resolve="enable" />
                 </node>
               </node>
               <node concept="kub3x" id="74nadn96BRe" role="3Ty3gA">
@@ -1068,23 +1081,127 @@
               </node>
             </node>
           </node>
-          <node concept="2fRoqJ" id="74nadn96BVn" role="283bkg">
-            <node concept="kub3E" id="74nadn96BVl" role="2fRomS">
-              <ref role="kub3w" node="6LAvc6vDSr0" resolve="PRU_OUT2" />
-              <node concept="kub3x" id="74nadn96BVX" role="3Ty3gA">
-                <ref role="kuaWX" node="6LAvc6vDSr1" resolve="Q" />
-                <node concept="2gtbcv" id="74nadn96BWE" role="kuaX2">
-                  <node concept="3TXI8J" id="74nadn96BXb" role="2gt4X0">
-                    <ref role="3TXI8W" node="6VooDTcVyu" resolve="ready" />
-                  </node>
-                  <node concept="2fRjeW" id="74nadn96BWt" role="2gt4X2">
-                    <ref role="2fRto5" node="74nadn96BK0" resolve="burst" />
-                  </node>
+          <node concept="283b7K" id="312iJfFmmpx" role="283bkg" />
+          <node concept="2INlLO" id="312iJfFmn2k" role="283bkg">
+            <property role="2EalUU" value="Загружаем параметры" />
+          </node>
+          <node concept="3NXZbc" id="312iJfFmmTe" role="283bkg">
+            <node concept="1SZpTx" id="312iJfFmmTf" role="3NXZbf">
+              <node concept="1SZUJe" id="312iJfFmmZP" role="1SZ66K">
+                <property role="1SZV$o" value="LBCO" />
+                <node concept="3NXsbA" id="312iJfFmn0a" role="1SZVuN">
+                  <ref role="3NXsbE" node="74nadn96BQn" resolve="quantity" />
+                </node>
+                <node concept="3NKoA0" id="312iJfFmmZR" role="1SZVuN">
+                  <property role="3NKoA3" value="3" />
+                </node>
+                <node concept="3NKoA0" id="312iJfFmmZS" role="1SZVuN">
+                  <property role="3NKoA3" value="100" />
+                </node>
+                <node concept="3NKoA0" id="312iJfFmmZT" role="1SZVuN">
+                  <property role="3NKoA3" value="4" />
+                </node>
+              </node>
+              <node concept="1SZUJe" id="312iJfFmmVd" role="1SZ66K">
+                <property role="1SZV$o" value="LBCO" />
+                <node concept="3NXsbA" id="312iJfFmmVt" role="1SZVuN">
+                  <ref role="3NXsbE" node="74nadn9bbCw" resolve="cycleLength" />
+                </node>
+                <node concept="3NKoA0" id="312iJfFmmV_" role="1SZVuN">
+                  <property role="3NKoA3" value="3" />
+                </node>
+                <node concept="3NKoA0" id="312iJfFmmVJ" role="1SZVuN">
+                  <property role="3NKoA3" value="104" />
+                </node>
+                <node concept="3NKoA0" id="312iJfFmmZi" role="1SZVuN">
+                  <property role="3NKoA3" value="4" />
+                </node>
+              </node>
+              <node concept="1SZUJe" id="312iJfFmmTl" role="1SZ66K">
+                <property role="1SZV$o" value="LBCO" />
+                <node concept="3NXsbA" id="312iJfFmmTm" role="1SZVuN">
+                  <ref role="3NXsbE" node="312iJfFmlUZ" resolve="enable" />
+                </node>
+                <node concept="3NKoA0" id="312iJfFmmTn" role="1SZVuN">
+                  <property role="3NKoA3" value="3" />
+                </node>
+                <node concept="3NKoA0" id="312iJfFmmTo" role="1SZVuN">
+                  <property role="3NKoA3" value="108" />
+                </node>
+                <node concept="3NKoA0" id="312iJfFmmTp" role="1SZVuN">
+                  <property role="3NKoA3" value="1" />
                 </node>
               </node>
             </node>
           </node>
-          <node concept="283b7K" id="1l2OrOTevj6" role="283bkg" />
+          <node concept="283b7K" id="312iJfFmmWV" role="283bkg" />
+          <node concept="2INlLO" id="312iJfFmn59" role="283bkg">
+            <property role="2EalUU" value="Выводим выгружаем состояние в ПЛК" />
+          </node>
+          <node concept="2fKkDk" id="312iJfFmmj2" role="283bkg">
+            <node concept="2gtbcv" id="312iJfFmmkB" role="2fKkDe">
+              <node concept="3TXI8J" id="312iJfFmml7" role="2gt4X0">
+                <ref role="3TXI8W" node="6VooDTcVyu" resolve="ready" />
+              </node>
+              <node concept="2fRjeW" id="312iJfFmmkk" role="2gt4X2">
+                <ref role="2fRto5" node="74nadn96BK0" resolve="burst" />
+              </node>
+            </node>
+            <node concept="2fRjeW" id="312iJfFmmi7" role="2fKkDa">
+              <ref role="2fRto5" node="312iJfFmmfI" resolve="ready" />
+            </node>
+          </node>
+          <node concept="3NXZbc" id="312iJfFmm4D" role="283bkg">
+            <node concept="1SZpTx" id="312iJfFmm4E" role="3NXZbf">
+              <node concept="1SZUJe" id="312iJfFmmfa" role="1SZ66K">
+                <property role="1SZV$o" value="SBCO" />
+                <node concept="3NXsbA" id="312iJfFmmrx" role="1SZVuN">
+                  <ref role="3NXsbE" node="312iJfFmmfI" resolve="ready" />
+                </node>
+                <node concept="3NKoA0" id="312iJfFmmrD" role="1SZVuN">
+                  <property role="3NKoA3" value="3" />
+                </node>
+                <node concept="3NKoA0" id="312iJfFmmvY" role="1SZVuN">
+                  <property role="3NKoA3" value="112" />
+                </node>
+                <node concept="3NKoA0" id="312iJfFmmw6" role="1SZVuN">
+                  <property role="3NKoA3" value="1" />
+                </node>
+              </node>
+            </node>
+          </node>
+          <node concept="2fKkDk" id="312iJfFmmPd" role="283bkg">
+            <node concept="2gtbcv" id="312iJfFmmR8" role="2fKkDe">
+              <node concept="3TXI8J" id="312iJfFmmS0" role="2gt4X0">
+                <ref role="3TXI8W" node="6VooDTcVy0" resolve="qtyLeft" />
+              </node>
+              <node concept="2fRjeW" id="312iJfFmmQP" role="2gt4X2">
+                <ref role="2fRto5" node="74nadn96BK0" resolve="burst" />
+              </node>
+            </node>
+            <node concept="2fRjeW" id="312iJfFmmNs" role="2fKkDa">
+              <ref role="2fRto5" node="312iJfFmmBg" resolve="qtyLeft" />
+            </node>
+          </node>
+          <node concept="3NXZbc" id="312iJfFmmxm" role="283bkg">
+            <node concept="1SZpTx" id="312iJfFmmxn" role="3NXZbf">
+              <node concept="1SZUJe" id="312iJfFmmxo" role="1SZ66K">
+                <property role="1SZV$o" value="SBCO" />
+                <node concept="3NXsbA" id="312iJfFmmSY" role="1SZVuN">
+                  <ref role="3NXsbE" node="312iJfFmmBg" resolve="qtyLeft" />
+                </node>
+                <node concept="3NKoA0" id="312iJfFmmxq" role="1SZVuN">
+                  <property role="3NKoA3" value="3" />
+                </node>
+                <node concept="3NKoA0" id="312iJfFmmxr" role="1SZVuN">
+                  <property role="3NKoA3" value="116" />
+                </node>
+                <node concept="3NKoA0" id="312iJfFmmxs" role="1SZVuN">
+                  <property role="3NKoA3" value="4" />
+                </node>
+              </node>
+            </node>
+          </node>
           <node concept="2INlLO" id="1l2OrOTeviR" role="283bkg">
             <property role="2EalUU" value="Тут будет передача данных из/в host" />
           </node>

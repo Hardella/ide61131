@@ -240,6 +240,7 @@
         <reference id="3155126767689025691" name="linkDeclaration" index="aDKIf" />
       </concept>
       <concept id="9064581101900867235" name="de.itemis.mps.editor.diagram.structure.IEdgeEditor" flags="ng" index="ljJFv">
+        <child id="621570459751239491" name="canSplit" index="KYgL9" />
         <child id="7188630757225274921" name="navigationTargets" index="1i7NIZ" />
         <child id="8587703283523592228" name="endpointFrom" index="1PN8q7" />
         <child id="8587703283523592242" name="endpointTo" index="1PN8qh" />
@@ -262,6 +263,7 @@
       <concept id="5383048119156619323" name="de.itemis.mps.editor.diagram.structure.IDiagramElementsProvider" flags="ng" index="HB_m5">
         <child id="3155126767688717334" name="contentList" index="aCds2" />
       </concept>
+      <concept id="621570459751009499" name="de.itemis.mps.editor.diagram.structure.EdgeEditor_CanSplit" flags="ig" index="KXoZh" />
       <concept id="2863449916475514559" name="de.itemis.mps.editor.diagram.structure.Parameter_EndpointFrom" flags="ng" index="S61CS" />
       <concept id="2863449916475515524" name="de.itemis.mps.editor.diagram.structure.Parameter_EndpointTo" flags="ng" index="S62o3" />
       <concept id="2863449916472123607" name="de.itemis.mps.editor.diagram.structure.SimpleConnectionType_CanCreate" flags="ig" index="SN6hg" />
@@ -321,6 +323,7 @@
         <child id="9064581101900868073" name="target" index="ljJml" />
         <child id="8587703283523590803" name="shape" index="1PNbKK" />
         <child id="8587703283523590801" name="setTarget" index="1PNbKM" />
+        <child id="3073973028676889051" name="anySideAllowed" index="3XKxJP" />
       </concept>
       <concept id="5712445629353395770" name="de.itemis.mps.editor.diagram.structure.Parameter_TargetNode" flags="ng" index="3R4i$M" />
       <concept id="5712445629353393305" name="de.itemis.mps.editor.diagram.structure.Function_SetConnectionEndpoint" flags="ig" index="3R4teh" />
@@ -449,6 +452,9 @@
         <node concept="2xQOud" id="1GwckiU7aR_" role="1PNbKK">
           <ref role="2xQOue" to="wo6c:4Te4zGtlJMP" resolve="Ellipsis" />
         </node>
+        <node concept="3clFbT" id="4t_GHi9d$dP" role="3XKxJP">
+          <property role="3clFbU" value="true" />
+        </node>
       </node>
       <node concept="1PNbMa" id="1GwckiU79SJ" role="1PN8qh">
         <node concept="23hSXV" id="1GwckiU7aTn" role="ljJml">
@@ -533,6 +539,18 @@
                   <ref role="3TsBF5" to="6w6t:1GwckiU13BX" resolve="toPort" />
                 </node>
               </node>
+            </node>
+          </node>
+        </node>
+        <node concept="3clFbT" id="4t_GHi9d$c$" role="3XKxJP">
+          <property role="3clFbU" value="true" />
+        </node>
+      </node>
+      <node concept="KXoZh" id="4t_GHi9dFzY" role="KYgL9">
+        <node concept="3clFbS" id="4t_GHi9dFzZ" role="2VODD2">
+          <node concept="3clFbF" id="4t_GHi9dFAX" role="3cqZAp">
+            <node concept="3clFbT" id="4t_GHi9dFAW" role="3clFbG">
+              <property role="3clFbU" value="true" />
             </node>
           </node>
         </node>
