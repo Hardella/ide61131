@@ -6,8 +6,8 @@
     <use id="4d1c59f7-8f87-4192-a752-a98136f0b57c" name="com.github.vlsi.iec61131.types" version="0" />
     <use id="d7601ad3-513b-4e38-a483-fb62b3afe145" name="com.github.vlsi.iec61131.ti1808" version="0" />
     <use id="d1aef6cd-5477-486f-bcbd-34728b246566" name="com.github.vlsi.iec61131.st2ti1808" version="0" />
-    <generationPart ref="d1aef6cd-5477-486f-bcbd-34728b246566(com.github.vlsi.iec61131.st2ti1808)" />
-    <generationPart ref="8be64a62-fc9c-4c90-a832-507f291073fd(com.github.vlsi.iec61131.ti1808.toemulator)" />
+    <engage id="d1aef6cd-5477-486f-bcbd-34728b246566" name="com.github.vlsi.iec61131.st2ti1808" />
+    <engage id="8be64a62-fc9c-4c90-a832-507f291073fd" name="com.github.vlsi.iec61131.ti1808.toemulator" />
   </languages>
   <imports>
     <import index="ocpr" ref="r:559bb865-4f6c-4d13-9298-a01687fa843f(com.github.vlsi.iec61131.st2ti1808.structure)" />
@@ -1026,26 +1026,6 @@
             </node>
           </node>
           <node concept="283b7K" id="1l2OrOTevgD" role="283bkg" />
-          <node concept="3NXZbc" id="74nadn9bbAg" role="283bkg">
-            <node concept="1SZpTx" id="74nadn9bbAh" role="3NXZbf">
-              <node concept="1SZUJe" id="74nadn9bbCm" role="1SZ66K">
-                <property role="1SZV$o" value="LBCO" />
-                <property role="3N2JDk" value="Считаем, что по смещению 2 в памяти находится длительность цикла" />
-                <node concept="3NXsbA" id="74nadn9bbDi" role="1SZVuN">
-                  <ref role="3NXsbE" node="74nadn9bbCw" resolve="cycleLength" />
-                </node>
-                <node concept="3NKoA0" id="74nadn9bbCo" role="1SZVuN">
-                  <property role="3NKoA3" value="3" />
-                </node>
-                <node concept="3NKoA0" id="74nadn9bbCp" role="1SZVuN">
-                  <property role="3NKoA3" value="2" />
-                </node>
-                <node concept="3NKoA0" id="74nadn9bbCq" role="1SZVuN">
-                  <property role="3NKoA3" value="2" />
-                </node>
-              </node>
-            </node>
-          </node>
           <node concept="2INlLO" id="74nadn96BCv" role="283bkg">
             <property role="2EalUU" value="Параметр pruCycleLength это &quot;количество тактов&quot;" />
           </node>
@@ -1114,7 +1094,7 @@
                   <property role="3NKoA3" value="104" />
                 </node>
                 <node concept="3NKoA0" id="312iJfFmmZi" role="1SZVuN">
-                  <property role="3NKoA3" value="4" />
+                  <property role="3NKoA3" value="2" />
                 </node>
               </node>
               <node concept="1SZUJe" id="312iJfFmmTl" role="1SZ66K">
@@ -1716,6 +1696,10 @@
   </node>
   <node concept="1X6EaH" id="74nadn90YjR">
     <property role="TrG5h" value="PRU_CYCLE_TEST" />
+    <node concept="283aBN" id="2KCNNQhOR3r" role="2fQKEM">
+      <property role="TrG5h" value="dfs" />
+      <node concept="2fQKs2" id="2KCNNQhOR3E" role="2fQRkO" />
+    </node>
     <node concept="283aBJ" id="74nadn90Ykr" role="283bkm">
       <node concept="2f$z1j" id="74nadn90YkJ" role="283bkg">
         <node concept="2fLVyO" id="74nadn90Yld" role="2f$z13">

@@ -7,8 +7,8 @@
   </models>
   <sourcePath />
   <languageVersions>
-    <language id="4d1c59f7-8f87-4192-a752-a98136f0b57c" fqName="com.github.vlsi.iec61131.types" version="0" />
-    <language id="ceab5195-25ea-4f22-9b92-103b95ca8c0c" fqName="jetbrains.mps.lang.core" version="1" />
+    <language slang="l:4d1c59f7-8f87-4192-a752-a98136f0b57c:com.github.vlsi.iec61131.types" version="0" />
+    <language slang="l:ceab5195-25ea-4f22-9b92-103b95ca8c0c:jetbrains.mps.lang.core" version="1" />
   </languageVersions>
   <dependencyVersions>
     <module reference="0041b19a-d72e-4eff-909f-c9935bfd4e88(com.github.vlsi.iec61131.standard_lib)" version="0" />

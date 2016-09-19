@@ -2,7 +2,7 @@
 <model ref="r:d822af51-1880-43ce-bb91-0037b5256b38(com.github.vlsi.iec61131.executors.editor)">
   <persistence version="9" />
   <languages>
-    <use id="18bc6592-03a6-4e29-a83a-7ff23bde13ba" name="jetbrains.mps.lang.editor" version="3" />
+    <use id="18bc6592-03a6-4e29-a83a-7ff23bde13ba" name="jetbrains.mps.lang.editor" version="4" />
     <devkit ref="fbc25dd2-5da4-483a-8b19-70928e1b62d7(jetbrains.mps.devkit.general-purpose)" />
   </languages>
   <imports>
@@ -116,7 +116,7 @@
         </node>
         <node concept="3F2HdR" id="4qXNmAZpxdm" role="3EZMnx">
           <property role="2czwfO" value="," />
-          <ref role="1NtTu8" to="r757:4qXNmAZpxcC" />
+          <ref role="1NtTu8" to="r757:4qXNmAZpxcC" resolve="types" />
           <node concept="l2Vlx" id="4qXNmAZpxdn" role="2czzBx" />
           <node concept="pj6Ft" id="4qXNmAZnjYd" role="3F10Kt">
             <property role="VOm3f" value="true" />
@@ -147,7 +147,7 @@
         </node>
         <node concept="3F2HdR" id="4qXNmAZpxdp" role="3EZMnx">
           <property role="2czwfO" value="," />
-          <ref role="1NtTu8" to="r757:4qXNmAZpx9M" />
+          <ref role="1NtTu8" to="r757:4qXNmAZpx9M" resolve="pous" />
           <node concept="l2Vlx" id="4qXNmAZpxdq" role="2czzBx" />
           <node concept="pj6Ft" id="4qXNmAZpxTi" role="3F10Kt">
             <property role="VOm3f" value="true" />
@@ -178,7 +178,7 @@
   <node concept="24kQdi" id="4qXNmAZpygQ">
     <ref role="1XX52x" to="r757:4qXNmAZpx9U" resolve="ReferenceToPou" />
     <node concept="1iCGBv" id="4qXNmAZpygS" role="2wV5jI">
-      <ref role="1NtTu8" to="r757:4qXNmAZpx9V" />
+      <ref role="1NtTu8" to="r757:4qXNmAZpx9V" resolve="pou" />
       <node concept="1sVBvm" id="4qXNmAZpygU" role="1sWHZn">
         <node concept="3SHvHV" id="4qXNmAZpyha" role="2wV5jI" />
       </node>

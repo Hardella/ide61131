@@ -3,11 +3,11 @@
   <persistence version="9" />
   <languages>
     <use id="ef7bf5ac-d06c-4342-b11d-e42104eb9343" name="jetbrains.mps.lang.plugin.standalone" version="0" />
-    <use id="28f9e497-3b42-4291-aeba-0a1039153ab1" name="jetbrains.mps.lang.plugin" version="0" />
-    <use id="982eb8df-2c96-4bd7-9963-11712ea622e5" name="jetbrains.mps.lang.resources" version="0" />
+    <use id="28f9e497-3b42-4291-aeba-0a1039153ab1" name="jetbrains.mps.lang.plugin" version="1" />
+    <use id="982eb8df-2c96-4bd7-9963-11712ea622e5" name="jetbrains.mps.lang.resources" version="2" />
     <use id="306d7456-29e2-4ea3-9c46-e7b830b08481" name="com.mbeddr.mpsutil.process" version="0" />
     <use id="f3061a53-9226-4cc5-a443-f952ceaf5816" name="jetbrains.mps.baseLanguage" version="4" />
-    <use id="aee9cad2-acd4-4608-aef2-0004f6a1cdbd" name="jetbrains.mps.lang.actions" version="0" />
+    <use id="aee9cad2-acd4-4608-aef2-0004f6a1cdbd" name="jetbrains.mps.lang.actions" version="3" />
     <use id="63650c59-16c8-498a-99c8-005c7ee9515d" name="jetbrains.mps.lang.access" version="0" />
     <use id="3a13115c-633c-4c5c-bbcc-75c4219e9555" name="jetbrains.mps.lang.quotation" version="0" />
     <use id="d28e7e4d-b627-42fa-82d5-c7472b85c5f6" name="com.github.vlsi.iec61131.st" version="0" />
@@ -59,7 +59,7 @@
     <import index="2k9e" ref="6ed54515-acc8-4d1e-a16c-9fd6cfe951ea/java:jetbrains.mps.smodel.adapter.structure(MPS.Core/)" />
     <import index="9ti4" ref="498d89d2-c2e9-11e2-ad49-6cf049e62fe5/java:com.intellij.openapi.extensions(MPS.IDEA/)" />
     <import index="h4ob" ref="r:252d1bf4-3052-47b0-86ce-c40b11aa9fa4(com.github.vlsi.iec61131.libimport.plugin)" />
-    <import index="57ty" ref="742f6602-5a2f-4313-aa6e-ae1cd4ffdc61/java:jetbrains.mps.ide.messages()" />
+    <import index="57ty" ref="742f6602-5a2f-4313-aa6e-ae1cd4ffdc61/java:jetbrains.mps.ide.messages(MPS.Platform/)" />
     <import index="jlff" ref="498d89d2-c2e9-11e2-ad49-6cf049e62fe5/java:com.intellij.openapi.vfs(MPS.IDEA/)" />
     <import index="4hrd" ref="742f6602-5a2f-4313-aa6e-ae1cd4ffdc61/java:jetbrains.mps.ide.vfs(MPS.Platform/)" />
     <import index="933e" ref="r:18dd54ba-c7e4-4f7b-951e-411e5bff3335(com.github.vlsi.iec61131.types.structure)" />
@@ -77,7 +77,7 @@
   </imports>
   <registry>
     <language id="982eb8df-2c96-4bd7-9963-11712ea622e5" name="jetbrains.mps.lang.resources">
-      <concept id="8974276187400029883" name="jetbrains.mps.lang.resources.structure.IconResource" flags="ng" index="1QGGSu">
+      <concept id="8974276187400029883" name="jetbrains.mps.lang.resources.structure.FileIcon" flags="ng" index="1QGGSu">
         <child id="6976585500156684809" name="iconExpression" index="3xaMm5" />
       </concept>
     </language>
@@ -6010,7 +6010,7 @@
                                                       </node>
                                                     </node>
                                                     <node concept="2pIpSj" id="4gPriRq3Xsp" role="2pJxcM">
-                                                      <ref role="2pIpSl" to="933e:5fgiBbs2NX6" />
+                                                      <ref role="2pIpSl" to="933e:5fgiBbs2NX6" resolve="typeDecl" />
                                                       <node concept="2pJPED" id="4gPriRq3Xsq" role="2pJxcZ">
                                                         <ref role="2pJxaS" to="933e:3gaOo01mTOJ" resolve="BoolType" />
                                                       </node>
@@ -6026,7 +6026,7 @@
                                                     <ref role="3cqZAo" node="4gPriRq3E9x" resolve="gvars" />
                                                   </node>
                                                   <node concept="3Tsc0h" id="4gPriRq3K2C" role="2OqNvi">
-                                                    <ref role="3TtcxE" to="933e:5fgiBbs2O30" />
+                                                    <ref role="3TtcxE" to="933e:5fgiBbs2O30" resolve="variables" />
                                                   </node>
                                                 </node>
                                                 <node concept="TSZUe" id="4gPriRq3NdB" role="2OqNvi">
@@ -6058,7 +6058,7 @@
                                                       </node>
                                                     </node>
                                                     <node concept="2pIpSj" id="4gPriRq40ie" role="2pJxcM">
-                                                      <ref role="2pIpSl" to="933e:5fgiBbs2NX6" />
+                                                      <ref role="2pIpSl" to="933e:5fgiBbs2NX6" resolve="typeDecl" />
                                                       <node concept="2pJPED" id="4gPriRq40if" role="2pJxcZ">
                                                         <ref role="2pJxaS" to="933e:3gaOo01mTOJ" resolve="BoolType" />
                                                       </node>
@@ -6075,7 +6075,7 @@
                                                     <ref role="3cqZAo" node="4gPriRq3E9x" resolve="gvars" />
                                                   </node>
                                                   <node concept="3Tsc0h" id="4gPriRq40i2" role="2OqNvi">
-                                                    <ref role="3TtcxE" to="933e:5fgiBbs2O30" />
+                                                    <ref role="3TtcxE" to="933e:5fgiBbs2O30" resolve="variables" />
                                                   </node>
                                                 </node>
                                                 <node concept="TSZUe" id="4gPriRq40i3" role="2OqNvi">
@@ -6141,7 +6141,7 @@
                                                     <ref role="3cqZAo" node="4gPriRq2VyZ" resolve="root" />
                                                   </node>
                                                   <node concept="3TrEf2" id="4gPriRq30xu" role="2OqNvi">
-                                                    <ref role="3Tt5mk" to="933e:3cChPJbRvfH" />
+                                                    <ref role="3Tt5mk" to="933e:3cChPJbRvfH" resolve="klass" />
                                                   </node>
                                                 </node>
                                                 <node concept="2OqwBi" id="4gPriRq2$2L" role="37vLTx">
@@ -6188,7 +6188,7 @@
                                                     <ref role="3cqZAo" node="4gPriRq2dis" resolve="plcConfig" />
                                                   </node>
                                                   <node concept="3TrEf2" id="4gPriRq2jLe" role="2OqNvi">
-                                                    <ref role="3Tt5mk" to="933e:3cChPJbRrtP" />
+                                                    <ref role="3Tt5mk" to="933e:3cChPJbRrtP" resolve="rootModule" />
                                                   </node>
                                                 </node>
                                                 <node concept="37vLTw" id="4gPriRq32H9" role="37vLTx">
@@ -6235,7 +6235,7 @@
                                                       <node concept="2pJPED" id="5m_LCZkczdk" role="2pJPEn">
                                                         <ref role="2pJxaS" to="933e:5fgiBbs3nBe" resolve="VariableReference" />
                                                         <node concept="2pIpSj" id="5m_LCZkc$1B" role="2pJxcM">
-                                                          <ref role="2pIpSl" to="933e:5fgiBbs3pLR" />
+                                                          <ref role="2pIpSl" to="933e:5fgiBbs3pLR" resolve="variableDeclaration" />
                                                           <node concept="36biLy" id="5m_LCZkc$ZR" role="2pJxcZ">
                                                             <node concept="37vLTw" id="5m_LCZkcIIN" role="36biLW">
                                                               <ref role="3cqZAo" node="4gPriRq40i6" resolve="buttonVar" />
@@ -6249,7 +6249,7 @@
                                                         <ref role="1M0zk5" node="5m_LCZkcnEm" resolve="input" />
                                                       </node>
                                                       <node concept="3TrEf2" id="5m_LCZkcwl3" role="2OqNvi">
-                                                        <ref role="3Tt5mk" to="933e:4FDhPh$VB2u" />
+                                                        <ref role="3Tt5mk" to="933e:4FDhPh$VB2u" resolve="variable" />
                                                       </node>
                                                     </node>
                                                   </node>
@@ -6264,11 +6264,11 @@
                                                           <ref role="3cqZAo" node="4gPriRq2dis" resolve="plcConfig" />
                                                         </node>
                                                         <node concept="3TrEf2" id="5m_LCZkcgKQ" role="2OqNvi">
-                                                          <ref role="3Tt5mk" to="933e:3cChPJbRrtP" />
+                                                          <ref role="3Tt5mk" to="933e:3cChPJbRrtP" resolve="rootModule" />
                                                         </node>
                                                       </node>
                                                       <node concept="3Tsc0h" id="5m_LCZkcgKR" role="2OqNvi">
-                                                        <ref role="3TtcxE" to="933e:25DDf3bYiei" />
+                                                        <ref role="3TtcxE" to="933e:25DDf3bYiei" resolve="subModules" />
                                                       </node>
                                                     </node>
                                                     <node concept="1z4cxt" id="5m_LCZkcgKS" role="2OqNvi">
@@ -6283,7 +6283,7 @@
                                                                       <ref role="3cqZAo" node="5m_LCZkcgL4" resolve="it" />
                                                                     </node>
                                                                     <node concept="3TrEf2" id="5m_LCZkcgL0" role="2OqNvi">
-                                                                      <ref role="3Tt5mk" to="933e:3cChPJbRvfH" />
+                                                                      <ref role="3Tt5mk" to="933e:3cChPJbRvfH" resolve="klass" />
                                                                     </node>
                                                                   </node>
                                                                   <node concept="3TrcHB" id="5m_LCZkcgL1" role="2OqNvi">
@@ -6334,7 +6334,7 @@
                                                       <node concept="2pJPED" id="5m_LCZkcJxA" role="2pJPEn">
                                                         <ref role="2pJxaS" to="933e:5fgiBbs3nBe" resolve="VariableReference" />
                                                         <node concept="2pIpSj" id="5m_LCZkcJxB" role="2pJxcM">
-                                                          <ref role="2pIpSl" to="933e:5fgiBbs3pLR" />
+                                                          <ref role="2pIpSl" to="933e:5fgiBbs3pLR" resolve="variableDeclaration" />
                                                           <node concept="36biLy" id="5m_LCZkcJxC" role="2pJxcZ">
                                                             <node concept="37vLTw" id="5m_LCZkcVFJ" role="36biLW">
                                                               <ref role="3cqZAo" node="4gPriRq3Xsi" resolve="lampVar" />
@@ -6348,7 +6348,7 @@
                                                         <ref role="1M0zk5" node="5m_LCZkcJxw" resolve="output" />
                                                       </node>
                                                       <node concept="3TrEf2" id="5m_LCZkcJxG" role="2OqNvi">
-                                                        <ref role="3Tt5mk" to="933e:4FDhPh$VB2u" />
+                                                        <ref role="3Tt5mk" to="933e:4FDhPh$VB2u" resolve="variable" />
                                                       </node>
                                                     </node>
                                                   </node>
@@ -6363,11 +6363,11 @@
                                                           <ref role="3cqZAo" node="4gPriRq2dis" resolve="plcConfig" />
                                                         </node>
                                                         <node concept="3TrEf2" id="5m_LCZkcJxN" role="2OqNvi">
-                                                          <ref role="3Tt5mk" to="933e:3cChPJbRrtP" />
+                                                          <ref role="3Tt5mk" to="933e:3cChPJbRrtP" resolve="rootModule" />
                                                         </node>
                                                       </node>
                                                       <node concept="3Tsc0h" id="5m_LCZkcJxO" role="2OqNvi">
-                                                        <ref role="3TtcxE" to="933e:25DDf3bYiei" />
+                                                        <ref role="3TtcxE" to="933e:25DDf3bYiei" resolve="subModules" />
                                                       </node>
                                                     </node>
                                                     <node concept="1z4cxt" id="5m_LCZkcJxP" role="2OqNvi">
@@ -6382,7 +6382,7 @@
                                                                       <ref role="3cqZAo" node="5m_LCZkcJy1" resolve="it" />
                                                                     </node>
                                                                     <node concept="3TrEf2" id="5m_LCZkcJxX" role="2OqNvi">
-                                                                      <ref role="3Tt5mk" to="933e:3cChPJbRvfH" />
+                                                                      <ref role="3Tt5mk" to="933e:3cChPJbRvfH" resolve="klass" />
                                                                     </node>
                                                                   </node>
                                                                   <node concept="3TrcHB" id="5m_LCZkcJxY" role="2OqNvi">
@@ -6459,7 +6459,7 @@
                                                     <ref role="3cqZAo" node="4gPriRq3nyx" resolve="plc_prg" />
                                                   </node>
                                                   <node concept="3TrEf2" id="5m_LCZkfraP" role="2OqNvi">
-                                                    <ref role="3Tt5mk" to="933e:5fgiBbrRfX$" />
+                                                    <ref role="3Tt5mk" to="933e:5fgiBbrRfX$" resolve="body" />
                                                   </node>
                                                 </node>
                                                 <node concept="2c44tf" id="5m_LCZkfuly" role="37vLTx">
@@ -6471,7 +6471,7 @@
                                                             <node concept="2pJPED" id="5m_LCZkg53c" role="2pJPEn">
                                                               <ref role="2pJxaS" to="933e:5fgiBbs3nBe" resolve="VariableReference" />
                                                               <node concept="2pIpSj" id="5m_LCZkg5Sw" role="2pJxcM">
-                                                                <ref role="2pIpSl" to="933e:5fgiBbs3pLR" />
+                                                                <ref role="2pIpSl" to="933e:5fgiBbs3pLR" resolve="variableDeclaration" />
                                                                 <node concept="36biLy" id="5m_LCZkg6S_" role="2pJxcZ">
                                                                   <node concept="37vLTw" id="5m_LCZkg839" role="36biLW">
                                                                     <ref role="3cqZAo" node="4gPriRq3Xsi" resolve="lampVar" />
@@ -6504,7 +6504,7 @@
                                                                         <node concept="2pJPED" id="5m_LCZkgaXX" role="2pJPEn">
                                                                           <ref role="2pJxaS" to="933e:5fgiBbs3nBe" resolve="VariableReference" />
                                                                           <node concept="2pIpSj" id="5m_LCZkgbKN" role="2pJxcM">
-                                                                            <ref role="2pIpSl" to="933e:5fgiBbs3pLR" />
+                                                                            <ref role="2pIpSl" to="933e:5fgiBbs3pLR" resolve="variableDeclaration" />
                                                                             <node concept="36biLy" id="5m_LCZkgcKO" role="2pJxcZ">
                                                                               <node concept="37vLTw" id="5m_LCZkgdIM" role="36biLW">
                                                                                 <ref role="3cqZAo" node="4gPriRq40i6" resolve="buttonVar" />

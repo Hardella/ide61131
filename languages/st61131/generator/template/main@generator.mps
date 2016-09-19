@@ -7,7 +7,7 @@
     <use id="d7706f63-9be2-479c-a3da-ae92af1e64d5" name="jetbrains.mps.lang.generator.generationContext" version="0" />
     <use id="ceab5195-25ea-4f22-9b92-103b95ca8c0c" name="jetbrains.mps.lang.core" version="1" />
     <use id="13744753-c81f-424a-9c1b-cf8943bf4e86" name="jetbrains.mps.lang.sharedConcepts" version="0" />
-    <use id="c72da2b9-7cce-4447-8389-f407dc1158b7" name="jetbrains.mps.lang.structure" version="1" />
+    <use id="c72da2b9-7cce-4447-8389-f407dc1158b7" name="jetbrains.mps.lang.structure" version="3" />
     <use id="ed6d7656-532c-4bc2-81d1-af945aeb8280" name="jetbrains.mps.baseLanguage.blTypes" version="0" />
     <use id="9ded098b-ad6a-4657-bfd9-48636cfe8bc3" name="jetbrains.mps.lang.traceable" version="0" />
     <devkit ref="fbc25dd2-5da4-483a-8b19-70928e1b62d7(jetbrains.mps.devkit.general-purpose)" />
@@ -274,7 +274,7 @@
                       <ref role="2Gs0qQ" node="5026ndIe9fq" resolve="f" />
                     </node>
                     <node concept="3TrEf2" id="5026ndIehes" role="2OqNvi">
-                      <ref role="3Tt5mk" to="933e:4wOfIPsj8Sd" />
+                      <ref role="3Tt5mk" to="933e:4wOfIPsj8Sd" resolve="function" />
                     </node>
                   </node>
                   <node concept="JncvC" id="5026ndIeh0s" role="JncvA">
@@ -326,7 +326,7 @@
                                     <ref role="2Gs0qQ" node="5026ndIe9fq" resolve="f" />
                                   </node>
                                   <node concept="3TrEf2" id="5026ndIebFl" role="2OqNvi">
-                                    <ref role="3Tt5mk" to="933e:4wOfIPsj8Sd" />
+                                    <ref role="3Tt5mk" to="933e:4wOfIPsj8Sd" resolve="function" />
                                   </node>
                                 </node>
                                 <node concept="3TrcHB" id="5026ndIebFm" role="2OqNvi">
@@ -358,11 +358,11 @@
                               </node>
                             </node>
                             <node concept="2pIpSj" id="5026ndIemLU" role="2pJxcM">
-                              <ref role="2pIpSl" to="933e:5fgiBbs2NX6" />
+                              <ref role="2pIpSl" to="933e:5fgiBbs2NX6" resolve="typeDecl" />
                               <node concept="2pJPED" id="5026ndIemLV" role="2pJxcZ">
                                 <ref role="2pJxaS" to="933e:4qXNmAZaavI" resolve="ReferenceToFunctionBlock" />
                                 <node concept="2pIpSj" id="5026ndIemLW" role="2pJxcM">
-                                  <ref role="2pIpSl" to="933e:4qXNmAZaavJ" />
+                                  <ref role="2pIpSl" to="933e:4qXNmAZaavJ" resolve="block" />
                                   <node concept="36biLy" id="5026ndIemLX" role="2pJxcZ">
                                     <node concept="Jnkvi" id="5026ndIeoTM" role="36biLW">
                                       <ref role="1M0zk5" node="5026ndIeh0s" resolve="fb" />
@@ -382,7 +382,7 @@
                             <ref role="3cqZAo" node="5026ndIea6j" resolve="pou" />
                           </node>
                           <node concept="3Tsc0h" id="5026ndIeagl" role="2OqNvi">
-                            <ref role="3TtcxE" to="933e:5fgiBbs2O30" />
+                            <ref role="3TtcxE" to="933e:5fgiBbs2O30" resolve="variables" />
                           </node>
                         </node>
                         <node concept="TSZUe" id="5026ndIejZT" role="2OqNvi">
@@ -402,7 +402,7 @@
                           <node concept="2pJPED" id="5026ndIgy0d" role="2pJPEn">
                             <ref role="2pJxaS" to="933e:5fgiBbs3nBe" resolve="VariableReference" />
                             <node concept="2pIpSj" id="5026ndIgy0e" role="2pJxcM">
-                              <ref role="2pIpSl" to="933e:5fgiBbs3pLR" />
+                              <ref role="2pIpSl" to="933e:5fgiBbs3pLR" resolve="variableDeclaration" />
                               <node concept="36biLy" id="5026ndIgy0f" role="2pJxcZ">
                                 <node concept="37vLTw" id="5026ndIgy0g" role="36biLW">
                                   <ref role="3cqZAo" node="5026ndIemLP" resolve="var" />
@@ -428,7 +428,7 @@
                               <ref role="2Gs0qQ" node="5026ndIe9fq" resolve="f" />
                             </node>
                             <node concept="3Tsc0h" id="42bSzUrhZvQ" role="2OqNvi">
-                              <ref role="3TtcxE" to="933e:4qXNmAZdv_f" />
+                              <ref role="3TtcxE" to="933e:4qXNmAZdv_f" resolve="args" />
                             </node>
                           </node>
                           <node concept="3$u5V9" id="5026ndIf55w" role="2OqNvi">
@@ -467,7 +467,7 @@
                           <node concept="2pJPED" id="5026ndIfTEN" role="2pJPEn">
                             <ref role="2pJxaS" to="933e:4qXNmAZduW5" resolve="FunctionRefCall" />
                             <node concept="2pIpSj" id="5026ndIfTEO" role="2pJxcM">
-                              <ref role="2pIpSl" to="933e:4qXNmAZdv_a" />
+                              <ref role="2pIpSl" to="933e:4qXNmAZdv_a" resolve="expression" />
                               <node concept="36biLy" id="5026ndIgy71" role="2pJxcZ">
                                 <node concept="2OqwBi" id="5026ndIh0p1" role="36biLW">
                                   <node concept="37vLTw" id="5026ndIgy7c" role="2Oq$k0">
@@ -478,7 +478,7 @@
                               </node>
                             </node>
                             <node concept="2pIpSj" id="5026ndIfTET" role="2pJxcM">
-                              <ref role="2pIpSl" to="933e:4qXNmAZdv_f" />
+                              <ref role="2pIpSl" to="933e:4qXNmAZdv_f" resolve="args" />
                               <node concept="36biLy" id="5026ndIfTEU" role="2pJxcZ">
                                 <node concept="37vLTw" id="5026ndIfTEV" role="36biLW">
                                   <ref role="3cqZAo" node="5026ndIf55r" resolve="args" />
@@ -549,7 +549,7 @@
                                   <node concept="2pJPED" id="5026ndIgxG0" role="2pJPEn">
                                     <ref role="2pJxaS" to="jzle:5fgiBbs3sNt" resolve="ExpressionStatement" />
                                     <node concept="2pIpSj" id="5026ndIgxH9" role="2pJxcM">
-                                      <ref role="2pIpSl" to="jzle:5fgiBbs3sZa" />
+                                      <ref role="2pIpSl" to="jzle:5fgiBbs3sZa" resolve="expression" />
                                       <node concept="36biLy" id="5026ndIgxHQ" role="2pJxcZ">
                                         <node concept="37vLTw" id="5026ndIgxI1" role="36biLW">
                                           <ref role="3cqZAo" node="5026ndIfTEL" resolve="fbCall" />

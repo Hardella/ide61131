@@ -3,8 +3,8 @@
   <persistence version="9" />
   <languages>
     <use id="af65afd8-f0dd-4942-87d9-63a55f2a9db1" name="jetbrains.mps.lang.behavior" version="0" />
-    <use id="aee9cad2-acd4-4608-aef2-0004f6a1cdbd" name="jetbrains.mps.lang.actions" version="0" />
-    <use id="c72da2b9-7cce-4447-8389-f407dc1158b7" name="jetbrains.mps.lang.structure" version="1" />
+    <use id="aee9cad2-acd4-4608-aef2-0004f6a1cdbd" name="jetbrains.mps.lang.actions" version="3" />
+    <use id="c72da2b9-7cce-4447-8389-f407dc1158b7" name="jetbrains.mps.lang.structure" version="3" />
     <devkit ref="fbc25dd2-5da4-483a-8b19-70928e1b62d7(jetbrains.mps.devkit.general-purpose)" />
   </languages>
   <imports>
@@ -134,7 +134,7 @@
                 <ref role="3cqZAo" node="5MdVxrFVdZD" resolve="elsIf" />
               </node>
               <node concept="3TrEf2" id="5MdVxrFVkwb" role="2OqNvi">
-                <ref role="3Tt5mk" to="jzle:5fgiBbs5e87" />
+                <ref role="3Tt5mk" to="jzle:5fgiBbs5e87" resolve="statementList" />
               </node>
             </node>
             <node concept="2oxUTD" id="5MdVxrFVl8w" role="2OqNvi">
@@ -142,7 +142,7 @@
                 <node concept="2OqwBi" id="5MdVxrFVluc" role="2Oq$k0">
                   <node concept="13iPFW" id="5MdVxrFVlrC" role="2Oq$k0" />
                   <node concept="3TrEf2" id="5MdVxrFVlR7" role="2OqNvi">
-                    <ref role="3Tt5mk" to="jzle:5fgiBbs5dW3" />
+                    <ref role="3Tt5mk" to="jzle:5fgiBbs5dW3" resolve="ifFalse" />
                   </node>
                 </node>
                 <node concept="1$rogu" id="5MdVxrFVUxV" role="2OqNvi" />
@@ -155,7 +155,7 @@
             <node concept="2OqwBi" id="5MdVxrFVEdY" role="2Oq$k0">
               <node concept="13iPFW" id="5MdVxrFVEba" role="2Oq$k0" />
               <node concept="3Tsc0h" id="5MdVxrFVEBq" role="2OqNvi">
-                <ref role="3TtcxE" to="jzle:5fgiBbs5dW7" />
+                <ref role="3TtcxE" to="jzle:5fgiBbs5dW7" resolve="elsifClauses" />
               </node>
             </node>
             <node concept="TSZUe" id="5MdVxrFVIgV" role="2OqNvi">
@@ -170,7 +170,7 @@
             <node concept="2OqwBi" id="5MdVxrFVUMj" role="2Oq$k0">
               <node concept="13iPFW" id="5MdVxrFVUEL" role="2Oq$k0" />
               <node concept="3TrEf2" id="5MdVxrFVVd2" role="2OqNvi">
-                <ref role="3Tt5mk" to="jzle:5fgiBbs5dW3" />
+                <ref role="3Tt5mk" to="jzle:5fgiBbs5dW3" resolve="ifFalse" />
               </node>
             </node>
             <node concept="1PgB_6" id="5MdVxrFVV_J" role="2OqNvi" />
@@ -188,7 +188,7 @@
             <node concept="2OqwBi" id="5MdVxrFVZmk" role="2Oq$k0">
               <node concept="13iPFW" id="5MdVxrFVZkr" role="2Oq$k0" />
               <node concept="3TrEf2" id="5MdVxrFVZyJ" role="2OqNvi">
-                <ref role="3Tt5mk" to="jzle:5fgiBbs5dW3" />
+                <ref role="3Tt5mk" to="jzle:5fgiBbs5dW3" resolve="ifFalse" />
               </node>
             </node>
             <node concept="2oxUTD" id="5MdVxrFW02J" role="2OqNvi">
@@ -198,7 +198,7 @@
                     <ref role="3cqZAo" node="5MdVxrFVZh4" resolve="elsIf" />
                   </node>
                   <node concept="3TrEf2" id="5MdVxrFW0mC" role="2OqNvi">
-                    <ref role="3Tt5mk" to="jzle:5fgiBbs5e87" />
+                    <ref role="3Tt5mk" to="jzle:5fgiBbs5e87" resolve="statementList" />
                   </node>
                 </node>
                 <node concept="1$rogu" id="5MdVxrFW0FJ" role="2OqNvi" />

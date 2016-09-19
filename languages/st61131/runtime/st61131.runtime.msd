@@ -11,7 +11,7 @@
     <dependency reexport="false">d7601ad3-513b-4e38-a483-fb62b3afe145(com.github.vlsi.iec61131.ti1808)</dependency>
   </dependencies>
   <languageVersions>
-    <language id="ceab5195-25ea-4f22-9b92-103b95ca8c0c" fqName="jetbrains.mps.lang.core" version="1" />
+    <language slang="l:ceab5195-25ea-4f22-9b92-103b95ca8c0c:jetbrains.mps.lang.core" version="1" />
   </languageVersions>
   <dependencyVersions>
     <module reference="3f233e7f-b8a6-46d2-a57f-795d56775243(Annotations)" version="0" />
