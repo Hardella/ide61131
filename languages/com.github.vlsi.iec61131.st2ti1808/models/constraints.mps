@@ -50,7 +50,7 @@
   <node concept="1M2fIO" id="6LAvc6v$VT5">
     <ref role="1M2myG" to="ocpr:6LAvc6v$VSB" resolve="RefToStVar" />
     <node concept="1N5Pfh" id="6LAvc6v$W0y" role="1Mr941">
-      <ref role="1N5Vy1" to="ocpr:6LAvc6v$VSF" />
+      <ref role="1N5Vy1" to="ocpr:6LAvc6v$VSF" resolve="variableDeclaration" />
       <node concept="13QW63" id="6LAvc6v$W0G" role="1N6uqs">
         <node concept="3clFbS" id="6LAvc6v$W0I" role="2VODD2">
           <node concept="3clFbF" id="6LAvc6v$W31" role="3cqZAp">

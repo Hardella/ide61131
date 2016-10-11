@@ -60,9 +60,6 @@
       <concept id="8155996382741089168" name="com.github.vlsi.iec61131.types.structure.IntegerParameterValue" flags="ng" index="vya3J">
         <child id="4800663726689709914" name="value" index="LVwPz" />
       </concept>
-      <concept id="8155996382741078089" name="com.github.vlsi.iec61131.types.structure.BoolParameterValue" flags="ng" index="vycGQ">
-        <property id="8155996382741078090" name="value" index="vycGP" />
-      </concept>
       <concept id="123060273427541007" name="com.github.vlsi.iec61131.types.structure.ICommentable" flags="ng" index="2EalU_">
         <property id="123060273427541008" name="comment" index="2EalUU" />
       </concept>
@@ -177,25 +174,27 @@
     <property role="TrG5h" value="PLC110_32M" />
     <node concept="3E$8tx" id="4FDhPh_kEKM" role="3SXv0I">
       <ref role="3SXriQ" to="cjs8:6PcEEG3Z3B" resolve="Root" />
-      <node concept="3E$8tx" id="4FDhPh_kEKO" role="3E$8ty">
-        <ref role="3SXriQ" to="cjs8:6PcEEG3Z1J" resolve="I_SIMPLE_INPUT" />
+      <node concept="3E$8tx" id="65nzZIfsnRa" role="3E$8ty">
+        <ref role="3SXriQ" to="cjs8:6PcEEG3YZA" resolve="ID562" />
         <ref role="3SPwOG" to="cjs8:6PcEEG3Z3D" />
-        <node concept="3Zbmay" id="4FDhPh_kEKP" role="3SPwdy">
-          <property role="2EalUU" value="Discrete input 1" />
-          <ref role="3ZblU3" to="cjs8:6PcEEG3Z1K" />
+        <node concept="3Zbmay" id="65nzZIfsnRb" role="3SPwdy">
+          <property role="2EalUU" value="Encoder 1" />
+          <ref role="3ZblU3" to="cjs8:6PcEEG3YZC" />
         </node>
-        <node concept="3Zbmay" id="4FDhPh_kEKQ" role="3SPwdy">
-          <property role="2EalUU" value="Discrete input 2" />
-          <ref role="3ZblU3" to="cjs8:6PcEEG3Z1L" />
+        <node concept="vkDt5" id="65nzZIfsnRc" role="vkI8F">
+          <property role="vk_EZ" value="Fast Encoders" />
+          <ref role="vkDt4" to="cjs8:6PcEEG3YZD" />
         </node>
-        <node concept="vkDt5" id="4FDhPh_kEKR" role="vkI8F">
-          <property role="vk_EZ" value="Fast discrete inputs" />
-          <ref role="vkDt4" to="cjs8:6PcEEG3Z1M" />
+        <node concept="vya3J" id="65nzZIfsnRd" role="vkI8F">
+          <ref role="vkDt4" to="cjs8:6PcEEG3YZE" />
+          <node concept="2fQMEq" id="65nzZIfsnRe" role="LVwPz">
+            <property role="2fVhNJ" value="255" />
+          </node>
         </node>
-        <node concept="vya3J" id="4FDhPh_kEKS" role="vkI8F">
-          <ref role="vkDt4" to="cjs8:6PcEEG3Z1N" />
-          <node concept="2fQMEq" id="4FDhPh_kEKT" role="LVwPz">
-            <property role="2fVhNJ" value="10000" />
+        <node concept="vya3J" id="65nzZIfsnRf" role="vkI8F">
+          <ref role="vkDt4" to="cjs8:6PcEEG3YZF" />
+          <node concept="2fQMEq" id="65nzZIfsnRg" role="LVwPz">
+            <property role="2fVhNJ" value="0" />
           </node>
         </node>
       </node>
@@ -278,44 +277,92 @@
           </node>
         </node>
       </node>
-      <node concept="3E$8tx" id="4FDhPh_kELi" role="3E$8ty">
-        <ref role="3SXriQ" to="cjs8:6PcEEG3Z39" resolve="OWEN_ID570" />
+      <node concept="3E$8tx" id="5fRwzr9DLQm" role="3E$8ty">
+        <ref role="3SXriQ" to="cjs8:6PcEEG3YZG" resolve="ID571" />
         <ref role="3SPwOG" to="cjs8:6PcEEG3Z3H" />
-        <node concept="3Zbmay" id="4FDhPh_kELj" role="3SPwdy">
-          <property role="2EalUU" value="Fast discrete output 1" />
-          <ref role="3ZblU3" to="cjs8:6PcEEG3Z3a" />
+        <node concept="3Zbmay" id="5fRwzr9DLQn" role="3SPwdy">
+          <property role="2EalUU" value="PWM 1 power" />
+          <ref role="3ZblU3" to="cjs8:6PcEEG3YZH" />
         </node>
-        <node concept="3Zbmay" id="4FDhPh_kELk" role="3SPwdy">
-          <property role="2EalUU" value="Fast discrete output 2" />
-          <ref role="3ZblU3" to="cjs8:6PcEEG3Z3b" />
+        <node concept="3Zbmay" id="5fRwzr9DLQo" role="3SPwdy">
+          <property role="2EalUU" value="PWM 2 power" />
+          <ref role="3ZblU3" to="cjs8:6PcEEG3YZI" />
         </node>
-        <node concept="3Zbmay" id="4FDhPh_kELl" role="3SPwdy">
-          <property role="2EalUU" value="Fast discrete output 3" />
-          <ref role="3ZblU3" to="cjs8:6PcEEG3Z3c" />
+        <node concept="3Zbmay" id="5fRwzr9DLQp" role="3SPwdy">
+          <property role="2EalUU" value="PWM 3 power" />
+          <ref role="3ZblU3" to="cjs8:6PcEEG3YZJ" />
         </node>
-        <node concept="3Zbmay" id="4FDhPh_kELm" role="3SPwdy">
-          <property role="2EalUU" value="Fast discrete output 4" />
-          <ref role="3ZblU3" to="cjs8:6PcEEG3Z3d" />
+        <node concept="3Zbmay" id="5fRwzr9DLQq" role="3SPwdy">
+          <property role="2EalUU" value="PWM 4 power" />
+          <ref role="3ZblU3" to="cjs8:6PcEEG3YZK" />
         </node>
-        <node concept="vkDt5" id="4FDhPh_kELn" role="vkI8F">
-          <property role="vk_EZ" value="Fast discrete outputs" />
-          <ref role="vkDt4" to="cjs8:6PcEEG3Z3e" />
+        <node concept="3Zbmay" id="5fRwzr9DLQr" role="3SPwdy">
+          <property role="2EalUU" value="PWM 1 period, in mks" />
+          <ref role="3ZblU3" to="cjs8:6PcEEG3YZL" />
         </node>
-        <node concept="vycGQ" id="4FDhPh_kELo" role="vkI8F">
-          <property role="vycGP" value="false" />
-          <ref role="vkDt4" to="cjs8:6PcEEG3Z3f" />
+        <node concept="3Zbmay" id="5fRwzr9DLQs" role="3SPwdy">
+          <property role="2EalUU" value="PWM 2 period, in mks" />
+          <ref role="3ZblU3" to="cjs8:6PcEEG3YZM" />
         </node>
-        <node concept="vycGQ" id="4FDhPh_kELp" role="vkI8F">
-          <property role="vycGP" value="false" />
-          <ref role="vkDt4" to="cjs8:6PcEEG3Z3g" />
+        <node concept="3Zbmay" id="5fRwzr9DLQt" role="3SPwdy">
+          <property role="2EalUU" value="PWM 3 period, in mks" />
+          <ref role="3ZblU3" to="cjs8:6PcEEG3YZN" />
         </node>
-        <node concept="vycGQ" id="4FDhPh_kELq" role="vkI8F">
-          <property role="vycGP" value="false" />
-          <ref role="vkDt4" to="cjs8:6PcEEG3Z3h" />
+        <node concept="3Zbmay" id="5fRwzr9DLQu" role="3SPwdy">
+          <property role="2EalUU" value="PWM 4 period, in mks" />
+          <ref role="3ZblU3" to="cjs8:6PcEEG3YZO" />
         </node>
-        <node concept="vycGQ" id="4FDhPh_kELr" role="vkI8F">
-          <property role="vycGP" value="false" />
-          <ref role="vkDt4" to="cjs8:6PcEEG3Z3i" />
+        <node concept="vkDt5" id="5fRwzr9DLQv" role="vkI8F">
+          <property role="vk_EZ" value="PWM" />
+          <ref role="vkDt4" to="cjs8:6PcEEG3YZP" />
+        </node>
+        <node concept="vya3J" id="5fRwzr9DLQw" role="vkI8F">
+          <ref role="vkDt4" to="cjs8:6PcEEG3YZQ" />
+          <node concept="2fQMEq" id="5fRwzr9DLQx" role="LVwPz">
+            <property role="2fVhNJ" value="3000" />
+          </node>
+        </node>
+        <node concept="vya3J" id="5fRwzr9DLQy" role="vkI8F">
+          <ref role="vkDt4" to="cjs8:6PcEEG3YZS" />
+          <node concept="2fQMEq" id="5fRwzr9DLQz" role="LVwPz">
+            <property role="2fVhNJ" value="3000" />
+          </node>
+        </node>
+        <node concept="vya3J" id="5fRwzr9DLQ$" role="vkI8F">
+          <ref role="vkDt4" to="cjs8:6PcEEG3YZU" />
+          <node concept="2fQMEq" id="5fRwzr9DLQ_" role="LVwPz">
+            <property role="2fVhNJ" value="3000" />
+          </node>
+        </node>
+        <node concept="vya3J" id="5fRwzr9DLQA" role="vkI8F">
+          <ref role="vkDt4" to="cjs8:6PcEEG3YZW" />
+          <node concept="2fQMEq" id="5fRwzr9DLQB" role="LVwPz">
+            <property role="2fVhNJ" value="3000" />
+          </node>
+        </node>
+        <node concept="vya3J" id="5fRwzr9DLQC" role="vkI8F">
+          <ref role="vkDt4" to="cjs8:6PcEEG3YZY" />
+          <node concept="2fQMEq" id="5fRwzr9DLQD" role="LVwPz">
+            <property role="2fVhNJ" value="1000000" />
+          </node>
+        </node>
+        <node concept="vya3J" id="5fRwzr9DLQE" role="vkI8F">
+          <ref role="vkDt4" to="cjs8:6PcEEG3YZZ" />
+          <node concept="2fQMEq" id="5fRwzr9DLQF" role="LVwPz">
+            <property role="2fVhNJ" value="1000000" />
+          </node>
+        </node>
+        <node concept="vya3J" id="5fRwzr9DLQG" role="vkI8F">
+          <ref role="vkDt4" to="cjs8:6PcEEG3Z00" />
+          <node concept="2fQMEq" id="5fRwzr9DLQH" role="LVwPz">
+            <property role="2fVhNJ" value="1000000" />
+          </node>
+        </node>
+        <node concept="vya3J" id="5fRwzr9DLQI" role="vkI8F">
+          <ref role="vkDt4" to="cjs8:6PcEEG3Z01" />
+          <node concept="2fQMEq" id="5fRwzr9DLQJ" role="LVwPz">
+            <property role="2fVhNJ" value="1000000" />
+          </node>
         </node>
       </node>
       <node concept="3E$8tx" id="4FDhPh_kELs" role="3E$8ty">

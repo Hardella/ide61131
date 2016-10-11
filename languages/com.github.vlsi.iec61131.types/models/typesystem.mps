@@ -1427,9 +1427,6 @@
         <node concept="3clFbS" id="1scnkI2$k9o" role="3clFbx">
           <node concept="2MkqsV" id="1scnkI2$oOL" role="3cqZAp">
             <node concept="3cpWs3" id="1scnkI2$pER" role="2MkJ7o">
-              <node concept="Xl_RD" id="1scnkI2$pEU" role="3uHU7w">
-                <property role="Xl_RC" value=" is already defined" />
-              </node>
               <node concept="3cpWs3" id="1scnkI2$oV4" role="3uHU7B">
                 <node concept="Xl_RD" id="1scnkI2$oP3" role="3uHU7B">
                   <property role="Xl_RC" value="Variable " />
@@ -1442,6 +1439,9 @@
                     <ref role="3TsBF5" to="tpck:h0TrG11" resolve="name" />
                   </node>
                 </node>
+              </node>
+              <node concept="Xl_RD" id="1scnkI2$pEU" role="3uHU7w">
+                <property role="Xl_RC" value=" is already defined" />
               </node>
             </node>
             <node concept="1YBJjd" id="1scnkI2$qAx" role="2OEOjV">
@@ -4912,6 +4912,12 @@
       </node>
       <node concept="3gn64h" id="2tBq2I4M9Rt" role="32tDTA">
         <ref role="3gnhBz" to="933e:2tBq2I4LStr" resolve="XorExpression" />
+      </node>
+      <node concept="3gn64h" id="65nzZIfJnCS" role="32tDTA">
+        <ref role="3gnhBz" to="933e:5fgiBbs6ym1" resolve="EqualExpression" />
+      </node>
+      <node concept="3gn64h" id="65nzZIfJnDG" role="32tDTA">
+        <ref role="3gnhBz" to="933e:5fgiBbs6yi2" resolve="NotEqualExpression" />
       </node>
       <node concept="3ciZUL" id="2tBq2I4M9Mw" role="32tDT$">
         <node concept="3clFbS" id="2tBq2I4M9M_" role="2VODD2">

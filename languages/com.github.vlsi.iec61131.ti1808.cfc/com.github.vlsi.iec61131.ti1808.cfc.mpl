@@ -40,6 +40,7 @@
         <module reference="8865b7a8-5271-43d3-884c-6fd1d9cfdd34(MPS.OpenAPI)" version="0" />
         <module reference="0c570d36-bf70-48a5-9f6a-2285d6b3b400(com.github.vlsi.iec61131.ti1808.cfc)" version="0" />
         <module reference="0ae1522c-2178-403d-ac54-ad7886712d07(com.github.vlsi.iec61131.ti1808.cfc#8449865404969428826)" version="0" />
+        <module reference="4d1c59f7-8f87-4192-a752-a98136f0b57c(com.github.vlsi.iec61131.types)" version="0" />
         <module reference="8ca79d43-eb45-4791-bdd4-0d6130ff895b(de.itemis.mps.editor.diagram.layout)" version="0" />
         <module reference="ceab5195-25ea-4f22-9b92-103b95ca8c0c(jetbrains.mps.lang.core)" version="0" />
         <module reference="d7eb0a2a-bd50-4576-beae-e4a89db35f20(jetbrains.mps.lang.scopes.runtime)" version="0" />
@@ -107,6 +108,8 @@
     <module reference="d7eb0a2a-bd50-4576-beae-e4a89db35f20(jetbrains.mps.lang.scopes.runtime)" version="0" />
     <module reference="c72da2b9-7cce-4447-8389-f407dc1158b7(jetbrains.mps.lang.structure)" version="0" />
   </dependencyVersions>
-  <extendedLanguages />
+  <extendedLanguages>
+    <extendedLanguage>4d1c59f7-8f87-4192-a752-a98136f0b57c(com.github.vlsi.iec61131.types)</extendedLanguage>
+  </extendedLanguages>
 </language>
 

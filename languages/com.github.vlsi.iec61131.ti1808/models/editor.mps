@@ -16,7 +16,6 @@
     <import index="uddc" ref="1ed103c3-3aa6-49b7-9c21-6765ee11f224/java:jetbrains.mps.openapi.editor.menus.transformation(MPS.Editor/)" implicit="true" />
     <import index="tpck" ref="r:00000000-0000-4000-0000-011c89590288(jetbrains.mps.lang.core.structure)" implicit="true" />
     <import index="tpco" ref="r:00000000-0000-4000-0000-011c89590284(jetbrains.mps.lang.core.editor)" implicit="true" />
-    <import index="tpen" ref="r:00000000-0000-4000-0000-011c895902c3(jetbrains.mps.baseLanguage.editor)" implicit="true" />
   </imports>
   <registry>
     <language id="18bc6592-03a6-4e29-a83a-7ff23bde13ba" name="jetbrains.mps.lang.editor">
@@ -101,6 +100,7 @@
       <concept id="1219418625346" name="jetbrains.mps.lang.editor.structure.IStyleContainer" flags="ng" index="3F0Thp">
         <child id="1219418656006" name="styleItem" index="3F10Kt" />
       </concept>
+      <concept id="1073389882823" name="jetbrains.mps.lang.editor.structure.CellModel_RefNode" flags="sg" stub="730538219795960754" index="3F1sOY" />
       <concept id="1073390211982" name="jetbrains.mps.lang.editor.structure.CellModel_RefNodeList" flags="sg" stub="2794558372793454595" index="3F2HdR" />
       <concept id="3647146066980922272" name="jetbrains.mps.lang.editor.structure.SelectInEditorOperation" flags="nn" index="1OKiuA">
         <child id="1948540814633499358" name="editorContext" index="lBI5i" />
@@ -432,6 +432,24 @@
       <node concept="3F0ifn" id="6LAvc6vr7xS" role="3EZMnx">
         <property role="3F0ifm" value="bytes" />
       </node>
+      <node concept="3F0ifn" id="65nzZIfBpom" role="3EZMnx">
+        <property role="3F0ifm" value="," />
+        <node concept="11L4FC" id="65nzZIfBpyR" role="3F10Kt">
+          <property role="VOm3f" value="true" />
+        </node>
+      </node>
+      <node concept="3F0ifn" id="65nzZIfBpoU" role="3EZMnx">
+        <property role="3F0ifm" value="reg" />
+      </node>
+      <node concept="3F0ifn" id="65nzZIfBppw" role="3EZMnx">
+        <property role="3F0ifm" value=":" />
+        <node concept="11L4FC" id="65nzZIfBpuD" role="3F10Kt">
+          <property role="VOm3f" value="true" />
+        </node>
+      </node>
+      <node concept="3F1sOY" id="65nzZIfBpq8" role="3EZMnx">
+        <ref role="1NtTu8" to="rpfd:65nzZIfBpo3" resolve="register" />
+      </node>
       <node concept="3F0ifn" id="5qOIvv1ZgvO" role="3EZMnx">
         <property role="3F0ifm" value=")" />
         <node concept="11L4FC" id="5qOIvv1ZgvP" role="3F10Kt">
@@ -512,11 +530,8 @@
   </node>
   <node concept="24kQdi" id="6LAvc6vDZ_V">
     <ref role="1XX52x" to="rpfd:6LAvc6vDZl1" resolve="IntegerLiteral" />
-    <node concept="1kIj98" id="6LAvc6vJ9pD" role="2wV5jI">
-      <node concept="3F0A7n" id="6LAvc6vDZA1" role="1kIj9b">
-        <ref role="1k5W1q" to="tpen:hshT4rC" resolve="NumericLiteral" />
-        <ref role="1NtTu8" to="rpfd:6LAvc6vDZl2" resolve="value" />
-      </node>
+    <node concept="3F0A7n" id="6ed$ieEWNWV" role="2wV5jI">
+      <ref role="1NtTu8" to="rpfd:6LAvc6vDZl2" resolve="value" />
     </node>
   </node>
   <node concept="3p36aQ" id="2Za7gvF0BPK">
@@ -548,9 +563,6 @@
   </node>
   <node concept="3p36aQ" id="2Za7gvF0BQp">
     <ref role="aqKnT" to="rpfd:3gk5sx3tQg0" resolve="Register" />
-  </node>
-  <node concept="3p36aQ" id="2Za7gvF0BQq">
-    <ref role="aqKnT" to="rpfd:6VooDThcD4" resolve="Instruction" />
   </node>
 </model>
 

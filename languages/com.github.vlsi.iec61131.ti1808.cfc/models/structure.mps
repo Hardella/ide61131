@@ -116,5 +116,14 @@
       <ref role="20lvS9" to="933e:7Bb7ds4OrWV" resolve="POU" />
     </node>
   </node>
+  <node concept="1TIwiD" id="5fRwzr9DLVk">
+    <property role="EcuMT" value="6050447796218568404" />
+    <property role="TrG5h" value="StComponent" />
+    <property role="34LRSv" value="ST component" />
+    <ref role="1TJDcQ" to="933e:7Bb7ds4OrWV" resolve="POU" />
+    <node concept="PrWs8" id="5fRwzr9DLVl" role="PzmwI">
+      <ref role="PrY4T" node="7l3WX474atx" resolve="IComponent" />
+    </node>
+  </node>
 </model>
 

@@ -553,7 +553,7 @@
   <node concept="1TIwiD" id="5fgiBbs3nBe">
     <property role="3GE5qa" value="expressions" />
     <property role="TrG5h" value="VariableReference" />
-    <property role="R4oN_" value="reference to variable" />
+    <property role="R4oN_" value="reference to variable (st)" />
     <property role="EcuMT" value="6039408957482432974" />
     <ref role="1TJDcQ" node="5fgiBbs2NXn" resolve="Expression" />
     <node concept="1TJgyj" id="5fgiBbs3pLR" role="1TKVEi">
@@ -762,8 +762,8 @@
   <node concept="1TIwiD" id="5fgiBbs2Q3C">
     <property role="3GE5qa" value="expressions.literals" />
     <property role="TrG5h" value="IntegerConstant" />
-    <property role="34LRSv" value="integer constant" />
-    <property role="R4oN_" value="integer constant" />
+    <property role="34LRSv" value="integer constant (st)" />
+    <property role="R4oN_" value="integer constant (st)" />
     <property role="EcuMT" value="6039408957482295528" />
     <ref role="1TJDcQ" node="5fgiBbs34Ms" resolve="IntegerLiteral" />
     <node concept="1TJgyi" id="5fgiBbsflqt" role="1TKVEl">

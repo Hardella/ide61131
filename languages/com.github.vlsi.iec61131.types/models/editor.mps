@@ -120,9 +120,7 @@
         <child id="5692353713941573325" name="textFunction" index="1hCUd6" />
       </concept>
       <concept id="8449131619432941427" name="jetbrains.mps.lang.editor.structure.TransformationMenuPart_Super" flags="ng" index="L$LW2" />
-      <concept id="1164824717996" name="jetbrains.mps.lang.editor.structure.CellMenuDescriptor" flags="ng" index="OXEIz">
-        <child id="1164824815888" name="cellMenuPart" index="OY2wv" />
-      </concept>
+      <concept id="1164824717996" name="jetbrains.mps.lang.editor.structure.CellMenuDescriptor" flags="ng" index="OXEIz" />
       <concept id="1078938745671" name="jetbrains.mps.lang.editor.structure.EditorComponentDeclaration" flags="ig" index="PKFIW">
         <child id="7033942394258392116" name="overridenEditorComponent" index="1PM95z" />
       </concept>
@@ -185,9 +183,6 @@
       <concept id="2896773699153795590" name="jetbrains.mps.lang.editor.structure.TransformationLocation_SideTransform" flags="ng" index="3cWJ9i">
         <child id="3473224453637651919" name="placeInCell" index="CtIbM" />
       </concept>
-      <concept id="1165253627126" name="jetbrains.mps.lang.editor.structure.CellMenuPart_AbstractGroup" flags="ng" index="1exORT">
-        <child id="1165253890469" name="parameterObjectType" index="1eyP2E" />
-      </concept>
       <concept id="7342352913006985500" name="jetbrains.mps.lang.editor.structure.TransformationLocation_Completion" flags="ng" index="3eGOoe" />
       <concept id="7342352913006985483" name="jetbrains.mps.lang.editor.structure.SubstituteMenuPart_Action" flags="ng" index="3eGOop">
         <child id="8612453216082699922" name="substituteHandler" index="3aKz83" />
@@ -224,11 +219,6 @@
       <concept id="1236262245656" name="jetbrains.mps.lang.editor.structure.MatchingLabelStyleClassItem" flags="ln" index="3mYdg7">
         <property id="1238091709220" name="labelName" index="1413C4" />
       </concept>
-      <concept id="1165420413719" name="jetbrains.mps.lang.editor.structure.CellMenuPart_Generic_Group" flags="ng" index="1ou48o">
-        <child id="1165420413721" name="handlerFunction" index="1ou48m" />
-        <child id="1165420413720" name="parametersFunction" index="1ou48n" />
-      </concept>
-      <concept id="1165420626554" name="jetbrains.mps.lang.editor.structure.CellMenuPart_Generic_Group_Handler" flags="in" index="1ouSdP" />
       <concept id="3308396621974580100" name="jetbrains.mps.lang.editor.structure.SubstituteMenu_Default" flags="ng" index="3p36aQ" />
       <concept id="7580468736840446506" name="jetbrains.mps.lang.editor.structure.ConceptFunctionParameter_model" flags="nn" index="1rpKSd" />
       <concept id="730181322658904464" name="jetbrains.mps.lang.editor.structure.SubstituteMenuPart_IncludeMenu" flags="ng" index="1s_PAr">
@@ -283,9 +273,6 @@
         <child id="4233361609415240998" name="part" index="1GhOri" />
         <child id="4233361609415241000" name="parameterQuery" index="1GhOrs" />
       </concept>
-      <concept id="1163613035599" name="jetbrains.mps.lang.editor.structure.CellMenuPart_AbstractGroup_Query" flags="in" index="3GJtP1" />
-      <concept id="1163613549566" name="jetbrains.mps.lang.editor.structure.CellMenuPart_AbstractGroup_parameterObject" flags="nn" index="3GLrbK" />
-      <concept id="1163613822479" name="jetbrains.mps.lang.editor.structure.CellMenuPart_Abstract_editedNode" flags="nn" index="3GMtW1" />
       <concept id="1225898583838" name="jetbrains.mps.lang.editor.structure.ReadOnlyModelAccessor" flags="ng" index="1HfYo3">
         <child id="1225898971709" name="getter" index="1Hhtcw" />
       </concept>
@@ -324,9 +311,6 @@
       </concept>
       <concept id="625126330682908270" name="jetbrains.mps.lang.editor.structure.CellModel_ReferencePresentation" flags="sg" stub="730538219795961225" index="3SHvHV" />
       <concept id="1176717841777" name="jetbrains.mps.lang.editor.structure.QueryFunction_ModelAccess_Getter" flags="in" index="3TQlhw" />
-      <concept id="1166040637528" name="jetbrains.mps.lang.editor.structure.CellMenuComponent" flags="ng" index="1Xs25n">
-        <child id="1166041505377" name="menuDescriptor" index="1XvlXI" />
-      </concept>
       <concept id="1166049232041" name="jetbrains.mps.lang.editor.structure.AbstractComponent" flags="ng" index="1XWOmA">
         <reference id="1166049300910" name="conceptDeclaration" index="1XX52x" />
       </concept>
@@ -560,9 +544,7 @@
       </concept>
     </language>
     <language id="aee9cad2-acd4-4608-aef2-0004f6a1cdbd" name="jetbrains.mps.lang.actions">
-      <concept id="7776141288922801652" name="jetbrains.mps.lang.actions.structure.NF_Concept_NewInstance" flags="nn" index="q_SaT">
-        <child id="3757480014665178932" name="prototype" index="1wAxWu" />
-      </concept>
+      <concept id="7776141288922801652" name="jetbrains.mps.lang.actions.structure.NF_Concept_NewInstance" flags="nn" index="q_SaT" />
       <concept id="767145758118872833" name="jetbrains.mps.lang.actions.structure.NF_LinkList_AddNewChildOperation" flags="nn" index="2DeJg1" />
       <concept id="5480835971642155304" name="jetbrains.mps.lang.actions.structure.NF_Model_CreateNewNodeOperation" flags="nn" index="15TzpJ" />
     </language>
@@ -2845,63 +2827,6 @@
               </node>
             </node>
           </node>
-        </node>
-      </node>
-    </node>
-  </node>
-  <node concept="1Xs25n" id="4wOfIPs09dn">
-    <property role="3GE5qa" value="expressions" />
-    <property role="TrG5h" value="replace_withAnotherBinaryExpression" />
-    <ref role="1XX52x" to="933e:5fgiBbs6kiv" resolve="BinaryOperation" />
-    <node concept="OXEIz" id="4wOfIPs09do" role="1XvlXI">
-      <node concept="1ou48o" id="4wOfIPs09ds" role="OY2wv">
-        <node concept="1ouSdP" id="4wOfIPs09du" role="1ou48m">
-          <node concept="3clFbS" id="4wOfIPs09dw" role="2VODD2">
-            <node concept="3cpWs8" id="4wOfIPs0a1N" role="3cqZAp">
-              <node concept="3cpWsn" id="4wOfIPs0a1O" role="3cpWs9">
-                <property role="TrG5h" value="expr" />
-                <node concept="3Tqbb2" id="4wOfIPs0a1J" role="1tU5fm">
-                  <ref role="ehGHo" to="933e:5fgiBbs6kiv" resolve="BinaryOperation" />
-                </node>
-                <node concept="2OqwBi" id="4wOfIPs0a1P" role="33vP2m">
-                  <node concept="3GLrbK" id="4wOfIPs0a1Q" role="2Oq$k0" />
-                  <node concept="q_SaT" id="4wOfIPs0a1R" role="2OqNvi">
-                    <node concept="3GMtW1" id="4wOfIPs0a1S" role="1wAxWu" />
-                  </node>
-                </node>
-              </node>
-            </node>
-            <node concept="3clFbF" id="4wOfIPs0a6g" role="3cqZAp">
-              <node concept="2OqwBi" id="4wOfIPs0a87" role="3clFbG">
-                <node concept="3GMtW1" id="4wOfIPs0a6e" role="2Oq$k0" />
-                <node concept="1P9Npp" id="4wOfIPs0agj" role="2OqNvi">
-                  <node concept="37vLTw" id="4wOfIPs0ah0" role="1P9ThW">
-                    <ref role="3cqZAo" node="4wOfIPs0a1O" resolve="expr" />
-                  </node>
-                </node>
-              </node>
-            </node>
-          </node>
-        </node>
-        <node concept="3GJtP1" id="4wOfIPs09dy" role="1ou48n">
-          <node concept="3clFbS" id="4wOfIPs09d$" role="2VODD2">
-            <node concept="3clFbF" id="4wOfIPs09kj" role="3cqZAp">
-              <node concept="2OqwBi" id="4wOfIPs09rw" role="3clFbG">
-                <node concept="35c_gC" id="4wOfIPs09ki" role="2Oq$k0">
-                  <ref role="35c_gD" to="933e:5fgiBbs6kiv" resolve="BinaryOperation" />
-                </node>
-                <node concept="LSoRf" id="4wOfIPs09yw" role="2OqNvi">
-                  <node concept="2OqwBi" id="4wOfIPs09F5" role="1iTxcG">
-                    <node concept="3GMtW1" id="4wOfIPs09Ac" role="2Oq$k0" />
-                    <node concept="I4A8Y" id="4wOfIPs09M4" role="2OqNvi" />
-                  </node>
-                </node>
-              </node>
-            </node>
-          </node>
-        </node>
-        <node concept="3bZ5Sz" id="4wOfIPs09fY" role="1eyP2E">
-          <ref role="3bZ5Sy" to="933e:5fgiBbs6kiv" resolve="BinaryOperation" />
         </node>
       </node>
     </node>

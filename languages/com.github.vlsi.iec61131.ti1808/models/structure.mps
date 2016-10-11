@@ -112,9 +112,6 @@
     <node concept="PrWs8" id="6LAvc6vr8r6" role="PzmwI">
       <ref role="PrY4T" node="6LAvc6vr8qk" resolve="ICommentable" />
     </node>
-    <node concept="PrWs8" id="6LAvc6vIvGE" role="PzmwI">
-      <ref role="PrY4T" to="tpck:1_TrU5E6oyb" resolve="IDontSubstituteByDefault" />
-    </node>
   </node>
   <node concept="1TIwiD" id="6VooDThcDa">
     <property role="TrG5h" value="Operand" />
@@ -247,6 +244,14 @@
       <property role="1uS6qv" value="SBCO" />
       <property role="1uS6qo" value="SBCO" />
     </node>
+    <node concept="M4N5e" id="2a2pyirq0Ut" role="M5hS2">
+      <property role="1uS6qv" value="LMBD" />
+      <property role="1uS6qo" value="LMBD" />
+    </node>
+    <node concept="M4N5e" id="65nzZIfaqHr" role="M5hS2">
+      <property role="1uS6qo" value="JMP" />
+      <property role="1uS6qv" value="JMP" />
+    </node>
   </node>
   <node concept="1TIwiD" id="6VooDThId5">
     <property role="TrG5h" value="LabelDeclaration" />
@@ -308,6 +313,12 @@
     </node>
     <node concept="PrWs8" id="6LAvc6v$EqW" role="PzmwI">
       <ref role="PrY4T" to="tpee:4H$HgYMZ7sw" resolve="IVariableDeclaration" />
+    </node>
+    <node concept="1TJgyj" id="65nzZIfBpo3" role="1TKVEi">
+      <property role="IQ2ns" value="7014233255261869571" />
+      <property role="20lmBu" value="aggregation" />
+      <property role="20kJfa" value="register" />
+      <ref role="20lvS9" node="3gk5sx3tQg0" resolve="Register" />
     </node>
   </node>
   <node concept="1TIwiD" id="5qOIvv1XVhx">
@@ -408,13 +419,13 @@
     <property role="TrG5h" value="IntegerLiteral" />
     <property role="EcuMT" value="7811067774769820993" />
     <ref role="1TJDcQ" node="6VooDThcDa" resolve="Operand" />
+    <node concept="PrWs8" id="6LAvc6vJ9pB" role="PzmwI">
+      <ref role="PrY4T" to="tpck:1_TrU5E6oyb" resolve="IDontSubstituteByDefault" />
+    </node>
     <node concept="1TJgyi" id="6LAvc6vDZl2" role="1TKVEl">
       <property role="TrG5h" value="value" />
       <property role="IQ2nx" value="7811067774769820994" />
       <ref role="AX2Wp" to="tpck:fKAQMTA" resolve="integer" />
-    </node>
-    <node concept="PrWs8" id="6LAvc6vJ9pB" role="PzmwI">
-      <ref role="PrY4T" to="tpck:1_TrU5E6oyb" resolve="IDontSubstituteByDefault" />
     </node>
   </node>
 </model>
