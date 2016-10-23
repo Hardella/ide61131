@@ -651,7 +651,7 @@
   <node concept="Az7Fb" id="4qXNmAZ8bY6">
     <property role="3GE5qa" value="types" />
     <property role="TrG5h" value="_TimeValue" />
-    <property role="FLfZY" value="([0-9]+d)?([0-9]+h)?([0-9]+m)?([0-9]+s)?([0-9]+ms)?" />
+    <property role="FLfZY" value="([0-9]+d)?([0-9]+h)?([0-9]+m)?([0-9]+s)?([0-9]+ms)?([0-9]+us)?([0-9]+ns)?" />
   </node>
   <node concept="1TIwiD" id="4qXNmAZ8VGl">
     <property role="TrG5h" value="FunctionPOU" />

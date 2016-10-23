@@ -21,7 +21,9 @@
       <modulePath path="$PROJECT_DIR$/solutions/com.github.vlsi.iec61131.quickstart.pluginSolution/com.github.vlsi.iec61131.quickstart.pluginSolution.msd" folder="" />
       <modulePath path="$PROJECT_DIR$/solutions/com.github.vlsi.iec61131.st2ti1808.runtime/com.github.vlsi.iec61131.st2ti1808.runtime.msd" folder="" />
       <modulePath path="$PROJECT_DIR$/solutions/com.github.vlsi.iec61131.standard_lib/com.github.vlsi.iec61131.standard_lib.msd" folder="" />
+      <modulePath path="$PROJECT_DIR$/solutions/com.github.vlsi.iec61131.ti1808.internallib/com.github.vlsi.iec61131.ti1808.internallib.msd" folder="" />
       <modulePath path="$PROJECT_DIR$/solutions/com.github.vlsi.iec61131.ti1808.libcompiler/com.github.vlsi.iec61131.ti1808.libcompiler.msd" folder="" />
+      <modulePath path="$PROJECT_DIR$/solutions/com.github.vlsi.iec61131.ti1808.stdlib/com.github.vlsi.iec61131.ti1808.stdlib.msd" folder="" />
       <modulePath path="$PROJECT_DIR$/solutions/st61131.build/st61131.build.msd" folder="" />
     </projectModules>
   </component>

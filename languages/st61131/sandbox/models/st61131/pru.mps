@@ -46,10 +46,6 @@
         <property id="7014233255272632695" name="blockName" index="3L5_Uc" />
         <child id="7014233255272714748" name="variables" index="3L59S7" />
       </concept>
-      <concept id="7811067774773015501" name="com.github.vlsi.iec61131.st2ti1808.structure.PruConfiguration" flags="ng" index="3NJGWc">
-        <property id="7811067774773015507" name="minCycle" index="3NJGWi" />
-        <reference id="7811067774773015502" name="pru0" index="3NJGWf" />
-      </concept>
       <concept id="7811067774768496167" name="com.github.vlsi.iec61131.st2ti1808.structure.RefToStVar" flags="ng" index="3NXsbA">
         <reference id="7811067774768496171" name="variableDeclaration" index="3NXsbE" />
       </concept>
@@ -1502,11 +1498,6 @@
       <node concept="283b7K" id="6LAvc6vNp0M" role="283bkg" />
     </node>
   </node>
-  <node concept="3NJGWc" id="6LAvc6vQbYT">
-    <property role="3NJGWi" value="5" />
-    <property role="TrG5h" value="PruPulseGeneratorSample" />
-    <ref role="3NJGWf" node="7l3WX474Zkb" resolve="PRU_PULSE_GENERATOR" />
-  </node>
   <node concept="1X6EaH" id="1l2OrOT8duR">
     <property role="TrG5h" value="ASM_TEST" />
     <node concept="283aBN" id="1l2OrOTgOUe" role="2fQKEM">
@@ -2274,7 +2265,7 @@
               <node concept="283aBJ" id="2a2pyisrL0W" role="2fLe4q">
                 <node concept="2fRoqJ" id="2a2pyisxh7G" role="283bkg">
                   <node concept="kub3E" id="2a2pyisxh7E" role="2fRomS">
-                    <ref role="kub3w" node="2a2pyiriYnB" resolve="PRU_DIV" />
+                    <ref role="kub3w" node="2a2pyiriYnB" resolve="PRU_DIV_DW_DW" />
                     <node concept="kub3x" id="2a2pyisxh8O" role="3Ty3gA">
                       <ref role="kuaWX" node="2a2pyiriYnL" resolve="x" />
                       <node concept="2fQMEq" id="2a2pyisxhf4" role="kuaX2">
@@ -2423,7 +2414,7 @@
                         </node>
                         <node concept="2fRoqJ" id="2a2pyisrXfe" role="283bkg">
                           <node concept="kub3E" id="2a2pyisrXfc" role="2fRomS">
-                            <ref role="kub3w" node="2a2pyiriYnB" resolve="PRU_DIV" />
+                            <ref role="kub3w" node="2a2pyiriYnB" resolve="PRU_DIV_DW_DW" />
                             <node concept="kub3x" id="2a2pyisrXkP" role="3Ty3gA">
                               <ref role="kuaWX" node="2a2pyiriYnL" resolve="x" />
                               <node concept="2fQMEq" id="2a2pyisrXlt" role="kuaX2">
@@ -2503,7 +2494,7 @@
                     <node concept="283b7K" id="535c6c_df_N" role="283bkg" />
                     <node concept="2fRoqJ" id="2a2pyisrXLa" role="283bkg">
                       <node concept="kub3E" id="2a2pyisrXL8" role="2fRomS">
-                        <ref role="kub3w" node="2a2pyisu3xs" resolve="PRU_SQRT" />
+                        <ref role="kub3w" node="2a2pyisu3xs" resolve="PRU_SQRT_DW" />
                         <node concept="kub3x" id="2a2pyisrXLG" role="3Ty3gA">
                           <ref role="kuaWX" node="2a2pyisu3xD" resolve="x" />
                           <node concept="2fRjeW" id="2a2pyisrXMk" role="kuaX2">
@@ -2572,7 +2563,7 @@
                         </node>
                         <node concept="2fRoqJ" id="535c6c_dcYc" role="283bkg">
                           <node concept="kub3E" id="535c6c_dcYd" role="2fRomS">
-                            <ref role="kub3w" node="2a2pyiriYnB" resolve="PRU_DIV" />
+                            <ref role="kub3w" node="2a2pyiriYnB" resolve="PRU_DIV_DW_DW" />
                             <node concept="kub3x" id="535c6c_dcYe" role="3Ty3gA">
                               <ref role="kuaWX" node="2a2pyiriYnL" resolve="x" />
                               <node concept="2fQMEq" id="535c6c_dcYf" role="kuaX2">
@@ -2595,7 +2586,7 @@
                         </node>
                         <node concept="2fRoqJ" id="535c6c_dcYk" role="283bkg">
                           <node concept="kub3E" id="535c6c_dcYl" role="2fRomS">
-                            <ref role="kub3w" node="2a2pyisx1QA" resolve="PRU_MULDIV" />
+                            <ref role="kub3w" node="2a2pyisx1QA" resolve="PRU_MULDIV_DW_DW_DW" />
                             <node concept="kub3x" id="535c6c_dcYm" role="3Ty3gA">
                               <ref role="kuaWX" node="2a2pyisx1QK" resolve="x" />
                               <node concept="2fRjeW" id="535c6c_dcYn" role="kuaX2">
@@ -2648,7 +2639,7 @@
                       <node concept="283aBJ" id="6ed$ieFNrcM" role="2fLe4q">
                         <node concept="2fRoqJ" id="6ed$ieFNsrf" role="283bkg">
                           <node concept="kub3E" id="6ed$ieFNsrg" role="2fRomS">
-                            <ref role="kub3w" node="2a2pyisx1QA" resolve="PRU_MULDIV" />
+                            <ref role="kub3w" node="2a2pyisx1QA" resolve="PRU_MULDIV_DW_DW_DW" />
                             <node concept="kub3x" id="6ed$ieFNsrh" role="3Ty3gA">
                               <ref role="kuaWX" node="2a2pyisx1QK" resolve="x" />
                               <node concept="2fA4kt" id="6ed$ieFNsri" role="kuaX2">
@@ -2717,7 +2708,7 @@
                           <node concept="283aBJ" id="535c6c_ae0z" role="2fL9lL">
                             <node concept="2fRoqJ" id="6ed$ieFNuwp" role="283bkg">
                               <node concept="kub3E" id="6ed$ieFNuwq" role="2fRomS">
-                                <ref role="kub3w" node="2a2pyisx1QA" resolve="PRU_MULDIV" />
+                                <ref role="kub3w" node="2a2pyisx1QA" resolve="PRU_MULDIV_DW_DW_DW" />
                                 <node concept="kub3x" id="6ed$ieFNuwr" role="3Ty3gA">
                                   <ref role="kuaWX" node="2a2pyisx1QK" resolve="x" />
                                   <node concept="2fRjeW" id="6ed$ieFNuws" role="kuaX2">
@@ -3438,7 +3429,7 @@
                 </node>
                 <node concept="2fRoqJ" id="535c6c_ghzD" role="283bkg">
                   <node concept="kub3E" id="535c6c_ghzE" role="2fRomS">
-                    <ref role="kub3w" node="2a2pyiriYnB" resolve="PRU_DIV" />
+                    <ref role="kub3w" node="2a2pyiriYnB" resolve="PRU_DIV_DW_DW" />
                     <node concept="kub3x" id="535c6c_ghzF" role="3Ty3gA">
                       <ref role="kuaWX" node="2a2pyiriYnL" resolve="x" />
                       <node concept="2fQMEq" id="535c6c_ghzG" role="kuaX2">
@@ -3486,7 +3477,7 @@
               <node concept="283aBJ" id="535c6c_eKb3" role="2fLe4q">
                 <node concept="2fRoqJ" id="535c6c_eKb4" role="283bkg">
                   <node concept="kub3E" id="535c6c_eKb5" role="2fRomS">
-                    <ref role="kub3w" node="2a2pyisx1QA" resolve="PRU_MULDIV" />
+                    <ref role="kub3w" node="2a2pyisx1QA" resolve="PRU_MULDIV_DW_DW_DW" />
                     <node concept="kub3x" id="535c6c_eKb6" role="3Ty3gA">
                       <ref role="kuaWX" node="2a2pyisx1QK" resolve="x" />
                       <node concept="2fRjeW" id="535c6c_eKb7" role="kuaX2">
@@ -3684,7 +3675,7 @@
       </node>
       <node concept="2fRoqJ" id="2a2pyiriYq8" role="283bkg">
         <node concept="kub3E" id="2a2pyiriYq6" role="2fRomS">
-          <ref role="kub3w" node="2a2pyiriYnB" resolve="PRU_DIV" />
+          <ref role="kub3w" node="2a2pyiriYnB" resolve="PRU_DIV_DW_DW" />
           <node concept="kub3x" id="2a2pyiriYqP" role="3Ty3gA">
             <ref role="kuaWX" node="2a2pyiriYnL" resolve="x" />
             <node concept="2fRjeW" id="2a2pyiriYs3" role="kuaX2">
@@ -3749,7 +3740,7 @@
     </node>
   </node>
   <node concept="283fMa" id="2a2pyiriYnB">
-    <property role="TrG5h" value="PRU_DIV" />
+    <property role="TrG5h" value="PRU_DIV_DW_DW" />
     <node concept="283aBN" id="2a2pyiriYnL" role="2fQKEM">
       <property role="TrG5h" value="x" />
       <property role="2fKTFS" value="true" />
@@ -4693,7 +4684,7 @@
     </node>
   </node>
   <node concept="283fMa" id="2a2pyisu3xs">
-    <property role="TrG5h" value="PRU_SQRT" />
+    <property role="TrG5h" value="PRU_SQRT_DW" />
     <node concept="283aBN" id="2a2pyisu3xD" role="2fQKEM">
       <property role="2fKTFS" value="true" />
       <property role="TrG5h" value="x" />
@@ -5021,7 +5012,7 @@
     </node>
   </node>
   <node concept="283fMa" id="2a2pyisx1QA">
-    <property role="TrG5h" value="PRU_MULDIV" />
+    <property role="TrG5h" value="PRU_MULDIV_DW_DW_DW" />
     <node concept="283aBN" id="2a2pyisx1QK" role="2fQKEM">
       <property role="TrG5h" value="x" />
       <property role="2fKTFS" value="true" />
@@ -5081,7 +5072,7 @@
       </node>
       <node concept="2fRoqJ" id="2a2pyisx1X6" role="283bkg">
         <node concept="kub3E" id="2a2pyisx1X4" role="2fRomS">
-          <ref role="kub3w" node="2a2pyiriYnB" resolve="PRU_DIV" />
+          <ref role="kub3w" node="2a2pyiriYnB" resolve="PRU_DIV_DW_DW" />
           <node concept="kub3x" id="2a2pyisx22Z" role="3Ty3gA">
             <ref role="kuaWX" node="2a2pyiriYnL" resolve="x" />
             <node concept="2fRjeW" id="2a2pyisxgQp" role="kuaX2">
@@ -5487,7 +5478,7 @@
     <node concept="283aBN" id="6ed$ieEXfLg" role="2fQKEM">
       <property role="TrG5h" value="div" />
       <node concept="3T_mE7" id="6ed$ieEXfLx" role="2fQRkO">
-        <ref role="3T_mE6" node="2a2pyiriYnB" resolve="PRU_DIV" />
+        <ref role="3T_mE6" node="2a2pyiriYnB" resolve="PRU_DIV_DW_DW" />
       </node>
     </node>
     <node concept="283aBJ" id="6ed$ieEO5Fg" role="283bkm">
@@ -8062,7 +8053,6 @@
         <node concept="2fRjeW" id="65nzZIgnq3N" role="3L59S7">
           <ref role="2fRto5" node="65nzZIfsorU" resolve="enable" />
         </node>
-        <node concept="2fRjeW" id="65nzZIgnq4j" role="3L59S7" />
       </node>
     </node>
     <node concept="283aBJ" id="65nzZIfsofW" role="283bkm">

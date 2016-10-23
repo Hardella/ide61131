@@ -621,9 +621,6 @@
         <child id="1182506816063" name="smodel" index="1iTxcG" />
       </concept>
       <concept id="1171305280644" name="jetbrains.mps.lang.smodel.structure.Node_GetDescendantsOperation" flags="nn" index="2Rf3mk" />
-      <concept id="1171315804604" name="jetbrains.mps.lang.smodel.structure.Model_RootsOperation" flags="nn" index="2RRcyG">
-        <reference id="1171315804605" name="concept" index="2RRcyH" />
-      </concept>
       <concept id="1171407110247" name="jetbrains.mps.lang.smodel.structure.Node_GetAncestorOperation" flags="nn" index="2Xjw5R" />
       <concept id="2644386474300074836" name="jetbrains.mps.lang.smodel.structure.ConceptIdRefExpression" flags="nn" index="35c_gC">
         <reference id="2644386474300074837" name="conceptDeclaration" index="35c_gD" />
@@ -5602,11 +5599,11 @@
       </node>
       <node concept="2$S_p_" id="2Za7gvF0C23" role="2$S_pT">
         <node concept="3clFbS" id="2Za7gvF0C24" role="2VODD2">
-          <node concept="3clFbF" id="2Za7gvF0C25" role="3cqZAp">
-            <node concept="2OqwBi" id="2Za7gvF0C26" role="3clFbG">
-              <node concept="1rpKSd" id="2Za7gvF0C29" role="2Oq$k0" />
-              <node concept="2RRcyG" id="2Za7gvF0C28" role="2OqNvi">
-                <ref role="2RRcyH" to="933e:5fgiBbshuAS" resolve="TypeAlias" />
+          <node concept="3clFbF" id="6mj7nr4BzxF" role="3cqZAp">
+            <node concept="2OqwBi" id="6mj7nr4BzIO" role="3clFbG">
+              <node concept="1rpKSd" id="6mj7nr4BzxD" role="2Oq$k0" />
+              <node concept="3lApI0" id="6mj7nr4BzUt" role="2OqNvi">
+                <ref role="3lApI3" to="933e:5fgiBbshuAS" resolve="TypeAlias" />
               </node>
             </node>
           </node>

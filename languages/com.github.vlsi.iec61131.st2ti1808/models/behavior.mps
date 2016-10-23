@@ -5,6 +5,9 @@
     <use id="af65afd8-f0dd-4942-87d9-63a55f2a9db1" name="jetbrains.mps.lang.behavior" version="0" />
     <use id="d8f591ec-4d86-4af2-9f92-a9e93c803ffa" name="jetbrains.mps.lang.scopes" version="0" />
     <use id="3f4bc5f5-c6c1-4a28-8b10-c83066ffa4a1" name="jetbrains.mps.lang.constraints" version="0" />
+    <use id="3a13115c-633c-4c5c-bbcc-75c4219e9555" name="jetbrains.mps.lang.quotation" version="0" />
+    <use id="aee9cad2-acd4-4608-aef2-0004f6a1cdbd" name="jetbrains.mps.lang.actions" version="3" />
+    <use id="c72da2b9-7cce-4447-8389-f407dc1158b7" name="jetbrains.mps.lang.structure" version="3" />
     <devkit ref="fbc25dd2-5da4-483a-8b19-70928e1b62d7(jetbrains.mps.devkit.general-purpose)" />
   </languages>
   <imports>
@@ -15,7 +18,7 @@
     <import index="tpcu" ref="r:00000000-0000-4000-0000-011c89590282(jetbrains.mps.lang.core.behavior)" />
     <import index="o8zo" ref="r:314576fc-3aee-4386-a0a5-a38348ac317d(jetbrains.mps.scope)" />
     <import index="933e" ref="r:18dd54ba-c7e4-4f7b-951e-411e5bff3335(com.github.vlsi.iec61131.types.structure)" />
-    <import index="ocpr" ref="r:559bb865-4f6c-4d13-9298-a01687fa843f(com.github.vlsi.iec61131.st2ti1808.structure)" implicit="true" />
+    <import index="ocpr" ref="r:559bb865-4f6c-4d13-9298-a01687fa843f(com.github.vlsi.iec61131.st2ti1808.structure)" />
     <import index="wyt6" ref="6354ebe7-c22a-4a0f-ac54-50b52ab9b065/java:java.lang(JDK/)" implicit="true" />
     <import index="tpck" ref="r:00000000-0000-4000-0000-011c89590288(jetbrains.mps.lang.core.structure)" implicit="true" />
   </imports>
@@ -213,7 +216,7 @@
       <node concept="3clFbS" id="4qXNmAZbQei" role="3clF47">
         <node concept="3clFbJ" id="4qXNmAZbQkY" role="3cqZAp">
           <node concept="3clFbS" id="4qXNmAZbQkZ" role="3clFbx">
-            <node concept="1X3_iC" id="65nzZIgpNbm" role="lGtFl">
+            <node concept="1X3_iC" id="6mj7nr2aITz" role="lGtFl">
               <property role="3V$3am" value="statement" />
               <property role="3V$3ak" value="f3061a53-9226-4cc5-a443-f952ceaf5816/1068580123136/1068581517665" />
               <node concept="3clFbJ" id="65nzZIgpsx0" role="8Wnug">
@@ -251,9 +254,12 @@
                       <node concept="37vLTw" id="65nzZIgpCzf" role="37wK5m">
                         <ref role="3cqZAo" node="4qXNmAZbQej" resolve="kind" />
                       </node>
-                      <node concept="2OqwBi" id="65nzZIgpCzg" role="37wK5m">
-                        <node concept="13iPFW" id="65nzZIgpCzh" role="2Oq$k0" />
-                        <node concept="1mfA1w" id="65nzZIgpCzi" role="2OqNvi" />
+                      <node concept="2OqwBi" id="6mj7nr2aI$0" role="37wK5m">
+                        <node concept="2OqwBi" id="65nzZIgpCzg" role="2Oq$k0">
+                          <node concept="13iPFW" id="65nzZIgpCzh" role="2Oq$k0" />
+                          <node concept="1mfA1w" id="65nzZIgpCzi" role="2OqNvi" />
+                        </node>
+                        <node concept="1mfA1w" id="6mj7nr2aIFQ" role="2OqNvi" />
                       </node>
                     </node>
                   </node>
