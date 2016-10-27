@@ -193,8 +193,8 @@
       <property role="20lbJX" value="1" />
       <ref role="20lvS9" node="11YupUX6p3c" resolve="InputConfiguration" />
     </node>
-    <node concept="PrWs8" id="1I83mA9_fTm" role="PzmwI">
-      <ref role="PrY4T" to="tpck:h0TrEE$" resolve="INamedConcept" />
+    <node concept="PrWs8" id="3yC4UNYePZE" role="PzmwI">
+      <ref role="PrY4T" to="933e:42bSzUqWpBr" resolve="IValidIdentifier" />
     </node>
   </node>
   <node concept="1TIwiD" id="1I83mA9_fUU">

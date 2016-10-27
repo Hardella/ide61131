@@ -258,12 +258,12 @@
   <node concept="283fMa" id="6mj7nr1PV0n">
     <property role="TrG5h" value="SYS_PRU0_OUTPUTS" />
     <node concept="283aBN" id="6mj7nr1PV0u" role="2fQKEM">
-      <property role="TrG5h" value="out1" />
+      <property role="TrG5h" value="out3" />
       <property role="2fKTFS" value="true" />
       <node concept="PkkMJ" id="6mj7nr1PV0L" role="2fQRkO" />
     </node>
     <node concept="283aBN" id="6mj7nr1PV0S" role="2fQKEM">
-      <property role="TrG5h" value="out2" />
+      <property role="TrG5h" value="out4" />
       <property role="2fKTFS" value="true" />
       <node concept="PkkMJ" id="6mj7nr1PV1d" role="2fQRkO" />
     </node>
@@ -304,7 +304,7 @@
             </node>
             <node concept="39vrwG" id="6mj7nr2aHgt" role="1SZVuN">
               <node concept="2fRjeW" id="6mj7nr2aHgr" role="39vrwe">
-                <ref role="2fRto5" node="6mj7nr1PV0u" resolve="out1" />
+                <ref role="2fRto5" node="6mj7nr1PV0u" resolve="out3" />
               </node>
             </node>
             <node concept="39vrwG" id="6mj7nr2aHgJ" role="1SZVuN">
@@ -340,7 +340,7 @@
             </node>
             <node concept="39vrwG" id="6mj7nr2aHlF" role="1SZVuN">
               <node concept="2fRjeW" id="6mj7nr2aHn5" role="39vrwe">
-                <ref role="2fRto5" node="6mj7nr1PV0S" resolve="out2" />
+                <ref role="2fRto5" node="6mj7nr1PV0S" resolve="out4" />
               </node>
             </node>
             <node concept="39vrwG" id="6mj7nr2aHlH" role="1SZVuN">

@@ -84,7 +84,7 @@
     <key>JVMOptions</key>
     <dict>
       <key>ClassPath</key>
-      <string>$APP_PACKAGE/Contents/lib/branding.jar:$APP_PACKAGE/Contents/lib/mps-boot.jar:$APP_PACKAGE/Contents/lib/boot.jar:$APP_PACKAGE/Contents/lib/bootstrap.jar:$APP_PACKAGE/Contents/lib/util.jar:$APP_PACKAGE/Contents/lib/jdom.jar:$APP_PACKAGE/Contents/lib/log4j.jar:$APP_PACKAGE/Contents/lib/extensions.jar:$APP_PACKAGE/Contents/lib/trove4j.jar</string>
+      <string>$APP_PACKAGE/Contents/lib/branding.jar:$APP_PACKAGE/Contents/lib/mps-boot.jar:$APP_PACKAGE/Contents/lib/mps-boot-util.jar:$APP_PACKAGE/Contents/lib/boot.jar:$APP_PACKAGE/Contents/lib/bootstrap.jar:$APP_PACKAGE/Contents/lib/util.jar:$APP_PACKAGE/Contents/lib/jdom.jar:$APP_PACKAGE/Contents/lib/log4j.jar:$APP_PACKAGE/Contents/lib/extensions.jar:$APP_PACKAGE/Contents/lib/trove4j.jar</string>
       <key>JVMVersion</key>
       <string>1.8+</string>
       <key>MainClass</key>
@@ -105,7 +105,7 @@
         <string>$APP_PACKAGE/Contents</string>
       </dict>
       <key>VMOptions</key>
-      <string>-Dintellij.config.imported.in.current.session=true -Didea.paths.selector=IDE61131-10 -Dide.mac.message.dialogs.as.sheets=false -Dapple.awt.graphics.UseQuartz=true -Dfile.encoding=UTF-8 -client -Xss1024k -ea -Xmx2048m -XX:MaxPermSize=350m -XX:NewSize=256m -XX:+HeapDumpOnOutOfMemoryError -Xverify:none</string>
+      <string>-Dintellij.config.imported.in.current.session=true -Didea.paths.selector=IDE61131-15 -Dide.mac.message.dialogs.as.sheets=false -Dapple.awt.graphics.UseQuartz=true -Dfile.encoding=UTF-8 -client -Xss1024k -ea -Xmx2048m -XX:MaxPermSize=350m -XX:NewSize=256m -XX:+HeapDumpOnOutOfMemoryError -Xverify:none</string>
       <key>WorkingDirectory</key>
       <string>$APP_PACKAGE/Contents/bin</string>
     </dict>

@@ -15,6 +15,7 @@
       </models>
       <external-templates>
         <generator generatorUID="b256c427-925f-4cf8-9040-e99564f9cb91(com.github.vlsi.iec61131.st#6039408957479237362)" />
+        <generator generatorUID="11ac135d-4816-4a63-aafd-9c101bf938b5(com.github.vlsi.iec61131.st.ext.implicitfb#4082534695945163422)" />
       </external-templates>
       <dependencies>
         <dependency reexport="false">4d1c59f7-8f87-4192-a752-a98136f0b57c(com.github.vlsi.iec61131.types)</dependency>
@@ -60,6 +61,7 @@
         <module reference="742f6602-5a2f-4313-aa6e-ae1cd4ffdc61(MPS.Platform)" version="0" />
         <module reference="d28e7e4d-b627-42fa-82d5-c7472b85c5f6(com.github.vlsi.iec61131.st)" version="0" />
         <module reference="b256c427-925f-4cf8-9040-e99564f9cb91(com.github.vlsi.iec61131.st#6039408957479237362)" version="0" />
+        <module reference="11ac135d-4816-4a63-aafd-9c101bf938b5(com.github.vlsi.iec61131.st.ext.implicitfb#4082534695945163422)" version="0" />
         <module reference="194c0f29-9416-42e3-ba87-ee7a8014e3f7(com.github.vlsi.iec61131.st.runtime)" version="0" />
         <module reference="d1aef6cd-5477-486f-bcbd-34728b246566(com.github.vlsi.iec61131.st2ti1808)" version="0" />
         <module reference="57516f25-a2b9-42fd-b0f1-dfc62d043b8d(com.github.vlsi.iec61131.st2ti1808#124800662050860764)" version="0" />
@@ -85,7 +87,7 @@
             </external-mapping>
           </greater-priority-mapping>
           <lesser-priority-mapping>
-            <generator generatorUID="b256c427-925f-4cf8-9040-e99564f9cb91(com.github.vlsi.iec61131.st#6039408957479237362)" />
+            <generator generatorUID="11ac135d-4816-4a63-aafd-9c101bf938b5(com.github.vlsi.iec61131.st.ext.implicitfb#4082534695945163422)" />
             <external-mapping>
               <all-local-mappings />
             </external-mapping>
@@ -99,7 +101,7 @@
             </external-mapping>
           </greater-priority-mapping>
           <lesser-priority-mapping>
-            <generator generatorUID="b256c427-925f-4cf8-9040-e99564f9cb91(com.github.vlsi.iec61131.st#6039408957479237362)" />
+            <generator generatorUID="11ac135d-4816-4a63-aafd-9c101bf938b5(com.github.vlsi.iec61131.st.ext.implicitfb#4082534695945163422)" />
             <external-mapping>
               <all-local-mappings />
             </external-mapping>
@@ -144,6 +146,20 @@
             <generator generatorUID="57516f25-a2b9-42fd-b0f1-dfc62d043b8d(com.github.vlsi.iec61131.st2ti1808#124800662050860764)" />
             <external-mapping>
               <mapping-node modelUID="r:b696b32c-44c5-431b-9650-d75a9e682382(com.github.vlsi.iec61131.st2ti1808.generator.template.main@generator)" nodeID="7319226215344481284" />
+            </external-mapping>
+          </lesser-priority-mapping>
+        </mapping-priority-rule>
+        <mapping-priority-rule kind="strictly_before">
+          <greater-priority-mapping>
+            <generator generatorUID="57516f25-a2b9-42fd-b0f1-dfc62d043b8d(com.github.vlsi.iec61131.st2ti1808#124800662050860764)" />
+            <external-mapping>
+              <all-local-mappings />
+            </external-mapping>
+          </greater-priority-mapping>
+          <lesser-priority-mapping>
+            <generator generatorUID="b256c427-925f-4cf8-9040-e99564f9cb91(com.github.vlsi.iec61131.st#6039408957479237362)" />
+            <external-mapping>
+              <all-local-mappings />
             </external-mapping>
           </lesser-priority-mapping>
         </mapping-priority-rule>

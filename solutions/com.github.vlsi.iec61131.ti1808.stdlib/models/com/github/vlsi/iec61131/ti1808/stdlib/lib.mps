@@ -77,9 +77,6 @@
       <concept id="6039408957486272595" name="com.github.vlsi.iec61131.types.structure.NotExpression" flags="ng" index="2fA5Cx">
         <child id="6039408957486272646" name="expression" index="2fA5FO" />
       </concept>
-      <concept id="6039408957483119302" name="com.github.vlsi.iec61131.types.structure.BooleanConstant" flags="ng" index="2fLVyO">
-        <property id="6039408957483119386" name="value" index="2fLV_C" />
-      </concept>
       <concept id="6039408957483205791" name="com.github.vlsi.iec61131.types.structure.BinaryOperation" flags="ng" index="2fMgVH">
         <child id="6039408957483205856" name="rightExpression" index="2fMgUi" />
         <child id="6039408957483205863" name="leftExpression" index="2fMgUl" />
@@ -1764,10 +1761,6 @@
       <property role="2fKTFZ" value="true" />
       <node concept="PkkMJ" id="6mj7nr3DBEU" role="2fQRkO" />
     </node>
-    <node concept="283aBN" id="6mj7nr7jiKy" role="2fQKEM">
-      <property role="TrG5h" value="outputIsChanging" />
-      <node concept="PkkMJ" id="6mj7nr7jiLx" role="2fQRkO" />
-    </node>
     <node concept="283aBN" id="VdqUZKuVIT" role="2fQKEM">
       <property role="TrG5h" value="newVal" />
       <node concept="PkkMJ" id="VdqUZKuVJu" role="2fQRkO" />
@@ -1787,143 +1780,94 @@
       <node concept="2fQKs2" id="6mj7nr3DBIc" role="2fQRkO" />
     </node>
     <node concept="283aBJ" id="6mj7nr3DBGk" role="283bkm">
-      <node concept="2fLe5g" id="6mj7nr7jpEv" role="283bkg">
-        <node concept="2fRjeW" id="6mj7nr7jpF_" role="2fLe4k">
-          <ref role="2fRto5" node="6mj7nr7jiKy" resolve="outputIsChanging" />
+      <node concept="2fLe5g" id="3yC4UO0WgCf" role="283bkg">
+        <node concept="2fMAVK" id="3yC4UO0WgCO" role="2fLe4k">
+          <node concept="2fRjeW" id="3yC4UO0WgDH" role="2fMgUi">
+            <ref role="2fRto5" node="VdqUZKuVIT" resolve="newVal" />
+          </node>
+          <node concept="2fRjeW" id="3yC4UO0WgCC" role="2fMgUl">
+            <ref role="2fRto5" node="6mj7nr3DBE5" resolve="in" />
+          </node>
         </node>
-        <node concept="283aBJ" id="6mj7nr7jpEz" role="2fLe4q">
-          <node concept="2fLe5g" id="VdqUZKuVOH" role="283bkg">
-            <node concept="2fMAVK" id="VdqUZKuVPC" role="2fLe4k">
-              <node concept="2fRjeW" id="VdqUZKuVQU" role="2fMgUi">
-                <ref role="2fRto5" node="VdqUZKuVIT" resolve="newVal" />
+        <node concept="283aBJ" id="3yC4UO0WgCj" role="2fLe4q">
+          <node concept="2INlLO" id="3yC4UO0WgEb" role="283bkg">
+            <property role="2EalUU" value="Если значение снова изменилось, начинаем считать сначала" />
+          </node>
+          <node concept="2fKkDk" id="3yC4UO0WgEc" role="283bkg">
+            <node concept="2fRjeW" id="3yC4UO0WgEd" role="2fKkDe">
+              <ref role="2fRto5" node="6mj7nr3DBE5" resolve="in" />
+            </node>
+            <node concept="2fRjeW" id="3yC4UO0WgEe" role="2fKkDa">
+              <ref role="2fRto5" node="VdqUZKuVIT" resolve="newVal" />
+            </node>
+          </node>
+          <node concept="2fKkDk" id="3yC4UO0WgEf" role="283bkg">
+            <node concept="2gtbcv" id="3yC4UO0WgEg" role="2fKkDe">
+              <node concept="3TXI8J" id="3yC4UO0WgEh" role="2gt4X0">
+                <ref role="3TXI8W" node="6mj7nr3DCI2" resolve="totalCycles" />
               </node>
-              <node concept="2fRjeW" id="VdqUZKuVPs" role="2fMgUl">
-                <ref role="2fRto5" node="6mj7nr3DBE5" resolve="in" />
+              <node concept="2fRjeW" id="3yC4UO0WgEi" role="2gt4X2">
+                <ref role="2fRto5" node="6mj7nr3DD2j" resolve="time" />
               </node>
             </node>
-            <node concept="283aBJ" id="VdqUZKuVOL" role="2fLe4q">
-              <node concept="2INlLO" id="VdqUZKz3O0" role="283bkg">
-                <property role="2EalUU" value="Если значение снова изменилось, начинаем считать сначала" />
-              </node>
-              <node concept="2fKkDk" id="VdqUZKuVVA" role="283bkg">
-                <node concept="2fRjeW" id="VdqUZKuVVB" role="2fKkDe">
-                  <ref role="2fRto5" node="6mj7nr3DBE5" resolve="in" />
+            <node concept="2fRjeW" id="3yC4UO0WgEj" role="2fKkDa">
+              <ref role="2fRto5" node="6mj7nr3DBFY" resolve="prevUpdateTime" />
+            </node>
+          </node>
+        </node>
+        <node concept="2fLaI7" id="3yC4UO0WgIf" role="2fL9lP">
+          <node concept="2fMAVK" id="3yC4UO0WgLV" role="2fLaxR">
+            <node concept="2fRjeW" id="3yC4UO0WgNa" role="2fMgUi">
+              <ref role="2fRto5" node="6mj7nr3DBEz" resolve="out" />
+            </node>
+            <node concept="2fRjeW" id="3yC4UO0WgLJ" role="2fMgUl">
+              <ref role="2fRto5" node="6mj7nr3DBE5" resolve="in" />
+            </node>
+          </node>
+          <node concept="283aBJ" id="3yC4UO0WgIi" role="2fLaxP">
+            <node concept="2INlLO" id="3yC4UO0WgIj" role="283bkg">
+              <property role="2EalUU" value="Значение не менялось -- смотрим сколько времени прошло" />
+            </node>
+            <node concept="2fKkDk" id="3yC4UO0WgIk" role="283bkg">
+              <node concept="2fA4kt" id="3yC4UO0WgIl" role="2fKkDe">
+                <node concept="2fRjeW" id="3yC4UO0WgIm" role="2fMgUi">
+                  <ref role="2fRto5" node="6mj7nr3DBFY" resolve="prevUpdateTime" />
                 </node>
-                <node concept="2fRjeW" id="VdqUZKuVVC" role="2fKkDa">
-                  <ref role="2fRto5" node="VdqUZKuVIT" resolve="newVal" />
-                </node>
-              </node>
-              <node concept="2fKkDk" id="VdqUZKuVV0" role="283bkg">
-                <node concept="2gtbcv" id="VdqUZKuVV1" role="2fKkDe">
-                  <node concept="3TXI8J" id="VdqUZKuVV2" role="2gt4X0">
+                <node concept="2gtbcv" id="3yC4UO0WgIn" role="2fMgUl">
+                  <node concept="3TXI8J" id="3yC4UO0WgIo" role="2gt4X0">
                     <ref role="3TXI8W" node="6mj7nr3DCI2" resolve="totalCycles" />
                   </node>
-                  <node concept="2fRjeW" id="VdqUZKuVV3" role="2gt4X2">
+                  <node concept="2fRjeW" id="3yC4UO0WgIp" role="2gt4X2">
                     <ref role="2fRto5" node="6mj7nr3DD2j" resolve="time" />
                   </node>
                 </node>
-                <node concept="2fRjeW" id="VdqUZKuVV4" role="2fKkDa">
-                  <ref role="2fRto5" node="6mj7nr3DBFY" resolve="prevUpdateTime" />
-                </node>
+              </node>
+              <node concept="2fRjeW" id="3yC4UO0WgIq" role="2fKkDa">
+                <ref role="2fRto5" node="6mj7nr3DBHN" resolve="diff" />
               </node>
             </node>
-            <node concept="283aBJ" id="VdqUZKuVZp" role="2fL9lL">
-              <node concept="2INlLO" id="VdqUZKz3OB" role="283bkg">
-                <property role="2EalUU" value="Значение не менялось -- смотрим сколько времени прошло" />
-              </node>
-              <node concept="2fKkDk" id="6mj7nr3DBJ$" role="283bkg">
-                <node concept="2fA4kt" id="6mj7nr3DBKW" role="2fKkDe">
-                  <node concept="2fRjeW" id="6mj7nr3DBLC" role="2fMgUi">
-                    <ref role="2fRto5" node="6mj7nr3DBFY" resolve="prevUpdateTime" />
-                  </node>
-                  <node concept="2gtbcv" id="6mj7nr3DD5g" role="2fMgUl">
-                    <node concept="3TXI8J" id="6mj7nr3DD6o" role="2gt4X0">
-                      <ref role="3TXI8W" node="6mj7nr3DCI2" resolve="totalCycles" />
-                    </node>
-                    <node concept="2fRjeW" id="6mj7nr3DD4c" role="2gt4X2">
-                      <ref role="2fRto5" node="6mj7nr3DD2j" resolve="time" />
-                    </node>
-                  </node>
-                </node>
-                <node concept="2fRjeW" id="6mj7nr3DBIQ" role="2fKkDa">
+            <node concept="2fLe5g" id="3yC4UO0WgIr" role="283bkg">
+              <node concept="2fMAS7" id="3yC4UO0WgIs" role="2fLe4k">
+                <node concept="2fRjeW" id="3yC4UO0WgIt" role="2fMgUl">
                   <ref role="2fRto5" node="6mj7nr3DBHN" resolve="diff" />
                 </node>
-              </node>
-              <node concept="2fLe5g" id="6mj7nr3DBGy" role="283bkg">
-                <node concept="2fMAS7" id="VdqUZKz3JU" role="2fLe4k">
-                  <node concept="2fRjeW" id="6mj7nr3DBMs" role="2fMgUl">
-                    <ref role="2fRto5" node="6mj7nr3DBHN" resolve="diff" />
-                  </node>
-                  <node concept="2fRjeW" id="6mj7nr3DBOh" role="2fMgUi">
-                    <ref role="2fRto5" node="6mj7nr3DBF1" resolve="debounce" />
-                  </node>
+                <node concept="2fRjeW" id="3yC4UO0WgIu" role="2fMgUi">
+                  <ref role="2fRto5" node="6mj7nr3DBF1" resolve="debounce" />
                 </node>
-                <node concept="283aBJ" id="6mj7nr3DBG$" role="2fLe4q">
-                  <node concept="2INlLO" id="VdqUZKz3JM" role="283bkg">
-                    <property role="2EalUU" value="Если прошло более debounce тактов, то фильтрация окончена" />
+              </node>
+              <node concept="283aBJ" id="3yC4UO0WgIv" role="2fLe4q">
+                <node concept="2INlLO" id="3yC4UO0WgIw" role="283bkg">
+                  <property role="2EalUU" value="Если прошло более debounce тактов, то фильтрация окончена" />
+                </node>
+                <node concept="2fKkDk" id="3yC4UO0WgIx" role="283bkg">
+                  <node concept="2fRjeW" id="3yC4UO0WgIy" role="2fKkDe">
+                    <ref role="2fRto5" node="6mj7nr3DBE5" resolve="in" />
                   </node>
-                  <node concept="2fKkDk" id="6mj7nr3DBPB" role="283bkg">
-                    <node concept="2fRjeW" id="6mj7nr3DBPY" role="2fKkDe">
-                      <ref role="2fRto5" node="6mj7nr3DBE5" resolve="in" />
-                    </node>
-                    <node concept="2fRjeW" id="6mj7nr3DBPt" role="2fKkDa">
-                      <ref role="2fRto5" node="6mj7nr3DBEz" resolve="out" />
-                    </node>
-                  </node>
-                  <node concept="2fKkDk" id="6mj7nr7jiM8" role="283bkg">
-                    <node concept="2fLVyO" id="6mj7nr7jq6Y" role="2fKkDe">
-                      <property role="2fLV_C" value="false" />
-                    </node>
-                    <node concept="2fRjeW" id="6mj7nr7jiLU" role="2fKkDa">
-                      <ref role="2fRto5" node="6mj7nr7jiKy" resolve="outputIsChanging" />
-                    </node>
+                  <node concept="2fRjeW" id="3yC4UO0WgIz" role="2fKkDa">
+                    <ref role="2fRto5" node="6mj7nr3DBEz" resolve="out" />
                   </node>
                 </node>
               </node>
-            </node>
-          </node>
-        </node>
-        <node concept="2fLaI7" id="VdqUZKz3SW" role="2fL9lP">
-          <node concept="283aBJ" id="VdqUZKz3SZ" role="2fLaxP">
-            <node concept="2INlLO" id="VdqUZKz3T5" role="283bkg">
-              <property role="2EalUU" value="Если значение на входе изменилось, то запускаем отсчёт времени" />
-            </node>
-            <node concept="2fKkDk" id="VdqUZKz3T6" role="283bkg">
-              <node concept="2fRjeW" id="VdqUZKz3T7" role="2fKkDe">
-                <ref role="2fRto5" node="6mj7nr3DBE5" resolve="in" />
-              </node>
-              <node concept="2fRjeW" id="VdqUZKz3T8" role="2fKkDa">
-                <ref role="2fRto5" node="VdqUZKuVIT" resolve="newVal" />
-              </node>
-            </node>
-            <node concept="2fKkDk" id="VdqUZKz3T9" role="283bkg">
-              <node concept="2gtbcv" id="VdqUZKz3Ta" role="2fKkDe">
-                <node concept="3TXI8J" id="VdqUZKz3Tb" role="2gt4X0">
-                  <ref role="3TXI8W" node="6mj7nr3DCI2" resolve="totalCycles" />
-                </node>
-                <node concept="2fRjeW" id="VdqUZKz3Tc" role="2gt4X2">
-                  <ref role="2fRto5" node="6mj7nr3DD2j" resolve="time" />
-                </node>
-              </node>
-              <node concept="2fRjeW" id="VdqUZKz3Td" role="2fKkDa">
-                <ref role="2fRto5" node="6mj7nr3DBFY" resolve="prevUpdateTime" />
-              </node>
-            </node>
-            <node concept="2fKkDk" id="VdqUZKz3Te" role="283bkg">
-              <node concept="2fLVyO" id="VdqUZKz3Tf" role="2fKkDe">
-                <property role="2fLV_C" value="true" />
-              </node>
-              <node concept="2fRjeW" id="VdqUZKz3Tg" role="2fKkDa">
-                <ref role="2fRto5" node="6mj7nr7jiKy" resolve="outputIsChanging" />
-              </node>
-            </node>
-          </node>
-          <node concept="2fMAVK" id="VdqUZKz3T1" role="2fLaxR">
-            <node concept="2fRjeW" id="VdqUZKz3T2" role="2fMgUi">
-              <ref role="2fRto5" node="6mj7nr3DBEz" resolve="out" />
-            </node>
-            <node concept="2fRjeW" id="VdqUZKz3T3" role="2fMgUl">
-              <ref role="2fRto5" node="6mj7nr3DBE5" resolve="in" />
             </node>
           </node>
         </node>

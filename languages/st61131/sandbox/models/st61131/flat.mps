@@ -19,6 +19,11 @@
         <child id="6039408957482663992" name="lValue" index="2fKkDa" />
         <child id="6039408957482663996" name="rValue" index="2fKkDe" />
       </concept>
+      <concept id="6039408957482904354" name="com.github.vlsi.iec61131.st.structure.IfStatement" flags="ng" index="2fLe5g">
+        <child id="6039408957482904422" name="condition" index="2fLe4k" />
+        <child id="6039408957482904424" name="ifTrue" index="2fLe4q" />
+      </concept>
+      <concept id="4949279015990068094" name="com.github.vlsi.iec61131.st.structure.CommentStatement" flags="ng" index="2INlLO" />
     </language>
     <language id="4d1c59f7-8f87-4192-a752-a98136f0b57c" name="com.github.vlsi.iec61131.types">
       <concept id="6039408957479248769" name="com.github.vlsi.iec61131.types.structure.VariableDeclaration" flags="ng" index="283aBN">
@@ -55,6 +60,9 @@
         <reference id="5202852658696457741" name="function" index="kub3w" />
       </concept>
       <concept id="2839352626200938331" name="com.github.vlsi.iec61131.types.structure.XorExpression" flags="ng" index="2zCeXK" />
+      <concept id="123060273427541007" name="com.github.vlsi.iec61131.types.structure.ICommentable" flags="ng" index="2EalU_">
+        <property id="123060273427541008" name="comment" index="2EalUU" />
+      </concept>
       <concept id="3750039987448159535" name="com.github.vlsi.iec61131.types.structure.BoolType" flags="ng" index="PkkMJ" />
       <concept id="2407636829921600129" name="com.github.vlsi.iec61131.types.structure.GlobalVariables" flags="ng" index="3EX$pL" />
       <concept id="212435093035477284" name="com.github.vlsi.iec61131.types.structure.TaskConfiguration" flags="ng" index="1KL_6N" />
@@ -64,6 +72,7 @@
       <concept id="5097456207317905222" name="com.github.vlsi.iec61131.types.structure.FunctionBlockVariableAccess" flags="ng" index="3TXI8J">
         <reference id="5097456207317905237" name="variable" index="3TXI8W" />
       </concept>
+      <concept id="8776140008685944442" name="com.github.vlsi.iec61131.types.structure.ProgramPOU" flags="ng" index="1X6EaH" />
       <concept id="8776140008685944635" name="com.github.vlsi.iec61131.types.structure.POU" flags="ng" index="1X6EfG">
         <child id="6039408957479255908" name="body" index="283bkm" />
         <child id="6039408957482287296" name="variables" index="2fQKEM" />
@@ -142,6 +151,38 @@
         </node>
         <node concept="2fRjeW" id="2tBq2I4LSrr" role="2fKkDa">
           <ref role="2fRto5" node="2tBq2I4LSpP" resolve="Q" />
+        </node>
+      </node>
+    </node>
+  </node>
+  <node concept="1X6EaH" id="3yC4UNZ6m3t">
+    <property role="TrG5h" value="test" />
+    <node concept="283aBN" id="3yC4UNZ6srY" role="2fQKEM">
+      <property role="TrG5h" value="b" />
+      <node concept="PkkMJ" id="3yC4UNZ6ssd" role="2fQRkO" />
+    </node>
+    <node concept="283aBJ" id="3yC4UNZ6m3G" role="283bkm">
+      <node concept="2INlLO" id="3yC4UNZ6m40" role="283bkg">
+        <property role="2EalUU" value="test " />
+      </node>
+      <node concept="2fLe5g" id="3yC4UNZ6ssw" role="283bkg">
+        <node concept="2fRjeW" id="3yC4UNZ6ssO" role="2fLe4k">
+          <ref role="2fRto5" node="3yC4UNZ6srY" resolve="b" />
+        </node>
+        <node concept="283aBJ" id="3yC4UNZ6ss$" role="2fLe4q">
+          <node concept="2fKkDk" id="3yC4UNZ6sta" role="283bkg">
+            <node concept="2fM$nL" id="3yC4UNZ6svX" role="2fKkDe">
+              <node concept="2fRjeW" id="3yC4UNZ6swp" role="2fMgUi">
+                <ref role="2fRto5" node="3yC4UNZ6srY" resolve="b" />
+              </node>
+              <node concept="2fRjeW" id="3yC4UNZ6sty" role="2fMgUl">
+                <ref role="2fRto5" node="3yC4UNZ6srY" resolve="b" />
+              </node>
+            </node>
+            <node concept="2fRjeW" id="3yC4UNZ6st0" role="2fKkDa">
+              <ref role="2fRto5" node="3yC4UNZ6srY" resolve="b" />
+            </node>
+          </node>
         </node>
       </node>
     </node>

@@ -417,6 +417,16 @@
               </node>
             </node>
           </node>
+          <node concept="3clFbF" id="3yC4UO1pwz6" role="3cqZAp">
+            <node concept="37vLTI" id="3yC4UO1pxLa" role="3clFbG">
+              <node concept="37vLTw" id="3yC4UO1pypL" role="37vLTx">
+                <ref role="3cqZAo" node="4qXNmAZqj0f" resolve="chooser" />
+              </node>
+              <node concept="yHkD2" id="3yC4UO1pwz4" role="37vLTJ">
+                <ref role="3cqZAo" node="7yLt8tTSJNQ" resolve="myChooser" />
+              </node>
+            </node>
+          </node>
           <node concept="3cpWs8" id="1ihsGuHIi2t" role="3cqZAp">
             <node concept="3cpWsn" id="7yLt8tTSJ0s" role="3cpWs9">
               <property role="TrG5h" value="panel" />

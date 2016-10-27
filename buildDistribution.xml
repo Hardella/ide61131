@@ -3,7 +3,7 @@
   <property name="build.dir" location="build" />
   <property name="build.tmp" location="${build.dir}/tmp/st61131Distribution" />
   <property name="build.layout" location="${build.dir}/artifacts/st61131Distribution" />
-  <property name="mps_home" location="${basedir}/../../Documents/work/MPS 3.3" />
+  <property name="mps_home" location="${basedir}/../../Documents/work/MPS 3.4" />
   <property name="artifacts.st61131" location="${build.dir}/artifacts/st61131" />
   <property file="${artifacts.st61131}/build.properties" prefix="import.st61131" />
   <property name="st61131.date" value="${import.st61131.st61131.date}" />
@@ -137,7 +137,6 @@
         <exclude name="**/**win32**/**" />
         <exclude name="**/**win64**/**" />
       </zipfileset>
-      <zipfileset file="${basedir}/bin/mac/Contents/Info.plist" prefix="${st61131.appName} ${st61131.version}.app/Contents" />
       <zipfileset file="${basedir}/icons/mps.icns" prefix="${st61131.appName} ${st61131.version}.app/Contents/Resources" />
       <zipfileset file="${mps_home}/bin/mac/Contents/MacOS/mps" prefix="${st61131.appName} ${st61131.version}.app/Contents/MacOS" filemode="755" />
       <zipfileset file="${mps_home}/bin/mac/Contents/MacOS/idea_appLauncher" prefix="${st61131.appName} ${st61131.version}.app/Contents/MacOS" filemode="644" />

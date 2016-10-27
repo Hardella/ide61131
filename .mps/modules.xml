@@ -5,6 +5,7 @@
       <modulePath path="$PROJECT_DIR$/languages/com.github.vlsi.iec61131.cfc/com.github.vlsi.iec61131.cfc.mpl" folder="" />
       <modulePath path="$PROJECT_DIR$/languages/com.github.vlsi.iec61131.executors/com.github.vlsi.iec61131.executors.mpl" folder="" />
       <modulePath path="$PROJECT_DIR$/languages/com.github.vlsi.iec61131.executors/runtime/com.github.vlsi.iec61131.executors.runtime.msd" folder="" />
+      <modulePath path="$PROJECT_DIR$/languages/com.github.vlsi.iec61131.st.ext.implicitfb/com.github.vlsi.iec61131.st.ext.implicitfb.mpl" folder="" />
       <modulePath path="$PROJECT_DIR$/languages/com.github.vlsi.iec61131.st2ti1808/com.github.vlsi.iec61131.st2ti1808.mpl" folder="" />
       <modulePath path="$PROJECT_DIR$/languages/com.github.vlsi.iec61131.ti1808.cfc/com.github.vlsi.iec61131.ti1808.cfc.mpl" folder="" />
       <modulePath path="$PROJECT_DIR$/languages/com.github.vlsi.iec61131.ti1808.pasm/com.github.vlsi.iec61131.ti1808.pasm.mpl" folder="" />
