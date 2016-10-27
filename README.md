@@ -84,6 +84,9 @@ Install mbeddr, clone ide61131, hack as required.
 Changelog
 ---------
 
+v1.5.0: 27 October 2016
+- Support for TI AM1808 PRU code generation
+
 v1.4.0: 12 June 2016
 - New project name and logo. Great thanks to [Sasha Karachinsky](http://karachinsky.ru) for the artwork.
 
