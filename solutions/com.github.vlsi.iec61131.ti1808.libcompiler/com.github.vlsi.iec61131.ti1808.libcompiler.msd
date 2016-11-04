@@ -2,14 +2,14 @@
 <solution name="com.github.vlsi.iec61131.ti1808.libcompiler" uuid="44ae5b95-6c91-4767-a63c-505721ea4c11" moduleVersion="0" compileInMPS="true">
   <models>
     <modelRoot contentPath="${module}" type="default">
-      <sourceRoot location="models" />
+      <sourceRoot location="lib" />
     </modelRoot>
-    <modelRoot contentPath="/Users/vladimirsitnikov/MPSProjects/st61131/lib" type="java_classes">
-      <sourceRoot location="emulator-1.0.0.jar" />
+    <modelRoot contentPath="${module}" type="java_classes">
+      <sourceRoot location="lib/emulator-1.0.0.jar" />
     </modelRoot>
   </models>
   <stubModelEntries>
-    <stubModelEntry path="/Users/vladimirsitnikov/MPSProjects/st61131/lib/emulator-1.0.0.jar" />
+    <stubModelEntry path="${module}/lib/emulator-1.0.0.jar" />
   </stubModelEntries>
   <sourcePath />
   <dependencies>

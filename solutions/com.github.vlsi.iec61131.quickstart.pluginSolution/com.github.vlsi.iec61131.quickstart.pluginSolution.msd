@@ -4,14 +4,14 @@
     <modelRoot contentPath="${module}" type="default">
       <sourceRoot location="models" />
     </modelRoot>
-    <modelRoot contentPath="/Users/vladimirsitnikov/MPSProjects/st61131/lib" type="java_classes">
-      <sourceRoot location="miglayout-core-5.0.jar" />
-      <sourceRoot location="miglayout-swing-5.0.jar" />
+    <modelRoot contentPath="${module}" type="java_classes">
+      <sourceRoot location="lib/miglayout-core-5.0.jar" />
+      <sourceRoot location="lib/miglayout-swing-5.0.jar" />
     </modelRoot>
   </models>
   <stubModelEntries>
-    <stubModelEntry path="/Users/vladimirsitnikov/MPSProjects/st61131/lib/miglayout-core-5.0.jar" />
-    <stubModelEntry path="/Users/vladimirsitnikov/MPSProjects/st61131/lib/miglayout-swing-5.0.jar" />
+    <stubModelEntry path="${module}/lib/miglayout-core-5.0.jar" />
+    <stubModelEntry path="${module}/lib/miglayout-swing-5.0.jar" />
   </stubModelEntries>
   <sourcePath />
   <dependencies>
