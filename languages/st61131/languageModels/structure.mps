@@ -57,7 +57,7 @@
     <node concept="1TJgyj" id="5fgiBbrRfXy" role="1TKVEi">
       <property role="20lmBu" value="aggregation" />
       <property role="20kJfa" value="statements" />
-      <property role="20lbJX" value="0..n" />
+      <property role="20lbJX" value="1..n" />
       <property role="IQ2ns" value="6039408957479255906" />
       <ref role="20lvS9" node="5fgiBbrRfI2" resolve="Statement" />
     </node>
@@ -258,8 +258,17 @@
       <property role="IQ2ns" value="6039408957486399673" />
       <ref role="20lvS9" node="5fgiBbrReet" resolve="StatementList" />
     </node>
+    <node concept="1TJgyj" id="mi8fP_nGmZ" role="1TKVEi">
+      <property role="IQ2ns" value="401419589488919999" />
+      <property role="20lmBu" value="aggregation" />
+      <property role="20kJfa" value="loopLabel" />
+      <ref role="20lvS9" node="mi8fP_nGmW" resolve="LoopLabel" />
+    </node>
     <node concept="PrWs8" id="5MdVxrG0oy2" role="PzmwI">
       <ref role="PrY4T" to="tpck:1_TrU5E6oyb" resolve="IDontSubstituteByDefault" />
+    </node>
+    <node concept="PrWs8" id="mi8fP_sSBy" role="PzmwI">
+      <ref role="PrY4T" to="tpck:3fifI_xCcJN" resolve="ScopeProvider" />
     </node>
   </node>
   <node concept="1TIwiD" id="3Sw88MmutA3">
@@ -319,6 +328,42 @@
     <ref role="1TJDcQ" node="5fgiBbrRfI2" resolve="Statement" />
     <node concept="PrWs8" id="4iJnKFEplkH" role="PzmwI">
       <ref role="PrY4T" to="933e:6PcEEFB6Kf" resolve="ICommentable" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="mi8fP_nGmW">
+    <property role="EcuMT" value="401419589488919996" />
+    <property role="3GE5qa" value="statements" />
+    <property role="TrG5h" value="LoopLabel" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
+    <node concept="PrWs8" id="mi8fP_oF4a" role="PzmwI">
+      <ref role="PrY4T" to="933e:42bSzUqWpBr" resolve="IValidIdentifier" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="mi8fP_pbPW">
+    <property role="EcuMT" value="401419589489311100" />
+    <property role="3GE5qa" value="statements" />
+    <property role="TrG5h" value="ExitStatement" />
+    <property role="34LRSv" value="exit" />
+    <property role="R4oN_" value="exit statement" />
+    <ref role="1TJDcQ" node="5fgiBbrRfI2" resolve="Statement" />
+    <node concept="1TJgyj" id="mi8fP_poTE" role="1TKVEi">
+      <property role="IQ2ns" value="401419589489364586" />
+      <property role="20lmBu" value="aggregation" />
+      <property role="20kJfa" value="loopLabel" />
+      <ref role="20lvS9" node="mi8fP_pjLc" resolve="LoopLabelReference" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="mi8fP_pjLc">
+    <property role="EcuMT" value="401419589489343564" />
+    <property role="3GE5qa" value="statements" />
+    <property role="TrG5h" value="LoopLabelReference" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
+    <node concept="1TJgyj" id="mi8fP_pjLd" role="1TKVEi">
+      <property role="IQ2ns" value="401419589489343565" />
+      <property role="20lmBu" value="reference" />
+      <property role="20kJfa" value="loopLabel" />
+      <property role="20lbJX" value="1" />
+      <ref role="20lvS9" node="mi8fP_nGmW" resolve="LoopLabel" />
     </node>
   </node>
 </model>

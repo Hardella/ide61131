@@ -77,6 +77,7 @@
     <import index="eoo2" ref="6354ebe7-c22a-4a0f-ac54-50b52ab9b065/java:java.nio.file(JDK/)" />
     <import index="tprs" ref="r:00000000-0000-4000-0000-011c895904a4(jetbrains.mps.ide.actions)" />
     <import index="gzb9" ref="r:de700410-c677-4f89-bf11-6bca95714d96(com.github.vlsi.iec61131.ti1808.stdlib.lib)" />
+    <import index="7lmn" ref="r:f3b45004-620c-4cf8-a97d-f2ef80350d2c(com.github.vlsi.iec61131.standard_lib.base)" />
   </imports>
   <registry>
     <language id="982eb8df-2c96-4bd7-9963-11712ea622e5" name="jetbrains.mps.lang.resources">
@@ -6098,6 +6099,39 @@
                                                 </node>
                                               </node>
                                             </node>
+                                            <node concept="3clFbF" id="58Wclwm9GdF" role="3cqZAp">
+                                              <node concept="37vLTI" id="58Wclwm9Ig_" role="3clFbG">
+                                                <node concept="37vLTw" id="58Wclwm9GdD" role="37vLTJ">
+                                                  <ref role="3cqZAo" node="7o69NaMYt28" resolve="model" />
+                                                </node>
+                                                <node concept="BaHAS" id="58Wclwm9BUk" role="37vLTx">
+                                                  <property role="BaHAW" value="com.github.vlsi.iec61131.standard_lib.base" />
+                                                  <property role="BaGAP" value="" />
+                                                  <node concept="2OqwBi" id="58Wclwm9BUl" role="up2gk">
+                                                    <node concept="2JrnkZ" id="58Wclwm9BUm" role="2Oq$k0">
+                                                      <node concept="37vLTw" id="58Wclwm9BUn" role="2JrQYb">
+                                                        <ref role="3cqZAo" node="7o69NaMY3ey" resolve="mainModel" />
+                                                      </node>
+                                                    </node>
+                                                    <node concept="liA8E" id="58Wclwm9BUo" role="2OqNvi">
+                                                      <ref role="37wK5l" to="mhbf:~SModel.getRepository():org.jetbrains.mps.openapi.module.SRepository" resolve="getRepository" />
+                                                    </node>
+                                                  </node>
+                                                </node>
+                                              </node>
+                                            </node>
+                                            <node concept="3clFbF" id="58Wclwm9BUc" role="3cqZAp">
+                                              <node concept="2OqwBi" id="58Wclwm9BUd" role="3clFbG">
+                                                <node concept="37vLTw" id="58Wclwm9BUe" role="2Oq$k0">
+                                                  <ref role="3cqZAo" node="7o69NaMY3ey" resolve="mainModel" />
+                                                </node>
+                                                <node concept="2o0W8l" id="58Wclwm9BUf" role="2OqNvi">
+                                                  <node concept="37vLTw" id="58Wclwm9BUg" role="oLjvr">
+                                                    <ref role="3cqZAo" node="7o69NaMYt28" resolve="model" />
+                                                  </node>
+                                                </node>
+                                              </node>
+                                            </node>
                                             <node concept="3cpWs8" id="4gPriRq29tl" role="3cqZAp">
                                               <node concept="3cpWsn" id="4gPriRq29to" role="3cpWs9">
                                                 <property role="TrG5h" value="tmp" />
@@ -6646,9 +6680,9 @@
                                                                 <ref role="3TXI8W" to="ax34:1uGpoaRwjqO" resolve="Q" />
                                                               </node>
                                                               <node concept="kub3E" id="4uu4gWrtBse" role="2gt4X2">
-                                                                <ref role="kub3w" to="ax34:1uGpoaRwjqK" resolve="R_TRIG" />
+                                                                <ref role="kub3w" to="7lmn:5qOIvv2kWHx" resolve="R_TRIG" />
                                                                 <node concept="kub3x" id="4uu4gWrtFAh" role="3Ty3gA">
-                                                                  <ref role="kuaWX" to="ax34:1uGpoaRwjqM" resolve="CLK" />
+                                                                  <ref role="kuaWX" to="7lmn:5qOIvv2kWJy" resolve="CLK" />
                                                                   <node concept="2fQRk_" id="5m_LCZkfCM6" role="kuaX2">
                                                                     <node concept="2c44te" id="5m_LCZkfDBE" role="lGtFl">
                                                                       <node concept="2pJPEk" id="5m_LCZkgaba" role="2c44t1">
@@ -10470,6 +10504,38 @@
                                             <node concept="2o0W8l" id="3yC4UO25Ceb" role="2OqNvi">
                                               <node concept="37vLTw" id="3yC4UO25Esf" role="oLjvr">
                                                 <ref role="3cqZAo" node="3yC4UO25ziA" resolve="stdLib" />
+                                              </node>
+                                            </node>
+                                          </node>
+                                        </node>
+                                        <node concept="3cpWs8" id="58Wclwm9RLA" role="3cqZAp">
+                                          <node concept="3cpWsn" id="58Wclwm9RLB" role="3cpWs9">
+                                            <property role="TrG5h" value="baseStdLib" />
+                                            <node concept="H_c77" id="58Wclwm9RLC" role="1tU5fm" />
+                                            <node concept="BaHAS" id="58Wclwm9RLD" role="33vP2m">
+                                              <property role="BaHAW" value="com.github.vlsi.iec61131.standard_lib.base" />
+                                              <property role="BaGAP" value="" />
+                                              <node concept="2OqwBi" id="58Wclwm9RLE" role="up2gk">
+                                                <node concept="2JrnkZ" id="58Wclwm9RLF" role="2Oq$k0">
+                                                  <node concept="37vLTw" id="58Wclwm9RLG" role="2JrQYb">
+                                                    <ref role="3cqZAo" node="3yC4UO1Vx__" resolve="targetModel" />
+                                                  </node>
+                                                </node>
+                                                <node concept="liA8E" id="58Wclwm9RLH" role="2OqNvi">
+                                                  <ref role="37wK5l" to="mhbf:~SModel.getRepository():org.jetbrains.mps.openapi.module.SRepository" resolve="getRepository" />
+                                                </node>
+                                              </node>
+                                            </node>
+                                          </node>
+                                        </node>
+                                        <node concept="3clFbF" id="58Wclwm9RLx" role="3cqZAp">
+                                          <node concept="2OqwBi" id="58Wclwm9RLy" role="3clFbG">
+                                            <node concept="37vLTw" id="58Wclwm9RLz" role="2Oq$k0">
+                                              <ref role="3cqZAo" node="3yC4UO1Vx__" resolve="targetModel" />
+                                            </node>
+                                            <node concept="2o0W8l" id="58Wclwm9RL$" role="2OqNvi">
+                                              <node concept="37vLTw" id="58Wclwm9Xkx" role="oLjvr">
+                                                <ref role="3cqZAo" node="58Wclwm9RLB" resolve="baseStdLib" />
                                               </node>
                                             </node>
                                           </node>

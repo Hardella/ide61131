@@ -11,6 +11,7 @@
   <imports>
     <import index="ax34" ref="r:d8febb6d-d954-4896-8399-1dcd00d04a36(com.github.vlsi.iec61131.standard_lib.lib)" />
     <import index="cjs8" ref="r:93fb98f2-7437-4cf9-b9ef-09914008e1b2(st61131.plc110)" />
+    <import index="7lmn" ref="r:f3b45004-620c-4cf8-a97d-f2ef80350d2c(com.github.vlsi.iec61131.standard_lib.base)" />
   </imports>
   <registry>
     <language id="d28e7e4d-b627-42fa-82d5-c7472b85c5f6" name="com.github.vlsi.iec61131.st">
@@ -862,12 +863,12 @@
       <property role="2fKTFS" value="false" />
       <property role="2fKTFZ" value="false" />
       <property role="2fKTC_" value="false" />
-      <node concept="3T_mE7" id="5EBmM4DXmRX" role="2fQRkO">
-        <ref role="3T_mE6" to="ax34:1uGpoaRwjqD" resolve="F_TRIG" />
+      <node concept="3T_mE7" id="58Wclwm9BI7" role="2fQRkO">
+        <ref role="3T_mE6" to="7lmn:6mj7nr1NDnq" resolve="F_TRIG" />
       </node>
       <node concept="2C4E7h" id="1GwckiTZiyZ" role="2fQRkU">
         <node concept="kub3x" id="1GwckiTZizg" role="3Ty3gA">
-          <ref role="kuaWX" to="ax34:1uGpoaRwjqF" resolve="CLK" />
+          <ref role="kuaWX" to="7lmn:6mj7nr1NDnr" resolve="CLK" />
           <node concept="2fLVyO" id="1GwckiTZizB" role="kuaX2">
             <property role="2fLV_C" value="true" />
           </node>

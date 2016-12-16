@@ -222,6 +222,7 @@
       <concept id="7753544965996489991" name="jetbrains.mps.build.mps.structure.BuildMps_BrandingUpdateSite" flags="ng" index="1zDKOm">
         <child id="6108265972537335225" name="updateUrl" index="2EtnoK" />
         <child id="6108265972537335224" name="checkUrl" index="2EtnoL" />
+        <child id="8795525031433091059" name="updateChannel" index="HFWMp" />
       </concept>
       <concept id="4278635856200826393" name="jetbrains.mps.build.mps.structure.BuildMps_ModuleDependencyJar" flags="ng" index="1BurEX">
         <child id="4278635856200826394" name="path" index="1BurEY" />
@@ -256,7 +257,7 @@
     <node concept="10PD9b" id="3$sDymgFgwj" role="10PD9s" />
     <node concept="3b7kt6" id="3$sDymgFgwk" role="10PD9s" />
     <node concept="1zClus" id="3$sDymgFgwx" role="3989C9">
-      <property role="2OjLBK" value="5" />
+      <property role="2OjLBK" value="6" />
       <property role="TrG5h" value="MPS" />
       <property role="2OjLBL" value="1" />
       <property role="1lNJF1" value="0" />
@@ -439,12 +440,17 @@
       <node concept="1zDKOm" id="3yC4UO2o9AE" role="2Etnp4">
         <node concept="3_J27D" id="3yC4UO2o9AF" role="2EtnoL">
           <node concept="3Mxwew" id="3yC4UO2oaeR" role="3MwsjC">
-            <property role="3MwjfP" value="https://github.com/vlsi/ide61131" />
+            <property role="3MwjfP" value="https://hardella.com" />
           </node>
         </node>
         <node concept="3_J27D" id="3yC4UO2o9AG" role="2EtnoK">
           <node concept="3Mxwew" id="3yC4UO2oacC" role="3MwsjC">
             <property role="3MwjfP" value="https://github.com/vlsi/ide61131" />
+          </node>
+        </node>
+        <node concept="NbPM2" id="5ZeBDx1wPfk" role="HFWMp">
+          <node concept="3Mxwew" id="5ZeBDx1wPhN" role="3MwsjC">
+            <property role="3MwjfP" value="HARDELLA34" />
           </node>
         </node>
       </node>
@@ -460,7 +466,7 @@
       <node concept="aVJcg" id="3$sDymgFgwo" role="aVJcv">
         <node concept="NbPM2" id="3$sDymgFgwp" role="aVJcq">
           <node concept="3Mxwew" id="3$sDymgFgwq" role="3MwsjC">
-            <property role="3MwjfP" value="162.1680" />
+            <property role="3MwjfP" value="162.1681" />
           </node>
         </node>
       </node>
@@ -470,7 +476,7 @@
       <node concept="aVJcg" id="25DDf3bBi2W" role="aVJcv">
         <node concept="NbPM2" id="25DDf3bBi2V" role="aVJcq">
           <node concept="3Mxwew" id="25DDf3bBi2U" role="3MwsjC">
-            <property role="3MwjfP" value="1.5.0" />
+            <property role="3MwjfP" value="1.6.0" />
           </node>
         </node>
       </node>
@@ -1010,7 +1016,7 @@
       </node>
       <node concept="2iUeEo" id="5zgQEvZlltx" role="2iVFfd">
         <property role="2iUeEt" value="Vladimir Sitnikov" />
-        <property role="2iUeEu" value="https://github.com/vlsi/ide61131" />
+        <property role="2iUeEu" value="https://hardella.com" />
         <node concept="55IIr" id="5zgQEvZllyz" role="2iUeEv">
           <node concept="2Ry0Ak" id="5zgQEvZlly$" role="iGT6I">
             <property role="2Ry0Am" value="icons" />
@@ -2114,6 +2120,12 @@
             </node>
           </node>
         </node>
+        <node concept="1SiIV0" id="58WclwmbnOs" role="3bR37C">
+          <node concept="3bR9La" id="58WclwmbnOt" role="1SiIV1">
+            <property role="3bR36h" value="false" />
+            <ref role="3bR37D" node="5EBmM4DXn4C" resolve="com.github.vlsi.iec61131.standard_lib" />
+          </node>
+        </node>
       </node>
       <node concept="1E1JtA" id="5Z_5Vvhk0Mp" role="2G$12L">
         <property role="BnDLt" value="true" />
@@ -2255,6 +2267,35 @@
                 </node>
               </node>
             </node>
+          </node>
+        </node>
+      </node>
+      <node concept="1E1JtA" id="58Wclwmbop9" role="2G$12L">
+        <property role="BnDLt" value="true" />
+        <property role="TrG5h" value="com.hardella.examples.ti1808" />
+        <property role="3LESm3" value="2436b149-b605-4276-a0e9-937f788bae1a" />
+        <property role="2GAjPV" value="false" />
+        <node concept="55IIr" id="58Wclwmbopa" role="3LF7KH">
+          <node concept="2Ry0Ak" id="58Wclwmbopb" role="iGT6I">
+            <property role="2Ry0Am" value="solutions" />
+            <node concept="2Ry0Ak" id="58Wclwmbopc" role="2Ry0An">
+              <property role="2Ry0Am" value="com.hardella.examples.ti1808" />
+              <node concept="2Ry0Ak" id="58WclwmboTM" role="2Ry0An">
+                <property role="2Ry0Am" value="com.hardella.examples.ti1808.msd" />
+              </node>
+            </node>
+          </node>
+        </node>
+        <node concept="1SiIV0" id="58Wclwmbopi" role="3bR37C">
+          <node concept="3bR9La" id="58Wclwmbopj" role="1SiIV1">
+            <property role="3bR36h" value="false" />
+            <ref role="3bR37D" node="5EBmM4DXn4C" resolve="com.github.vlsi.iec61131.standard_lib" />
+          </node>
+        </node>
+        <node concept="1SiIV0" id="58WclwmbopE" role="3bR37C">
+          <node concept="3bR9La" id="58WclwmbopF" role="1SiIV1">
+            <property role="3bR36h" value="false" />
+            <ref role="3bR37D" node="3yC4UO29t5N" resolve="com.github.vlsi.iec61131.ti1808.stdlib" />
           </node>
         </node>
       </node>

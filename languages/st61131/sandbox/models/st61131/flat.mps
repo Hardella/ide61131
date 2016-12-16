@@ -9,6 +9,7 @@
   <imports>
     <import index="cjs8" ref="r:93fb98f2-7437-4cf9-b9ef-09914008e1b2(st61131.plc110)" />
     <import index="ax34" ref="r:d8febb6d-d954-4896-8399-1dcd00d04a36(com.github.vlsi.iec61131.standard_lib.lib)" />
+    <import index="7lmn" ref="r:f3b45004-620c-4cf8-a97d-f2ef80350d2c(com.github.vlsi.iec61131.standard_lib.base)" />
   </imports>
   <registry>
     <language id="d28e7e4d-b627-42fa-82d5-c7472b85c5f6" name="com.github.vlsi.iec61131.st">
@@ -86,6 +87,11 @@
   </registry>
   <node concept="3EX$pL" id="2tBq2I4LRQS">
     <property role="TrG5h" value="GlobalVariables" />
+    <node concept="283aBN" id="5pj1WKf07kg" role="2fQKEM">
+      <property role="TrG5h" value="out1" />
+      <property role="2EalUU" value="output pin 1" />
+      <node concept="PkkMJ" id="5pj1WKf07ks" role="2fQRkO" />
+    </node>
   </node>
   <node concept="1KL_6N" id="2tBq2I4LRZ$" />
   <node concept="283fMa" id="2tBq2I4LSo_">
@@ -126,16 +132,16 @@
               </node>
               <node concept="2gtbcv" id="13WgsUY59_V" role="2fMgUi">
                 <node concept="kub3E" id="2tBq2I4Mmmb" role="2gt4X2">
-                  <ref role="kub3w" to="ax34:1uGpoaRwjqK" resolve="R_TRIG" />
+                  <ref role="kub3w" to="7lmn:5qOIvv2kWHx" resolve="R_TRIG" />
                   <node concept="kub3x" id="2tBq2I4Mmn4" role="3Ty3gA">
-                    <ref role="kuaWX" to="ax34:1uGpoaRwjqM" resolve="CLK" />
+                    <ref role="kuaWX" to="7lmn:5qOIvv2kWJy" resolve="CLK" />
                     <node concept="2fRjeW" id="2tBq2I4MmnY" role="kuaX2">
                       <ref role="2fRto5" node="2tBq2I4LSpv" resolve="CLK" />
                     </node>
                   </node>
                 </node>
-                <node concept="3TXI8J" id="2tBq2I4MzeG" role="2gt4X0">
-                  <ref role="3TXI8W" to="ax34:1uGpoaRwjqO" resolve="Q" />
+                <node concept="3TXI8J" id="58WclwmbnDU" role="2gt4X0">
+                  <ref role="3TXI8W" to="7lmn:5qOIvv2kWJ_" resolve="Q" />
                 </node>
               </node>
             </node>
@@ -172,7 +178,7 @@
         <node concept="283aBJ" id="3yC4UNZ6ss$" role="2fLe4q">
           <node concept="2fKkDk" id="3yC4UNZ6sta" role="283bkg">
             <node concept="2fM$nL" id="3yC4UNZ6svX" role="2fKkDe">
-              <node concept="2fRjeW" id="3yC4UNZ6swp" role="2fMgUi">
+              <node concept="2fRjeW" id="63FqFScJlS0" role="2fMgUi">
                 <ref role="2fRto5" node="3yC4UNZ6srY" resolve="b" />
               </node>
               <node concept="2fRjeW" id="3yC4UNZ6sty" role="2fMgUl">

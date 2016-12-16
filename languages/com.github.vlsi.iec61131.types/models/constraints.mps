@@ -22,7 +22,7 @@
     <import index="tpcu" ref="r:00000000-0000-4000-0000-011c89590282(jetbrains.mps.lang.core.behavior)" />
     <import index="wyt6" ref="6354ebe7-c22a-4a0f-ac54-50b52ab9b065/java:java.lang(JDK/)" />
     <import index="mhfm" ref="3f233e7f-b8a6-46d2-a57f-795d56775243/java:org.jetbrains.annotations(Annotations/)" />
-    <import index="tpck" ref="r:00000000-0000-4000-0000-011c89590288(jetbrains.mps.lang.core.structure)" implicit="true" />
+    <import index="tpck" ref="r:00000000-0000-4000-0000-011c89590288(jetbrains.mps.lang.core.structure)" />
   </imports>
   <registry>
     <language id="13744753-c81f-424a-9c1b-cf8943bf4e86" name="jetbrains.mps.lang.sharedConcepts">
@@ -191,9 +191,11 @@
       <concept id="8966504967485224688" name="jetbrains.mps.lang.constraints.structure.ConstraintFunctionParameter_contextNode" flags="nn" index="2rP1CM" />
       <concept id="1147467115080" name="jetbrains.mps.lang.constraints.structure.NodePropertyConstraint" flags="ng" index="EnEH3">
         <reference id="1147467295099" name="applicableProperty" index="EomxK" />
+        <child id="1147468630220" name="propertyGetter" index="EtsB7" />
         <child id="1212097481299" name="propertyValidator" index="QCWH9" />
         <child id="1152963095733" name="propertySetter" index="1LXaQT" />
       </concept>
+      <concept id="1147467790433" name="jetbrains.mps.lang.constraints.structure.ConstraintFunction_PropertyGetter" flags="in" index="Eqf_E" />
       <concept id="1147468365020" name="jetbrains.mps.lang.constraints.structure.ConstraintsFunctionParameter_node" flags="nn" index="EsrRn" />
       <concept id="1212096972063" name="jetbrains.mps.lang.constraints.structure.ConstraintFunction_PropertyValidator" flags="in" index="QB0g5" />
       <concept id="5676632058862809931" name="jetbrains.mps.lang.constraints.structure.ConstraintFunction_ReferentSearchScope_Scope" flags="in" index="13QW63" />
@@ -2895,6 +2897,29 @@
             <node concept="3uNrnE" id="3cChPJc1kR4" role="1Dwrff">
               <node concept="37vLTw" id="3cChPJc1kR6" role="2$L3a6">
                 <ref role="3cqZAo" node="3cChPJc1k$Q" resolve="i" />
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+    </node>
+  </node>
+  <node concept="1M2fIO" id="63FqFSeA1gQ">
+    <property role="3GE5qa" value="expressions.functions" />
+    <ref role="1M2myG" to="933e:4wOfIPsj8S7" resolve="FunctionCall" />
+  </node>
+  <node concept="1M2fIO" id="5ZeBDx1aXMD">
+    <property role="3GE5qa" value="plcconfig.instance" />
+    <ref role="1M2myG" to="933e:6PcEEFB6Kf" resolve="ICommentable" />
+    <node concept="EnEH3" id="5ZeBDx1aXME" role="1MhHOB">
+      <ref role="EomxK" to="tpck:gOOYnlO" resolve="shortDescription" />
+      <node concept="Eqf_E" id="5ZeBDx1aXMG" role="EtsB7">
+        <node concept="3clFbS" id="5ZeBDx1aXMH" role="2VODD2">
+          <node concept="3clFbF" id="5ZeBDx1aXV6" role="3cqZAp">
+            <node concept="2OqwBi" id="5ZeBDx1aY6f" role="3clFbG">
+              <node concept="EsrRn" id="5ZeBDx1aXV5" role="2Oq$k0" />
+              <node concept="3TrcHB" id="5ZeBDx1aYkl" role="2OqNvi">
+                <ref role="3TsBF5" to="933e:6PcEEFB6Kg" resolve="comment" />
               </node>
             </node>
           </node>

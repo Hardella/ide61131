@@ -4,7 +4,9 @@
   <languages>
     <use id="4d1c59f7-8f87-4192-a752-a98136f0b57c" name="com.github.vlsi.iec61131.types" version="0" />
   </languages>
-  <imports />
+  <imports>
+    <import index="7lmn" ref="r:f3b45004-620c-4cf8-a97d-f2ef80350d2c(com.github.vlsi.iec61131.standard_lib.base)" />
+  </imports>
   <registry>
     <language id="4d1c59f7-8f87-4192-a752-a98136f0b57c" name="com.github.vlsi.iec61131.types">
       <concept id="6039408957479248769" name="com.github.vlsi.iec61131.types.structure.VariableDeclaration" flags="ng" index="283aBN">
@@ -226,27 +228,6 @@
       <node concept="2fQMHo" id="1uGpoaRwjsg" role="2fQRkO" />
     </node>
   </node>
-  <node concept="283fMa" id="1uGpoaRwjqD">
-    <property role="TrG5h" value="F_TRIG" />
-    <node concept="283aBN" id="1uGpoaRwjqF" role="2fQKEM">
-      <property role="TrG5h" value="CLK" />
-      <property role="2fKTFS" value="true" />
-      <property role="2fKTFZ" value="false" />
-      <node concept="PkkMJ" id="1uGpoaRwjqE" role="2fQRkO" />
-    </node>
-    <node concept="283aBN" id="1uGpoaRwjqH" role="2fQKEM">
-      <property role="TrG5h" value="Q" />
-      <property role="2fKTFS" value="false" />
-      <property role="2fKTFZ" value="true" />
-      <node concept="PkkMJ" id="1uGpoaRwjqG" role="2fQRkO" />
-    </node>
-    <node concept="283aBN" id="1uGpoaRwjqJ" role="2fQKEM">
-      <property role="TrG5h" value="M" />
-      <property role="2fKTFS" value="false" />
-      <property role="2fKTFZ" value="false" />
-      <node concept="PkkMJ" id="1uGpoaRwjqI" role="2fQRkO" />
-    </node>
-  </node>
   <node concept="3TBBpW" id="1uGpoaRwjsj">
     <property role="TrG5h" value="INSERT" />
     <node concept="2fQMHo" id="1uGpoaRwjsi" role="3TBBpZ" />
@@ -361,48 +342,6 @@
       <node concept="2lvX3u" id="1uGpoaRwjsU" role="2fQRkO" />
     </node>
   </node>
-  <node concept="283fMa" id="1uGpoaRwjqR">
-    <property role="TrG5h" value="RS" />
-    <node concept="283aBN" id="1uGpoaRwjqT" role="2fQKEM">
-      <property role="TrG5h" value="SET" />
-      <property role="2fKTFS" value="true" />
-      <property role="2fKTFZ" value="false" />
-      <node concept="PkkMJ" id="1uGpoaRwjqS" role="2fQRkO" />
-    </node>
-    <node concept="283aBN" id="1uGpoaRwjqV" role="2fQKEM">
-      <property role="TrG5h" value="RESET1" />
-      <property role="2fKTFS" value="true" />
-      <property role="2fKTFZ" value="false" />
-      <node concept="PkkMJ" id="1uGpoaRwjqU" role="2fQRkO" />
-    </node>
-    <node concept="283aBN" id="1uGpoaRwjqX" role="2fQKEM">
-      <property role="TrG5h" value="Q1" />
-      <property role="2fKTFS" value="false" />
-      <property role="2fKTFZ" value="true" />
-      <node concept="PkkMJ" id="1uGpoaRwjqW" role="2fQRkO" />
-    </node>
-  </node>
-  <node concept="283fMa" id="1uGpoaRwjqK">
-    <property role="TrG5h" value="R_TRIG" />
-    <node concept="283aBN" id="1uGpoaRwjqM" role="2fQKEM">
-      <property role="TrG5h" value="CLK" />
-      <property role="2fKTFS" value="true" />
-      <property role="2fKTFZ" value="false" />
-      <node concept="PkkMJ" id="1uGpoaRwjqL" role="2fQRkO" />
-    </node>
-    <node concept="283aBN" id="1uGpoaRwjqO" role="2fQKEM">
-      <property role="TrG5h" value="Q" />
-      <property role="2fKTFS" value="false" />
-      <property role="2fKTFZ" value="true" />
-      <node concept="PkkMJ" id="1uGpoaRwjqN" role="2fQRkO" />
-    </node>
-    <node concept="283aBN" id="1uGpoaRwjqQ" role="2fQKEM">
-      <property role="TrG5h" value="M" />
-      <property role="2fKTFS" value="false" />
-      <property role="2fKTFZ" value="false" />
-      <node concept="PkkMJ" id="1uGpoaRwjqP" role="2fQRkO" />
-    </node>
-  </node>
   <node concept="283fMa" id="1uGpoaRwjr9">
     <property role="TrG5h" value="SEMA" />
     <node concept="283aBN" id="1uGpoaRwjrb" role="2fQKEM">
@@ -428,27 +367,6 @@
       <property role="2fKTFS" value="false" />
       <property role="2fKTFZ" value="false" />
       <node concept="PkkMJ" id="1uGpoaRwjrg" role="2fQRkO" />
-    </node>
-  </node>
-  <node concept="283fMa" id="1uGpoaRwjri">
-    <property role="TrG5h" value="SR" />
-    <node concept="283aBN" id="1uGpoaRwjrk" role="2fQKEM">
-      <property role="TrG5h" value="SET1" />
-      <property role="2fKTFS" value="true" />
-      <property role="2fKTFZ" value="false" />
-      <node concept="PkkMJ" id="1uGpoaRwjrj" role="2fQRkO" />
-    </node>
-    <node concept="283aBN" id="1uGpoaRwjrm" role="2fQKEM">
-      <property role="TrG5h" value="RESET" />
-      <property role="2fKTFS" value="true" />
-      <property role="2fKTFZ" value="false" />
-      <node concept="PkkMJ" id="1uGpoaRwjrl" role="2fQRkO" />
-    </node>
-    <node concept="283aBN" id="1uGpoaRwjro" role="2fQKEM">
-      <property role="TrG5h" value="Q1" />
-      <property role="2fKTFS" value="false" />
-      <property role="2fKTFZ" value="true" />
-      <node concept="PkkMJ" id="1uGpoaRwjrn" role="2fQRkO" />
     </node>
   </node>
   <node concept="283fMa" id="1uGpoaRwjrp">

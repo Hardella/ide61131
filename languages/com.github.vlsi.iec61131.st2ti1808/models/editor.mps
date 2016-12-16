@@ -212,8 +212,10 @@
   </node>
   <node concept="24kQdi" id="6LAvc6vQbfH">
     <ref role="1XX52x" to="ocpr:6LAvc6vQbfd" resolve="PruConfiguration" />
-    <node concept="3F1sOY" id="1I83mA9_hlZ" role="2wV5jI">
-      <ref role="1NtTu8" to="ocpr:1I83mA9_fW5" resolve="taskConfiguration" />
+    <node concept="1kIj98" id="63FqFSdoBxQ" role="2wV5jI">
+      <node concept="3F1sOY" id="1I83mA9_hlZ" role="1kIj9b">
+        <ref role="1NtTu8" to="ocpr:1I83mA9_fW5" resolve="taskConfiguration" />
+      </node>
     </node>
   </node>
   <node concept="3p309x" id="2Za7gvF0BNX">
@@ -587,6 +589,13 @@
         </node>
       </node>
       <node concept="2iRkQZ" id="6mj7nr595w3" role="2iSdaV" />
+    </node>
+  </node>
+  <node concept="24kQdi" id="58WclwlYifu">
+    <ref role="1XX52x" to="ocpr:58WclwlYif2" resolve="CurrentPruControlRegister" />
+    <node concept="3F0ifn" id="58WclwlYifw" role="2wV5jI">
+      <property role="3F0ifm" value="PRUcontrolRegister" />
+      <ref role="1k5W1q" to="tpen:hgVS8CF" resolve="KeyWord" />
     </node>
   </node>
 </model>

@@ -46,9 +46,17 @@
       <concept id="1203001093456" name="jetbrains.mps.lang.constraints.structure.ConstraintFunction_CanBeAParent" flags="in" index="osYL8" />
       <concept id="1203001236505" name="jetbrains.mps.lang.constraints.structure.ConstraintFunctionParameter_childConcept" flags="nn" index="otxO1" />
       <concept id="1203009604308" name="jetbrains.mps.lang.constraints.structure.ConstraintFunctionParameter_link" flags="nn" index="oXsJc" />
+      <concept id="8401916545537438642" name="jetbrains.mps.lang.constraints.structure.InheritedNodeScopeFactory" flags="ng" index="1dDu$B">
+        <reference id="8401916545537438643" name="kind" index="1dDu$A" />
+      </concept>
       <concept id="1213093968558" name="jetbrains.mps.lang.constraints.structure.ConceptConstraints" flags="ng" index="1M2fIO">
         <reference id="1213093996982" name="concept" index="1M2myG" />
+        <child id="1213100494875" name="referent" index="1Mr941" />
         <child id="1213106478122" name="canBeParent" index="1MLXOK" />
+      </concept>
+      <concept id="1148687176410" name="jetbrains.mps.lang.constraints.structure.NodeReferentConstraint" flags="ng" index="1N5Pfh">
+        <reference id="1148687202698" name="applicableLink" index="1N5Vy1" />
+        <child id="1148687345559" name="searchScopeFactory" index="1N6uqs" />
       </concept>
     </language>
     <language id="7866978e-a0f0-4cc7-81bc-4d213d9375e1" name="jetbrains.mps.lang.smodel">
@@ -85,7 +93,7 @@
           <node concept="3y3z36" id="3Sw88Mmx$Jk" role="3clFbw">
             <node concept="oXsJc" id="3Sw88Mmx$DG" role="3uHU7B" />
             <node concept="28GBK8" id="3Sw88Mmx_0h" role="3uHU7w">
-              <ref role="28H3Ia" to="jzle:3Sw88MmutDH" />
+              <ref role="28H3Ia" to="jzle:3Sw88MmutDH" resolve="values" />
               <ref role="28GBKb" to="jzle:3Sw88MmutAl" resolve="CaseItem" />
             </node>
           </node>
@@ -120,6 +128,16 @@
             </node>
           </node>
         </node>
+      </node>
+    </node>
+  </node>
+  <node concept="1M2fIO" id="mi8fP_soDa">
+    <property role="3GE5qa" value="statements" />
+    <ref role="1M2myG" to="jzle:mi8fP_pjLc" resolve="LoopLabelReference" />
+    <node concept="1N5Pfh" id="mi8fP_soDb" role="1Mr941">
+      <ref role="1N5Vy1" to="jzle:mi8fP_pjLd" resolve="loopLabel" />
+      <node concept="1dDu$B" id="mi8fP_soDf" role="1N6uqs">
+        <ref role="1dDu$A" to="jzle:mi8fP_nGmW" resolve="LoopLabel" />
       </node>
     </node>
   </node>

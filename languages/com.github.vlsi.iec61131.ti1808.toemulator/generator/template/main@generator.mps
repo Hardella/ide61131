@@ -366,10 +366,21 @@
               <node concept="3zFVjK" id="6LAvc6v3iIa" role="3zH0cK">
                 <node concept="3clFbS" id="6LAvc6v3iIb" role="2VODD2">
                   <node concept="3clFbF" id="6LAvc6v3iIc" role="3cqZAp">
-                    <node concept="2OqwBi" id="6LAvc6v3iId" role="3clFbG">
-                      <node concept="30H73N" id="6LAvc6v3iIe" role="2Oq$k0" />
-                      <node concept="3TrcHB" id="6LAvc6v3iIf" role="2OqNvi">
-                        <ref role="3TsBF5" to="rpfd:5qOIvv1TQJs" resolve="text" />
+                    <node concept="2OqwBi" id="63FqFSeJNhb" role="3clFbG">
+                      <node concept="2OqwBi" id="6LAvc6v3iId" role="2Oq$k0">
+                        <node concept="30H73N" id="6LAvc6v3iIe" role="2Oq$k0" />
+                        <node concept="3TrcHB" id="6LAvc6v3iIf" role="2OqNvi">
+                          <ref role="3TsBF5" to="rpfd:5qOIvv1TQJs" resolve="text" />
+                        </node>
+                      </node>
+                      <node concept="liA8E" id="63FqFSeJNDc" role="2OqNvi">
+                        <ref role="37wK5l" to="wyt6:~String.replaceAll(java.lang.String,java.lang.String):java.lang.String" resolve="replaceAll" />
+                        <node concept="Xl_RD" id="63FqFSeJNOV" role="37wK5m">
+                          <property role="Xl_RC" value="[\n\r]+" />
+                        </node>
+                        <node concept="Xl_RD" id="63FqFSeJPmJ" role="37wK5m">
+                          <property role="Xl_RC" value="\n// " />
+                        </node>
                       </node>
                     </node>
                   </node>

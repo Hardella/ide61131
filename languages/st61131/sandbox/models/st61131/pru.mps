@@ -33,9 +33,13 @@
       <concept id="124800662050897899" name="com.github.vlsi.iec61131.ti1808.structure.StatementList" flags="ng" index="1SZpTx">
         <child id="124800662050897978" name="statements" index="1SZ66K" />
       </concept>
+      <concept id="124800662050753089" name="com.github.vlsi.iec61131.ti1808.structure.Statement" flags="ng" index="1SZUJb" />
       <concept id="124800662050753092" name="com.github.vlsi.iec61131.ti1808.structure.Instruction" flags="ng" index="1SZUJe">
         <property id="124800662050756754" name="name" index="1SZV$o" />
         <child id="124800662050756153" name="args" index="1SZVuN" />
+      </concept>
+      <concept id="124800662050748520" name="com.github.vlsi.iec61131.ti1808.structure.Program" flags="ng" index="1SZXBy">
+        <child id="124800662050754321" name="body" index="1SZUUr" />
       </concept>
     </language>
     <language id="d1aef6cd-5477-486f-bcbd-34728b246566" name="com.github.vlsi.iec61131.st2ti1808">
@@ -43,7 +47,7 @@
         <child id="7173549363848816941" name="expression" index="39vrwe" />
       </concept>
       <concept id="7014233255272281711" name="com.github.vlsi.iec61131.st2ti1808.structure.Export" flags="ng" index="3LqZAk">
-        <property id="7014233255272632695" name="blockName" index="3L5_Uc" />
+        <property id="7014233255272632695" name="varPrefix" index="3L5_Uc" />
         <child id="7014233255272714748" name="variables" index="3L59S7" />
       </concept>
       <concept id="7811067774768496167" name="com.github.vlsi.iec61131.st2ti1808.structure.RefToStVar" flags="ng" index="3NXsbA">
@@ -547,7 +551,7 @@
     <node concept="283aBN" id="1l2OrOTiuxa" role="2fQKEM">
       <property role="TrG5h" value="CU_T" />
       <node concept="3T_mE7" id="1l2OrOTiuyK" role="2fQRkO">
-        <ref role="3T_mE6" node="5qOIvv2kWHx" resolve="PRU_RTRIG" />
+        <ref role="3T_mE6" node="5qOIvv2kWHx" resolve="RTRIG" />
       </node>
     </node>
     <node concept="283aBJ" id="5qOIvv2jrDX" role="283bkm">
@@ -648,7 +652,7 @@
     </node>
   </node>
   <node concept="283fMa" id="5qOIvv2kWHx">
-    <property role="TrG5h" value="PRU_RTRIG" />
+    <property role="TrG5h" value="RTRIG" />
     <node concept="283aBN" id="5qOIvv2kWJy" role="2fQKEM">
       <property role="2fKTFS" value="true" />
       <property role="TrG5h" value="in" />
@@ -660,9 +664,10 @@
       <node concept="PkkMJ" id="5qOIvv2kWM0" role="2fQRkO" />
     </node>
     <node concept="283aBN" id="5qOIvv2lune" role="2fQKEM">
-      <property role="TrG5h" value="mem" />
       <property role="2fKTFZ" value="false" />
       <property role="2fKTC_" value="false" />
+      <property role="TrG5h" value="mem" />
+      <property role="2fKTFS" value="false" />
       <node concept="PkkMJ" id="5qOIvv2lunJ" role="2fQRkO" />
     </node>
     <node concept="283aBN" id="5qOIvv2pbKU" role="2fQKEM">
@@ -701,6 +706,7 @@
           <ref role="2fRto5" node="5qOIvv2lune" resolve="mem" />
         </node>
       </node>
+      <node concept="283b7K" id="58WclwlFk_E" role="283bkg" />
     </node>
   </node>
   <node concept="283fMa" id="5qOIvv2qbAe">
@@ -8691,7 +8697,7 @@
         </node>
         <node concept="283aBJ" id="65nzZIfJkRM" role="2fLe4q">
           <node concept="2INlLO" id="65nzZIfJl66" role="283bkg">
-            <property role="2EalUU" value="Если a или b изменилось" />
+            <property role="2EalUU" value="Update position when a or b has changed" />
           </node>
           <node concept="2fKkDk" id="65nzZIfw3H3" role="283bkg">
             <node concept="2fA4ie" id="65nzZIfw3IS" role="2fKkDe">
@@ -8804,7 +8810,7 @@
             <ref role="3TXI8W" node="5qOIvv2kWJ_" resolve="out" />
           </node>
           <node concept="kub3E" id="65nzZIftlQ1" role="2gt4X2">
-            <ref role="kub3w" node="5qOIvv2kWHx" resolve="PRU_RTRIG" />
+            <ref role="kub3w" node="5qOIvv2kWHx" resolve="RTRIG" />
             <node concept="kub3x" id="65nzZIftlQ2" role="3Ty3gA">
               <ref role="kuaWX" node="5qOIvv2kWJy" resolve="in" />
               <node concept="2fRjeW" id="65nzZIftlUN" role="kuaX2">
@@ -9339,6 +9345,15 @@
           </node>
         </node>
       </node>
+    </node>
+  </node>
+  <node concept="1SZXBy" id="63FqFSdQQhT">
+    <property role="TrG5h" value="test" />
+    <node concept="1SZpTx" id="63FqFSdQQhU" role="1SZUUr">
+      <node concept="2nkX8G" id="63FqFSdQQhX" role="1SZ66K">
+        <property role="2nkX8F" value="asdfasa" />
+      </node>
+      <node concept="1SZUJb" id="63FqFSdQQi0" role="1SZ66K" />
     </node>
   </node>
 </model>

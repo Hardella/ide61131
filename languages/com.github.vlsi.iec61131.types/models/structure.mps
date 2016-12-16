@@ -10,6 +10,7 @@
   <imports>
     <import index="tpck" ref="r:00000000-0000-4000-0000-011c89590288(jetbrains.mps.lang.core.structure)" />
     <import index="tpee" ref="r:00000000-0000-4000-0000-011c895902ca(jetbrains.mps.baseLanguage.structure)" />
+    <import index="vs0r" ref="r:f7764ca4-8c75-4049-922b-08516400a727(com.mbeddr.core.base.structure)" />
   </imports>
   <registry>
     <language id="982eb8df-2c96-4bd7-9963-11712ea622e5" name="jetbrains.mps.lang.resources">
@@ -610,6 +611,12 @@
     </node>
     <node concept="PrWs8" id="4qXNmAZbQdE" role="PzmwI">
       <ref role="PrY4T" to="tpck:3fifI_xCcJN" resolve="ScopeProvider" />
+    </node>
+    <node concept="PrWs8" id="2e5me3oMLCd" role="PzmwI">
+      <ref role="PrY4T" to="vs0r:3m8H$lmFM60" resolve="IDocumentable" />
+    </node>
+    <node concept="PrWs8" id="5ZeBDx0UDif" role="PzmwI">
+      <ref role="PrY4T" node="6PcEEFB6Kf" resolve="ICommentable" />
     </node>
   </node>
   <node concept="1TIwiD" id="7Bb7ds4OrTU">

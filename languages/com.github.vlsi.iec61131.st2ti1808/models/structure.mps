@@ -102,6 +102,12 @@
       <property role="20lbJX" value="1" />
       <ref role="20lvS9" node="1I83mA9_fUU" resolve="PruTaskConfiguration" />
     </node>
+    <node concept="PrWs8" id="63FqFSdp8u0" role="PzmwI">
+      <ref role="PrY4T" to="tpck:hLJPP0O" resolve="IWrapper" />
+    </node>
+    <node concept="PrWs8" id="63FqFSdp8u5" role="PzmwI">
+      <ref role="PrY4T" to="tpck:1_TrU5E6oyb" resolve="IDontSubstituteByDefault" />
+    </node>
   </node>
   <node concept="1TIwiD" id="6ed$ieEW2$f">
     <property role="EcuMT" value="7173549363848816911" />
@@ -278,6 +284,13 @@
       <property role="TrG5h" value="offset" />
       <ref role="AX2Wp" to="tpck:fKAQMTA" resolve="integer" />
     </node>
+  </node>
+  <node concept="1TIwiD" id="58WclwlYif2">
+    <property role="EcuMT" value="5925665464108262338" />
+    <property role="TrG5h" value="CurrentPruControlRegister" />
+    <property role="34LRSv" value="pruControlRegister" />
+    <property role="R4oN_" value="control Register of current PRU" />
+    <ref role="1TJDcQ" to="933e:5fgiBbs2NXn" resolve="Expression" />
   </node>
 </model>
 
