@@ -3,7 +3,7 @@
   <property name="build.dir" location="build" />
   <property name="build.tmp" location="${build.dir}/tmp/st61131Distribution" />
   <property name="build.layout" location="${build.dir}/artifacts/st61131Distribution" />
-  <property name="mps_home" location="${basedir}/../../Documents/work/MPS 3.4" />
+  <property name="mps_home" location="${basedir}/../../Documents/work/MPS 3.4.2" />
   <property name="artifacts.st61131" location="${build.dir}/artifacts/st61131" />
   <property file="${artifacts.st61131}/build.properties" prefix="import.st61131" />
   <property name="st61131.date" value="${import.st61131.st61131.date}" />

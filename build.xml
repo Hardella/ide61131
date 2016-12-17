@@ -6,10 +6,10 @@
   <tstamp>
     <format property="date" pattern="yyyyMMdd" />
   </tstamp>
-  <property name="build.number" value="162.1680" />
-  <property name="version" value="1.5.0" />
+  <property name="build.number" value="162.2065" />
+  <property name="version" value="1.6.0" />
   <property name="appName" value="Hardella" />
-  <property name="mps_home" location="${basedir}/../../Documents/work/MPS 3.4" />
+  <property name="mps_home" location="${basedir}/../../Documents/work/MPS 3.4.2" />
   <property name="mbeddr.github.core.home" location="${basedir}/../../Documents/work/mbeddr.core" />
   <property name="artifacts.mpsStandalone" location="${mps_home}" />
   <property name="artifacts.mpsWorkbench" location="${mps_home}" />
@@ -96,7 +96,7 @@
     <mkdir dir="${build.tmp}/default/branding.jar/idea" />
     <echoxml file="${build.tmp}/default/branding.jar/idea/IdeaApplicationInfo.xml">
       <component>
-        <version codename="" major="1" minor="5.0" eap="false" />
+        <version codename="" major="1" minor="6.0" eap="false" update-channel="HARDELLA34" />
         <company name="Vladimir Sitnikov" url="https://twitter.com/VladimirSitnikv" />
         <build number="${build.number}" date="${date}" />
         <logo url="/splash.png" textcolor="002387" progressColor="4269bc" progressY="394" progressHeight="3" />
@@ -109,9 +109,9 @@
         <welcome-screen logo-url="/icon_80x80.png" />
         
         <plugins url="" />
-        <update-urls check="https://github.com/vlsi/ide61131" update="https://github.com/vlsi/ide61131" />
+        <update-urls check="https://hardella.com" update="https://github.com/vlsi/ide61131" />
         
-        <documentation url="https://github.com/vlsi/ide61131" />
+        <documentation url="http://localhost:4000/docs/introduction" />
         <support url="https://github.com/vlsi/ide61131/issues" />
         <feedback release-url="https://github.com/vlsi/ide61131/issues" />
         <whatsnew url="https://github.com/vlsi/ide61131#changelog" />
@@ -207,12 +207,13 @@
         <name>IDE 61131</name>
         <description>AM1808 PRU programming added</description>
         <version>${version}</version>
-        <vendor url="https://github.com/vlsi/ide61131" logo="/icon_16x16.png">Vladimir Sitnikov</vendor>
+        <vendor url="https://hardella.com" logo="/icon_16x16.png">Vladimir Sitnikov</vendor>
         <depends>jetbrains.mps.core</depends>
         <depends>jetbrains.mps.debugger.api</depends>
         <depends>jetbrains.mps.debugger.java</depends>
         <depends>jetbrains.mps.execution.configurations</depends>
         <depends>de.itemis.mps.editor.diagram</depends>
+        <depends>com.mbeddr.platform</depends>
         
         <extensions defaultExtensionNs="com.intellij">
           <mps.LanguageLibrary dir="/languages" />
@@ -622,6 +623,7 @@
           <module ref="6ed54515-acc8-4d1e-a16c-9fd6cfe951ea(MPS.Core)" />
           <module ref="1ed103c3-3aa6-49b7-9c21-6765ee11f224(MPS.Editor)" />
           <module ref="8865b7a8-5271-43d3-884c-6fd1d9cfdd34(MPS.OpenAPI)" />
+          <module ref="742f6602-5a2f-4313-aa6e-ae1cd4ffdc61(MPS.Platform)" />
           <module ref="4c6a28d1-2c60-478d-b36e-db9b3cbb21fb(closures.runtime)" />
           <module ref="9b80526e-f0bf-4992-bdf5-cee39c1833f3(collections.runtime)" />
           <module ref="7ac49bcb-77fb-4f0f-9036-e31b86b854b2(com.mbeddr.mpsutil.grammarcells.runtime)" />
@@ -633,6 +635,8 @@
           <module ref="d936855b-48da-4812-a8a0-2bfddd633ac5(jetbrains.mps.lang.behavior.api)" />
           <module ref="d936855b-48da-4812-a8a0-2bfddd633ac4(jetbrains.mps.lang.behavior.runtime)" />
           <module ref="528ff3b9-5fc4-40dd-931f-c6ce3650640e(jetbrains.mps.lang.migration.runtime)" />
+          <module ref="d7eb0a2a-bd50-4576-beae-e4a89db35f20(jetbrains.mps.lang.scopes.runtime)" />
+          <module ref="31f56055-9d30-42b3-a2b1-fb3f554d7075(jetbrains.mps.lang.smodel.query.runtime)" />
           <module ref="8fe4c62a-2020-4ff4-8eda-f322a55bdc9f(jetbrains.mps.refactoring.runtime)" />
           <module ref="9a4afe51-f114-4595-b5df-048ce3c596be(jetbrains.mps.runtime)" />
         </dependencies>
@@ -670,6 +674,43 @@
       <zipfileset file="${basedir}/languages/st61131/st61131.mpl" prefix="module" />
       <zipfileset dir="${build.tmp}/customProcessors/copyModels/languages-st61131-generator-template" prefix="module/generator/template" />
       <zipfileset dir="${build.tmp}/customProcessors/copyModels/languages-st61131-languageModels" prefix="module/languageModels" />
+    </jar>
+    <mkdir dir="${build.tmp}/default/com.hardella.st.ext.implicitfb.jar" />
+    <mkdir dir="${build.tmp}/default/com.hardella.st.ext.implicitfb.jar/META-INF" />
+    <echoxml file="${build.tmp}/default/com.hardella.st.ext.implicitfb.jar/META-INF/module.xml">
+      <module namespace="com.hardella.st.ext.implicitfb" type="solution" uuid="2c8c64a4-f9aa-40e4-b40a-dfb65fda99c4">
+        <dependencies>
+          <module ref="6354ebe7-c22a-4a0f-ac54-50b52ab9b065(JDK)" />
+          <module ref="6ed54515-acc8-4d1e-a16c-9fd6cfe951ea(MPS.Core)" />
+          <module ref="8865b7a8-5271-43d3-884c-6fd1d9cfdd34(MPS.OpenAPI)" />
+          <module ref="4c6a28d1-2c60-478d-b36e-db9b3cbb21fb(closures.runtime)" />
+          <module ref="9b80526e-f0bf-4992-bdf5-cee39c1833f3(collections.runtime)" />
+          <module ref="194c0f29-9416-42e3-ba87-ee7a8014e3f7(com.github.vlsi.iec61131.st.runtime)" />
+          <module ref="d936855b-48da-4812-a8a0-2bfddd633ac5(jetbrains.mps.lang.behavior.api)" />
+          <module ref="d936855b-48da-4812-a8a0-2bfddd633ac4(jetbrains.mps.lang.behavior.runtime)" />
+          <module ref="9a4afe51-f114-4595-b5df-048ce3c596be(jetbrains.mps.runtime)" />
+        </dependencies>
+        <sources jar="com.hardella.st.ext.implicitfb-src.jar" descriptor="com.hardella.st.ext.implicitfb.msd" />
+      </module>
+    </echoxml>
+    <jar destfile="${build.layout}/plugins/st61131/languages/st61131/com.hardella.st.ext.implicitfb.jar" duplicate="preserve">
+      <fileset dir="${build.tmp}/java/out/com.hardella.st.ext.implicitfb" />
+      <fileset dir="${basedir}/solutions/com.hardella.st.ext.implicitfb" includes="icons/**, resources/**" />
+      <fileset dir="${basedir}/solutions/com.hardella.st.ext.implicitfb/source_gen" includes="**/trace.info, **/exports, **/*.mps, **/checkpoints" />
+      <fileset dir="${build.tmp}/default/com.hardella.st.ext.implicitfb.jar" />
+    </jar>
+    <copyModels todir="${build.tmp}/customProcessors/copyModels/solutions-com.hardella.st.ext.implicitfb-models">
+      <fileset dir="${basedir}/solutions/com.hardella.st.ext.implicitfb/models" includes="**/*.mps, **/*.metadata, **/*.history, **/*.mpsr, **/.model" />
+    </copyModels>
+    <jar destfile="${build.layout}/plugins/st61131/languages/st61131/com.hardella.st.ext.implicitfb-src.jar" duplicate="preserve">
+      <fileset dir="${basedir}/solutions/com.hardella.st.ext.implicitfb/source_gen">
+        <exclude name="**/trace.info" />
+        <exclude name="**/exports" />
+        <exclude name="**/checkpoints" />
+        <exclude name="**/*.mps" />
+      </fileset>
+      <zipfileset file="${basedir}/solutions/com.hardella.st.ext.implicitfb/com.hardella.st.ext.implicitfb.msd" prefix="module" />
+      <zipfileset dir="${build.tmp}/customProcessors/copyModels/solutions-com.hardella.st.ext.implicitfb-models" prefix="module/models" />
     </jar>
     <mkdir dir="${build.tmp}/default/com.github.vlsi.iec61131.st.ext.implicitfb.jar" />
     <mkdir dir="${build.tmp}/default/com.github.vlsi.iec61131.st.ext.implicitfb.jar/META-INF" />
@@ -943,7 +984,24 @@
     <mkdir dir="${build.tmp}/default/com.github.vlsi.iec61131.standard_lib.jar/META-INF" />
     <echoxml file="${build.tmp}/default/com.github.vlsi.iec61131.standard_lib.jar/META-INF/module.xml">
       <module namespace="com.github.vlsi.iec61131.standard_lib" type="solution" uuid="0041b19a-d72e-4eff-909f-c9935bfd4e88">
-        <dependencies />
+        <dependencies>
+          <module ref="6354ebe7-c22a-4a0f-ac54-50b52ab9b065(JDK)" />
+          <module ref="6ed54515-acc8-4d1e-a16c-9fd6cfe951ea(MPS.Core)" />
+          <module ref="8865b7a8-5271-43d3-884c-6fd1d9cfdd34(MPS.OpenAPI)" />
+          <module ref="4c6a28d1-2c60-478d-b36e-db9b3cbb21fb(closures.runtime)" />
+          <module ref="9b80526e-f0bf-4992-bdf5-cee39c1833f3(collections.runtime)" />
+          <module ref="194c0f29-9416-42e3-ba87-ee7a8014e3f7(com.github.vlsi.iec61131.st.runtime)" />
+          <module ref="360a4e25-e902-4667-a0a6-0e971c4f3177(com.mbeddr.mpsutil.blutil.rt)" />
+          <module ref="fd28f7ed-d277-425b-a282-684ac4cbead6(com.mbeddr.mpsutil.breadcrumb.runtime)" />
+          <module ref="94b17d5e-87d9-4868-8101-157e83e33243(com.mbeddr.mpsutil.editor.querylist.runtime)" />
+          <module ref="dc038ceb-b7ea-4fea-ac12-55f7400e97ba(de.slisson.mps.editor.multiline.runtime)" />
+          <module ref="a3e4657f-a76c-45bb-bbda-c764596ecc65(jetbrains.mps.baseLanguage.logging.runtime)" />
+          <module ref="34e84b8f-afa8-4364-abcd-a279fddddbe7(jetbrains.mps.editor.runtime)" />
+          <module ref="2d3c70e9-aab2-4870-8d8d-6036800e4103(jetbrains.mps.kernel)" />
+          <module ref="d936855b-48da-4812-a8a0-2bfddd633ac5(jetbrains.mps.lang.behavior.api)" />
+          <module ref="d936855b-48da-4812-a8a0-2bfddd633ac4(jetbrains.mps.lang.behavior.runtime)" />
+          <module ref="9a4afe51-f114-4595-b5df-048ce3c596be(jetbrains.mps.runtime)" />
+        </dependencies>
         <sources jar="com.github.vlsi.iec61131.standard_lib-src.jar" descriptor="com.github.vlsi.iec61131.standard_lib.msd" />
       </module>
     </echoxml>
@@ -1048,6 +1106,37 @@
       <zipfileset file="${basedir}/solutions/com.github.vlsi.iec61131.quickstart.pluginSolution/com.github.vlsi.iec61131.quickstart.pluginSolution.msd" prefix="module" />
       <zipfileset dir="${build.tmp}/customProcessors/copyModels/solutions-com.github.vlsi.iec61131.quickstart.pluginSolution-models" prefix="module/models" />
     </jar>
+    <mkdir dir="${build.tmp}/default/com.hardella.examples.ti1808.jar" />
+    <mkdir dir="${build.tmp}/default/com.hardella.examples.ti1808.jar/META-INF" />
+    <echoxml file="${build.tmp}/default/com.hardella.examples.ti1808.jar/META-INF/module.xml">
+      <module namespace="com.hardella.examples.ti1808" type="solution" uuid="2436b149-b605-4276-a0e9-937f788bae1a">
+        <dependencies>
+          <module ref="6354ebe7-c22a-4a0f-ac54-50b52ab9b065(JDK)" />
+          <module ref="194c0f29-9416-42e3-ba87-ee7a8014e3f7(com.github.vlsi.iec61131.st.runtime)" />
+          <module ref="1e682fde-2505-474b-b507-bcc63e8131e0(com.github.vlsi.iec61131.st2ti1808.runtime)" />
+        </dependencies>
+        <sources jar="com.hardella.examples.ti1808-src.jar" descriptor="com.hardella.examples.ti1808.msd" />
+      </module>
+    </echoxml>
+    <jar destfile="${build.layout}/plugins/st61131/languages/st61131/com.hardella.examples.ti1808.jar" duplicate="preserve">
+      <fileset dir="${build.tmp}/java/out/com.hardella.examples.ti1808" />
+      <fileset dir="${basedir}/solutions/com.hardella.examples.ti1808" includes="icons/**, resources/**" />
+      <fileset dir="${basedir}/solutions/com.hardella.examples.ti1808/source_gen" includes="**/trace.info, **/exports, **/*.mps, **/checkpoints" />
+      <fileset dir="${build.tmp}/default/com.hardella.examples.ti1808.jar" />
+    </jar>
+    <copyModels todir="${build.tmp}/customProcessors/copyModels/solutions-com.hardella.examples.ti1808-models">
+      <fileset dir="${basedir}/solutions/com.hardella.examples.ti1808/models" includes="**/*.mps, **/*.metadata, **/*.history, **/*.mpsr, **/.model" />
+    </copyModels>
+    <jar destfile="${build.layout}/plugins/st61131/languages/st61131/com.hardella.examples.ti1808-src.jar" duplicate="preserve">
+      <fileset dir="${basedir}/solutions/com.hardella.examples.ti1808/source_gen">
+        <exclude name="**/trace.info" />
+        <exclude name="**/exports" />
+        <exclude name="**/checkpoints" />
+        <exclude name="**/*.mps" />
+      </fileset>
+      <zipfileset file="${basedir}/solutions/com.hardella.examples.ti1808/com.hardella.examples.ti1808.msd" prefix="module" />
+      <zipfileset dir="${build.tmp}/customProcessors/copyModels/solutions-com.hardella.examples.ti1808-models" prefix="module/models" />
+    </jar>
     <mkdir dir="${build.tmp}/default/com.github.vlsi.iec61131.cfc.jar" />
     <mkdir dir="${build.tmp}/default/com.github.vlsi.iec61131.cfc.jar/META-INF" />
     <echoxml file="${build.tmp}/default/com.github.vlsi.iec61131.cfc.jar/META-INF/module.xml">
@@ -1150,7 +1239,7 @@
     <delete dir="${build.layout}" />
   </target>
   
-  <target name="compileJava" depends="java.compile.com.github.vlsi.iec61131.types, java.compile.com.github.vlsi.iec61131.types#5202852658697191353, java.compile.com.github.vlsi.iec61131.parser, java.compile.com.github.vlsi.iec61131.ti1808, java.compile.com.github.vlsi.iec61131.ti1808#124800662050748518, java.compile.com.github.vlsi.iec61131.ti1808.cfc, java.compile.com.github.vlsi.iec61131.ti1808.cfc#8449865404969428826, java.compile.java.modules.cycle.1, java.compile.com.github.vlsi.iec61131.st2ti1808, java.compile.com.github.vlsi.iec61131.st2ti1808#124800662050860764, java.compile.com.github.vlsi.iec61131.st2ti1808.runtime, java.compile.com.github.vlsi.iec61131.ti1808.libcompiler, java.compile.com.github.vlsi.iec61131.ti1808.toemulator, java.compile.com.github.vlsi.iec61131.ti1808.toemulator#1290013542351728604, java.compile.com.github.vlsi.iec61131.st, java.compile.com.github.vlsi.iec61131.st#6039408957479237362, java.compile.com.github.vlsi.iec61131.st.ext.implicitfb, java.compile.com.github.vlsi.iec61131.st.ext.implicitfb#4082534695945163422, java.compile.com.github.vlsi.iec61131.st.runtime, java.compile.com.github.vlsi.iec61131.plc110pru.executors, java.compile.com.github.vlsi.iec61131.executors, java.compile.com.github.vlsi.iec61131.executors#8776140008686452100, java.compile.com.github.vlsi.iec61131.executors.runtime, java.compile.com.github.vlsi.iec61131.libimport, java.compile.com.github.vlsi.iec61131.standard_lib, java.compile.com.github.vlsi.iec61131.ti1808.stdlib, java.compile.com.github.vlsi.iec61131.quickstart.pluginSolution, java.compile.com.github.vlsi.iec61131.cfc, java.compile.com.github.vlsi.iec61131.cfc#1954616409527170363" />
+  <target name="compileJava" depends="java.compile.com.github.vlsi.iec61131.types, java.compile.com.github.vlsi.iec61131.types#5202852658697191353, java.compile.com.github.vlsi.iec61131.parser, java.compile.com.github.vlsi.iec61131.ti1808, java.compile.com.github.vlsi.iec61131.ti1808#124800662050748518, java.compile.com.github.vlsi.iec61131.ti1808.cfc, java.compile.com.github.vlsi.iec61131.ti1808.cfc#8449865404969428826, java.compile.java.modules.cycle.1, java.compile.com.github.vlsi.iec61131.st2ti1808, java.compile.com.github.vlsi.iec61131.st2ti1808#124800662050860764, java.compile.com.github.vlsi.iec61131.st2ti1808.runtime, java.compile.com.github.vlsi.iec61131.ti1808.libcompiler, java.compile.com.github.vlsi.iec61131.ti1808.toemulator, java.compile.com.github.vlsi.iec61131.ti1808.toemulator#1290013542351728604, java.compile.com.github.vlsi.iec61131.st, java.compile.com.github.vlsi.iec61131.st#6039408957479237362, java.compile.com.hardella.st.ext.implicitfb, java.compile.com.github.vlsi.iec61131.st.ext.implicitfb, java.compile.com.github.vlsi.iec61131.st.ext.implicitfb#4082534695945163422, java.compile.com.github.vlsi.iec61131.st.runtime, java.compile.com.github.vlsi.iec61131.plc110pru.executors, java.compile.com.github.vlsi.iec61131.executors, java.compile.com.github.vlsi.iec61131.executors#8776140008686452100, java.compile.com.github.vlsi.iec61131.executors.runtime, java.compile.com.github.vlsi.iec61131.libimport, java.compile.com.github.vlsi.iec61131.standard_lib, java.compile.com.github.vlsi.iec61131.ti1808.stdlib, java.compile.com.github.vlsi.iec61131.quickstart.pluginSolution, java.compile.com.hardella.examples.ti1808, java.compile.com.github.vlsi.iec61131.cfc, java.compile.com.github.vlsi.iec61131.cfc#1954616409527170363" />
   
   <target name="processResources" />
   
@@ -1171,6 +1260,8 @@
       <plugin path="${artifacts.mps}/plugins/mps-execution-configurations" />
       <plugin path="${artifacts.mps}/plugins/mps-execution-languages" />
       <plugin path="${artifacts.mps}/plugins/mps-testing" />
+      <plugin path="${build.tmp}/deps/com.mbeddr.platform/com.mbeddr.mpsutil.zip/mbeddr.mpsutil" />
+      <plugin path="${build.tmp}/deps/com.mbeddr.platform/com.mbeddr.platform.zip/mbeddr.platform" />
       <plugin path="${build.tmp}/deps/mps-sl-all/mps-sl-all.zip/de-itemis-mps-selection" />
       <plugin path="${build.tmp}/deps/mps-sl-all/mps-sl-all.zip/de.itemis.mps.celllayout" />
       <plugin path="${build.tmp}/deps/mps-sl-all/mps-sl-all.zip/de.itemis.mps.editor.diagram" />
@@ -1180,6 +1271,8 @@
       <plugin path="${build.tmp}/deps/mps-sl-all/mps-sl-all.zip/de.slisson.mps.conditionalEditor" />
       <plugin path="${build.tmp}/deps/mps-sl-all/mps-sl-all.zip/de.slisson.mps.hacks" />
       <plugin path="${build.tmp}/deps/mps-sl-all/mps-sl-all.zip/mps-apache-commons" />
+      <plugin path="${build.tmp}/deps/mps-sl-all/mps-sl-all.zip/mps-multiline" />
+      <plugin path="${build.tmp}/deps/mps-sl-all/mps-sl-all.zip/mps-richtext" />
       <library file="${artifacts.mpsStandalone}/languages/baseLanguage/jetbrains.mps.baseLanguage.blTypes.jar" />
       <library file="${artifacts.mpsStandalone}/languages/baseLanguage/jetbrains.mps.baseLanguage.classifiers.jar" />
       <library file="${artifacts.mpsStandalone}/languages/baseLanguage/jetbrains.mps.baseLanguage.closures.jar" />
@@ -1275,19 +1368,28 @@
       <library file="${artifacts.mps}/plugins/mps-execution-languages/languages/mps-execution-languages/jetbrains.mps.execution.configurations.pluginSolution.jar" />
       <library file="${artifacts.mps}/plugins/mps-execution-languages/lib/execution-languages.jar" />
       <library file="${artifacts.mps}/plugins/mps-testing/languages/baseLanguage/jetbrains.mps.baseLanguage.unitTest.jar" />
+      <library file="${build.tmp}/deps/com.mbeddr.platform/com.mbeddr.mpsutil.zip/mbeddr.mpsutil/languages/com.mbeddr.mpsutil.baseLanguage/com.mbeddr.mpsutil.common.jar" />
       <library file="${build.tmp}/deps/com.mbeddr.platform/com.mbeddr.mpsutil.zip/mbeddr.mpsutil/languages/com.mbeddr.mpsutil.blutil/com.mbeddr.mpsutil.blutil.jar" />
       <library file="${build.tmp}/deps/com.mbeddr.platform/com.mbeddr.mpsutil.zip/mbeddr.mpsutil/languages/com.mbeddr.mpsutil.blutil/com.mbeddr.mpsutil.blutil.rt.jar" />
+      <library file="${build.tmp}/deps/com.mbeddr.platform/com.mbeddr.mpsutil.zip/mbeddr.mpsutil/languages/com.mbeddr.mpsutil.breadcrumb/com.mbeddr.mpsutil.breadcrumb.jar" />
+      <library file="${build.tmp}/deps/com.mbeddr.platform/com.mbeddr.mpsutil.zip/mbeddr.mpsutil/languages/com.mbeddr.mpsutil.breadcrumb/com.mbeddr.mpsutil.breadcrumb.runtime.jar" />
+      <library file="${build.tmp}/deps/com.mbeddr.platform/com.mbeddr.mpsutil.zip/mbeddr.mpsutil/languages/com.mbeddr.mpsutil.editor.querylist/com.mbeddr.mpsutil.editor.querylist.runtime.jar" />
       <library file="${build.tmp}/deps/com.mbeddr.platform/com.mbeddr.mpsutil.zip/mbeddr.mpsutil/languages/com.mbeddr.mpsutil.grammarcells/com.mbeddr.mpsutil.grammarcells.jar" />
       <library file="${build.tmp}/deps/com.mbeddr.platform/com.mbeddr.mpsutil.zip/mbeddr.mpsutil/languages/com.mbeddr.mpsutil.grammarcells/com.mbeddr.mpsutil.grammarcells.runtime.jar" />
       <library file="${build.tmp}/deps/com.mbeddr.platform/com.mbeddr.mpsutil.zip/mbeddr.mpsutil/languages/com.mbeddr.mpsutil.grammarcells/com.mbeddr.mpsutil.grammarcells.runtimelang.jar" />
       <library file="${build.tmp}/deps/com.mbeddr.platform/com.mbeddr.mpsutil.zip/mbeddr.mpsutil/languages/com.mbeddr.mpsutil.httpsupport/com.mbeddr.mpsutil.httpsupport.rt.jar" />
       <library file="${build.tmp}/deps/com.mbeddr.platform/com.mbeddr.mpsutil.zip/mbeddr.mpsutil/languages/com.mbeddr.mpsutil.infrastructure-support/com.mbeddr.mpsutil.nodeaccess.jar" />
       <library file="${build.tmp}/deps/com.mbeddr.platform/com.mbeddr.mpsutil.zip/mbeddr.mpsutil/languages/com.mbeddr.mpsutil.infrastructure-support/com.mbeddr.mpsutil.serializer.xml.jar" />
+      <library file="${build.tmp}/deps/com.mbeddr.platform/com.mbeddr.mpsutil.zip/mbeddr.mpsutil/languages/com.mbeddr.mpsutil.jung/com.mbeddr.mpsutil.jung.jar" />
+      <library file="${build.tmp}/deps/com.mbeddr.platform/com.mbeddr.mpsutil.zip/mbeddr.mpsutil/languages/com.mbeddr.mpsutil.jung/com.mbeddr.mpsutil.jung.pluginSolution.jar" />
       <library file="${build.tmp}/deps/com.mbeddr.platform/com.mbeddr.mpsutil.zip/mbeddr.mpsutil/languages/com.mbeddr.mpsutil.lang-support/com.mbeddr.mpsutil.iconchar.jar" />
+      <library file="${build.tmp}/deps/com.mbeddr.platform/com.mbeddr.mpsutil.zip/mbeddr.mpsutil/languages/com.mbeddr.mpsutil.plantuml/com.mbeddr.mpsutil.plantuml.node.jar" />
       <library file="${build.tmp}/deps/com.mbeddr.platform/com.mbeddr.mpsutil.zip/mbeddr.mpsutil/languages/com.mbeddr.mpsutil.process/com.mbeddr.mpsutil.process.jar" />
       <library file="${build.tmp}/deps/com.mbeddr.platform/com.mbeddr.mpsutil.zip/mbeddr.mpsutil/languages/com.mbeddr.mpsutil.process/com.mbeddr.mpsutil.process.runtime.jar" />
       <library file="${build.tmp}/deps/com.mbeddr.platform/com.mbeddr.mpsutil.zip/mbeddr.mpsutil/languages/com.mbeddr.mpsutil.smodule/com.mbeddr.mpsutil.smodule.jar" />
       <library file="${build.tmp}/deps/com.mbeddr.platform/com.mbeddr.mpsutil.zip/mbeddr.mpsutil/languages/com.mbeddr.mpsutil.smodule/com.mbeddr.mpsutil.smodule.runtime.jar" />
+      <library file="${build.tmp}/deps/com.mbeddr.platform/com.mbeddr.mpsutil.zip/mbeddr.mpsutil/languages/com.mbeddr.mpsutil.suppresswarning/com.mbeddr.mpsutil.suppresswarning.jar" />
+      <library file="${build.tmp}/deps/com.mbeddr.platform/com.mbeddr.platform.zip/mbeddr.platform/languages/com.mbeddr.platform/com.mbeddr.core.base.jar" />
       <library file="${build.tmp}/deps/mps-sl-all/mps-sl-all.zip/de-itemis-mps-selection/languages/de.itemis.mps.selection/de.itemis.mps.selection.runtime.jar" />
       <library file="${build.tmp}/deps/mps-sl-all/mps-sl-all.zip/de.itemis.mps.celllayout/languages/de.itemis.mps.celllayout/de.itemis.mps.editor.celllayout.runtime.jar" />
       <library file="${build.tmp}/deps/mps-sl-all/mps-sl-all.zip/de.itemis.mps.celllayout/languages/de.itemis.mps.celllayout/de.itemis.mps.editor.celllayout.styles.jar" />
@@ -1331,7 +1433,10 @@
         <module file="${basedir}/languages/st61131/st61131.mpl" />
         <module file="${basedir}/languages/com.github.vlsi.iec61131.st.ext.implicitfb/com.github.vlsi.iec61131.st.ext.implicitfb.mpl" />
         <module file="${basedir}/languages/st61131/runtime/st61131.runtime.msd" />
+      </chunk>
+      <chunk>
         <module file="${basedir}/solutions/com.github.vlsi.iec61131.standard_lib/com.github.vlsi.iec61131.standard_lib.msd" />
+        <module file="${basedir}/solutions/com.hardella.st.ext.implicitfb/com.hardella.st.ext.implicitfb.msd" />
       </chunk>
       <chunk bootstrap="true">
         <module file="${basedir}/languages/com.github.vlsi.iec61131.st2ti1808/com.github.vlsi.iec61131.st2ti1808.mpl" />
@@ -1341,6 +1446,7 @@
       <chunk>
         <module file="${basedir}/solutions/com.github.vlsi.iec61131.plc110pru.executors/com.github.vlsi.iec61131.plc110pru.executors.msd" />
         <module file="${basedir}/solutions/com.github.vlsi.iec61131.quickstart.pluginSolution/com.github.vlsi.iec61131.quickstart.pluginSolution.msd" />
+        <module file="${basedir}/solutions/com.hardella.examples.ti1808/com.hardella.examples.ti1808.msd" />
       </chunk>
       <jvmargs>
         <arg value="-Xmx512m" />
@@ -1390,7 +1496,12 @@
         <fileset file="${artifacts.mpsStandalone}/lib/diffutils-1.2.1.jar" />
         <fileset file="${artifacts.mpsStandalone}/lib/ecj-4.5.2.jar" />
         <fileset dir="${artifacts.mpsStandalone}/lib" includes="*.jar" />
+        <fileset file="${build.tmp}/deps/com.mbeddr.platform/com.mbeddr.platform.zip/mbeddr.platform/languages/com.mbeddr.platform/com.mbeddr.core.base.jar" />
+        <fileset file="${build.tmp}/deps/com.mbeddr.platform/com.mbeddr.mpsutil.zip/mbeddr.mpsutil/languages/com.mbeddr.mpsutil.blutil/com.mbeddr.mpsutil.blutil.jar" />
+        <fileset file="${build.tmp}/deps/com.mbeddr.platform/com.mbeddr.mpsutil.zip/mbeddr.mpsutil/languages/com.mbeddr.mpsutil.breadcrumb/com.mbeddr.mpsutil.breadcrumb.jar" />
         <fileset file="${build.tmp}/deps/com.mbeddr.platform/com.mbeddr.mpsutil.zip/mbeddr.mpsutil/languages/com.mbeddr.mpsutil.grammarcells/com.mbeddr.mpsutil.grammarcells.runtime.jar" />
+        <fileset file="${build.tmp}/deps/com.mbeddr.platform/com.mbeddr.mpsutil.zip/mbeddr.mpsutil/languages/com.mbeddr.mpsutil.jung/com.mbeddr.mpsutil.jung.jar" />
+        <fileset file="${build.tmp}/deps/com.mbeddr.platform/com.mbeddr.mpsutil.zip/mbeddr.mpsutil/languages/com.mbeddr.mpsutil.plantuml/com.mbeddr.mpsutil.plantuml.node.jar" />
         <fileset file="${build.tmp}/deps/mps-sl-all/mps-sl-all.zip/de.itemis.mps.editor.widgets/languages/de.itemis.mps.editor.widgets/de.itemis.mps.editor.bool.runtime.jar" />
         <fileset file="${build.tmp}/deps/mps-sl-all/mps-sl-all.zip/de.itemis.mps.celllayout/languages/de.itemis.mps.celllayout/de.itemis.mps.editor.celllayout.runtime.jar" />
         <fileset file="${build.tmp}/deps/mps-sl-all/mps-sl-all.zip/de.itemis.mps.editor.widgets/languages/de.itemis.mps.editor.widgets/de.itemis.mps.editor.dropdown.runtime.jar" />
@@ -1398,15 +1509,23 @@
         <fileset file="${build.tmp}/deps/mps-sl-all/mps-sl-all.zip/de-itemis-mps-selection/languages/de.itemis.mps.selection/de.itemis.mps.selection.runtime.jar" />
         <fileset file="${build.tmp}/deps/mps-sl-all/mps-sl-all.zip/de.slisson.mps.hacks/languages/de.slisson.mps.hacks/de.slisson.mps.hacks.editor.jar" />
         <fileset file="${build.tmp}/deps/mps-sl-all/mps-sl-all.zip/de.slisson.mps.hacks/languages/de.slisson.mps.hacks/de.slisson.mps.reflection.runtime.jar" />
+        <fileset file="${build.tmp}/deps/mps-sl-all/mps-sl-all.zip/mps-richtext/languages/mps-richtext/de.slisson.mps.richtext.jar" />
         <fileset file="${build.tmp}/deps/mps-sl-all/mps-sl-all.zip/mps-tables/languages/mps-tables/de.slisson.mps.tables.runtime.jar" />
         <fileset file="${artifacts.mpsStandalone}/languages/baseLanguage/jetbrains.mps.baseLanguage.jar" />
         <fileset file="${artifacts.mpsStandalone}/languages/baseLanguage/jetbrains.mps.baseLanguage.blTypes.jar" />
+        <fileset file="${artifacts.mpsStandalone}/languages/baseLanguage/jetbrains.mps.baseLanguage.closures.jar" />
+        <fileset file="${artifacts.mpsStandalone}/languages/baseLanguage/jetbrains.mps.baseLanguage.collections.jar" />
+        <fileset file="${artifacts.mpsStandalone}/languages/baseLanguage/jetbrains.mps.baseLanguage.logging.jar" />
         <fileset file="${artifacts.mpsStandalone}/languages/baseLanguage/jetbrains.mps.baseLanguage.regexp.runtime.jar" />
         <fileset file="${artifacts.mpsStandalone}/languages/baseLanguage/jetbrains.mps.baseLanguage.scopes.jar" />
+        <fileset file="${artifacts.mpsStandalone}/languages/xml/jetbrains.mps.core.xml.jar" />
+        <fileset file="${artifacts.mpsStandalone}/languages/languageDesign/jetbrains.mps.lang.access.jar" />
         <fileset file="${artifacts.mpsStandalone}/languages/languageDesign/jetbrains.mps.lang.core.jar" />
         <fileset file="${artifacts.mpsStandalone}/languages/languageDesign/jetbrains.mps.lang.scopes.runtime.jar" />
+        <fileset file="${artifacts.mpsStandalone}/languages/languageDesign/jetbrains.mps.lang.smodel.jar" />
         <fileset file="${artifacts.mpsStandalone}/languages/languageDesign/jetbrains.mps.lang.structure.jar" />
         <fileset file="${artifacts.mpsStandalone}/languages/languageDesign/jetbrains.mps.lang.traceable.jar" />
+        <fileset file="${artifacts.mpsStandalone}/languages/languageDesign/jetbrains.mps.lang.typesystem.jar" />
       </classpath>
     </javac>
   </target>
@@ -1667,7 +1786,7 @@
     </javac>
   </target>
   
-  <target name="java.compile.java.modules.cycle.1" depends="java.compile.com.github.vlsi.iec61131.st, java.compile.com.github.vlsi.iec61131.st.runtime, java.compile.com.github.vlsi.iec61131.ti1808, java.compile.com.github.vlsi.iec61131.types, java.compile.com.github.vlsi.iec61131.executors, java.compile.com.github.vlsi.iec61131.executors.runtime, java.compile.com.github.vlsi.iec61131.ti1808.libcompiler, fetchDependencies">
+  <target name="java.compile.java.modules.cycle.1" depends="java.compile.com.github.vlsi.iec61131.st, java.compile.com.github.vlsi.iec61131.st.runtime, java.compile.com.github.vlsi.iec61131.ti1808, java.compile.com.github.vlsi.iec61131.types, java.compile.com.github.vlsi.iec61131.executors, java.compile.com.github.vlsi.iec61131.executors.runtime, java.compile.com.github.vlsi.iec61131.ti1808.libcompiler, java.compile.com.hardella.st.ext.implicitfb, java.compile.com.github.vlsi.iec61131.standard_lib, fetchDependencies">
     <mkdir dir="${build.tmp}/java.modules.cycle.1" />
     <javac destdir="${build.tmp}/java.modules.cycle.1" fork="true" encoding="utf8" nowarn="true" includeantruntime="false">
       <compilerarg value="-Xlint:none" />
@@ -1738,6 +1857,8 @@
         <pathelement path="${build.tmp}/java/out/com.github.vlsi.iec61131.executors" />
         <pathelement path="${build.tmp}/java/out/com.github.vlsi.iec61131.executors.runtime" />
         <pathelement path="${build.tmp}/java/out/com.github.vlsi.iec61131.ti1808.libcompiler" />
+        <pathelement path="${build.tmp}/java/out/com.hardella.st.ext.implicitfb" />
+        <pathelement path="${build.tmp}/java/out/com.github.vlsi.iec61131.standard_lib" />
       </classpath>
     </javac>
   </target>
@@ -1856,7 +1977,7 @@
     </javac>
   </target>
   
-  <target name="java.compile.com.github.vlsi.iec61131.st2ti1808.runtime" depends="java.compile.com.github.vlsi.iec61131.executors, java.compile.com.github.vlsi.iec61131.executors.runtime, java.compile.com.github.vlsi.iec61131.st, java.compile.com.github.vlsi.iec61131.ti1808, java.compile.com.github.vlsi.iec61131.ti1808.libcompiler, java.compile.com.github.vlsi.iec61131.types, java.compile.java.modules.cycle.1, fetchDependencies">
+  <target name="java.compile.com.github.vlsi.iec61131.st2ti1808.runtime" depends="java.compile.com.github.vlsi.iec61131.executors, java.compile.com.github.vlsi.iec61131.executors.runtime, java.compile.com.github.vlsi.iec61131.st, java.compile.com.github.vlsi.iec61131.ti1808, java.compile.com.github.vlsi.iec61131.ti1808.libcompiler, java.compile.com.github.vlsi.iec61131.types, java.compile.com.hardella.st.ext.implicitfb, java.compile.java.modules.cycle.1, fetchDependencies">
     <mkdir dir="${basedir}/solutions/com.github.vlsi.iec61131.st2ti1808.runtime/source_gen" />
     <mkdir dir="${build.tmp}/java/out/com.github.vlsi.iec61131.st2ti1808.runtime" />
     <javac destdir="${build.tmp}/java/out/com.github.vlsi.iec61131.st2ti1808.runtime" fork="true" encoding="utf8" includeantruntime="false" debug="true">
@@ -1892,6 +2013,7 @@
         <pathelement path="${build.tmp}/java/out/com.github.vlsi.iec61131.ti1808" />
         <pathelement path="${build.tmp}/java/out/com.github.vlsi.iec61131.ti1808.libcompiler" />
         <pathelement path="${build.tmp}/java/out/com.github.vlsi.iec61131.types" />
+        <pathelement path="${build.tmp}/java/out/com.hardella.st.ext.implicitfb" />
         <fileset file="${basedir}/solutions/com.github.vlsi.iec61131.ti1808.libcompiler/lib/emulator-1.0.0.jar" />
         <fileset file="${artifacts.mpsStandalone}/lib/log4j.jar" />
         <fileset file="${artifacts.mpsStandalone}/lib/annotations.jar" />
@@ -2136,6 +2258,54 @@
     </javac>
   </target>
   
+  <target name="java.compile.com.hardella.st.ext.implicitfb" depends="java.compile.com.github.vlsi.iec61131.st, java.compile.com.github.vlsi.iec61131.st.runtime, java.compile.com.github.vlsi.iec61131.types, fetchDependencies">
+    <mkdir dir="${basedir}/solutions/com.hardella.st.ext.implicitfb/source_gen" />
+    <mkdir dir="${build.tmp}/java/out/com.hardella.st.ext.implicitfb" />
+    <javac destdir="${build.tmp}/java/out/com.hardella.st.ext.implicitfb" fork="true" encoding="utf8" includeantruntime="false" debug="true">
+      <compilerarg value="-Xlint:none" />
+      <src>
+        <path location="${basedir}/solutions/com.hardella.st.ext.implicitfb/source_gen" />
+      </src>
+      <classpath>
+        <fileset file="${artifacts.mpsStandalone}/lib/mps-behavior-api.jar" />
+        <fileset file="${artifacts.mpsStandalone}/lib/mps-behavior-runtime.jar" />
+        <fileset file="${artifacts.mpsStandalone}/lib/mps-closures.jar" />
+        <fileset file="${artifacts.mpsStandalone}/lib/mps-collections.jar" />
+        <fileset file="${artifacts.mpsStandalone}/lib/mps-annotations.jar" />
+        <fileset file="${artifacts.mpsStandalone}/lib/mps-openapi.jar" />
+        <fileset file="${artifacts.mpsStandalone}/lib/mps-core.jar" />
+        <fileset file="${artifacts.mpsStandalone}/lib/mps-logging.jar" />
+        <fileset file="${artifacts.mpsStandalone}/lib/mps-tuples.jar" />
+        <fileset file="${artifacts.mpsStandalone}/lib/mps-messaging.jar" />
+        <fileset file="${artifacts.mpsStandalone}/lib/mps-boot-util.jar" />
+        <fileset file="${artifacts.mpsStandalone}/lib/mps-editor-api.jar" />
+        <fileset file="${artifacts.mpsStandalone}/lib/mps-editor-runtime.jar" />
+        <fileset file="${artifacts.mpsStandalone}/lib/mps-editor.jar" />
+        <fileset file="${artifacts.mpsStandalone}/lib/mps-environment.jar" />
+        <fileset file="${artifacts.mpsStandalone}/lib/mps-platform.jar" />
+        <pathelement path="${build.tmp}/java/out/com.github.vlsi.iec61131.st" />
+        <pathelement path="${build.tmp}/java/out/com.github.vlsi.iec61131.st.runtime" />
+        <pathelement path="${build.tmp}/java/out/com.github.vlsi.iec61131.types" />
+        <fileset file="${artifacts.mpsStandalone}/lib/annotations.jar" />
+        <fileset file="${artifacts.mpsStandalone}/lib/jdom.jar" />
+        <fileset file="${artifacts.mpsStandalone}/lib/trove4j.jar" />
+        <fileset file="${artifacts.mpsStandalone}/lib/xstream-1.4.8.jar" />
+        <fileset file="${artifacts.mpsStandalone}/lib/asm-all.jar" />
+        <fileset file="${artifacts.mpsStandalone}/lib/diffutils-1.2.1.jar" />
+        <fileset file="${artifacts.mpsStandalone}/lib/log4j.jar" />
+        <fileset file="${artifacts.mpsStandalone}/lib/ecj-4.5.2.jar" />
+        <fileset dir="${artifacts.mpsStandalone}/lib" includes="*.jar" />
+        <fileset file="${artifacts.mpsStandalone}/languages/baseLanguage/jetbrains.mps.baseLanguage.jar" />
+        <fileset file="${artifacts.mpsStandalone}/languages/baseLanguage/jetbrains.mps.baseLanguage.blTypes.jar" />
+        <fileset file="${artifacts.mpsStandalone}/languages/baseLanguage/jetbrains.mps.baseLanguage.scopes.jar" />
+        <fileset file="${artifacts.mpsStandalone}/languages/languageDesign/jetbrains.mps.lang.core.jar" />
+        <fileset file="${artifacts.mpsStandalone}/languages/languageDesign/jetbrains.mps.lang.scopes.runtime.jar" />
+        <fileset file="${artifacts.mpsStandalone}/languages/languageDesign/jetbrains.mps.lang.structure.jar" />
+        <fileset file="${artifacts.mpsStandalone}/languages/languageDesign/jetbrains.mps.lang.traceable.jar" />
+      </classpath>
+    </javac>
+  </target>
+  
   <target name="java.compile.com.github.vlsi.iec61131.st.ext.implicitfb" depends="java.compile.com.github.vlsi.iec61131.st, java.compile.com.github.vlsi.iec61131.types, fetchDependencies">
     <mkdir dir="${basedir}/languages/com.github.vlsi.iec61131.st.ext.implicitfb/source_gen" />
     <mkdir dir="${build.tmp}/java/out/com.github.vlsi.iec61131.st.ext.implicitfb" />
@@ -2183,7 +2353,7 @@
     </javac>
   </target>
   
-  <target name="java.compile.com.github.vlsi.iec61131.st.ext.implicitfb#4082534695945163422" depends="java.compile.com.github.vlsi.iec61131.st, java.compile.com.github.vlsi.iec61131.st.ext.implicitfb, java.compile.com.github.vlsi.iec61131.types, fetchDependencies">
+  <target name="java.compile.com.github.vlsi.iec61131.st.ext.implicitfb#4082534695945163422" depends="java.compile.com.github.vlsi.iec61131.st, java.compile.com.github.vlsi.iec61131.st.ext.implicitfb, java.compile.com.github.vlsi.iec61131.types, java.compile.com.hardella.st.ext.implicitfb, fetchDependencies">
     <mkdir dir="${basedir}/languages/com.github.vlsi.iec61131.st.ext.implicitfb/generator/source_gen" />
     <mkdir dir="${build.tmp}/java/out/com.github.vlsi.iec61131.st.ext.implicitfb#4082534695945163422" />
     <javac destdir="${build.tmp}/java/out/com.github.vlsi.iec61131.st.ext.implicitfb#4082534695945163422" fork="true" encoding="utf8" includeantruntime="false" debug="true">
@@ -2211,6 +2381,7 @@
         <pathelement path="${build.tmp}/java/out/com.github.vlsi.iec61131.st" />
         <pathelement path="${build.tmp}/java/out/com.github.vlsi.iec61131.st.ext.implicitfb" />
         <pathelement path="${build.tmp}/java/out/com.github.vlsi.iec61131.types" />
+        <pathelement path="${build.tmp}/java/out/com.hardella.st.ext.implicitfb" />
         <fileset file="${artifacts.mpsStandalone}/lib/log4j.jar" />
         <fileset file="${artifacts.mpsStandalone}/lib/annotations.jar" />
         <fileset file="${artifacts.mpsStandalone}/lib/jdom.jar" />
@@ -2529,7 +2700,7 @@
     </javac>
   </target>
   
-  <target name="java.compile.com.github.vlsi.iec61131.standard_lib">
+  <target name="java.compile.com.github.vlsi.iec61131.standard_lib" depends="java.compile.com.github.vlsi.iec61131.st.runtime, fetchDependencies">
     <mkdir dir="${basedir}/solutions/com.github.vlsi.iec61131.standard_lib/source_gen" />
     <mkdir dir="${build.tmp}/java/out/com.github.vlsi.iec61131.standard_lib" />
     <javac destdir="${build.tmp}/java/out/com.github.vlsi.iec61131.standard_lib" fork="true" encoding="utf8" includeantruntime="false" debug="true">
@@ -2537,11 +2708,44 @@
       <src>
         <path location="${basedir}/solutions/com.github.vlsi.iec61131.standard_lib/source_gen" />
       </src>
-      <classpath />
+      <classpath>
+        <fileset file="${artifacts.mpsStandalone}/lib/mps-core.jar" />
+        <fileset file="${artifacts.mpsStandalone}/lib/mps-annotations.jar" />
+        <fileset file="${artifacts.mpsStandalone}/lib/mps-openapi.jar" />
+        <fileset file="${artifacts.mpsStandalone}/lib/mps-logging.jar" />
+        <fileset file="${artifacts.mpsStandalone}/lib/mps-closures.jar" />
+        <fileset file="${artifacts.mpsStandalone}/lib/mps-collections.jar" />
+        <fileset file="${artifacts.mpsStandalone}/lib/mps-tuples.jar" />
+        <fileset file="${artifacts.mpsStandalone}/lib/mps-behavior-api.jar" />
+        <fileset file="${artifacts.mpsStandalone}/lib/mps-behavior-runtime.jar" />
+        <fileset file="${artifacts.mpsStandalone}/lib/mps-messaging.jar" />
+        <fileset file="${artifacts.mpsStandalone}/lib/mps-boot-util.jar" />
+        <pathelement path="${build.tmp}/java/out/com.github.vlsi.iec61131.st.runtime" />
+        <fileset file="${artifacts.mpsStandalone}/lib/mps-editor-api.jar" />
+        <fileset file="${artifacts.mpsStandalone}/lib/mps-editor-runtime.jar" />
+        <fileset file="${artifacts.mpsStandalone}/lib/mps-editor.jar" />
+        <fileset file="${artifacts.mpsStandalone}/lib/mps-environment.jar" />
+        <fileset file="${artifacts.mpsStandalone}/lib/mps-platform.jar" />
+        <fileset file="${artifacts.mpsStandalone}/lib/log4j.jar" />
+        <fileset file="${build.tmp}/deps/mps-sl-all/mps-sl-all.zip/mps-multiline/lib/diff_match_patch.jar" />
+        <fileset file="${artifacts.mpsStandalone}/lib/annotations.jar" />
+        <fileset file="${artifacts.mpsStandalone}/lib/jdom.jar" />
+        <fileset file="${artifacts.mpsStandalone}/lib/trove4j.jar" />
+        <fileset file="${artifacts.mpsStandalone}/lib/xstream-1.4.8.jar" />
+        <fileset file="${artifacts.mpsStandalone}/lib/asm-all.jar" />
+        <fileset file="${artifacts.mpsStandalone}/lib/diffutils-1.2.1.jar" />
+        <fileset file="${artifacts.mpsStandalone}/lib/ecj-4.5.2.jar" />
+        <fileset dir="${artifacts.mpsStandalone}/lib" includes="*.jar" />
+        <fileset file="${build.tmp}/deps/com.mbeddr.platform/com.mbeddr.mpsutil.zip/mbeddr.mpsutil/languages/com.mbeddr.mpsutil.blutil/com.mbeddr.mpsutil.blutil.rt.jar" />
+        <fileset file="${build.tmp}/deps/com.mbeddr.platform/com.mbeddr.mpsutil.zip/mbeddr.mpsutil/languages/com.mbeddr.mpsutil.breadcrumb/com.mbeddr.mpsutil.breadcrumb.runtime.jar" />
+        <fileset file="${build.tmp}/deps/com.mbeddr.platform/com.mbeddr.mpsutil.zip/mbeddr.mpsutil/languages/com.mbeddr.mpsutil.editor.querylist/com.mbeddr.mpsutil.editor.querylist.runtime.jar" />
+        <fileset file="${build.tmp}/deps/mps-sl-all/mps-sl-all.zip/de.itemis.mps.celllayout/languages/de.itemis.mps.celllayout/de.itemis.mps.editor.celllayout.runtime.jar" />
+        <fileset file="${build.tmp}/deps/mps-sl-all/mps-sl-all.zip/mps-multiline/languages/mps-multiline/de.slisson.mps.editor.multiline.runtime.jar" />
+      </classpath>
     </javac>
   </target>
   
-  <target name="java.compile.com.github.vlsi.iec61131.ti1808.stdlib" depends="java.compile.com.github.vlsi.iec61131.st.runtime, java.compile.java.modules.cycle.1">
+  <target name="java.compile.com.github.vlsi.iec61131.ti1808.stdlib" depends="java.compile.com.github.vlsi.iec61131.st.runtime, java.compile.com.github.vlsi.iec61131.standard_lib, java.compile.java.modules.cycle.1">
     <mkdir dir="${basedir}/solutions/com.github.vlsi.iec61131.ti1808.stdlib/source_gen" />
     <mkdir dir="${build.tmp}/java/out/com.github.vlsi.iec61131.ti1808.stdlib" />
     <javac destdir="${build.tmp}/java/out/com.github.vlsi.iec61131.ti1808.stdlib" fork="true" encoding="utf8" includeantruntime="false" debug="true">
@@ -2572,6 +2776,7 @@
         <fileset file="${artifacts.mpsStandalone}/lib/mps-workbench.jar" />
         <fileset file="${artifacts.mps}/plugins/mps-debugger-api/lib/debugger-api.jar" />
         <fileset file="${artifacts.mps}/plugins/mps-execution-languages/lib/execution-languages.jar" />
+        <pathelement path="${build.tmp}/java/out/com.github.vlsi.iec61131.standard_lib" />
         <fileset file="${artifacts.mpsStandalone}/lib/annotations.jar" />
         <fileset file="${artifacts.mpsStandalone}/lib/jdom.jar" />
         <fileset file="${artifacts.mpsStandalone}/lib/trove4j.jar" />
@@ -2648,6 +2853,55 @@
         <fileset file="${artifacts.mpsStandalone}/languages/languageDesign/jetbrains.mps.lang.scopes.runtime.jar" />
         <fileset file="${artifacts.mpsStandalone}/languages/languageDesign/jetbrains.mps.lang.structure.jar" />
         <fileset file="${artifacts.mpsStandalone}/languages/languageDesign/jetbrains.mps.lang.traceable.jar" />
+      </classpath>
+    </javac>
+  </target>
+  
+  <target name="java.compile.com.hardella.examples.ti1808" depends="java.compile.com.github.vlsi.iec61131.st.runtime, java.compile.com.github.vlsi.iec61131.st2ti1808.runtime, java.compile.com.github.vlsi.iec61131.standard_lib, java.compile.com.github.vlsi.iec61131.ti1808.libcompiler, java.compile.com.github.vlsi.iec61131.ti1808.stdlib">
+    <mkdir dir="${basedir}/solutions/com.hardella.examples.ti1808/source_gen" />
+    <mkdir dir="${build.tmp}/java/out/com.hardella.examples.ti1808" />
+    <javac destdir="${build.tmp}/java/out/com.hardella.examples.ti1808" fork="true" encoding="utf8" includeantruntime="false" debug="true">
+      <compilerarg value="-Xlint:none" />
+      <src>
+        <path location="${basedir}/solutions/com.hardella.examples.ti1808/source_gen" />
+      </src>
+      <classpath>
+        <fileset file="${artifacts.mpsStandalone}/lib/mps-core.jar" />
+        <fileset file="${artifacts.mpsStandalone}/lib/mps-annotations.jar" />
+        <fileset file="${artifacts.mpsStandalone}/lib/mps-openapi.jar" />
+        <fileset file="${artifacts.mpsStandalone}/lib/mps-logging.jar" />
+        <fileset file="${artifacts.mpsStandalone}/lib/mps-closures.jar" />
+        <fileset file="${artifacts.mpsStandalone}/lib/mps-collections.jar" />
+        <fileset file="${artifacts.mpsStandalone}/lib/mps-tuples.jar" />
+        <fileset file="${artifacts.mpsStandalone}/lib/mps-behavior-api.jar" />
+        <fileset file="${artifacts.mpsStandalone}/lib/mps-behavior-runtime.jar" />
+        <fileset file="${artifacts.mpsStandalone}/lib/mps-messaging.jar" />
+        <fileset file="${artifacts.mpsStandalone}/lib/mps-boot-util.jar" />
+        <pathelement path="${build.tmp}/java/out/com.github.vlsi.iec61131.st.runtime" />
+        <fileset file="${artifacts.mps}/plugins/mps-execution-api/lib/execution-api.jar" />
+        <fileset file="${artifacts.mpsStandalone}/lib/mps-environment.jar" />
+        <fileset file="${artifacts.mpsStandalone}/lib/mps-platform.jar" />
+        <fileset file="${artifacts.mpsStandalone}/lib/mps-editor-api.jar" />
+        <fileset file="${artifacts.mpsStandalone}/lib/mps-editor-runtime.jar" />
+        <fileset file="${artifacts.mpsStandalone}/lib/mps-editor.jar" />
+        <fileset file="${artifacts.mpsStandalone}/lib/mps-icons.jar" />
+        <fileset file="${artifacts.mpsStandalone}/lib/mps-workbench.jar" />
+        <fileset file="${artifacts.mps}/plugins/mps-debugger-api/lib/debugger-api.jar" />
+        <fileset file="${artifacts.mps}/plugins/mps-execution-languages/lib/execution-languages.jar" />
+        <pathelement path="${build.tmp}/java/out/com.github.vlsi.iec61131.st2ti1808.runtime" />
+        <pathelement path="${build.tmp}/java/out/com.github.vlsi.iec61131.standard_lib" />
+        <pathelement path="${build.tmp}/java/out/com.github.vlsi.iec61131.ti1808.libcompiler" />
+        <pathelement path="${build.tmp}/java/out/com.github.vlsi.iec61131.ti1808.stdlib" />
+        <fileset file="${basedir}/solutions/com.github.vlsi.iec61131.ti1808.libcompiler/lib/emulator-1.0.0.jar" />
+        <fileset file="${artifacts.mpsStandalone}/lib/annotations.jar" />
+        <fileset file="${artifacts.mpsStandalone}/lib/jdom.jar" />
+        <fileset file="${artifacts.mpsStandalone}/lib/trove4j.jar" />
+        <fileset file="${artifacts.mpsStandalone}/lib/xstream-1.4.8.jar" />
+        <fileset file="${artifacts.mpsStandalone}/lib/asm-all.jar" />
+        <fileset file="${artifacts.mpsStandalone}/lib/diffutils-1.2.1.jar" />
+        <fileset file="${artifacts.mpsStandalone}/lib/log4j.jar" />
+        <fileset file="${artifacts.mpsStandalone}/lib/ecj-4.5.2.jar" />
+        <fileset dir="${artifacts.mpsStandalone}/lib" includes="*.jar" />
       </classpath>
     </javac>
   </target>
@@ -2768,13 +3022,17 @@
     <delete dir="${basedir}/languages/st61131/source_gen" />
     <delete dir="${basedir}/languages/com.github.vlsi.iec61131.st.ext.implicitfb/source_gen" />
     <delete dir="${basedir}/languages/st61131/runtime/source_gen" />
-    <delete dir="${basedir}/solutions/com.github.vlsi.iec61131.standard_lib/source_gen" />
     <delete dir="${basedir}/languages/com.github.vlsi.iec61131.ti1808/generator/source_gen" />
     <delete dir="${basedir}/languages/com.github.vlsi.iec61131.ti1808.cfc/generator/source_gen" />
     <delete dir="${basedir}/languages/com.github.vlsi.iec61131.ti1808.toemulator/generator/source_gen" />
     <delete dir="${basedir}/languages/com.github.vlsi.iec61131.types/generator/source_gen" />
+    <delete dir="${basedir}/languages/st61131/generator/source_gen" />
+    <delete dir="${basedir}/languages/com.github.vlsi.iec61131.st.ext.implicitfb/generator/source_gen" />
+    <delete dir="${basedir}/solutions/com.github.vlsi.iec61131.standard_lib/source_gen" />
+    <delete dir="${basedir}/solutions/com.hardella.st.ext.implicitfb/source_gen" />
     <delete dir="${basedir}/solutions/com.github.vlsi.iec61131.plc110pru.executors/source_gen" />
     <delete dir="${basedir}/solutions/com.github.vlsi.iec61131.quickstart.pluginSolution/source_gen" />
     <delete dir="${basedir}/languages/com.github.vlsi.iec61131.st2ti1808/generator/source_gen" />
+    <delete dir="${basedir}/solutions/com.hardella.examples.ti1808/source_gen" />
   </target>
 </project>

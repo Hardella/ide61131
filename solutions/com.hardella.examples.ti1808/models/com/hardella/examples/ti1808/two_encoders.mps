@@ -41,7 +41,6 @@
     </language>
     <language id="4d1c59f7-8f87-4192-a752-a98136f0b57c" name="com.github.vlsi.iec61131.types">
       <concept id="6039408957479248769" name="com.github.vlsi.iec61131.types.structure.VariableDeclaration" flags="ng" index="283aBN">
-        <property id="6039408957482848394" name="input" index="2fKTFS" />
         <child id="6039408957482286918" name="typeDecl" index="2fQRkO" />
       </concept>
       <concept id="6039408957482432974" name="com.github.vlsi.iec61131.types.structure.VariableReference" flags="ng" index="2fRjeW">
@@ -57,7 +56,6 @@
       <concept id="5202852658696457739" name="com.github.vlsi.iec61131.types.structure.FunctionCallArgument" flags="ng" index="kub3A">
         <child id="5202852658696458671" name="expression" index="kuaX2" />
       </concept>
-      <concept id="3750039987448159535" name="com.github.vlsi.iec61131.types.structure.BoolType" flags="ng" index="PkkMJ" />
       <concept id="5097456207316512517" name="com.github.vlsi.iec61131.types.structure.FunctionRefCall" flags="ng" index="3Ty29G">
         <child id="5097456207316515146" name="expression" index="3Ty3gz" />
       </concept>
@@ -66,9 +64,6 @@
       </concept>
       <concept id="5097456207315642350" name="com.github.vlsi.iec61131.types.structure.ReferenceToFunctionBlock" flags="ng" index="3T_mE7">
         <reference id="5097456207315642351" name="block" index="3T_mE6" />
-      </concept>
-      <concept id="5097456207315319573" name="com.github.vlsi.iec61131.types.structure.FunctionPOU" flags="ng" index="3TBBpW">
-        <child id="5097456207315319574" name="type" index="3TBBpZ" />
       </concept>
       <concept id="5097456207317905222" name="com.github.vlsi.iec61131.types.structure.FunctionBlockVariableAccess" flags="ng" index="3TXI8J">
         <reference id="5097456207317905237" name="variable" index="3TXI8W" />
@@ -117,11 +112,6 @@
       <node concept="3T_mE7" id="58WclwlFtzp" role="2fQRkO">
         <ref role="3T_mE6" to="gzb9:6mj7nr2aFs0" resolve="FAST_INPUTS" />
       </node>
-    </node>
-    <node concept="283aBN" id="3gn4C0vCpKe" role="2fQKEM">
-      <property role="TrG5h" value="inpusdf" />
-      <property role="2fKTFS" value="false" />
-      <node concept="PkkMJ" id="3gn4C0vCpKJ" role="2fQRkO" />
     </node>
     <node concept="283aBJ" id="58WclwlFtyG" role="283bkm">
       <node concept="2fRoqJ" id="58WclwlFtyN" role="283bkg">
@@ -196,14 +186,6 @@
     <node concept="2HpY_i" id="58WclwlFI1d" role="2Hpttk" />
     <node concept="2HpY_i" id="58WclwlFI1f" role="2Hptth" />
     <node concept="2HpY_i" id="58WclwlFI1h" role="2Hpttb" />
-  </node>
-  <node concept="3TBBpW" id="3gn4C0vCpLq">
-    <property role="TrG5h" value="test" />
-    <node concept="283aBN" id="3gn4C0vCpL$" role="2fQKEM">
-      <property role="TrG5h" value="q" />
-      <node concept="PkkMJ" id="3gn4C0vCpLO" role="2fQRkO" />
-    </node>
-    <node concept="PkkMJ" id="3gn4C0vCpLV" role="3TBBpZ" />
   </node>
 </model>
 

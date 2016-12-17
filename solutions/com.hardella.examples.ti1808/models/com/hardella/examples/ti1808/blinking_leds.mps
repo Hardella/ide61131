@@ -49,6 +49,7 @@
     </language>
     <language id="4d1c59f7-8f87-4192-a752-a98136f0b57c" name="com.github.vlsi.iec61131.types">
       <concept id="6039408957479248769" name="com.github.vlsi.iec61131.types.structure.VariableDeclaration" flags="ng" index="283aBN">
+        <property id="6039408957482848394" name="input" index="2fKTFS" />
         <child id="6039408957482286918" name="typeDecl" index="2fQRkO" />
       </concept>
       <concept id="6039408957486272595" name="com.github.vlsi.iec61131.types.structure.NotExpression" flags="ng" index="2fA5Cx">
@@ -127,6 +128,7 @@
     </node>
     <node concept="283aBN" id="2e5me3oN0bk" role="2fQKEM">
       <property role="TrG5h" value="enable" />
+      <property role="2fKTFS" value="true" />
       <node concept="PkkMJ" id="2e5me3oN0bB" role="2fQRkO" />
       <node concept="3LqZAk" id="2e5me3oN0v_" role="lGtFl" />
     </node>
@@ -139,6 +141,7 @@
     <property role="TrG5h" value="BLINK_1_2" />
     <node concept="283aBN" id="2e5me3oN0ok" role="2fQKEM">
       <property role="TrG5h" value="enable" />
+      <property role="2fKTFS" value="true" />
       <node concept="PkkMJ" id="2e5me3oN0o_" role="2fQRkO" />
       <node concept="3LqZAk" id="2e5me3oN0sY" role="lGtFl" />
     </node>
@@ -186,10 +189,10 @@
     </node>
   </node>
   <node concept="2i7eBn" id="2e5me3oN0w3">
-    <property role="TrG5h" value="PruConfig" />
+    <property role="TrG5h" value="BlinkningLeds" />
     <node concept="3NJGWc" id="2e5me3oN0w4" role="2i7exr">
       <node concept="2i7f9x" id="2e5me3oN0w6" role="2i7f9G">
-        <property role="2i7f8U" value="100000.0" />
+        <property role="2i7f8U" value="500000.0" />
         <ref role="2i7f8W" node="2e5me3oN0av" resolve="BLINK_3_4" />
       </node>
     </node>
@@ -199,7 +202,7 @@
     <node concept="2HpY_i" id="2e5me3oN0we" role="2Hpttb" />
     <node concept="3NJGWc" id="2e5me3oN0wh" role="2i7ext">
       <node concept="2i7f9x" id="2e5me3oN0wg" role="2i7f9G">
-        <property role="2i7f8U" value="200000.0" />
+        <property role="2i7f8U" value="250000.0" />
         <ref role="2i7f8W" node="2e5me3oN0nH" resolve="BLINK_1_2" />
       </node>
     </node>

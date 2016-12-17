@@ -13,7 +13,6 @@
   </languages>
   <imports>
     <import index="ocpr" ref="r:559bb865-4f6c-4d13-9298-a01687fa843f(com.github.vlsi.iec61131.st2ti1808.structure)" />
-    <import index="aqmw" ref="642f71f8-327a-425b-84f9-44ad58786d27/f:project#44ae5b95-6c91-4767-a63c-505721ea4c11(jetbrains.mps.lang.project.modules/module.com.github.vlsi.iec61131.ti1808.libcompiler@project_stub)" />
   </imports>
   <registry>
     <language id="d7601ad3-513b-4e38-a483-fb62b3afe145" name="com.github.vlsi.iec61131.ti1808">

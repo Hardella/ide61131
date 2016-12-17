@@ -46,6 +46,8 @@
     </language>
     <language id="4d1c59f7-8f87-4192-a752-a98136f0b57c" name="com.github.vlsi.iec61131.types">
       <concept id="6039408957479248769" name="com.github.vlsi.iec61131.types.structure.VariableDeclaration" flags="ng" index="283aBN">
+        <property id="6039408957482848394" name="input" index="2fKTFS" />
+        <property id="6039408957482848397" name="output" index="2fKTFZ" />
         <child id="6039408957482286918" name="typeDecl" index="2fQRkO" />
       </concept>
       <concept id="6039408957486272252" name="com.github.vlsi.iec61131.types.structure.PlusExpression" flags="ng" index="2fA4ie" />
@@ -102,22 +104,18 @@
   </registry>
   <node concept="1X6EaH" id="58WclwlFIaK">
     <property role="TrG5h" value="FAST_COUNTER" />
+    <node concept="283aBN" id="58WclwlFIbq" role="2fQKEM">
+      <property role="TrG5h" value="counter" />
+      <property role="2EalUU" value="This variable will be visible in CoDeSys program" />
+      <property role="2fKTFS" value="false" />
+      <property role="2fKTFZ" value="true" />
+      <node concept="2fQKt7" id="58WclwlFIbF" role="2fQRkO" />
+      <node concept="3LqZAk" id="58WclwlFIl6" role="lGtFl" />
+    </node>
     <node concept="283aBN" id="58WclwlFIaU" role="2fQKEM">
       <property role="TrG5h" value="inputs" />
       <node concept="3T_mE7" id="58WclwlFIb9" role="2fQRkO">
         <ref role="3T_mE6" to="gzb9:6mj7nr2aFs0" resolve="FAST_INPUTS" />
-      </node>
-    </node>
-    <node concept="283aBN" id="58WclwlFIbq" role="2fQKEM">
-      <property role="TrG5h" value="counter" />
-      <property role="2EalUU" value="This variable will be visible in CoDeSys program" />
-      <node concept="2fQKt7" id="58WclwlFIbF" role="2fQRkO" />
-      <node concept="3LqZAk" id="58WclwlFIl6" role="lGtFl" />
-    </node>
-    <node concept="283aBN" id="2e5me3oN02F" role="2fQKEM">
-      <property role="TrG5h" value="time" />
-      <node concept="3T_mE7" id="2e5me3oN02Z" role="2fQRkO">
-        <ref role="3T_mE6" to="gzb9:6mj7nr3DCHJ" resolve="PRU_CURRENT_TIME" />
       </node>
     </node>
     <node concept="283aBJ" id="58WclwlFIbk" role="283bkm">

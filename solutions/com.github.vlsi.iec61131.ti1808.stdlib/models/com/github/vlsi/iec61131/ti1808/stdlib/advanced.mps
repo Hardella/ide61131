@@ -9,7 +9,6 @@
   </languages>
   <imports>
     <import index="gzb9" ref="r:de700410-c677-4f89-bf11-6bca95714d96(com.github.vlsi.iec61131.ti1808.stdlib.lib)" />
-    <import index="v9dl" ref="r:2c8ec547-e21e-44db-bd30-7f693ae402cc(st61131.pru)" />
   </imports>
   <registry>
     <language id="d7601ad3-513b-4e38-a483-fb62b3afe145" name="com.github.vlsi.iec61131.ti1808">
