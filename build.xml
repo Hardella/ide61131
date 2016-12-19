@@ -96,7 +96,7 @@
     <mkdir dir="${build.tmp}/default/branding.jar/idea" />
     <echoxml file="${build.tmp}/default/branding.jar/idea/IdeaApplicationInfo.xml">
       <component>
-        <version codename="" major="1" minor="6.0" eap="false" update-channel="HARDELLA34" />
+        <version codename="" major="1" minor="6.0" eap="false" update-channel="Hardella_release" />
         <company name="Vladimir Sitnikov" url="https://twitter.com/VladimirSitnikv" />
         <build number="${build.number}" date="${date}" />
         <logo url="/splash.png" textcolor="002387" progressColor="4269bc" progressY="394" progressHeight="3" />
@@ -104,18 +104,18 @@
         <icon size32="/icon_32x32.png" size16="/icon_16x16.png" size32opaque="/icon_32x32.png" size12="/icon_32x32.png" size128="/icon_128x128.png" ico="/icon_128x128.png" />
         <dialogs-image url="/dialogImage.png" />
         <package code="code" />
-        <names product="Hardella" fullname="Hardella IDE 61131" />
+        <names product="Hardella" fullname="Hardella IDE" />
         
         <welcome-screen logo-url="/icon_80x80.png" />
         
         <plugins url="" />
-        <update-urls check="https://hardella.com" update="https://github.com/vlsi/ide61131" />
+        <update-urls check="https://hardella.com/updates/updates.xml" update="https://github.com/Hardella/ide61131/releases/download/v1.6.0" />
         
-        <documentation url="http://localhost:4000/docs/introduction" />
-        <support url="https://github.com/vlsi/ide61131/issues" />
-        <feedback release-url="https://github.com/vlsi/ide61131/issues" />
-        <whatsnew url="https://github.com/vlsi/ide61131#changelog" />
-        <third-party url="https://github.com/vlsi/ide61131" />
+        <documentation url="http://hardella.com/docs/introduction" />
+        <support url="https://github.com/Hardella/ide61131/issues" />
+        <feedback release-url="https://github.com/Hardella/ide61131/issues" />
+        <whatsnew url="https://hardella.com/blog" />
+        <third-party url="https://github.com/Hardella/ide61131" />
         
       </component>
     </echoxml>
@@ -256,6 +256,7 @@
     <jar destfile="${build.layout}/plugins/st61131/languages/st61131/com.github.vlsi.iec61131.types.jar" duplicate="preserve">
       <fileset dir="${build.tmp}/java/out/com.github.vlsi.iec61131.types" />
       <fileset dir="${basedir}/languages/com.github.vlsi.iec61131.types" includes="icons/**, resources/**" />
+      <zipfileset dir="${basedir}/languages/com.github.vlsi.iec61131.types/icons" includes="*.png" prefix="com/github/vlsi/iec61131/types/structure"/>
       <fileset dir="${basedir}/languages/com.github.vlsi.iec61131.types/source_gen" includes="**/trace.info, **/exports, **/*.mps, **/checkpoints" />
       <fileset dir="${build.tmp}/default/com.github.vlsi.iec61131.types.jar" />
     </jar>
@@ -461,6 +462,7 @@
     <jar destfile="${build.layout}/plugins/st61131/languages/st61131/com.github.vlsi.iec61131.st2ti1808.jar" duplicate="preserve">
       <fileset dir="${build.tmp}/java/out/com.github.vlsi.iec61131.st2ti1808" />
       <fileset dir="${basedir}/languages/com.github.vlsi.iec61131.st2ti1808" includes="icons/**, resources/**" />
+      <zipfileset dir="${basedir}/languages/com.github.vlsi.iec61131.st2ti1808/icons" includes="*.png" prefix="com/github/vlsi/iec61131/st2ti1808/structure"/>
       <fileset dir="${basedir}/languages/com.github.vlsi.iec61131.st2ti1808/source_gen" includes="**/trace.info, **/exports, **/*.mps, **/checkpoints" />
       <fileset dir="${build.tmp}/default/com.github.vlsi.iec61131.st2ti1808.jar" />
     </jar>
@@ -1226,10 +1228,10 @@
   <target name="fetchDependencies">
     <mkdir dir="${build.tmp}/deps/mps-sl-all/mps-sl-all.zip" />
     <unzip src="${artifacts.mps-sl-all}/mps-sl-all.zip" dest="${build.tmp}/deps/mps-sl-all/mps-sl-all.zip" />
-    <mkdir dir="${build.tmp}/deps/com.mbeddr.platform/com.mbeddr.platform.zip" />
-    <unzip src="${artifacts.com.mbeddr.platform}/com.mbeddr.platform.zip" dest="${build.tmp}/deps/com.mbeddr.platform/com.mbeddr.platform.zip" />
     <mkdir dir="${build.tmp}/deps/com.mbeddr.platform/com.mbeddr.mpsutil.zip" />
     <unzip src="${artifacts.com.mbeddr.platform}/com.mbeddr.mpsutil.zip" dest="${build.tmp}/deps/com.mbeddr.platform/com.mbeddr.mpsutil.zip" />
+    <mkdir dir="${build.tmp}/deps/com.mbeddr.platform/com.mbeddr.platform.zip" />
+    <unzip src="${artifacts.com.mbeddr.platform}/com.mbeddr.platform.zip" dest="${build.tmp}/deps/com.mbeddr.platform/com.mbeddr.platform.zip" />
   </target>
   
   <target name="build" depends="assemble" />
@@ -1382,7 +1384,6 @@
       <library file="${build.tmp}/deps/com.mbeddr.platform/com.mbeddr.mpsutil.zip/mbeddr.mpsutil/languages/com.mbeddr.mpsutil.infrastructure-support/com.mbeddr.mpsutil.serializer.xml.jar" />
       <library file="${build.tmp}/deps/com.mbeddr.platform/com.mbeddr.mpsutil.zip/mbeddr.mpsutil/languages/com.mbeddr.mpsutil.jung/com.mbeddr.mpsutil.jung.jar" />
       <library file="${build.tmp}/deps/com.mbeddr.platform/com.mbeddr.mpsutil.zip/mbeddr.mpsutil/languages/com.mbeddr.mpsutil.jung/com.mbeddr.mpsutil.jung.pluginSolution.jar" />
-      <library file="${build.tmp}/deps/com.mbeddr.platform/com.mbeddr.mpsutil.zip/mbeddr.mpsutil/languages/com.mbeddr.mpsutil.lang-support/com.mbeddr.mpsutil.iconchar.jar" />
       <library file="${build.tmp}/deps/com.mbeddr.platform/com.mbeddr.mpsutil.zip/mbeddr.mpsutil/languages/com.mbeddr.mpsutil.plantuml/com.mbeddr.mpsutil.plantuml.node.jar" />
       <library file="${build.tmp}/deps/com.mbeddr.platform/com.mbeddr.mpsutil.zip/mbeddr.mpsutil/languages/com.mbeddr.mpsutil.process/com.mbeddr.mpsutil.process.jar" />
       <library file="${build.tmp}/deps/com.mbeddr.platform/com.mbeddr.mpsutil.zip/mbeddr.mpsutil/languages/com.mbeddr.mpsutil.process/com.mbeddr.mpsutil.process.runtime.jar" />
@@ -2791,7 +2792,7 @@
     </javac>
   </target>
   
-  <target name="java.compile.com.github.vlsi.iec61131.quickstart.pluginSolution" depends="java.compile.com.github.vlsi.iec61131.executors, java.compile.com.github.vlsi.iec61131.libimport, java.compile.com.github.vlsi.iec61131.parser, java.compile.com.github.vlsi.iec61131.st, java.compile.com.github.vlsi.iec61131.st.runtime, java.compile.com.github.vlsi.iec61131.st2ti1808.runtime, java.compile.com.github.vlsi.iec61131.standard_lib, java.compile.com.github.vlsi.iec61131.ti1808.stdlib, java.compile.com.github.vlsi.iec61131.types, fetchDependencies">
+  <target name="java.compile.com.github.vlsi.iec61131.quickstart.pluginSolution" depends="java.compile.com.github.vlsi.iec61131.executors, java.compile.com.github.vlsi.iec61131.libimport, java.compile.com.github.vlsi.iec61131.parser, java.compile.com.github.vlsi.iec61131.st, java.compile.com.github.vlsi.iec61131.st.runtime, java.compile.com.github.vlsi.iec61131.st2ti1808, java.compile.com.github.vlsi.iec61131.st2ti1808.runtime, java.compile.com.github.vlsi.iec61131.standard_lib, java.compile.com.github.vlsi.iec61131.ti1808, java.compile.com.github.vlsi.iec61131.ti1808.stdlib, java.compile.com.github.vlsi.iec61131.types, fetchDependencies">
     <mkdir dir="${basedir}/solutions/com.github.vlsi.iec61131.quickstart.pluginSolution/source_gen" />
     <mkdir dir="${build.tmp}/java/out/com.github.vlsi.iec61131.quickstart.pluginSolution" />
     <javac destdir="${build.tmp}/java/out/com.github.vlsi.iec61131.quickstart.pluginSolution" fork="true" encoding="utf8" includeantruntime="false" debug="true">
@@ -2823,11 +2824,13 @@
         <pathelement path="${build.tmp}/java/out/com.github.vlsi.iec61131.parser" />
         <pathelement path="${build.tmp}/java/out/com.github.vlsi.iec61131.st" />
         <pathelement path="${build.tmp}/java/out/com.github.vlsi.iec61131.st.runtime" />
+        <pathelement path="${build.tmp}/java/out/com.github.vlsi.iec61131.st2ti1808" />
         <fileset file="${artifacts.mps}/plugins/mps-execution-api/lib/execution-api.jar" />
         <fileset file="${artifacts.mps}/plugins/mps-debugger-api/lib/debugger-api.jar" />
         <fileset file="${artifacts.mps}/plugins/mps-execution-languages/lib/execution-languages.jar" />
         <pathelement path="${build.tmp}/java/out/com.github.vlsi.iec61131.st2ti1808.runtime" />
         <pathelement path="${build.tmp}/java/out/com.github.vlsi.iec61131.standard_lib" />
+        <pathelement path="${build.tmp}/java/out/com.github.vlsi.iec61131.ti1808" />
         <pathelement path="${build.tmp}/java/out/com.github.vlsi.iec61131.ti1808.stdlib" />
         <pathelement path="${build.tmp}/java/out/com.github.vlsi.iec61131.types" />
         <fileset file="${basedir}/solutions/com.github.vlsi.iec61131.parser/lib/jna-4.2.2.jar" />

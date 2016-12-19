@@ -13,23 +13,8 @@
   </imports>
   <registry>
     <language id="982eb8df-2c96-4bd7-9963-11712ea622e5" name="jetbrains.mps.lang.resources">
-      <concept id="2756621024541681841" name="jetbrains.mps.lang.resources.structure.Primitive" flags="ng" index="1irPi6">
-        <child id="1860120738943552529" name="fillColor" index="3PKjn_" />
-        <child id="1860120738943552531" name="borderColor" index="3PKjnB" />
-      </concept>
-      <concept id="2756621024541681849" name="jetbrains.mps.lang.resources.structure.Text" flags="ng" index="1irPie">
-        <property id="2756621024541681854" name="text" index="1irPi9" />
-        <child id="1860120738943552534" name="color" index="3PKjny" />
-      </concept>
-      <concept id="2756621024541674821" name="jetbrains.mps.lang.resources.structure.TextIcon" flags="ng" index="1irR5M">
-        <property id="1358878980655415353" name="iconId" index="2$rrk2" />
-        <child id="2756621024541675110" name="layers" index="1irR9h" />
-      </concept>
-      <concept id="2756621024541675104" name="jetbrains.mps.lang.resources.structure.Circle" flags="ng" index="1irR9n">
-        <property id="2756621024541681857" name="r" index="1irPjQ" />
-      </concept>
-      <concept id="1860120738943552477" name="jetbrains.mps.lang.resources.structure.ColorLiteral" flags="ng" index="3PKj8D">
-        <property id="1860120738943552481" name="val" index="3PKj8l" />
+      <concept id="8974276187400029883" name="jetbrains.mps.lang.resources.structure.FileIcon" flags="ng" index="1QGGSu">
+        <property id="2756621024541341363" name="file" index="1iqoE4" />
       </concept>
     </language>
     <language id="c72da2b9-7cce-4447-8389-f407dc1158b7" name="jetbrains.mps.lang.structure">
@@ -434,22 +419,8 @@
       <property role="IQ2ns" value="6039408957486132269" />
       <ref role="20lvS9" node="5fgiBbs2NWo" resolve="AnyType" />
     </node>
-    <node concept="1irR5M" id="7NG07uA9zQ5" role="rwd14">
-      <property role="2$rrk2" value="2" />
-      <node concept="1irR9n" id="7NG07uA9zQ6" role="1irR9h">
-        <node concept="3PKj8D" id="7NG07uA9zQ7" role="3PKjn_">
-          <property role="3PKj8l" value="86e18a" />
-        </node>
-        <node concept="3PKj8D" id="7NG07uA9zQ8" role="3PKjnB">
-          <property role="3PKj8l" value="5d9d60" />
-        </node>
-      </node>
-      <node concept="1irPie" id="7NG07uA9zQ9" role="1irR9h">
-        <property role="1irPi9" value="T" />
-        <node concept="3PKj8D" id="7NG07uA9zQa" role="3PKjny">
-          <property role="3PKj8l" value="000000" />
-        </node>
-      </node>
+    <node concept="1QGGSu" id="6ZqREyIeMgK" role="rwd14">
+      <property role="1iqoE4" value="${module}/icons/TypeAliasIcon.png" />
     </node>
   </node>
   <node concept="1TIwiD" id="1scnkI3eWbE">
@@ -592,22 +563,8 @@
     <property role="R4oN_" value="function block" />
     <property role="EcuMT" value="6039408957479237368" />
     <ref role="1TJDcQ" node="7Bb7ds4OrWV" resolve="POU" />
-    <node concept="1irR5M" id="47_z4h3S6OA" role="rwd14">
-      <property role="2$rrk2" value="3" />
-      <node concept="1irR9n" id="47_z4h3S6OB" role="1irR9h">
-        <node concept="3PKj8D" id="47_z4h3S6OC" role="3PKjn_">
-          <property role="3PKj8l" value="aa9b8f" />
-        </node>
-        <node concept="3PKj8D" id="47_z4h3S6OD" role="3PKjnB">
-          <property role="3PKj8l" value="766c64" />
-        </node>
-      </node>
-      <node concept="1irPie" id="47_z4h3S6OE" role="1irR9h">
-        <property role="1irPi9" value="F" />
-        <node concept="3PKj8D" id="47_z4h3S6OF" role="3PKjny">
-          <property role="3PKj8l" value="000000" />
-        </node>
-      </node>
+    <node concept="1QGGSu" id="6ZqREyIeMgG" role="rwd14">
+      <property role="1iqoE4" value="${module}/icons/FunctionBlockPOUIcon.png" />
     </node>
   </node>
   <node concept="1TIwiD" id="7Bb7ds4OrWV">
@@ -653,23 +610,8 @@
     <property role="EcuMT" value="8776140008685944442" />
     <property role="MwhBj" value="${module}/icons/ProgramPOUCharIcon.png" />
     <ref role="1TJDcQ" node="7Bb7ds4OrWV" resolve="POU" />
-    <node concept="1irR5M" id="7NG07uA9CJL" role="rwd14">
-      <property role="2$rrk2" value="1" />
-      <node concept="1irR9n" id="7NG07uA9CJM" role="1irR9h">
-        <property role="1irPjQ" value="8" />
-        <node concept="3PKj8D" id="7NG07uA9CJN" role="3PKjn_">
-          <property role="3PKj8l" value="8dd391" />
-        </node>
-        <node concept="3PKj8D" id="7NG07uA9CJO" role="3PKjnB">
-          <property role="3PKj8l" value="629365" />
-        </node>
-      </node>
-      <node concept="1irPie" id="7NG07uA9CJP" role="1irR9h">
-        <property role="1irPi9" value="P" />
-        <node concept="3PKj8D" id="7NG07uA9CJQ" role="3PKjny">
-          <property role="3PKj8l" value="000000" />
-        </node>
-      </node>
+    <node concept="1QGGSu" id="6ZqREyIeMgI" role="rwd14">
+      <property role="1iqoE4" value="${module}/icons/ProgramPOUIcon.png" />
     </node>
   </node>
   <node concept="PlHQZ" id="4qXNmAZ3wTd">

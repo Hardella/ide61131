@@ -292,7 +292,7 @@
       </node>
       <node concept="3_J27D" id="3$sDymgFgwG" role="2EtHGT">
         <node concept="3Mxwew" id="3$sDymgFgwH" role="3MwsjC">
-          <property role="3MwjfP" value="Hardella IDE 61131" />
+          <property role="3MwjfP" value="Hardella IDE" />
         </node>
       </node>
       <node concept="NbPM2" id="3$sDymgFgwI" role="2OjNyQ" />
@@ -366,22 +366,22 @@
       </node>
       <node concept="NbPM2" id="5EBmM4DXjzW" role="3$HL_E">
         <node concept="3Mxwew" id="5EBmM4DXj$e" role="3MwsjC">
-          <property role="3MwjfP" value="https://github.com/vlsi/ide61131/issues" />
+          <property role="3MwjfP" value="https://github.com/Hardella/ide61131/issues" />
         </node>
       </node>
       <node concept="NbPM2" id="5EBmM4DXj$x" role="3$Ir1d">
         <node concept="3Mxwew" id="5EBmM4DXj$w" role="3MwsjC">
-          <property role="3MwjfP" value="http://localhost:4000/docs/introduction" />
+          <property role="3MwjfP" value="http://hardella.com/docs/introduction" />
         </node>
       </node>
       <node concept="NbPM2" id="5EBmM4DXj$P" role="2Mmf0a">
         <node concept="3Mxwew" id="5EBmM4DXj$O" role="3MwsjC">
-          <property role="3MwjfP" value="https://github.com/vlsi/ide61131/issues" />
+          <property role="3MwjfP" value="https://github.com/Hardella/ide61131/issues" />
         </node>
       </node>
       <node concept="NbPM2" id="1GwckiU99Dr" role="IuMTc">
         <node concept="3Mxwew" id="1GwckiU99Er" role="3MwsjC">
-          <property role="3MwjfP" value="https://github.com/vlsi/ide61131#changelog" />
+          <property role="3MwjfP" value="https://hardella.com/blog" />
         </node>
       </node>
       <node concept="55IIr" id="1_poQ2hV9Kz" role="IvI4g">
@@ -434,23 +434,23 @@
       </node>
       <node concept="NbPM2" id="5zgQEvZlv2g" role="3$iogF">
         <node concept="3Mxwew" id="5zgQEvZlv2f" role="3MwsjC">
-          <property role="3MwjfP" value="https://github.com/vlsi/ide61131" />
+          <property role="3MwjfP" value="https://github.com/Hardella/ide61131" />
         </node>
       </node>
       <node concept="1zDKOm" id="3yC4UO2o9AE" role="2Etnp4">
         <node concept="3_J27D" id="3yC4UO2o9AF" role="2EtnoL">
           <node concept="3Mxwew" id="3yC4UO2oaeR" role="3MwsjC">
-            <property role="3MwjfP" value="https://hardella.com" />
+            <property role="3MwjfP" value="https://hardella.com/updates/updates.xml" />
           </node>
         </node>
         <node concept="3_J27D" id="3yC4UO2o9AG" role="2EtnoK">
           <node concept="3Mxwew" id="3yC4UO2oacC" role="3MwsjC">
-            <property role="3MwjfP" value="https://github.com/vlsi/ide61131" />
+            <property role="3MwjfP" value="https://github.com/Hardella/ide61131/releases/download/v1.6.0" />
           </node>
         </node>
         <node concept="NbPM2" id="5ZeBDx1wPfk" role="HFWMp">
           <node concept="3Mxwew" id="5ZeBDx1wPhN" role="3MwsjC">
-            <property role="3MwjfP" value="HARDELLA34" />
+            <property role="3MwjfP" value="Hardella_release" />
           </node>
         </node>
       </node>
@@ -2356,6 +2356,12 @@
                 </node>
               </node>
             </node>
+          </node>
+        </node>
+        <node concept="1SiIV0" id="6ZqREyIcXkX" role="3bR37C">
+          <node concept="3bR9La" id="6ZqREyIcXkY" role="1SiIV1">
+            <property role="3bR36h" value="false" />
+            <ref role="3bR37D" node="3yC4UO2as5k" resolve="com.github.vlsi.iec61131.st2ti1808" />
           </node>
         </node>
       </node>

@@ -16,7 +16,6 @@
     <dependency reexport="false">742f6602-5a2f-4313-aa6e-ae1cd4ffdc61(MPS.Platform)</dependency>
     <dependency reexport="false">22250116-183c-4e90-8450-b6a13dd8998b(jetbrains.mps.baseLanguage.execution.util)</dependency>
     <dependency reexport="false">a1250a4d-c090-42c3-ad7c-d298a3357dd4(jetbrains.mps.make.runtime)</dependency>
-    <dependency reexport="false">e9ab19fa-0158-4d47-97cb-ef19cd623260(com.github.vlsi.iec61131.executors.runtime)</dependency>
     <dependency reexport="false">f8e20673-3f65-44e9-84c0-c4a4b6ede37e(jetbrains.mps.make.facets)</dependency>
     <dependency reexport="false">df9d410f-2ebb-43f7-893a-483a4f085250(jetbrains.mps.smodel.resources)</dependency>
     <dependency reexport="false">44ae5b95-6c91-4767-a63c-505721ea4c11(com.github.vlsi.iec61131.ti1808.libcompiler)</dependency>
@@ -59,7 +58,6 @@
     <module reference="8865b7a8-5271-43d3-884c-6fd1d9cfdd34(MPS.OpenAPI)" version="0" />
     <module reference="742f6602-5a2f-4313-aa6e-ae1cd4ffdc61(MPS.Platform)" version="0" />
     <module reference="86441d7a-e194-42da-81a5-2161ec62a379(MPS.Workbench)" version="0" />
-    <module reference="e9ab19fa-0158-4d47-97cb-ef19cd623260(com.github.vlsi.iec61131.executors.runtime)" version="0" />
     <module reference="70a97310-dc14-45b6-a162-73a2ee1bf58e(com.github.vlsi.iec61131.plc110pru.executors)" version="0" />
     <module reference="d28e7e4d-b627-42fa-82d5-c7472b85c5f6(com.github.vlsi.iec61131.st)" version="0" />
     <module reference="d1aef6cd-5477-486f-bcbd-34728b246566(com.github.vlsi.iec61131.st2ti1808)" version="0" />

@@ -15,21 +15,8 @@
   </imports>
   <registry>
     <language id="982eb8df-2c96-4bd7-9963-11712ea622e5" name="jetbrains.mps.lang.resources">
-      <concept id="2756621024541681841" name="jetbrains.mps.lang.resources.structure.Primitive" flags="ng" index="1irPi6">
-        <child id="1860120738943552529" name="fillColor" index="3PKjn_" />
-        <child id="1860120738943552531" name="borderColor" index="3PKjnB" />
-      </concept>
-      <concept id="2756621024541681849" name="jetbrains.mps.lang.resources.structure.Text" flags="ng" index="1irPie">
-        <property id="2756621024541681854" name="text" index="1irPi9" />
-        <child id="1860120738943552534" name="color" index="3PKjny" />
-      </concept>
-      <concept id="2756621024541674821" name="jetbrains.mps.lang.resources.structure.TextIcon" flags="ng" index="1irR5M">
-        <property id="1358878980655415353" name="iconId" index="2$rrk2" />
-        <child id="2756621024541675110" name="layers" index="1irR9h" />
-      </concept>
-      <concept id="2756621024541675104" name="jetbrains.mps.lang.resources.structure.Circle" flags="ng" index="1irR9n" />
-      <concept id="1860120738943552477" name="jetbrains.mps.lang.resources.structure.ColorLiteral" flags="ng" index="3PKj8D">
-        <property id="1860120738943552481" name="val" index="3PKj8l" />
+      <concept id="8974276187400029883" name="jetbrains.mps.lang.resources.structure.FileIcon" flags="ng" index="1QGGSu">
+        <property id="2756621024541341363" name="file" index="1iqoE4" />
       </concept>
     </language>
     <language id="c72da2b9-7cce-4447-8389-f407dc1158b7" name="jetbrains.mps.lang.structure">
@@ -221,22 +208,8 @@
     <node concept="PrWs8" id="3yC4UNYePZE" role="PzmwI">
       <ref role="PrY4T" to="933e:42bSzUqWpBr" resolve="IValidIdentifier" />
     </node>
-    <node concept="1irR5M" id="7NG07uA9Rvz" role="rwd14">
-      <property role="2$rrk2" value="1" />
-      <node concept="1irR9n" id="7NG07uA9Rv$" role="1irR9h">
-        <node concept="3PKj8D" id="7NG07uA9Rv_" role="3PKjn_">
-          <property role="3PKj8l" value="84a2e8" />
-        </node>
-        <node concept="3PKj8D" id="7NG07uA9RvA" role="3PKjnB">
-          <property role="3PKj8l" value="5c71a2" />
-        </node>
-      </node>
-      <node concept="1irPie" id="7NG07uA9RvB" role="1irR9h">
-        <property role="1irPi9" value="C" />
-        <node concept="3PKj8D" id="7NG07uA9RvC" role="3PKjny">
-          <property role="3PKj8l" value="000000" />
-        </node>
-      </node>
+    <node concept="1QGGSu" id="6ZqREyIf3WQ" role="rwd14">
+      <property role="1iqoE4" value="${module}/icons/PruFullConfigurationIcon.png" />
     </node>
   </node>
   <node concept="1TIwiD" id="1I83mA9_fUU">
