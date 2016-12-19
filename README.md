@@ -103,6 +103,13 @@ Install mbeddr, clone ide61131, hack as required.
 Changelog
 ---------
 
+v1.6.0: 19 December 2016
+- Both PRU cores can now be programmed. You can freely control 4 fast outputs and 2 fast inputs
+- Standard library is improved. For instance, there's a block for step motor control, a block for ABZ encoder, and several others
+- hardella.com has been launched
+- `EXIT` statement was added, so you can break loops early
+- Autocomplete menu now includes variable comments
+
 v1.5.0: 27 October 2016
 - Support for TI AM1808 PRU code generation
 
