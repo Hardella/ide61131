@@ -7,8 +7,10 @@
   <property name="artifacts.st61131" location="${build.dir}/artifacts/st61131" />
   <property file="${artifacts.st61131}/build.properties" prefix="import.st61131" />
   <property name="st61131.date" value="${import.st61131.st61131.date}" />
+  <property name="st61131.codename" value="${import.st61131.st61131.codename}" />
   <property name="st61131.build.number" value="${import.st61131.st61131.build.number}" />
   <property name="st61131.version" value="${import.st61131.st61131.version}" />
+  <property name="st61131.path.selector" value="${import.st61131.st61131.path.selector}" />
   <property name="st61131.appName" value="${import.st61131.st61131.appName}" />
   <property name="mpsBootstrapCore.version" value="${import.st61131.mpsBootstrapCore.version}" />
   <property name="mps.build.number" value="${import.st61131.mps.build.number}" />
@@ -29,23 +31,30 @@
     <mkdir dir="${build.tmp}/default/_dl__lbrace_appName_rbrace_-_dl__lbrace_version_rbrace_-linux.tar.gz/${st61131.appName} ${st61131.version}" />
     <mkdir dir="${build.tmp}/default/_dl__lbrace_appName_rbrace_-_dl__lbrace_version_rbrace_-linux.tar.gz/${st61131.appName} ${st61131.version}/bin" />
     <copy todir="${build.tmp}/default/_dl__lbrace_appName_rbrace_-_dl__lbrace_version_rbrace_-linux.tar.gz/${st61131.appName} ${st61131.version}/bin">
-      <fileset file="${mps_home}/bin/mps.vmoptions" />
+      <fileset file="${basedir}/solutions/st61131.build/source_gen/com/github/vlsi/st61131/build/hardella.vmoptions" />
       <filterchain>
         <fixcrlf eol="lf" eof="remove" />
       </filterchain>
     </copy>
     <copy todir="${build.tmp}/default/_dl__lbrace_appName_rbrace_-_dl__lbrace_version_rbrace_-linux.tar.gz/${st61131.appName} ${st61131.version}/bin">
-      <fileset file="${mps_home}/bin/mps64.vmoptions" />
+      <fileset file="${basedir}/solutions/st61131.build/source_gen/com/github/vlsi/st61131/build/hardella64.vmoptions" />
       <filterchain>
         <fixcrlf eol="lf" eof="remove" />
       </filterchain>
     </copy>
     <mkdir dir="${build.tmp}/default/_dl__lbrace_appName_rbrace_-_dl__lbrace_version_rbrace_-linux.tar.gz_f755" />
     <copy todir="${build.tmp}/default/_dl__lbrace_appName_rbrace_-_dl__lbrace_version_rbrace_-linux.tar.gz_f755">
-      <fileset file="${mps_home}/mps.sh" />
+      <fileset file="${basedir}/solutions/st61131.build/source_gen/com/github/vlsi/st61131/build/mps.sh" />
       <filterchain>
+        <tokenfilter>
+          <replaceregex pattern="/mps\$BITS.vmoptions" replace="/hardella&#36;BITS.vmoptions" flags="" />
+        </tokenfilter>
+        <tokenfilter>
+          <replaceregex pattern="&quot;\$\{UNAME\}&quot;" replace="&#36;{UNAME}" flags="" />
+        </tokenfilter>
         <fixcrlf eol="lf" eof="remove" />
       </filterchain>
+      <globmapper from="*" to="hardella.sh" />
     </copy>
     <tar destfile="${build.layout}/${st61131.appName}-${st61131.version}-linux.tar.gz" compression="gzip" longfile="gnu">
       <tarfileset dir="${artifacts.st61131}" prefix="${st61131.appName} ${st61131.version}">
@@ -56,77 +65,85 @@
       <tarfileset dir="${mps_home}/bin/linux" prefix="${st61131.appName} ${st61131.version}/bin">
         <exclude name="**/fsnotifier" />
         <exclude name="**/fsnotifier64" />
+        <exclude name="**/fsnotifier-arm" />
+        <exclude name="**/*.so" />
       </tarfileset>
       <tarfileset file="${mps_home}/bin/linux/fsnotifier" prefix="${st61131.appName} ${st61131.version}/bin" filemode="755" />
+      <tarfileset file="${mps_home}/bin/linux/fsnotifier-arm" prefix="${st61131.appName} ${st61131.version}/bin" filemode="755" />
       <tarfileset file="${mps_home}/bin/linux/fsnotifier64" prefix="${st61131.appName} ${st61131.version}/bin" filemode="755" />
+      <tarfileset file="${mps_home}/bin/linux/libbreakgen.so" prefix="${st61131.appName} ${st61131.version}/bin" filemode="755" />
+      <tarfileset file="${mps_home}/bin/linux/libbreakgen64.so" prefix="${st61131.appName} ${st61131.version}/bin" filemode="755" />
       <tarfileset dir="${build.tmp}/default/_dl__lbrace_appName_rbrace_-_dl__lbrace_version_rbrace_-linux.tar.gz_f755" filemode="755" prefix="${st61131.appName} ${st61131.version}" />
       <tarfileset dir="${build.tmp}/default/_dl__lbrace_appName_rbrace_-_dl__lbrace_version_rbrace_-linux.tar.gz" />
     </tar>
+    <mkdir dir="${build.tmp}/default/_dl__lbrace_appName_rbrace_-_dl__lbrace_version_rbrace_-win.zip" />
+    <mkdir dir="${build.tmp}/default/_dl__lbrace_appName_rbrace_-_dl__lbrace_version_rbrace_-win.zip/${st61131.appName} ${st61131.version}" />
+    <mkdir dir="${build.tmp}/default/_dl__lbrace_appName_rbrace_-_dl__lbrace_version_rbrace_-win.zip/${st61131.appName} ${st61131.version}/bin" />
+    <copy todir="${build.tmp}/default/_dl__lbrace_appName_rbrace_-_dl__lbrace_version_rbrace_-win.zip/${st61131.appName} ${st61131.version}/bin">
+      <fileset file="${basedir}/solutions/st61131.build/source_gen/com/github/vlsi/st61131/build/hardella.vmoptions" />
+      <filterchain>
+        <fixcrlf eol="crlf" />
+      </filterchain>
+      <globmapper from="*" to="hardella.exe.vmoptions" />
+    </copy>
+    <copy todir="${build.tmp}/default/_dl__lbrace_appName_rbrace_-_dl__lbrace_version_rbrace_-win.zip/${st61131.appName} ${st61131.version}/bin">
+      <fileset file="${basedir}/solutions/st61131.build/source_gen/com/github/vlsi/st61131/build/hardella64.vmoptions" />
+      <filterchain>
+        <fixcrlf eol="crlf" />
+      </filterchain>
+      <globmapper from="*" to="hardella64.exe.vmoptions" />
+    </copy>
     <mkdir dir="${build.tmp}/default/_dl__lbrace_appName_rbrace_-_dl__lbrace_version_rbrace_-win.zip_f755" />
     <copy todir="${build.tmp}/default/_dl__lbrace_appName_rbrace_-_dl__lbrace_version_rbrace_-win.zip_f755">
-      <fileset file="${mps_home}/mps.bat" />
-      <globmapper from="mps.bat" to="hardella.bat" />
+      <fileset file="${basedir}/solutions/st61131.build/source_gen/com/github/vlsi/st61131/build/hardella.bat" />
+      <filterchain>
+        <fixcrlf eol="crlf" />
+      </filterchain>
     </copy>
     <zip destfile="${build.layout}/${st61131.appName}-${st61131.version}-win.zip">
       <zipfileset dir="${artifacts.st61131}" prefix="${st61131.appName} ${st61131.version}">
         <exclude name="**/**osx**/**" />
         <exclude name="**/**linux**/**" />
       </zipfileset>
-      <zipfileset file="${mps_home}/bin/mps.vmoptions" prefix="${st61131.appName} ${st61131.version}/bin" />
-      <zipfileset file="${mps_home}/bin/mps.exe.vmoptions" prefix="${st61131.appName} ${st61131.version}/bin" />
-      <zipfileset file="${mps_home}/bin/mps64.vmoptions" prefix="${st61131.appName} ${st61131.version}/bin" />
-      <zipfileset file="${mps_home}/bin/mps64.exe.vmoptions" prefix="${st61131.appName} ${st61131.version}/bin" />
-      <zipfileset dir="${mps_home}/bin/win" prefix="${st61131.appName} ${st61131.version}/bin/win">
+      <zipfileset dir="${mps_home}/bin/win" prefix="${st61131.appName} ${st61131.version}/bin">
         <exclude name="**/*.exe" />
       </zipfileset>
-      <zipfileset dir="${mps_home}/bin/win" prefix="${st61131.appName} ${st61131.version}/bin/win" filemode="755">
+      <zipfileset dir="${mps_home}/bin/win" prefix="${st61131.appName} ${st61131.version}/bin" filemode="755">
         <include name="**/*.exe" />
       </zipfileset>
-      <zipfileset dir="${mps_home}/bin/linux" prefix="${st61131.appName} ${st61131.version}/bin/linux">
-        <exclude name="**/fsnotifier" />
-        <exclude name="**/fsnotifier64" />
-      </zipfileset>
-      <zipfileset file="${mps_home}/bin/linux/fsnotifier" prefix="${st61131.appName} ${st61131.version}/bin/linux" filemode="755" />
-      <zipfileset file="${mps_home}/bin/linux/fsnotifier64" prefix="${st61131.appName} ${st61131.version}/bin/linux" filemode="755" />
-      <zipfileset dir="${mps_home}/bin/nix" prefix="${st61131.appName} ${st61131.version}/bin/nix" filemode="755" />
-      <zipfileset file="${mps_home}/bin/mac/libbreakgen.jnilib" prefix="${st61131.appName} ${st61131.version}/bin/mac" />
-      <zipfileset file="${mps_home}/bin/mac/libbreakgen64.jnilib" prefix="${st61131.appName} ${st61131.version}/bin/mac" />
-      <zipfileset file="${mps_home}/bin/mac/restarter" prefix="${st61131.appName} ${st61131.version}/bin/mac" filemode="755" />
-      <zipfileset file="${mps_home}/bin/mac/fsnotifier" prefix="${st61131.appName} ${st61131.version}/bin/mac" filemode="755" />
-      <zipfileset file="${mps_home}/bin/mac/printenv.py" prefix="${st61131.appName} ${st61131.version}/bin/mac" filemode="755" />
-      <zipfileset file="${mps_home}/bin/mac/Contents/Info.plist" prefix="${st61131.appName} ${st61131.version}/bin/mac/Contents" />
-      <zipfileset file="${mps_home}/bin/mac/Contents/Resources/mps.icns" prefix="${st61131.appName} ${st61131.version}/bin/mac/Contents/Resources" />
-      <zipfileset file="${mps_home}/bin/mac/Contents/MacOS/mps" prefix="${st61131.appName} ${st61131.version}/bin/mac/Contents/MacOS" filemode="755" />
-      <zipfileset file="${mps_home}/bin/mac/Contents/MacOS/idea_appLauncher" prefix="${st61131.appName} ${st61131.version}/bin/mac/Contents/MacOS" filemode="644" />
-      <zipfileset file="${mps_home}/mps.sh" prefix="${st61131.appName} ${st61131.version}" filemode="755" />
       <zipfileset dir="${build.tmp}/default/_dl__lbrace_appName_rbrace_-_dl__lbrace_version_rbrace_-win.zip_f755" filemode="755" prefix="${st61131.appName} ${st61131.version}" />
+      <fileset dir="${build.tmp}/default/_dl__lbrace_appName_rbrace_-_dl__lbrace_version_rbrace_-win.zip" />
     </zip>
     <mkdir dir="${build.tmp}/default/_dl__lbrace_appName_rbrace_-_dl__lbrace_version_rbrace_-mac.zip" />
     <mkdir dir="${build.tmp}/default/_dl__lbrace_appName_rbrace_-_dl__lbrace_version_rbrace_-mac.zip/${st61131.appName} ${st61131.version}.app" />
     <mkdir dir="${build.tmp}/default/_dl__lbrace_appName_rbrace_-_dl__lbrace_version_rbrace_-mac.zip/${st61131.appName} ${st61131.version}.app/Contents" />
-    <mkdir dir="${build.tmp}/default/_dl__lbrace_appName_rbrace_-_dl__lbrace_version_rbrace_-mac.zip/${st61131.appName} ${st61131.version}.app/Contents/bin" />
-    <copy todir="${build.tmp}/default/_dl__lbrace_appName_rbrace_-_dl__lbrace_version_rbrace_-mac.zip/${st61131.appName} ${st61131.version}.app/Contents/bin">
-      <fileset file="${mps_home}/bin/mps.vmoptions" />
+    <copy todir="${build.tmp}/default/_dl__lbrace_appName_rbrace_-_dl__lbrace_version_rbrace_-mac.zip/${st61131.appName} ${st61131.version}.app/Contents">
+      <fileset file="${basedir}/solutions/st61131.build/source_gen/com/github/vlsi/st61131/build/Info.plist.xml" />
       <filterchain>
-        <fixcrlf eol="lf" eof="remove" />
+        <tokenfilter>
+          <replaceregex pattern="JetBrains MPS" replace="Hardella IDE" flags="g" />
+        </tokenfilter>
+        <tokenfilter>
+          <replaceregex pattern="string&gt;MPS&lt;/string" replace="string&gt;Hardella&lt;/string" flags="" />
+        </tokenfilter>
+        <tokenfilter>
+          <replaceregex pattern="string&gt;com.jetbrains.intellij&lt;/string" replace="string&gt;com.github.vlsi&lt;/string" flags="" />
+        </tokenfilter>
+        <tokenfilter>
+          <replaceregex pattern="\$version\$" replace="${st61131.version}" flags="g" />
+        </tokenfilter>
+        <tokenfilter>
+          <replaceregex pattern="\$build\$" replace="Hardella-${st61131.version}" flags="g" />
+        </tokenfilter>
+        <tokenfilter>
+          <replaceregex pattern="string&gt;MPS\d+&lt;/string" replace="string&gt;${st61131.path.selector}&lt;/string" flags="" />
+        </tokenfilter>
       </filterchain>
-    </copy>
-    <copy todir="${build.tmp}/default/_dl__lbrace_appName_rbrace_-_dl__lbrace_version_rbrace_-mac.zip/${st61131.appName} ${st61131.version}.app/Contents/bin">
-      <fileset file="${mps_home}/bin/mps64.vmoptions" />
-      <filterchain>
-        <fixcrlf eol="lf" eof="remove" />
-      </filterchain>
-    </copy>
-    <mkdir dir="${build.tmp}/default/_dl__lbrace_appName_rbrace_-_dl__lbrace_version_rbrace_-mac.zip_f7551" />
-    <copy todir="${build.tmp}/default/_dl__lbrace_appName_rbrace_-_dl__lbrace_version_rbrace_-mac.zip_f7551">
-      <fileset file="${mps_home}/bin/mac/printenv.py" />
-      <filterchain>
-        <fixcrlf eol="lf" eof="remove" />
-      </filterchain>
+      <globmapper from="Info.plist.xml" to="Info.plist" />
     </copy>
     <mkdir dir="${build.tmp}/default/_dl__lbrace_appName_rbrace_-_dl__lbrace_version_rbrace_-mac.zip_f755" />
     <copy todir="${build.tmp}/default/_dl__lbrace_appName_rbrace_-_dl__lbrace_version_rbrace_-mac.zip_f755">
-      <fileset file="${mps_home}/mps.sh" />
+      <fileset file="${mps_home}/bin/mac/printenv.py" />
       <filterchain>
         <fixcrlf eol="lf" eof="remove" />
       </filterchain>
@@ -144,11 +161,10 @@
       <zipfileset file="${mps_home}/bin/mac/libbreakgen64.jnilib" prefix="${st61131.appName} ${st61131.version}.app/Contents/bin" />
       <zipfileset file="${mps_home}/bin/mac/restarter" prefix="${st61131.appName} ${st61131.version}.app/Contents/bin" filemode="755" />
       <zipfileset file="${mps_home}/bin/mac/fsnotifier" prefix="${st61131.appName} ${st61131.version}.app/Contents/bin" filemode="755" />
-      <zipfileset dir="${build.tmp}/default/_dl__lbrace_appName_rbrace_-_dl__lbrace_version_rbrace_-mac.zip_f755" filemode="755" prefix="${st61131.appName} ${st61131.version}.app/Contents" />
-      <zipfileset dir="${build.tmp}/default/_dl__lbrace_appName_rbrace_-_dl__lbrace_version_rbrace_-mac.zip_f7551" filemode="755" prefix="${st61131.appName} ${st61131.version}.app/Contents/bin" />
+      <zipfileset dir="${build.tmp}/default/_dl__lbrace_appName_rbrace_-_dl__lbrace_version_rbrace_-mac.zip_f755" filemode="755" prefix="${st61131.appName} ${st61131.version}.app/Contents/bin" />
       <fileset dir="${build.tmp}/default/_dl__lbrace_appName_rbrace_-_dl__lbrace_version_rbrace_-mac.zip" />
     </zip>
-    <echo file="${build.layout}/build.properties">st61131.date=${st61131.date}${line.separator}st61131.build.number=${st61131.build.number}${line.separator}st61131.version=${st61131.version}${line.separator}st61131.appName=${st61131.appName}${line.separator}mpsBootstrapCore.version=${mpsBootstrapCore.version}${line.separator}mps.build.number=${mps.build.number}${line.separator}mps.date=${mps.date}${line.separator}mps.build.vcs.number=${mps.build.vcs.number}${line.separator}mps.teamcity.buildConfName=${mps.teamcity.buildConfName}${line.separator}mps.idea.platform.build.number=${mps.idea.platform.build.number}${line.separator}mps.mps.build.counter=${mps.mps.build.counter}${line.separator}mps-sl-all.versionNumber=${mps-sl-all.versionNumber}${line.separator}com.mbeddr.platform.major.version=${com.mbeddr.platform.major.version}${line.separator}com.mbeddr.platform.minor.version=${com.mbeddr.platform.minor.version}${line.separator}com.mbeddr.platform.build=${com.mbeddr.platform.build}${line.separator}com.mbeddr.platform.mbeddr.version=${com.mbeddr.platform.mbeddr.version}</echo>
+    <echo file="${build.layout}/build.properties">st61131.date=${st61131.date}${line.separator}st61131.codename=${st61131.codename}${line.separator}st61131.build.number=${st61131.build.number}${line.separator}st61131.version=${st61131.version}${line.separator}st61131.path.selector=${st61131.path.selector}${line.separator}st61131.appName=${st61131.appName}${line.separator}mpsBootstrapCore.version=${mpsBootstrapCore.version}${line.separator}mps.build.number=${mps.build.number}${line.separator}mps.date=${mps.date}${line.separator}mps.build.vcs.number=${mps.build.vcs.number}${line.separator}mps.teamcity.buildConfName=${mps.teamcity.buildConfName}${line.separator}mps.idea.platform.build.number=${mps.idea.platform.build.number}${line.separator}mps.mps.build.counter=${mps.mps.build.counter}${line.separator}mps-sl-all.versionNumber=${mps-sl-all.versionNumber}${line.separator}com.mbeddr.platform.major.version=${com.mbeddr.platform.major.version}${line.separator}com.mbeddr.platform.minor.version=${com.mbeddr.platform.minor.version}${line.separator}com.mbeddr.platform.build=${com.mbeddr.platform.build}${line.separator}com.mbeddr.platform.mbeddr.version=${com.mbeddr.platform.mbeddr.version}</echo>
   </target>
   
   <target name="buildDependents">

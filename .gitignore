@@ -22,3 +22,5 @@ source_gen
 source_gen.caches
 
 .DS_Store
+
+build.xml.*

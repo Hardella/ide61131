@@ -6,8 +6,10 @@
   <tstamp>
     <format property="date" pattern="yyyyMMdd" />
   </tstamp>
-  <property name="build.number" value="162.2065" />
-  <property name="version" value="1.6.0" />
+  <property name="codename" value="HD" />
+  <property name="build.number" value="${codename}-162.2066" />
+  <property name="version" value="1.6.1" />
+  <property name="path.selector" value="IDE61131-15" />
   <property name="appName" value="Hardella" />
   <property name="mps_home" location="${basedir}/../../Documents/work/MPS 3.4.2" />
   <property name="mbeddr.github.core.home" location="${basedir}/../../Documents/work/mbeddr.core" />
@@ -64,25 +66,11 @@
       <fileset file="${mps_home}/bin/idea.properties" />
       <filterchain>
         <tokenfilter>
-          <replaceregex pattern="\.MPS(\w+)" replace="\.IDE61131-15" flags="g" />
+          <replaceregex pattern="\.MPS(\w+)" replace="\.${path.selector}" flags="g" />
         </tokenfilter>
         <tokenfilter>
           <replaceregex pattern="# (idea\.\w+\.path)" replace="\1" flags="g" />
         </tokenfilter>
-      </filterchain>
-    </copy>
-    <copy todir="${build.layout}">
-      <fileset file="${basedir}/bin/mac/Contents/Info.plist" />
-      <filterchain>
-        <replacetokens>
-          <token key="CFBundleGetInfoString" value="Hardella IDE ${version}" />
-        </replacetokens>
-        <replacetokens>
-          <token key="CFBundleShortVersionString" value="${version}" />
-        </replacetokens>
-        <replacetokens>
-          <token key="CFBundleVersion" value="Hardella-${version}" />
-        </replacetokens>
       </filterchain>
     </copy>
     <mkdir dir="${build.layout}/lib" />
@@ -92,11 +80,14 @@
         <exclude name="branding.jar" />
       </fileset>
     </copy>
+    <jar destfile="${build.layout}/lib/hardella-boot.jar" duplicate="preserve">
+      <fileset dir="${build.tmp}/java/out/hardellaLauncher" />
+    </jar>
     <mkdir dir="${build.tmp}/default/branding.jar" />
     <mkdir dir="${build.tmp}/default/branding.jar/idea" />
     <echoxml file="${build.tmp}/default/branding.jar/idea/IdeaApplicationInfo.xml">
       <component>
-        <version codename="" major="1" minor="6.0" eap="false" update-channel="Hardella_release" />
+        <version codename="${codename}" major="1" minor="6.1" eap="false" update-channel="Hardella_release" />
         <company name="Vladimir Sitnikov" url="https://twitter.com/VladimirSitnikv" />
         <build number="${build.number}" date="${date}" />
         <logo url="/splash.png" textcolor="002387" progressColor="4269bc" progressY="394" progressHeight="3" />
@@ -109,7 +100,7 @@
         <welcome-screen logo-url="/icon_80x80.png" />
         
         <plugins url="" />
-        <update-urls check="https://hardella.com/updates/updates.xml" update="https://github.com/Hardella/ide61131/releases/download/v1.6.0" />
+        <update-urls check="https://hardella.com/updates/updates.xml" update="https://github.com/Hardella/ide61131/releases/download/v${version}" />
         
         <documentation url="http://hardella.com/docs/introduction" />
         <support url="https://github.com/Hardella/ide61131/issues" />
@@ -205,7 +196,7 @@
       <idea-plugin version="2" xmlns:xi="http://www.w3.org/2001/XInclude">
         <id>st61131</id>
         <name>IDE 61131</name>
-        <description>AM1808 PRU programming added</description>
+        <description>This plugin implements ST 61131 language</description>
         <version>${version}</version>
         <vendor url="https://hardella.com" logo="/icon_16x16.png">Vladimir Sitnikov</vendor>
         <depends>jetbrains.mps.core</depends>
@@ -256,7 +247,6 @@
     <jar destfile="${build.layout}/plugins/st61131/languages/st61131/com.github.vlsi.iec61131.types.jar" duplicate="preserve">
       <fileset dir="${build.tmp}/java/out/com.github.vlsi.iec61131.types" />
       <fileset dir="${basedir}/languages/com.github.vlsi.iec61131.types" includes="icons/**, resources/**" />
-      <zipfileset dir="${basedir}/languages/com.github.vlsi.iec61131.types/icons" includes="*.png" prefix="com/github/vlsi/iec61131/types/structure"/>
       <fileset dir="${basedir}/languages/com.github.vlsi.iec61131.types/source_gen" includes="**/trace.info, **/exports, **/*.mps, **/checkpoints" />
       <fileset dir="${build.tmp}/default/com.github.vlsi.iec61131.types.jar" />
     </jar>
@@ -462,7 +452,6 @@
     <jar destfile="${build.layout}/plugins/st61131/languages/st61131/com.github.vlsi.iec61131.st2ti1808.jar" duplicate="preserve">
       <fileset dir="${build.tmp}/java/out/com.github.vlsi.iec61131.st2ti1808" />
       <fileset dir="${basedir}/languages/com.github.vlsi.iec61131.st2ti1808" includes="icons/**, resources/**" />
-      <zipfileset dir="${basedir}/languages/com.github.vlsi.iec61131.st2ti1808/icons" includes="*.png" prefix="com/github/vlsi/iec61131/st2ti1808/structure"/>
       <fileset dir="${basedir}/languages/com.github.vlsi.iec61131.st2ti1808/source_gen" includes="**/trace.info, **/exports, **/*.mps, **/checkpoints" />
       <fileset dir="${build.tmp}/default/com.github.vlsi.iec61131.st2ti1808.jar" />
     </jar>
@@ -1220,7 +1209,7 @@
       <fileset file="${basedir}/solutions/com.github.vlsi.iec61131.quickstart.pluginSolution/lib/miglayout-swing-5.0.jar" />
     </copy>
     <echo file="${build.layout}/build.number">build.number=${build.number}${line.separator}date=${date}${line.separator}version=${version}</echo>
-    <echo file="${build.layout}/build.properties">st61131.date=${date}${line.separator}st61131.build.number=${build.number}${line.separator}st61131.version=${version}${line.separator}st61131.appName=${appName}${line.separator}mpsBootstrapCore.version=${mpsBootstrapCore.version}${line.separator}mps.build.number=${mps.build.number}${line.separator}mps.date=${mps.date}${line.separator}mps.build.vcs.number=${mps.build.vcs.number}${line.separator}mps.teamcity.buildConfName=${mps.teamcity.buildConfName}${line.separator}mps.idea.platform.build.number=${mps.idea.platform.build.number}${line.separator}mps.mps.build.counter=${mps.mps.build.counter}${line.separator}mps-sl-all.versionNumber=${mps-sl-all.versionNumber}${line.separator}com.mbeddr.platform.major.version=${com.mbeddr.platform.major.version}${line.separator}com.mbeddr.platform.minor.version=${com.mbeddr.platform.minor.version}${line.separator}com.mbeddr.platform.build=${com.mbeddr.platform.build}${line.separator}com.mbeddr.platform.mbeddr.version=${com.mbeddr.platform.mbeddr.version}</echo>
+    <echo file="${build.layout}/build.properties">st61131.date=${date}${line.separator}st61131.codename=${codename}${line.separator}st61131.build.number=${build.number}${line.separator}st61131.version=${version}${line.separator}st61131.path.selector=${path.selector}${line.separator}st61131.appName=${appName}${line.separator}mpsBootstrapCore.version=${mpsBootstrapCore.version}${line.separator}mps.build.number=${mps.build.number}${line.separator}mps.date=${mps.date}${line.separator}mps.build.vcs.number=${mps.build.vcs.number}${line.separator}mps.teamcity.buildConfName=${mps.teamcity.buildConfName}${line.separator}mps.idea.platform.build.number=${mps.idea.platform.build.number}${line.separator}mps.mps.build.counter=${mps.mps.build.counter}${line.separator}mps-sl-all.versionNumber=${mps-sl-all.versionNumber}${line.separator}com.mbeddr.platform.major.version=${com.mbeddr.platform.major.version}${line.separator}com.mbeddr.platform.minor.version=${com.mbeddr.platform.minor.version}${line.separator}com.mbeddr.platform.build=${com.mbeddr.platform.build}${line.separator}com.mbeddr.platform.mbeddr.version=${com.mbeddr.platform.mbeddr.version}</echo>
   </target>
   
   <target name="buildDependents" />
@@ -1241,7 +1230,7 @@
     <delete dir="${build.layout}" />
   </target>
   
-  <target name="compileJava" depends="java.compile.com.github.vlsi.iec61131.types, java.compile.com.github.vlsi.iec61131.types#5202852658697191353, java.compile.com.github.vlsi.iec61131.parser, java.compile.com.github.vlsi.iec61131.ti1808, java.compile.com.github.vlsi.iec61131.ti1808#124800662050748518, java.compile.com.github.vlsi.iec61131.ti1808.cfc, java.compile.com.github.vlsi.iec61131.ti1808.cfc#8449865404969428826, java.compile.java.modules.cycle.1, java.compile.com.github.vlsi.iec61131.st2ti1808, java.compile.com.github.vlsi.iec61131.st2ti1808#124800662050860764, java.compile.com.github.vlsi.iec61131.st2ti1808.runtime, java.compile.com.github.vlsi.iec61131.ti1808.libcompiler, java.compile.com.github.vlsi.iec61131.ti1808.toemulator, java.compile.com.github.vlsi.iec61131.ti1808.toemulator#1290013542351728604, java.compile.com.github.vlsi.iec61131.st, java.compile.com.github.vlsi.iec61131.st#6039408957479237362, java.compile.com.hardella.st.ext.implicitfb, java.compile.com.github.vlsi.iec61131.st.ext.implicitfb, java.compile.com.github.vlsi.iec61131.st.ext.implicitfb#4082534695945163422, java.compile.com.github.vlsi.iec61131.st.runtime, java.compile.com.github.vlsi.iec61131.plc110pru.executors, java.compile.com.github.vlsi.iec61131.executors, java.compile.com.github.vlsi.iec61131.executors#8776140008686452100, java.compile.com.github.vlsi.iec61131.executors.runtime, java.compile.com.github.vlsi.iec61131.libimport, java.compile.com.github.vlsi.iec61131.standard_lib, java.compile.com.github.vlsi.iec61131.ti1808.stdlib, java.compile.com.github.vlsi.iec61131.quickstart.pluginSolution, java.compile.com.hardella.examples.ti1808, java.compile.com.github.vlsi.iec61131.cfc, java.compile.com.github.vlsi.iec61131.cfc#1954616409527170363" />
+  <target name="compileJava" depends="java.compile.com.github.vlsi.iec61131.types, java.compile.com.github.vlsi.iec61131.types#5202852658697191353, java.compile.com.github.vlsi.iec61131.parser, java.compile.com.github.vlsi.iec61131.ti1808, java.compile.com.github.vlsi.iec61131.ti1808#124800662050748518, java.compile.com.github.vlsi.iec61131.ti1808.cfc, java.compile.com.github.vlsi.iec61131.ti1808.cfc#8449865404969428826, java.compile.java.modules.cycle.1, java.compile.com.github.vlsi.iec61131.st2ti1808, java.compile.com.github.vlsi.iec61131.st2ti1808#124800662050860764, java.compile.com.github.vlsi.iec61131.st2ti1808.runtime, java.compile.com.github.vlsi.iec61131.ti1808.libcompiler, java.compile.com.github.vlsi.iec61131.ti1808.toemulator, java.compile.com.github.vlsi.iec61131.ti1808.toemulator#1290013542351728604, java.compile.com.github.vlsi.iec61131.st, java.compile.com.github.vlsi.iec61131.st#6039408957479237362, java.compile.com.hardella.st.ext.implicitfb, java.compile.com.github.vlsi.iec61131.st.ext.implicitfb, java.compile.com.github.vlsi.iec61131.st.ext.implicitfb#4082534695945163422, java.compile.com.github.vlsi.iec61131.st.runtime, java.compile.com.github.vlsi.iec61131.plc110pru.executors, java.compile.com.github.vlsi.iec61131.executors, java.compile.com.github.vlsi.iec61131.executors#8776140008686452100, java.compile.com.github.vlsi.iec61131.executors.runtime, java.compile.com.github.vlsi.iec61131.libimport, java.compile.com.github.vlsi.iec61131.standard_lib, java.compile.com.github.vlsi.iec61131.ti1808.stdlib, java.compile.com.github.vlsi.iec61131.quickstart.pluginSolution, java.compile.com.hardella.examples.ti1808, java.compile.com.github.vlsi.iec61131.cfc, java.compile.com.github.vlsi.iec61131.cfc#1954616409527170363, java.compile.hardellaLauncher" />
   
   <target name="processResources" />
   
@@ -3005,6 +2994,20 @@
         <fileset file="${artifacts.mpsStandalone}/languages/languageDesign/jetbrains.mps.lang.core.jar" />
         <fileset file="${artifacts.mpsStandalone}/languages/languageDesign/jetbrains.mps.lang.scopes.runtime.jar" />
         <fileset file="${artifacts.mpsStandalone}/languages/languageDesign/jetbrains.mps.lang.structure.jar" />
+      </classpath>
+    </javac>
+  </target>
+  
+  <target name="java.compile.hardellaLauncher" depends="fetchDependencies">
+    <mkdir dir="${basedir}/startup/src" />
+    <mkdir dir="${build.tmp}/java/out/hardellaLauncher" />
+    <javac destdir="${build.tmp}/java/out/hardellaLauncher" fork="true" encoding="utf8" includeantruntime="false" debug="true">
+      <compilerarg value="-Xlint:none" />
+      <src>
+        <path location="${basedir}/startup/src" />
+      </src>
+      <classpath>
+        <fileset file="${artifacts.mpsStandalone}/lib/mps-boot.jar" />
       </classpath>
     </javac>
   </target>

@@ -103,6 +103,10 @@ Install mbeddr, clone ide61131, hack as required.
 Changelog
 ---------
 
+v1.6.1: 25 December 2016
+- Arguments are no longer red when replacing one FB call with another (e.g. TON(...) -> TOF(...))
+- Implemented automatic updates, so updates will be small and fast
+
 v1.6.0: 19 December 2016
 - Both PRU cores can now be programmed. You can freely control 4 fast outputs and 2 fast inputs
 - Standard library is improved. For instance, there's a block for step motor control, a block for ABZ encoder, and several others
