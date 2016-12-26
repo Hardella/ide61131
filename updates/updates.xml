@@ -1,0 +1,36 @@
+<!DOCTYPE products SYSTEM "updates.dtd">
+<products>
+	<product name="Hardella">
+		<code>HD</code>
+		<code></code>
+
+		<channel id="Hardella_release" name="Hardella IDE" status="release" url="https://hardella.com/download"
+				 feedback="https://github.com/Hardella/ide61131" majorVersion="1">
+			<build number="162.2066" version="1.6.1" releaseDate="20161225">
+				<message><![CDATA[
+<p>Hardella 1.6.1 is now available.</p>
+<ul>
+<li>The code is no longer red when you replace one functional block with another (e.g. when you change TON(...) to TOF(...))</li>
+<li>Autoupdate is implemented. Updates from 1.6.1 to subsequent versions will be much simpler and it will download just modified files</li>
+</ul>
+<p></p>
+]]></message>
+				<button name="More Information" url="https://hardella.com/en/blog/2016/12/25/hardella-1.6.1-released/"/>
+				<button name="Download" url="https://hardella.com/download" download="true"/>
+			</build>
+			<build number="162.2065" version="1.6.0" releaseDate="20161219">
+				<message><![CDATA[
+<p>Hardella 1.6.0 is now available.</p>
+<ul>
+<li>Programming of both PRU is supported. You can now have a full control of 4 fast outputs and 2 fast inputs</li>
+<li>The standard library is extended. Several blocks were included: step motor control, encoder, and several others</li>
+<li>Block and variable comments are now visible in the autocomplete menu</li>
+</ul>
+<p></p>
+]]></message>
+				<button name="More Information" url="http://hardella.com/blog/2016/12/19/hardella-1.6.0-released/"/>
+				<button name="Download" url="https://hardella.com/download" download="true"/>
+			</build>
+		</channel>
+	</product>
+</products>

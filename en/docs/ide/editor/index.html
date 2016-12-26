@@ -1,0 +1,623 @@
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin SEO -->
+
+
+
+
+
+
+
+
+
+<title>Code editing  Hardella IDE</title>
+
+
+
+
+<meta name="description" content="Code editing in Hardella IDE essentials. Hardella is a capable IDE for PLC programming in 61131 languages (ST, etc)">
+
+
+
+
+<meta property="og:locale" content="en">
+<meta property="og:site_name" content="Hardella IDE">
+<meta property="og:title" content="Code editing">
+
+
+  <link rel="canonical" href="/ide61131/en/docs/ide/editor/">
+  <meta property="og:url" content="https://hardella.github.io/ide61131/docs/ide/editor/">
+
+
+
+  <meta property="og:description" content="Code editing in Hardella IDE essentials. Hardella is a capable IDE for PLC programming in 61131 languages (ST, etc)">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- end SEO -->
+
+
+<link href="/ide61131/en/feed.xml" type="application/atom+xml" rel="alternate" title="Hardella IDE Feed">
+
+<!-- http://t.co/dKP3o1e -->
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/ide61131/en/assets/css/main.css">
+
+<meta http-equiv="cleartype" content="on">
+    <link rel="apple-touch-icon" sizes="180x180" href="/ide61131/en/assets/images/favicons/apple-touch-icon.png">
+<link rel="icon" type="image/png" href="/ide61131/en/assets/images/favicons/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/ide61131/en/assets/images/favicons/favicon-16x16.png" sizes="16x16">
+<link rel="manifest" href="/ide61131/en/assets/images/favicons/manifest.json">
+<link rel="mask-icon" href="/ide61131/en/assets/images/favicons/safari-pinned-tab.svg" color="#5bbad5">
+<meta name="theme-color" content="#ffffff">
+<meta http-equiv="Content-Language" content="en"><link rel="alternate" i18n="ru" href="https://hardella.com/docs/ide/editor/" />
+<link rel="alternate" i18n="en" href="https://hardella.com/en/docs/ide/editor/" />
+
+  </head>
+
+  <body class="layout--single">
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+    <div class="masthead">
+    <div class="masthead__inner-wrap">
+        <div class="masthead__menu">
+            <nav id="site-nav" class="greedy-nav">
+                <button><div class="navicon"></div></button>
+                <ul class="visible-links">
+                    <li class="masthead__menu-item masthead__menu-item--lg"><a href="/ide61131/en/"><img src="/assets/images/hardella.iconset/icon_128x128.png" style="height: 2em;"> Hardella IDE</a></li>
+                    
+                    
+                    <li class="masthead__menu-item"><a href=" https://hardella.github.io/ide61131/docs/ide/editor/ ">Ru</a></li>
+                    
+                    
+                    
+                    
+                    
+                    
+                    <li class="masthead__menu-item"><a href="/ide61131/en/blog">News</a></li>
+                    
+                    
+                    <li class="masthead__menu-item"><a href="/ide61131/en/docs/introduction">Documentation</a></li>
+                    
+                    
+                    <li class="masthead__menu-item"><a href="https://groups.google.com/forum/#!forum/hardella-forum" target="_blank">Forum</a></li>
+                    
+                    
+                    <li class="masthead__menu-item"><a href="/ide61131/en/donate">Donate</a></li>
+                    
+                    
+                    <li class="masthead__menu-item"><a href="/ide61131/en/download">Download</a></li>
+                    
+                </ul>
+                <ul class="hidden-links hidden"></ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+    
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+  
+    
+      
+      
+      
+    
+    
+      
+
+<nav class="nav__list">
+  
+  <input id="ac-toc" name="accordion-toc" type="checkbox" />
+  <label for="ac-toc">Toggle Menu</label>
+  <ul class="nav__items">
+    
+      <li>
+        
+          <span class="nav__sub-title"></span>
+        
+
+        
+        <ul>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/ide61131/en/docs/introduction/" class="">Introduction</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/ide61131/en/docs/upgrade/" class="">Upgrade</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/ide61131/en/docs/changelog/" class="">Changelog</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Hardella tricks</span>
+        
+
+        
+        <ul>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/ide61131/en/docs/ide/navigation/" class="">Code browsing</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/ide61131/en/docs/ide/editor/" class="active">Code editing</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">AM1808 PRU (PLC110[М02])</span>
+        
+
+        
+        <ul>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/ide61131/en/docs/pru/features-and-limits/" class="">Features and limitations</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/ide61131/en/docs/pru/new-project/" class="">Creating a project in Hardella</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/ide61131/en/docs/pru/project-build/" class="">Compilation of a PRU project</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/ide61131/en/docs/pru/codesys-setup/" class="">CoDeSys setup</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/ide61131/en/docs/pru/data-exchange/" class="">PRU data exchange</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/ide61131/en/docs/pru/standard-library/" class="">Standard library</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">AM1808 PRU examples</span>
+        
+
+        
+        <ul>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/ide61131/en/docs/pru/examples/four-blinkning-leds" class="">Blinking leds</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/ide61131/en/docs/pru/examples/fast-counter" class="">Fast counter</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/ide61131/en/docs/pru/examples/fast-encoder" class="">Fast encoder</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/ide61131/en/docs/pru/examples/fast-pwm" class="">PWM output</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/ide61131/en/docs/pru/examples/step-motor" class="">Step motor</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/ide61131/en/docs/pru/examples/material-cutter" class="">Precise motor control</a></li>
+          
+        </ul>
+        
+      </li>
+    
+  </ul>
+</nav>
+    
+  
+  </div>
+
+
+  <article class="page" itemscope itemtype="http://schema.org/CreativeWork">
+    <meta itemprop="headline" content="Code editing">
+    <meta itemprop="description" content="Code editing in Hardella IDE essentials. Hardella is a capable IDE for PLC programming in 61131 languages (ST, etc)">
+    
+    <meta itemprop="dateModified" content="December 25, 2016">
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 class="page__title" itemprop="headline">Code editing
+</h1>
+          
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        <aside class="sidebar__right">
+<nav class="toc">
+    <header><h4 class="nav__title"><i class="fa fa-columns"></i> Code editing</h4></header>
+<ul class="toc__menu" id="markdown-toc">
+  <li><a href="#creation-of-functional-blocks" id="markdown-toc-creation-of-functional-blocks">Creation of functional blocks</a>    <ul>
+      <li><a href="#variable-declaration" id="markdown-toc-variable-declaration">Variable declaration</a>        <ul>
+          <li><a href="#input-and-output-flags" id="markdown-toc-input-and-output-flags"><code class="highlighter-rouge">input</code> and <code class="highlighter-rouge">output</code> flags</a></li>
+        </ul>
+      </li>
+      <li><a href="#code-line-duplication" id="markdown-toc-code-line-duplication">Code line duplication</a></li>
+    </ul>
+  </li>
+  <li><a href="#editing-expressions" id="markdown-toc-editing-expressions">Editing expressions</a></li>
+  <li><a href="#copy--paste" id="markdown-toc-copy--paste">Copy &amp; paste</a></li>
+  <li><a href="#variable-and-funciton-block-rename" id="markdown-toc-variable-and-funciton-block-rename">Variable and funciton block rename</a></li>
+  <li><a href="#code-movement-up-and-down" id="markdown-toc-code-movement-up-and-down">Code movement: up and down</a></li>
+</ul>
+
+  </nav>
+</aside>
+
+<p>The important feature of Hardella IDE is that it is not a text editor.
+ST language editor looks like text, however it has some features of “fill in the form” editor with empty cells waiting to be filled.</p>
+
+<p>This might look odd, especially when you see it for the first time, however you will quickly learn how to use it. For instance, this feature is very visible when you declare a variables.</p>
+
+<p>Due to this peculiarity text paste does not always work. If you copy the source from Hardella, it will paste just fine. However if you copy from other tool (e.g. browser), then paste will fail (this might be improved in future).</p>
+
+<h2 id="creation-of-functional-blocks">Creation of functional blocks</h2>
+
+<p>To create a functional block, right click in a <code class="highlighter-rouge">Logical View</code> (on the left), and choose <code class="highlighter-rouge">New</code> &gt; <code class="highlighter-rouge">c.g.v.iec61131.types</code> &gt; <code class="highlighter-rouge">FB</code>.</p>
+
+<p><img width="848" alt="New FB menu" src="https://hardella.github.io/ide61131/assets/images/docs/ide/new-fb-menu.png" /></p>
+
+<p>Alternative approach is to use <code class="highlighter-rouge">ctrl+c / ctrl+v</code> for an existing block.</p>
+
+<p>Here’s how a block would like right after creation:</p>
+
+<p><img width="721" alt="A brand new block" src="https://hardella.github.io/ide61131/assets/images/docs/ide/new-fb-empty.png" /></p>
+
+<p>As you can see, the wire-frame is there (words like <code class="highlighter-rouge">FUNCTION_BLOCK</code>, <code class="highlighter-rouge">variables</code>, <code class="highlighter-rouge">body</code>), and there are gaps for the values.</p>
+
+<p>Block name is mandatory, so the gap for the name is marked with red. The variable list and block body are optional, so they are not marked with red.</p>
+
+<p>Let’s create a block for <code class="highlighter-rouge">OR</code> operation. There’s no much sense in that block (as one can just use <code class="highlighter-rouge">a OR b</code>), however it is fine for demo purposes.</p>
+
+<p>So we type a block name:
+ <img width="453" alt="New block with name" src="https://hardella.github.io/ide61131/assets/images/docs/ide/or-named.png" /></p>
+
+<p>Then you need to declare variables. In order to do that you can hit <code class="highlighter-rouge">tab</code> and the cursor will move to the variable declaration section. You can use arrows and mouse as well depending on what works better for you.</p>
+
+<h3 id="variable-declaration">Variable declaration</h3>
+
+<p>In order to add an element to the list, you typically just need to hit <code class="highlighter-rouge">enter</code>. In other words, as soon as you hit <code class="highlighter-rouge">enter</code> Hardella generates template for the variable declaration.</p>
+
+<p><img width="453" alt="Template for variable declaration" src="https://hardella.github.io/ide61131/assets/images/docs/ide/var-template.png" /></p>
+
+<p>You need to specify variable name and type separate. The semicolon in between is already there and you don’t need to type it.</p>
+
+<p>Specify <code class="highlighter-rouge">x</code> for the variable name, and hit <code class="highlighter-rouge">tab</code> (or right arrow) to continue with data type declaration.</p>
+
+<p><img width="107" alt="Variable name is specified" src="https://hardella.github.io/ide61131/assets/images/docs/ide/var-without-type.png" /></p>
+
+<p>Now you need to specify <code class="highlighter-rouge">BOOL</code> type somehow. One of the ways is just type  <code class="highlighter-rouge">BOOL</code> in capital letters.
+The more interesting way is to use autocomplete feature.
+You can start typing or you can just hit <code class="highlighter-rouge">ctrl+space</code> to invoke autocomplete.</p>
+
+<p><img width="567" alt="Datatype specification" src="https://hardella.github.io/ide61131/assets/images/docs/ide/type-autocomplete.png" /></p>
+
+<p><code class="highlighter-rouge">BOOL</code> is the second on the list, so you can use arrow keys to choose it and confirm with <code class="highlighter-rouge">enter</code>.
+This approach enables you to proceed even if you don’t remember the full variable name.</p>
+
+<p>Well, we did achieve <code class="highlighter-rouge">x : BOOL</code>, however it does not mean the variable is <code class="highlighter-rouge">input</code> variable. How do we get there?</p>
+
+<h4 id="input-and-output-flags"><code class="highlighter-rouge">input</code> and <code class="highlighter-rouge">output</code> flags</h4>
+
+<p>In order to specify <code class="highlighter-rouge">input</code> and <code class="highlighter-rouge">output</code> flags, you need to place cursor to the left of the variable name (i.e. to the left of <code class="highlighter-rouge">x</code>), hit <code class="highlighter-rouge">space</code> and use one of the following possibilities:</p>
+<ul>
+  <li>type <code class="highlighter-rouge">input</code> (or <code class="highlighter-rouge">output</code>)</li>
+  <li>hit <code class="highlighter-rouge">ctrl+space</code> and pick the required option on the menu:
+<img width="352" alt="input and output flags" src="https://hardella.github.io/ide61131/assets/images/docs/ide/input-output.png" /></li>
+</ul>
+
+<h3 id="code-line-duplication">Code line duplication</h3>
+
+<p>One input variable is not enough, so we can duplicate it with <code class="highlighter-rouge">ctrl+d</code> shortcut (that is named after duplicate).
+Hit that shortcuts several times and you’ll get the following:
+  <img width="165" alt="Duplicated variables" src="https://hardella.github.io/ide61131/assets/images/docs/ide/vars-duplicated.png" /></p>
+
+<p>The second and the third variables are underlined with red since they result in duplicate variable name declaration error.</p>
+
+<p>Now you need to update variable names, and change the type of the last variable from <code class="highlighter-rouge">input</code> to <code class="highlighter-rouge">output</code>. In order to do that, just delete<code class="highlighter-rouge">input</code> and add <code class="highlighter-rouge">output</code> like you did before.</p>
+
+<p>The IDE adds empty divisor lines automatically between variables of different types, so the final result will look like the following:</p>
+
+<p><img width="173" alt="Variables are declared" src="https://hardella.github.io/ide61131/assets/images/docs/ide/vars-declared.png" /></p>
+
+<h2 id="editing-expressions">Editing expressions</h2>
+
+<p>In order to create body of a function block, you need to navigate to the body part, press <code class="highlighter-rouge">ctrl+space</code>, and pick <code class="highlighter-rouge">StatementList</code>.
+Now you can write ST code.</p>
+
+<p>In order to produce <code class="highlighter-rouge">z := x OR y;</code>, you need to follow this sequence:</p>
+<ol>
+  <li><code class="highlighter-rouge">z</code>. The screen will read: <code class="highlighter-rouge">z;</code></li>
+  <li><code class="highlighter-rouge">:=</code>. The screen will read: <code class="highlighter-rouge">z := ___;</code></li>
+  <li><code class="highlighter-rouge">x</code>. The screen will read: <code class="highlighter-rouge">z := x;</code></li>
+  <li><code class="highlighter-rouge">space</code>. If you omit the space after <code class="highlighter-rouge">x</code>, then IDE will think you mean variable named <code class="highlighter-rouge">xOR</code> instead of <code class="highlighter-rouge">x OR</code></li>
+  <li><code class="highlighter-rouge">OR</code>. The screen will read: <code class="highlighter-rouge">z := x OR ___;</code></li>
+  <li><code class="highlighter-rouge">y</code></li>
+</ol>
+
+<p>You can tackle the problem in another way:</p>
+<ol>
+  <li><code class="highlighter-rouge">:</code>. The screen will read: <code class="highlighter-rouge">___ := ___;</code> The thing is the assignment is the only valid operation in this context that has double colon, so as soon as you type <code class="highlighter-rouge">:</code> IDE creates assignment statement</li>
+  <li><code class="highlighter-rouge">z</code>. The screen will read: <code class="highlighter-rouge">z := ___;</code></li>
+  <li><code class="highlighter-rouge">tab</code> in order to move to the right side of the assignment</li>
+  <li><code class="highlighter-rouge">OR</code>, press <code class="highlighter-rouge">ctrl+space</code>, and pick <code class="highlighter-rouge">or expression</code> on the menu. The screen will read <code class="highlighter-rouge">z := ___ OR ___;</code></li>
+  <li>Then you can fill in left and right sides of the or expression</li>
+</ol>
+
+<h2 id="copy--paste">Copy &amp; paste</h2>
+
+<p><code class="highlighter-rouge">ctrl+c</code> / <code class="highlighter-rouge">ctrl+v</code> just works.
+It is important that IDE honors data types and the sense of the code.
+For instance, if you copy <code class="highlighter-rouge">IF ... END_IF</code> to the clipboard and try to paste it to the place of variable declaration, then nothing will happen. Well, it makes no sense to insert <code class="highlighter-rouge">IF</code> into variable declaration place, however IDE behaves similarly in other aspects.</p>
+
+<p>On the other hand, if you copy a variable declaration, then you could insert it side by side with another variable just fine.</p>
+
+<p>Typically statements are copied in whole. For instance, you can’t copy <code class="highlighter-rouge">IF</code> without corresponsing <code class="highlighter-rouge">END_IF</code>. You cannot omit some of <code class="highlighter-rouge">ELSIF</code> branches. If you really need to copy just part of the <code class="highlighter-rouge">IF</code> statement, duplicate the statement and cut non required parts later.</p>
+
+<h2 id="variable-and-funciton-block-rename">Variable and funciton block rename</h2>
+
+<p>In order to rename a variable or function block you just need to navigate to the declaration and rename it. All the usages of the variable in question will be update automatically.</p>
+
+<h2 id="code-movement-up-and-down">Code movement: up and down</h2>
+
+<p>It is often the case that you need to move lines around. For instance, you might need to move a couple of lines under <code class="highlighter-rouge">IF</code> statement, or move lines out of <code class="highlighter-rouge">IF</code> statement.</p>
+
+<p>In order to do that, you can use <code class="highlighter-rouge">ctrl+shift+↑</code> and <code class="highlighter-rouge">ctrl+shift+↓</code> hotkeys.</p>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+
+
+                
+          <p class="page__date"><strong><i class="fa fa-fw fa-calendar" aria-hidden="true"></i> Updated:</strong> <time datetime="2016-12-25">December 25, 2016 20:49</time></p>
+        
+
+      </footer>
+
+      
+
+      
+  <nav class="pagination">
+    
+      <a href="/ide61131/en/docs/ide/navigation/" class="pagination--pager" title="Code browsing
+">Previous</a>
+    
+    
+      <a href="/ide61131/en/docs/pru/features-and-limits/" class="pagination--pager" title="Features and limits
+">Next</a>
+    
+  </nav>
+
+    </div>
+
+    
+      <div class="page__comments">
+  
+  
+    <h4 class="page__comments-title">Leave a Comment</h4>
+    <section id="disqus_thread"></section>
+  
+</div>
+    
+  </article>
+
+  
+  
+</div>
+
+    <div class="page__footer">
+      <footer>
+        <a href="//orphus.ru" id="orphus" target="_blank"><img alt="Система Orphus" src="/assets/images/orphus.gif" border="0" width="257" height="48" /></a><br><br>
+
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>Follow:</strong></li>
+    
+    
+    
+    
+      <li><a href="http://github.com/Hardella"><i class="fa fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+    
+    
+    <li><a href="/ide61131/en/feed.xml"><i class="fa fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2016 Hardella IDE. Powered by <a href="http://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+      </footer>
+    </div>
+
+    <script src="https://hardella.github.io/ide61131/assets/js/main.min.js"></script>
+
+
+
+
+  <!-- Yandex.Metrika counter --> <script type="text/javascript"> (function (d, w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter41689319 = new Ya.Metrika({ id:41689319, clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true }); } catch(e) { } }); var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () { n.parentNode.insertBefore(s, n); }; s.type = "text/javascript"; s.async = true; s.src = "https://mc.yandex.ru/metrika/watch.js"; if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); } })(document, window, "yandex_metrika_callbacks"); </script> <noscript><div><img src="https://mc.yandex.ru/watch/41689319" style="position:absolute; left:-9999px;" alt="" /></div></noscript> <!-- /Yandex.Metrika counter -->
+<script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-62628294-3', 'auto');
+    ga('send', 'pageview');
+</script>
+
+
+
+
+
+
+  
+  <script type="text/javascript">
+  	/* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+  	var disqus_shortname = 'hardella';
+
+  	/* * * DON'T EDIT BELOW THIS LINE * * */
+  	(function() {
+  		var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+  		dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+  		(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  	})();
+
+  	/* * * DON'T EDIT BELOW THIS LINE * * */
+  	(function () {
+  		var s = document.createElement('script'); s.async = true;
+  		s.type = 'text/javascript';
+  		s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+  		(document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+  	}());
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/3.2.2/anchor.min.js"></script>
+<script language="JavaScript">
+    anchors.add('article h1, article h2, article h3, article h4, article h5');
+</script>
+<script type="text/javascript" src="/assets/js/orphus.js"></script>
+
+
+  </body>
+</html>

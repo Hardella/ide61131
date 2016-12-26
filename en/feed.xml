@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="/ide61131/en/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.3.0">Jekyll</generator><link href="/ide61131/en/feed.xml" rel="self" type="application/atom+xml" /><link href="/ide61131/en/" rel="alternate" type="text/html" /><updated>2016-12-26T21:25:36+03:00</updated><id>https://hardella.github.io/ide61131//</id><title type="html">Hardella IDE</title><subtitle>Hardella is an IDE for PLC programming. It focuses on developer productivity and on the fly error checking.
+</subtitle><author><name>{&quot;github&quot;=&gt;&quot;Hardella&quot;}</name></author><entry xml:lang="en"><title type="html">Hardella 1.6.1 released</title><link href="/ide61131/en/blog/2016/12/25/hardella-1.6.1-released/" rel="alternate" type="text/html" title="Hardella 1.6.1 released" /><published>2016-12-25T20:50:00+03:00</published><updated>2016-12-25T20:50:00+03:00</updated><id>https://hardella.github.io/ide61131/blog/2016/12/25/hardella-1.6.1-released.en</id><content type="html" xml:base="https://hardella.github.io/ide61131/blog/2016/12/25/hardella-1.6.1-released/">&lt;p&gt;Hardella 1.6.1 is avaliable for &lt;a href=&quot;/download&quot;&gt;download&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Fixed:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;The code is no longer red when you replace one functional block with another (e.g. when you change &lt;code class=&quot;highlighter-rouge&quot;&gt;TON(...)&lt;/code&gt; to &lt;code class=&quot;highlighter-rouge&quot;&gt;TOF(...)&lt;/code&gt;)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;New features:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Autoupdate is implemented. Updates from 1.6.1 to subsequent versions will be much simpler and it will download just modified files.
+For instance, update 1.6.0..1.6.1 would have downloaded just 150 KiB.&lt;/li&gt;
+&lt;/ul&gt;</content><author><name>{&quot;github&quot;=&gt;&quot;Hardella&quot;}</name></author><summary type="html">Hardella 1.6.1 is avaliable for download.
+
+Fixed:
+
+  The code is no longer red when you replace one functional block with another (e.g. when you change TON(...) to TOF(...))</summary></entry><entry xml:lang="en"><title type="html">Hardella 1.6.0 released</title><link href="/ide61131/en/blog/2016/12/19/hardella-1.6.0-released/" rel="alternate" type="text/html" title="Hardella 1.6.0 released" /><published>2016-12-19T17:17:34+03:00</published><updated>2016-12-19T17:17:34+03:00</updated><id>https://hardella.github.io/ide61131/blog/2016/12/19/hardella-1.6.0-released.en</id><content type="html" xml:base="https://hardella.github.io/ide61131/blog/2016/12/19/hardella-1.6.0-released/">&lt;p&gt;Hardella 1.6.0 is avaliable for &lt;a href=&quot;/download&quot;&gt;download&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;New features:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Programming of both PRU is supported. You can now have a full control of 4 fast outputs and 2 fast inputs&lt;/li&gt;
+  &lt;li&gt;The standard library is extended. Several blocks were included: &lt;a href=&quot;/docs/pru/examples/step-motor/&quot;&gt;step motor control&lt;/a&gt;, &lt;a href=&quot;/docs/pru/examples/fast-encoder/&quot;&gt;encoder&lt;/a&gt;, and several others&lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;EXIT&lt;/code&gt; statement is implemented&lt;/p&gt;
+
+    &lt;p&gt;&lt;img width=&quot;202&quot; alt=&quot;EXIT statement&quot; src=&quot;https://hardella.github.io/ide61131/assets/images/docs/ide/exit-statement.png&quot; /&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Block and variable comments are now visible in the autocomplete menu&lt;/p&gt;
+
+    &lt;p&gt;&lt;img width=&quot;704&quot; alt=&quot;Comments in autocomplete menu&quot; src=&quot;https://hardella.github.io/ide61131/assets/images/docs/ide/autocomplete-comments.png&quot; /&gt;&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;</content><author><name>{&quot;github&quot;=&gt;&quot;Hardella&quot;}</name></author><summary type="html">Hardella 1.6.0 is avaliable for download.
+
+New features:
+
+  Programming of both PRU is supported. You can now have a full control of 4 fast outputs and 2 fast inputs
+  The standard library is extended. Several blocks were included: step motor control, encoder, and several others
+  
+    EXIT statement is implemented</summary></entry></feed>

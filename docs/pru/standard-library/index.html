@@ -1,0 +1,795 @@
+<!doctype html>
+<html lang="ru" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin SEO -->
+
+
+
+
+
+
+
+
+
+<title>Библиотека блоков  Hardella IDE</title>
+
+
+
+
+<meta name="description" content="Описание PRU блоков в базовой поставке Hardella IDE. Hardella это среда для программирования ПЛК на языках группы 61131 (ST и т.п.)">
+
+
+
+
+<meta property="og:locale" content="ru">
+<meta property="og:site_name" content="Hardella IDE">
+<meta property="og:title" content="Библиотека блоков">
+
+
+  <link rel="canonical" href="https://hardella.github.io/ide61131/docs/pru/standard-library/">
+  <meta property="og:url" content="https://hardella.github.io/ide61131/docs/pru/standard-library/">
+
+
+
+  <meta property="og:description" content="Описание PRU блоков в базовой поставке Hardella IDE. Hardella это среда для программирования ПЛК на языках группы 61131 (ST и т.п.)">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- end SEO -->
+
+
+<link href="https://hardella.github.io/ide61131/feed.xml" type="application/atom+xml" rel="alternate" title="Hardella IDE Feed">
+
+<!-- http://t.co/dKP3o1e -->
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="https://hardella.github.io/ide61131/assets/css/main.css">
+
+<meta http-equiv="cleartype" content="on">
+    <link rel="apple-touch-icon" sizes="180x180" href="https://hardella.github.io/ide61131/assets/images/favicons/apple-touch-icon.png">
+<link rel="icon" type="image/png" href="https://hardella.github.io/ide61131/assets/images/favicons/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="https://hardella.github.io/ide61131/assets/images/favicons/favicon-16x16.png" sizes="16x16">
+<link rel="manifest" href="https://hardella.github.io/ide61131/assets/images/favicons/manifest.json">
+<link rel="mask-icon" href="https://hardella.github.io/ide61131/assets/images/favicons/safari-pinned-tab.svg" color="#5bbad5">
+<meta name="theme-color" content="#ffffff">
+<meta http-equiv="Content-Language" content="ru"><link rel="alternate" i18n="ru" href="https://hardella.com/docs/pru/standard-library/" />
+<link rel="alternate" i18n="en" href="https://hardella.com/en/docs/pru/standard-library/" />
+
+  </head>
+
+  <body class="layout--single">
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+    <div class="masthead">
+    <div class="masthead__inner-wrap">
+        <div class="masthead__menu">
+            <nav id="site-nav" class="greedy-nav">
+                <button><div class="navicon"></div></button>
+                <ul class="visible-links">
+                    <li class="masthead__menu-item masthead__menu-item--lg"><a href="https://hardella.github.io/ide61131/"><img src="/assets/images/hardella.iconset/icon_128x128.png" style="height: 2em;"> Hardella IDE</a></li>
+                    
+                    
+                    
+                    
+                    <li class="masthead__menu-item"><a href=" https://hardella.github.io/ide61131/en/docs/pru/standard-library/">En</a></li>
+                    
+                    
+                    
+                    
+                    <li class="masthead__menu-item"><a href="https://hardella.github.io/ide61131/blog">Новости</a></li>
+                    
+                    
+                    <li class="masthead__menu-item"><a href="https://hardella.github.io/ide61131/docs/introduction">Документация</a></li>
+                    
+                    
+                    <li class="masthead__menu-item"><a href="https://groups.google.com/forum/#!forum/hardella-forum" target="_blank">Форум</a></li>
+                    
+                    
+                    <li class="masthead__menu-item"><a href="https://hardella.github.io/ide61131/donate">Поддержать</a></li>
+                    
+                    
+                    <li class="masthead__menu-item"><a href="https://hardella.github.io/ide61131/download">Скачать</a></li>
+                    
+                </ul>
+                <ul class="hidden-links hidden"></ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+    
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+  
+    
+      
+      
+      
+    
+    
+      
+
+<nav class="nav__list">
+  
+  <input id="ac-toc" name="accordion-toc" type="checkbox" />
+  <label for="ac-toc">Toggle Menu</label>
+  <ul class="nav__items">
+    
+      <li>
+        
+          <span class="nav__sub-title"></span>
+        
+
+        
+        <ul>
+          
+            
+            
+
+            
+            
+
+            <li><a href="https://hardella.github.io/ide61131/docs/introduction/" class="">Введение</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="https://hardella.github.io/ide61131/docs/installation/" class="">Установка</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="https://hardella.github.io/ide61131/docs/upgrade/" class="">Обновление</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="https://hardella.github.io/ide61131/docs/changelog/" class="">Список изменений</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Приёмы работы с Hardella</span>
+        
+
+        
+        <ul>
+          
+            
+            
+
+            
+            
+
+            <li><a href="https://hardella.github.io/ide61131/docs/ide/navigation/" class="">Навигация по коду</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="https://hardella.github.io/ide61131/docs/ide/editor/" class="">Редактирование кода</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">AM1808 PRU (ПЛК110[М02])</span>
+        
+
+        
+        <ul>
+          
+            
+            
+
+            
+            
+
+            <li><a href="https://hardella.github.io/ide61131/docs/pru/features-and-limits/" class="">Возможности и ограничения</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="https://hardella.github.io/ide61131/docs/pru/new-project/" class="">Создание проекта в Hardella</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="https://hardella.github.io/ide61131/docs/pru/project-build/" class="">Компиляция PRU проекта</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="https://hardella.github.io/ide61131/docs/pru/codesys-setup/" class="">Настройка CoDeSys</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="https://hardella.github.io/ide61131/docs/pru/data-exchange/" class="">Обмен данными с PRU</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="https://hardella.github.io/ide61131/docs/pru/standard-library/" class="active">Библиотека блоков</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Примеры программ AM1808 PRU</span>
+        
+
+        
+        <ul>
+          
+            
+            
+
+            
+            
+
+            <li><a href="https://hardella.github.io/ide61131/docs/pru/examples/four-blinkning-leds" class="">Мигающие выходы</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="https://hardella.github.io/ide61131/docs/pru/examples/fast-counter" class="">Быстрый счётчик</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="https://hardella.github.io/ide61131/docs/pru/examples/fast-encoder" class="">Быстрый энкодер</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="https://hardella.github.io/ide61131/docs/pru/examples/fast-pwm" class="">ШИМ</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="https://hardella.github.io/ide61131/docs/pru/examples/step-motor" class="">Шаговый двигатель</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="https://hardella.github.io/ide61131/docs/pru/examples/material-cutter" class="">Точный останов мотора</a></li>
+          
+        </ul>
+        
+      </li>
+    
+  </ul>
+</nav>
+    
+  
+  </div>
+
+
+  <article class="page" itemscope itemtype="http://schema.org/CreativeWork">
+    <meta itemprop="headline" content="Библиотека блоков">
+    <meta itemprop="description" content="Описание PRU блоков в базовой поставке Hardella IDE. Hardella это среда для программирования ПЛК на языках группы 61131 (ST и т.п.)">
+    
+    <meta itemprop="dateModified" content="December 25, 2016">
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 class="page__title" itemprop="headline">Библиотека блоков
+</h1>
+          
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        <aside class="sidebar__right">
+<nav class="toc">
+    <header><h4 class="nav__title"><i class="fa fa-columns"></i> Библиотека блоков</h4></header>
+<ul class="toc__menu" id="markdown-toc">
+  <li><a href="#Блоки-для-аппаратной-части-pru" id="markdown-toc-Блоки-для-аппаратной-части-pru">Блоки для аппаратной части PRU</a>    <ul>
+      <li><a href="#fast_inputs" id="markdown-toc-fast_inputs">FAST_INPUTS</a></li>
+      <li><a href="#fast_outputs" id="markdown-toc-fast_outputs">FAST_OUTPUTS</a></li>
+      <li><a href="#pru_current_time" id="markdown-toc-pru_current_time">PRU_CURRENT_TIME</a></li>
+    </ul>
+  </li>
+  <li><a href="#Блоки-для-сложных-устройств" id="markdown-toc-Блоки-для-сложных-устройств">Блоки для сложных устройств</a>    <ul>
+      <li><a href="#pru_abz_encoder" id="markdown-toc-pru_abz_encoder">PRU_ABZ_ENCODER</a></li>
+      <li><a href="#pru_stepper" id="markdown-toc-pru_stepper">PRU_STEPPER</a></li>
+    </ul>
+  </li>
+  <li><a href="#Математика" id="markdown-toc-Математика">Математика</a>    <ul>
+      <li><a href="#pru_div_dw_dw" id="markdown-toc-pru_div_dw_dw">PRU_DIV_DW_DW</a></li>
+      <li><a href="#pru_muldiv_dw_dw_dw" id="markdown-toc-pru_muldiv_dw_dw_dw">PRU_MULDIV_DW_DW_DW</a></li>
+      <li><a href="#pru_mul_dw_dw" id="markdown-toc-pru_mul_dw_dw">PRU_MUL_DW_DW</a></li>
+      <li><a href="#pru_mul_dw_w" id="markdown-toc-pru_mul_dw_w">PRU_MUL_DW_W</a></li>
+      <li><a href="#pru_sqrt_dw" id="markdown-toc-pru_sqrt_dw">PRU_SQRT_DW</a></li>
+    </ul>
+  </li>
+  <li><a href="#Прочее" id="markdown-toc-Прочее">Прочее</a>    <ul>
+      <li><a href="#ctu_dword" id="markdown-toc-ctu_dword">CTU_DWORD</a></li>
+      <li><a href="#f_trig" id="markdown-toc-f_trig">F_TRIG</a></li>
+      <li><a href="#r_trig" id="markdown-toc-r_trig">R_TRIG</a></li>
+      <li><a href="#rs-триггер" id="markdown-toc-rs-триггер">RS-триггер</a></li>
+      <li><a href="#sr-триггер" id="markdown-toc-sr-триггер">SR-триггер</a></li>
+      <li><a href="#pwm_dw" id="markdown-toc-pwm_dw">PWM_DW</a></li>
+      <li><a href="#pdm_dw" id="markdown-toc-pdm_dw">PDM_DW</a></li>
+    </ul>
+  </li>
+</ul>
+
+  </nav>
+</aside>
+
+<h2 id="Блоки-для-аппаратной-части-pru">Блоки для аппаратной части PRU</h2>
+
+<h3 id="fast_inputs">FAST_INPUTS</h3>
+
+<p>Блок для чтения значений с быстрых входов. Получаемые данные уже <strong>учитывают настройки фильтрации</strong>.</p>
+
+<p>Следует помнить, что все входы заведены на PRU0, т.е. использовать <code class="highlighter-rouge">FAST_INPUTS</code> в программе для PRU1 не получится.</p>
+
+<p>Использовать <code class="highlighter-rouge">FAST_INPUTS</code> можно в любом месте кода. Можно объявить и несколько переменных для <code class="highlighter-rouge">FAST_INPUTS</code>, но особого смысла нет.</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>FUNCTION_BLOCK FAST_INPUTS (* returns values of fast inputs *) 
+    output in1 : BOOL; (* fast input 1 *) 
+    output in2 : BOOL; (* fast input 2 *) 
+    output in3 : BOOL; (* fast input 3 *) 
+    output in4 : BOOL; (* fast input 4 *) 
+</code></pre>
+</div>
+
+<h3 id="fast_outputs">FAST_OUTPUTS</h3>
+
+<p>Блок для управления быстрыми выходами.
+Следует помнить, что выходы 3 и 4 распаяны к PRU0, а выходы 1 и 2 к PRU1.
+При попытках “управлять 1-ым выходом в программе для PRU0” будет ошибка компиляции.</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>FUNCTION_BLOCK FAST_OUTPUTS (* specifies values for the fast outputs *) 
+    input out1 : BOOL; (* fast output 1 (PRU1) *) 
+    input out2 : BOOL; (* fast output 2 (PRU1) *) 
+    input out3 : BOOL; (* fast output 3 (PRU0) *) 
+    input out4 : BOOL; (* fast output 4 (PRU0) *) 
+</code></pre>
+</div>
+
+<h3 id="pru_current_time">PRU_CURRENT_TIME</h3>
+
+<p>Позволяет “узнать” текущее время и длину PRU цикла (в <strong>тактах</strong>, каждый из которых составляет 5нс). Стоит понимать, что как таковых часов в PRU нет, поэтому под временем здесь понимается “счётчик выполненных тактов процессора”.</p>
+
+<p>В основе лежат следующие предположения:</p>
+<ul>
+  <li>PRU тактуется от кварца (так утверждали представители ОВЕН на форуме owen.ru)</li>
+  <li>Частота PRU – 200 МГц (подтверждена осциллографом)</li>
+  <li>PRU регистр, который считает выполненные такты работает верно. Например, считается, что на него не влияют разнообраные операции с памятью и т.п.</li>
+</ul>
+
+<p>Специально точность ведения времени не проверяли, но импульсы 500кГц выглядели как 500кГц.</p>
+
+<p>Каждый вызов блока <code class="highlighter-rouge">PRU_CURRENT_TIME</code> будет запрашивать новое значение “счётчика выполненных PRU тактов”, поэтому не стоит ставить вызовы <code class="highlighter-rouge">time()</code> после каждой строки.
+Например, блок фильтрации входов один раз обновляет текущее время, а затем на его основе выполняет фильтрацию всех входов.</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>FUNCTION_BLOCK PRU_CURRENT_TIME 
+    output totalCycles : DWORD; (* Total CPU ticks elapsed *) 
+    output prevOutputWriteTime : DWORD; (* Absolute time when previous outputs were written (in CPU ticks) *) 
+    output cycleLength : DWORD; (* PRU cycle length in CPU ticks *) 
+</code></pre>
+</div>
+
+<p>Пример использования</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>time : PRU_CURRENT_TIME;
+...
+time(); (* узнать текущее время *)
+IF time.totalCycles &lt; deadLine THEN ...
+...
+deadLine := time.totalCycles + 100500;
+</code></pre>
+</div>
+
+<h2 id="Блоки-для-сложных-устройств">Блоки для сложных устройств</h2>
+
+<h3 id="pru_abz_encoder">PRU_ABZ_ENCODER</h3>
+
+<p>Блок обработки сигнала ABZ энкодера.
+Учитываются оба фронта (передний и задний) A и B фаз.</p>
+
+<p><code class="highlighter-rouge">zeroDetected</code> переходит в <code class="highlighter-rouge">TRUE</code> когда впервые найдена Z метка.
+<code class="highlighter-rouge">counter</code> возвращает общее количество учтённых фронтов A и B фаз.</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>FUNCTION_BLOCK PRU_ABZ_ENCODER (* Decodes ABZ encoder. Each edge of both A and B are processed *) 
+  variables: 
+    input a : BOOL; (* A input *) 
+    input b : BOOL; (* B input *) 
+    input z : BOOL; (* Z input *) 
+     
+    output position : WORD; (* position of the encoder *) 
+    output counter : WORD; (* number of encoder pulses processed *) 
+    output zeroDetected : BOOL; (* TRUE when Z mark was detected *) 
+</code></pre>
+</div>
+
+<h3 id="pru_stepper">PRU_STEPPER</h3>
+
+<p>Блок для управления шаговым двигателем с помощью STEP сигнала.
+Блок генерирует импульсы 50% скважности.</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>FUNCTION_BLOCK PRU_STEPPER (* Step motor controller *) 
+  variables: 
+    input enable : BOOL; (* Starts and stops the motor *) 
+    input quantity : DWORD; (* Number of pulses to generate *) 
+    input accel_ramp : WORD; (* Acceleration in Hz/sec. 0 means no acceleration is made *) 
+    input decel_ramp : WORD; (* Deceleration in Hz/sec. 0 means no deceleration is made *) 
+    input min_speed : DWORD; (* Minimal pulse speed in Hz *) 
+    input max_speed : DWORD; (* Maximal pulse speed in Hz *) 
+     
+    output state : STEPPER_RUN_STATE; (* State of the stepper block (init, moving, stopped, etc) *) 
+    output step_count : DWORD; (* Number of steps made. DO NOT use to check the state of the motor. Use state instead *) 
+    output Q : BOOL; (* STEP signal for the stepper motor *) 
+</code></pre>
+</div>
+
+<h2 id="Математика">Математика</h2>
+
+<p>В PRU ядрах нет встроенного умножителя и делителя.
+Тем не менее, алгоритмы “умножение по-школьному” позволяют умножать, делить и вычислять квадратные корни за разумное время.</p>
+
+<p>Умножение и деление двух <code class="highlighter-rouge">DWORD</code> зависят от фактических значений и в худшем случае требуется около 1µs (200 тактов).
+Если требуется умножать на степень двойки, то лучше использовать <code class="highlighter-rouge">SHL(x, y)</code> (PRU компилятор пока не поддерживает операцию <code class="highlighter-rouge">*</code>).</p>
+
+<h3 id="pru_div_dw_dw">PRU_DIV_DW_DW</h3>
+
+<p>Блок выполняет целочисленное деление <code class="highlighter-rouge">DWORD</code>, возвращает частное и остаток.
+Время работы зависит от значений. В худшем случае требуется около 1µs (200 тактов)</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>FUNCTION_BLOCK PRU_DIV_DW_DW 
+    input x : DWORD; 
+    input y : DWORD; 
+     
+    output div : DWORD; 
+    output mod : DWORD; 
+</code></pre>
+</div>
+
+<h3 id="pru_muldiv_dw_dw_dw">PRU_MULDIV_DW_DW_DW</h3>
+
+<p>Блок для вычисления <code class="highlighter-rouge">DIV(MUL(x, y), z)</code> и <code class="highlighter-rouge">MOD(MUL(x, y), z)</code>.
+Время работы зависит от значений.</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>FUNCTION_BLOCK PRU_MULDIV_DW_DW_DW (* calculates DIV(x*y, z); MOD(x*y, z) *) 
+    input x : DWORD; 
+    input y : DWORD; 
+    input z : DWORD; 
+     
+    output div : DWORD; (* div := DIV(MUL(x, y), z) *) 
+    output mod : DWORD; (* mod := MOD(MUL(x, y), z) *) 
+</code></pre>
+</div>
+
+<h3 id="pru_mul_dw_dw">PRU_MUL_DW_DW</h3>
+
+<p>Блок для умножения двух <code class="highlighter-rouge">DWORD</code>.
+Время работы зависит от значений. В худшем случае требуется около 1µs (200 тактов)</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>FUNCTION_BLOCK PRU_MUL_DW_DW (* x*y *) 
+    input x : DWORD; 
+    input y : DWORD; 
+     
+    output mul : DWORD; 
+</code></pre>
+</div>
+
+<h3 id="pru_mul_dw_w">PRU_MUL_DW_W</h3>
+
+<p>Блок для умножения <code class="highlighter-rouge">DWORD</code> * <code class="highlighter-rouge">WORD</code>.
+Время работы зависит от значений. В худшем случае требуется около 0.5µs (100 тактов)</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>FUNCTION_BLOCK PRU_MUL_DW_W (* x*y *) 
+    input x : DWORD; 
+    input y : WORD; 
+     
+    output mul : DWORD; 
+</code></pre>
+</div>
+
+<h3 id="pru_sqrt_dw">PRU_SQRT_DW</h3>
+
+<p>Блок для вычисления целой части квадратного корня из <code class="highlighter-rouge">DWORD</code> значения.
+Время работы составляет около 0.25…1µs (50-150 тактов)</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>FUNCTION_BLOCK PRU_SQRT_DW 
+    input x : DWORD; 
+     
+    output sqrt : DWORD; 
+</code></pre>
+</div>
+
+<h2 id="Прочее">Прочее</h2>
+
+<h3 id="ctu_dword">CTU_DWORD</h3>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>FUNCTION_BLOCK CTU_WORD 
+    input CU : BOOL; (* counter input *) 
+    input R : BOOL; (* reset *) 
+    input PV : WORD; 
+     
+    output Q : BOOL; (* TRUE when CV &gt;= PV *) 
+     
+    retain output CV : WORD; (* current counter value *) 
+</code></pre>
+</div>
+
+<h3 id="f_trig">F_TRIG</h3>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>FUNCTION_BLOCK F_TRIG (* ¯¯\__ detector *) 
+    input CLK : BOOL; (* Input clock *) 
+     
+    output Q : BOOL; (* TRUE when falling edge is detected: ¯¯\__ *) 
+</code></pre>
+</div>
+
+<h3 id="r_trig">R_TRIG</h3>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>FUNCTION_BLOCK R_TRIG (* __/¯¯ detector *) 
+    input CLK : BOOL; (* Input clock *) 
+     
+    output Q : BOOL; (* TRUE when rising edge is detected: __/¯¯ *) 
+</code></pre>
+</div>
+
+<h3 id="rs-триггер">RS-триггер</h3>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>FUNCTION_BLOCK RS (* reset-set trigger *) 
+    input S : BOOL; 
+    input R : BOOL; 
+     
+    output Q : BOOL; 
+</code></pre>
+</div>
+
+<h3 id="sr-триггер">SR-триггер</h3>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>FUNCTION_BLOCK SR (* set-reset trigger *) 
+    input S : BOOL; 
+    input R : BOOL; 
+     
+    output Q : BOOL; 
+</code></pre>
+</div>
+
+<h3 id="pwm_dw">PWM_DW</h3>
+
+<p>Блок генерирует ШИМ сигнал заданной скважности.
+При каждом вызове внутренее состояние ШИМ блока увеличивается на 1.
+С настройками <code class="highlighter-rouge">value=2, period=4</code> вывод Q будет принимать значения: 1, 1, 0, 0, 1, 1, …</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>FUNCTION_BLOCK PWM_DW (* Pulse Width Modulation generator *) 
+    input value : DWORD;  (* Значение скважности *)
+    input period : DWORD; (* Длина периода ШИМ *)
+     
+    output Q : BOOL; 
+</code></pre>
+</div>
+
+<h3 id="pdm_dw">PDM_DW</h3>
+
+<p>См <a href="https://en.wikipedia.org/wiki/Pulse-density_modulation">Pulse Density Modulation</a>. Не путать с ШИМ модуляцией!
+Блок выдаёт 0 или 1 в такой пропорции, чтобы среднее значение было близко к <code class="highlighter-rouge">value/period</code>.</p>
+
+<p>Наибольшее отличие от ШИМ будет на скважности 50%.
+PDM будет выдавать 0, 1, 0, …, а ШИМ будет выдавать длинные пачки нулей и единиц.</p>
+
+<p>Второе отличие – PDM гораздо быстрее переходит к новой сважности (не нужно дожидаться конца PWM импульса)</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>FUNCTION_BLOCK PDM_DW (* Pulse Density Modulation generator *) 
+    input value : DWORD; 
+    input period : DWORD; 
+     
+    output Q : BOOL; 
+</code></pre>
+</div>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+
+
+                
+          <p class="page__date"><strong><i class="fa fa-fw fa-calendar" aria-hidden="true"></i> Обновлено:</strong> <time datetime="2016-12-25">December 25, 2016 20:49</time></p>
+        
+
+      </footer>
+
+      
+
+      
+  <nav class="pagination">
+    
+      <a href="https://hardella.github.io/ide61131/docs/pru/data-exchange/" class="pagination--pager" title="Обмен данными с PRU
+">Назад</a>
+    
+    
+      <a href="#" class="pagination--pager disabled">Вперёд</a>
+    
+  </nav>
+
+    </div>
+
+    
+      <div class="page__comments">
+  
+  
+    <h4 class="page__comments-title">Комментировать</h4>
+    <section id="disqus_thread"></section>
+  
+</div>
+    
+  </article>
+
+  
+  
+</div>
+
+    <div class="page__footer">
+      <footer>
+        <a href="//orphus.ru" id="orphus" target="_blank"><img alt="Система Orphus" src="/assets/images/orphus.gif" border="0" width="257" height="48" /></a><br><br>
+
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>Подписаться:</strong></li>
+    
+    
+    
+    
+      <li><a href="http://github.com/Hardella"><i class="fa fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+    
+    
+    <li><a href="https://hardella.github.io/ide61131/feed.xml"><i class="fa fa-fw fa-rss-square" aria-hidden="true"></i> Новости</a></li>
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2016 Hardella IDE. Powered by <a href="http://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+      </footer>
+    </div>
+
+    <script src="https://hardella.github.io/ide61131/assets/js/main.min.js"></script>
+
+
+
+
+  <!-- Yandex.Metrika counter --> <script type="text/javascript"> (function (d, w, c) { (w[c] = w[c] || []).push(function() { try { w.yaCounter41689319 = new Ya.Metrika({ id:41689319, clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true }); } catch(e) { } }); var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () { n.parentNode.insertBefore(s, n); }; s.type = "text/javascript"; s.async = true; s.src = "https://mc.yandex.ru/metrika/watch.js"; if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); } })(document, window, "yandex_metrika_callbacks"); </script> <noscript><div><img src="https://mc.yandex.ru/watch/41689319" style="position:absolute; left:-9999px;" alt="" /></div></noscript> <!-- /Yandex.Metrika counter -->
+<script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-62628294-3', 'auto');
+    ga('send', 'pageview');
+</script>
+
+
+
+
+
+
+  
+  <script type="text/javascript">
+  	/* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+  	var disqus_shortname = 'hardella';
+
+  	/* * * DON'T EDIT BELOW THIS LINE * * */
+  	(function() {
+  		var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+  		dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+  		(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  	})();
+
+  	/* * * DON'T EDIT BELOW THIS LINE * * */
+  	(function () {
+  		var s = document.createElement('script'); s.async = true;
+  		s.type = 'text/javascript';
+  		s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+  		(document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+  	}());
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/3.2.2/anchor.min.js"></script>
+<script language="JavaScript">
+    anchors.add('article h1, article h2, article h3, article h4, article h5');
+</script>
+<script type="text/javascript" src="/assets/js/orphus.js"></script>
+
+
+  </body>
+</html>
