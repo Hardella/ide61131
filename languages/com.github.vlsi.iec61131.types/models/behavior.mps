@@ -20,6 +20,8 @@
     <import index="tpee" ref="r:00000000-0000-4000-0000-011c895902ca(jetbrains.mps.baseLanguage.structure)" />
     <import index="o8zo" ref="r:314576fc-3aee-4386-a0a5-a38348ac317d(jetbrains.mps.scope)" />
     <import index="xlxw" ref="6354ebe7-c22a-4a0f-ac54-50b52ab9b065/java:java.math(JDK/)" />
+    <import index="6xgk" ref="r:6e9ad488-5df2-49e4-8c01-8a7f3812adf7(jetbrains.mps.lang.scopes.runtime)" />
+    <import index="mhfm" ref="3f233e7f-b8a6-46d2-a57f-795d56775243/java:org.jetbrains.annotations(Annotations/)" />
   </imports>
   <registry>
     <language id="af65afd8-f0dd-4942-87d9-63a55f2a9db1" name="jetbrains.mps.lang.behavior">
@@ -1753,10 +1755,10 @@
               <node concept="2YIFZM" id="4qXNmAZcYBs" role="3cqZAk">
                 <ref role="1Pybhc" to="fnmy:3A2qfoxVUBF" resolve="Scopes" />
                 <ref role="37wK5l" to="fnmy:3A2qfoxVU7a" resolve="forVariables" />
-                <node concept="37vLTw" id="4qXNmAZcYNG" role="37wK5m">
+                <node concept="37vLTw" id="7y0eJj0PX8k" role="37wK5m">
                   <ref role="3cqZAo" node="4qXNmAZbQej" resolve="kind" />
                 </node>
-                <node concept="37vLTw" id="4qXNmAZcZ0b" role="37wK5m">
+                <node concept="37vLTw" id="7y0eJj0Q0Hy" role="37wK5m">
                   <ref role="3cqZAo" node="4qXNmAZcUwA" resolve="vars" />
                 </node>
                 <node concept="iy90A" id="4qXNmAZcZsf" role="37wK5m" />

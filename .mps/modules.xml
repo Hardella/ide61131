@@ -6,28 +6,28 @@
       <modulePath path="$PROJECT_DIR$/languages/com.github.vlsi.iec61131.cfc/com.github.vlsi.iec61131.cfc.mpl" folder="" />
       <modulePath path="$PROJECT_DIR$/languages/com.github.vlsi.iec61131.executors/com.github.vlsi.iec61131.executors.mpl" folder="" />
       <modulePath path="$PROJECT_DIR$/languages/com.github.vlsi.iec61131.executors/runtime/com.github.vlsi.iec61131.executors.runtime.msd" folder="" />
-      <modulePath path="$PROJECT_DIR$/languages/com.github.vlsi.iec61131.st.ext.implicitfb/com.github.vlsi.iec61131.st.ext.implicitfb.mpl" folder="" />
-      <modulePath path="$PROJECT_DIR$/languages/com.github.vlsi.iec61131.st2ti1808/com.github.vlsi.iec61131.st2ti1808.mpl" folder="" />
-      <modulePath path="$PROJECT_DIR$/languages/com.github.vlsi.iec61131.ti1808.cfc/com.github.vlsi.iec61131.ti1808.cfc.mpl" folder="" />
-      <modulePath path="$PROJECT_DIR$/languages/com.github.vlsi.iec61131.ti1808.pasm/com.github.vlsi.iec61131.ti1808.pasm.mpl" folder="" />
-      <modulePath path="$PROJECT_DIR$/languages/com.github.vlsi.iec61131.ti1808.toemulator/com.github.vlsi.iec61131.ti1808.toemulator.mpl" folder="" />
-      <modulePath path="$PROJECT_DIR$/languages/com.github.vlsi.iec61131.ti1808/com.github.vlsi.iec61131.ti1808.mpl" folder="" />
-      <modulePath path="$PROJECT_DIR$/languages/com.github.vlsi.iec61131.types/com.github.vlsi.iec61131.types.mpl" folder="" />
+      <modulePath path="$PROJECT_DIR$/languages/com.github.vlsi.iec61131.st.ext.implicitfb/com.github.vlsi.iec61131.st.ext.implicitfb.mpl" folder="st" />
+      <modulePath path="$PROJECT_DIR$/languages/com.github.vlsi.iec61131.st2ti1808/com.github.vlsi.iec61131.st2ti1808.mpl" folder="ti1808" />
+      <modulePath path="$PROJECT_DIR$/languages/com.github.vlsi.iec61131.ti1808.cfc/com.github.vlsi.iec61131.ti1808.cfc.mpl" folder="ti1808" />
+      <modulePath path="$PROJECT_DIR$/languages/com.github.vlsi.iec61131.ti1808.pasm/com.github.vlsi.iec61131.ti1808.pasm.mpl" folder="ti1808" />
+      <modulePath path="$PROJECT_DIR$/languages/com.github.vlsi.iec61131.ti1808.toemulator/com.github.vlsi.iec61131.ti1808.toemulator.mpl" folder="ti1808" />
+      <modulePath path="$PROJECT_DIR$/languages/com.github.vlsi.iec61131.ti1808/com.github.vlsi.iec61131.ti1808.mpl" folder="ti1808" />
+      <modulePath path="$PROJECT_DIR$/languages/com.github.vlsi.iec61131.types/com.github.vlsi.iec61131.types.mpl" folder="st" />
       <modulePath path="$PROJECT_DIR$/languages/com.github.vlsi.iec61131.unittest/com.github.vlsi.iec61131.unittest.mpl" folder="" />
-      <modulePath path="$PROJECT_DIR$/languages/st61131/runtime/st61131.runtime.msd" folder="" />
+      <modulePath path="$PROJECT_DIR$/languages/st61131/runtime/st61131.runtime.msd" folder="st" />
       <modulePath path="$PROJECT_DIR$/languages/st61131/sandbox/st61131.sandbox.msd" folder="" />
-      <modulePath path="$PROJECT_DIR$/languages/st61131/st61131.mpl" folder="" />
+      <modulePath path="$PROJECT_DIR$/languages/st61131/st61131.mpl" folder="st" />
       <modulePath path="$PROJECT_DIR$/solutions/com.github.vlsi.iec61131.libimport/com.github.vlsi.iec61131.libimport.msd" folder="" />
       <modulePath path="$PROJECT_DIR$/solutions/com.github.vlsi.iec61131.parser/com.github.vlsi.iec61131.parser.msd" folder="" />
       <modulePath path="$PROJECT_DIR$/solutions/com.github.vlsi.iec61131.plc110pru.executors/com.github.vlsi.iec61131.plc110pru.executors.msd" folder="" />
       <modulePath path="$PROJECT_DIR$/solutions/com.github.vlsi.iec61131.quickstart.pluginSolution/com.github.vlsi.iec61131.quickstart.pluginSolution.msd" folder="" />
-      <modulePath path="$PROJECT_DIR$/solutions/com.github.vlsi.iec61131.st2ti1808.runtime/com.github.vlsi.iec61131.st2ti1808.runtime.msd" folder="" />
-      <modulePath path="$PROJECT_DIR$/solutions/com.github.vlsi.iec61131.standard_lib/com.github.vlsi.iec61131.standard_lib.msd" folder="" />
-      <modulePath path="$PROJECT_DIR$/solutions/com.github.vlsi.iec61131.ti1808.internallib/com.github.vlsi.iec61131.ti1808.internallib.msd" folder="" />
-      <modulePath path="$PROJECT_DIR$/solutions/com.github.vlsi.iec61131.ti1808.libcompiler/com.github.vlsi.iec61131.ti1808.libcompiler.msd" folder="" />
-      <modulePath path="$PROJECT_DIR$/solutions/com.github.vlsi.iec61131.ti1808.stdlib/com.github.vlsi.iec61131.ti1808.stdlib.msd" folder="" />
-      <modulePath path="$PROJECT_DIR$/solutions/com.hardella.examples.ti1808/com.hardella.examples.ti1808.msd" folder="" />
-      <modulePath path="$PROJECT_DIR$/solutions/com.hardella.st.ext.implicitfb/com.hardella.st.ext.implicitfb.msd" folder="" />
+      <modulePath path="$PROJECT_DIR$/solutions/com.github.vlsi.iec61131.st2ti1808.runtime/com.github.vlsi.iec61131.st2ti1808.runtime.msd" folder="ti1808" />
+      <modulePath path="$PROJECT_DIR$/solutions/com.github.vlsi.iec61131.standard_lib/com.github.vlsi.iec61131.standard_lib.msd" folder="st" />
+      <modulePath path="$PROJECT_DIR$/solutions/com.github.vlsi.iec61131.ti1808.internallib/com.github.vlsi.iec61131.ti1808.internallib.msd" folder="ti1808" />
+      <modulePath path="$PROJECT_DIR$/solutions/com.github.vlsi.iec61131.ti1808.libcompiler/com.github.vlsi.iec61131.ti1808.libcompiler.msd" folder="ti1808" />
+      <modulePath path="$PROJECT_DIR$/solutions/com.github.vlsi.iec61131.ti1808.stdlib/com.github.vlsi.iec61131.ti1808.stdlib.msd" folder="ti1808" />
+      <modulePath path="$PROJECT_DIR$/solutions/com.hardella.examples.ti1808/com.hardella.examples.ti1808.msd" folder="ti1808" />
+      <modulePath path="$PROJECT_DIR$/solutions/com.hardella.st.ext.implicitfb/com.hardella.st.ext.implicitfb.msd" folder="st" />
       <modulePath path="$PROJECT_DIR$/solutions/st61131.build/st61131.build.msd" folder="" />
     </projectModules>
   </component>

@@ -826,6 +826,9 @@
       <node concept="3F0ifn" id="5fgiBbsgBEB" role="3EZMnx">
         <property role="3F0ifm" value="WHILE" />
         <ref role="1k5W1q" to="tpch:24YP6ZDyde4" resolve="Keyword" />
+        <node concept="3mYdg7" id="5fgiBbsgBED" role="3F10Kt">
+          <property role="1413C4" value="body-brace" />
+        </node>
         <node concept="OXEIz" id="5MdVxrFZmte" role="P5bDN">
           <node concept="UkePV" id="3gaOo01iwyd" role="OY2wv">
             <ref role="Ul1FP" to="jzle:5fgiBbsiv8D" resolve="ForStatement" />
@@ -847,9 +850,6 @@
       <node concept="3F0ifn" id="5fgiBbsgBEC" role="3EZMnx">
         <property role="3F0ifm" value="DO" />
         <ref role="1k5W1q" to="tpch:24YP6ZDyde4" resolve="Keyword" />
-        <node concept="3mYdg7" id="5fgiBbsgBED" role="3F10Kt">
-          <property role="1413C4" value="body-brace" />
-        </node>
         <node concept="ljvvj" id="5fgiBbsgBEE" role="3F10Kt">
           <property role="VOm3f" value="true" />
         </node>
