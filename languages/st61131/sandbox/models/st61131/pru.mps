@@ -16,8 +16,18 @@
   </imports>
   <registry>
     <language id="d7601ad3-513b-4e38-a483-fb62b3afe145" name="com.github.vlsi.iec61131.ti1808">
+      <concept id="6247823056832017505" name="com.github.vlsi.iec61131.ti1808.structure.VariableReference" flags="ng" index="2ngKQm">
+        <reference id="6247823056832017506" name="variableDeclaration" index="2ngKQl" />
+      </concept>
+      <concept id="6247823056832017492" name="com.github.vlsi.iec61131.ti1808.structure.VariableDeclaration" flags="ng" index="2ngKQz">
+        <property id="6247823056832017498" name="width" index="2ngKQH" />
+      </concept>
       <concept id="6247823056830950363" name="com.github.vlsi.iec61131.ti1808.structure.CommentStatement" flags="ng" index="2nkX8G">
         <property id="6247823056830950364" name="text" index="2nkX8F" />
+      </concept>
+      <concept id="4094408907358160007" name="com.github.vlsi.iec61131.ti1808.structure.VariablePartReference" flags="ng" index="1K_guM">
+        <property id="4094408907358160012" name="field" index="1K_guT" />
+        <child id="4094408907358160010" name="variable" index="1K_guZ" />
       </concept>
       <concept id="7811067774765926036" name="com.github.vlsi.iec61131.ti1808.structure.ICommentable" flags="ng" index="3N2JDl">
         <property id="7811067774765926037" name="comment" index="3N2JDk" />
@@ -32,12 +42,12 @@
       <concept id="124800662050897899" name="com.github.vlsi.iec61131.ti1808.structure.StatementList" flags="ng" index="1SZpTx">
         <child id="124800662050897978" name="statements" index="1SZ66K" />
       </concept>
-      <concept id="124800662050753089" name="com.github.vlsi.iec61131.ti1808.structure.Statement" flags="ng" index="1SZUJb" />
       <concept id="124800662050753092" name="com.github.vlsi.iec61131.ti1808.structure.Instruction" flags="ng" index="1SZUJe">
         <property id="124800662050756754" name="name" index="1SZV$o" />
         <child id="124800662050756153" name="args" index="1SZVuN" />
       </concept>
       <concept id="124800662050748520" name="com.github.vlsi.iec61131.ti1808.structure.Program" flags="ng" index="1SZXBy">
+        <child id="6247823056832017502" name="variables" index="2ngKQD" />
         <child id="124800662050754321" name="body" index="1SZUUr" />
       </concept>
     </language>
@@ -9348,11 +9358,31 @@
   </node>
   <node concept="1SZXBy" id="63FqFSdQQhT">
     <property role="TrG5h" value="test" />
+    <node concept="2ngKQz" id="3zigNl8iNW1" role="2ngKQD">
+      <property role="TrG5h" value="c" />
+      <property role="2ngKQH" value="4" />
+    </node>
     <node concept="1SZpTx" id="63FqFSdQQhU" role="1SZUUr">
       <node concept="2nkX8G" id="63FqFSdQQhX" role="1SZ66K">
         <property role="2nkX8F" value="asdfasa" />
       </node>
-      <node concept="1SZUJb" id="63FqFSdQQi0" role="1SZ66K" />
+      <node concept="1SZUJe" id="3zigNl8iNW3" role="1SZ66K">
+        <property role="1SZV$o" value="ADD" />
+        <node concept="1K_guM" id="3zigNl8iNXi" role="1SZVuN">
+          <property role="1K_guT" value="b3" />
+          <node concept="2ngKQm" id="3zigNl8iNWk" role="1K_guZ">
+            <ref role="2ngKQl" node="3zigNl8iNW1" resolve="c" />
+          </node>
+        </node>
+        <node concept="2ngKQm" id="3zigNl8iNWv" role="1SZVuN">
+          <ref role="2ngKQl" node="3zigNl8iNW1" resolve="c" />
+        </node>
+        <node concept="39vrwG" id="3zigNl8iNWC" role="1SZVuN">
+          <node concept="2fQMEq" id="3zigNl8iNWB" role="39vrwe">
+            <property role="2fVhNJ" value="0" />
+          </node>
+        </node>
+      </node>
     </node>
   </node>
 </model>

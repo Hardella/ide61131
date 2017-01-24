@@ -176,7 +176,7 @@
         <node concept="3clFbS" id="47_z4h3ABep" role="3clFbx">
           <node concept="2MkqsV" id="47_z4h3ACRi" role="3cqZAp">
             <node concept="Xl_RD" id="47_z4h3ACRx" role="2MkJ7o">
-              <property role="Xl_RC" value="Variable should be either `input` or `output`" />
+              <property role="Xl_RC" value="Only `input` or `output` variables can be exchanged between PRU and host" />
             </node>
             <node concept="1YBJjd" id="47_z4h3ACT7" role="2OEOjV">
               <ref role="1YBMHb" node="47_z4h3AAhz" resolve="variableDeclaration" />

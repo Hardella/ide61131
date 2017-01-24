@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<model ref="r:de700410-c677-4f89-bf11-6bca95714d96(com.github.vlsi.iec61131.ti1808.stdlib.lib)">
+<model ref="r:de700410-c677-4f89-bf11-6bca95714d96(com.github.vlsi.iec61131.ti1808.stdlib.lib)" doNotGenerate="true">
   <persistence version="9" />
   <languages>
     <use id="d1aef6cd-5477-486f-bcbd-34728b246566" name="com.github.vlsi.iec61131.st2ti1808" version="0" />
@@ -1608,16 +1608,16 @@
       <node concept="2fQKt7" id="65nzZIfsqyn" role="2fQRkO" />
     </node>
     <node concept="283aBN" id="65nzZIfw3E$" role="2fQKEM">
-      <property role="TrG5h" value="counter" />
+      <property role="TrG5h" value="initialOffset" />
       <property role="2fKTFZ" value="true" />
-      <property role="2EalUU" value="number of encoder pulses processed" />
+      <property role="2EalUU" value="likePosition, but it is number of encoder pulses processed" />
       <node concept="2fQKt7" id="65nzZIfw3F1" role="2fQRkO" />
     </node>
     <node concept="283aBN" id="65nzZIfsqyu" role="2fQKEM">
-      <property role="TrG5h" value="zeroDetected" />
+      <property role="TrG5h" value="zCount" />
       <property role="2fKTFZ" value="true" />
-      <property role="2EalUU" value="TRUE when Z mark was detected" />
-      <node concept="PkkMJ" id="65nzZIfsqyX" role="2fQRkO" />
+      <property role="2EalUU" value="increased by one every time Z mark is detected" />
+      <node concept="2fQKrT" id="5jXokEW8WvQ" role="2fQRkO" />
     </node>
     <node concept="283aBN" id="65nzZIfJkvL" role="2fQKEM">
       <property role="TrG5h" value="prevA" />
@@ -1668,19 +1668,6 @@
         <node concept="283aBJ" id="65nzZIfJkRM" role="2fLe4q">
           <node concept="2INlLO" id="65nzZIfJl66" role="283bkg">
             <property role="2EalUU" value="Если a или b изменилось" />
-          </node>
-          <node concept="2fKkDk" id="65nzZIfw3H3" role="283bkg">
-            <node concept="2fA4ie" id="65nzZIfw3IS" role="2fKkDe">
-              <node concept="2fQMEq" id="65nzZIfw3Je" role="2fMgUi">
-                <property role="2fVhNJ" value="1" />
-              </node>
-              <node concept="2fRjeW" id="65nzZIfw3HS" role="2fMgUl">
-                <ref role="2fRto5" node="65nzZIfw3E$" resolve="counter" />
-              </node>
-            </node>
-            <node concept="2fRjeW" id="65nzZIfw3FY" role="2fKkDa">
-              <ref role="2fRto5" node="65nzZIfw3E$" resolve="counter" />
-            </node>
           </node>
           <node concept="283b7K" id="65nzZIg0ogu" role="283bkg" />
           <node concept="2fKkDk" id="65nzZIg0o3$" role="283bkg">
@@ -1758,20 +1745,25 @@
       <node concept="283b7K" id="65nzZIfJlPu" role="283bkg" />
       <node concept="2fLe5g" id="65nzZIftlPJ" role="283bkg">
         <node concept="283aBJ" id="65nzZIftlPK" role="2fLe4q">
-          <node concept="2fKkDk" id="65nzZIftlZ_" role="283bkg">
-            <node concept="2fQMEq" id="65nzZIftm1I" role="2fKkDe">
-              <property role="2fVhNJ" value="0" />
-            </node>
-            <node concept="2fRjeW" id="65nzZIftlYJ" role="2fKkDa">
-              <ref role="2fRto5" node="65nzZIfsqxB" resolve="position" />
-            </node>
-          </node>
           <node concept="2fKkDk" id="65nzZIftm4t" role="283bkg">
-            <node concept="2fLVyO" id="65nzZIftm4Y" role="2fKkDe">
-              <property role="2fLV_C" value="true" />
+            <node concept="2fA4ie" id="5jXokEW8WAD" role="2fKkDe">
+              <node concept="2fQMEq" id="5jXokEW8WAY" role="2fMgUi">
+                <property role="2fVhNJ" value="1" />
+              </node>
+              <node concept="2fRjeW" id="5jXokEW8W_t" role="2fMgUl">
+                <ref role="2fRto5" node="65nzZIfsqyu" resolve="zCount" />
+              </node>
             </node>
             <node concept="2fRjeW" id="65nzZIftm4f" role="2fKkDa">
-              <ref role="2fRto5" node="65nzZIfsqyu" resolve="zeroDetected" />
+              <ref role="2fRto5" node="65nzZIfsqyu" resolve="zCount" />
+            </node>
+          </node>
+          <node concept="2fKkDk" id="5jXokEW8X9N" role="283bkg">
+            <node concept="2fRjeW" id="5jXokEW8Xay" role="2fKkDe">
+              <ref role="2fRto5" node="65nzZIfsqxB" resolve="position" />
+            </node>
+            <node concept="2fRjeW" id="5jXokEW8X8R" role="2fKkDa">
+              <ref role="2fRto5" node="65nzZIfw3E$" resolve="initialOffset" />
             </node>
           </node>
         </node>

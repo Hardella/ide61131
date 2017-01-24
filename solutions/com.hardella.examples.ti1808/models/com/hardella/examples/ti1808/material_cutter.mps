@@ -172,13 +172,13 @@
       <node concept="3LqZAk" id="65nzZIgfBeS" role="lGtFl">
         <property role="3L5_Uc" value="encoder" />
         <node concept="2fRjeW" id="5ZeBDx0MYqh" role="3L59S7">
-          <ref role="2fRto5" to="gzb9:65nzZIfw3E$" resolve="counter" />
+          <ref role="2fRto5" to="gzb9:65nzZIfw3E$" resolve="initialOffset" />
         </node>
         <node concept="2fRjeW" id="5ZeBDx0MYqM" role="3L59S7">
           <ref role="2fRto5" to="gzb9:65nzZIfsqxB" resolve="position" />
         </node>
         <node concept="2fRjeW" id="5ZeBDx0NkZB" role="3L59S7">
-          <ref role="2fRto5" to="gzb9:65nzZIfsqyu" resolve="zeroDetected" />
+          <ref role="2fRto5" to="gzb9:65nzZIfsqyu" resolve="zCount" />
         </node>
       </node>
     </node>

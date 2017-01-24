@@ -3,8 +3,6 @@
   <persistence version="9" />
   <languages>
     <use id="c72da2b9-7cce-4447-8389-f407dc1158b7" name="jetbrains.mps.lang.structure" version="3" />
-    <use id="982eb8df-2c96-4bd7-9963-11712ea622e5" name="jetbrains.mps.lang.resources" version="2" />
-    <devkit ref="fbc25dd2-5da4-483a-8b19-70928e1b62d7(jetbrains.mps.devkit.general-purpose)" />
   </languages>
   <imports>
     <import index="tpck" ref="r:00000000-0000-4000-0000-011c89590288(jetbrains.mps.lang.core.structure)" />
@@ -160,7 +158,7 @@
     </node>
     <node concept="M4N5e" id="6VooDThdyD" role="M5hS2">
       <property role="1uS6qv" value="RSB" />
-      <property role="1uS6qo" value="RDB" />
+      <property role="1uS6qo" value="RSB" />
     </node>
     <node concept="M4N5e" id="17B37HzkmOA" role="M5hS2">
       <property role="1uS6qv" value="RSC" />
@@ -462,6 +460,28 @@
       <property role="IQ2nx" value="7319226215390735120" />
       <property role="TrG5h" value="offset" />
       <ref role="AX2Wp" to="tpck:fKAQMTA" resolve="integer" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="3zigNl8hOi7">
+    <property role="EcuMT" value="4094408907358160007" />
+    <property role="TrG5h" value="VariablePartReference" />
+    <property role="34LRSv" value="varpart" />
+    <property role="R4oN_" value="access a part of a vairable" />
+    <ref role="1TJDcQ" node="6VooDThcDa" resolve="Operand" />
+    <node concept="1TJgyj" id="3zigNl8hOia" role="1TKVEi">
+      <property role="IQ2ns" value="4094408907358160010" />
+      <property role="20lmBu" value="aggregation" />
+      <property role="20kJfa" value="variable" />
+      <property role="20lbJX" value="1" />
+      <ref role="20lvS9" node="5qOIvv1XVhx" resolve="VariableReference" />
+    </node>
+    <node concept="PrWs8" id="3zigNl8hOi8" role="PzmwI">
+      <ref role="PrY4T" to="tpck:hLJPP0O" resolve="IWrapper" />
+    </node>
+    <node concept="1TJgyi" id="3zigNl8hOic" role="1TKVEl">
+      <property role="IQ2nx" value="4094408907358160012" />
+      <property role="TrG5h" value="field" />
+      <ref role="AX2Wp" node="3gk5sx3tQg6" resolve="RegisterField" />
     </node>
   </node>
 </model>

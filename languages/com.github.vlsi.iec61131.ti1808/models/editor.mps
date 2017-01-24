@@ -4,13 +4,10 @@
   <languages>
     <use id="18bc6592-03a6-4e29-a83a-7ff23bde13ba" name="jetbrains.mps.lang.editor" version="4" />
     <use id="9d69e719-78c8-4286-90db-fb19c107d049" name="com.mbeddr.mpsutil.grammarcells" version="0" />
-    <use id="b4f35ed8-45af-4efa-abe4-00ac26956e69" name="com.mbeddr.mpsutil.grammarcells.runtimelang" version="0" />
     <use id="aee9cad2-acd4-4608-aef2-0004f6a1cdbd" name="jetbrains.mps.lang.actions" version="3" />
     <devkit ref="fbc25dd2-5da4-483a-8b19-70928e1b62d7(jetbrains.mps.devkit.general-purpose)" />
   </languages>
   <imports>
-    <import index="mhbf" ref="8865b7a8-5271-43d3-884c-6fd1d9cfdd34/java:org.jetbrains.mps.openapi.model(MPS.OpenAPI/)" />
-    <import index="zce0" ref="1ed103c3-3aa6-49b7-9c21-6765ee11f224/java:jetbrains.mps.smodel.action(MPS.Editor/)" />
     <import index="rpfd" ref="r:e0d14335-60e4-477c-a927-13c1cccae4f1(com.github.vlsi.iec61131.ti1808.structure)" />
     <import index="tpch" ref="r:00000000-0000-4000-0000-011c8959028d(jetbrains.mps.lang.structure.editor)" />
     <import index="uddc" ref="1ed103c3-3aa6-49b7-9c21-6765ee11f224/java:jetbrains.mps.openapi.editor.menus.transformation(MPS.Editor/)" implicit="true" />
@@ -783,6 +780,29 @@
       </node>
     </node>
     <node concept="2VfDsV" id="2Za7gvF0BQn" role="3ft7WO" />
+  </node>
+  <node concept="24kQdi" id="3zigNl8hOiD">
+    <ref role="1XX52x" to="rpfd:3zigNl8hOi7" resolve="VariablePartReference" />
+    <node concept="3EZMnI" id="3zigNl8hOiF" role="2wV5jI">
+      <node concept="1kIj98" id="3zigNl8hOjh" role="3EZMnx">
+        <node concept="3F1sOY" id="3zigNl8hOiM" role="1kIj9b">
+          <ref role="1NtTu8" to="rpfd:3zigNl8hOia" resolve="variable" />
+        </node>
+      </node>
+      <node concept="3F0ifn" id="3zigNl8hOiS" role="3EZMnx">
+        <property role="3F0ifm" value="." />
+        <node concept="11L4FC" id="3zigNl8hOnA" role="3F10Kt">
+          <property role="VOm3f" value="true" />
+        </node>
+        <node concept="11LMrY" id="3zigNl8hOrT" role="3F10Kt">
+          <property role="VOm3f" value="true" />
+        </node>
+      </node>
+      <node concept="3F0A7n" id="3zigNl8hOj0" role="3EZMnx">
+        <ref role="1NtTu8" to="rpfd:3zigNl8hOic" resolve="field" />
+      </node>
+      <node concept="l2Vlx" id="3zigNl8hOiI" role="2iSdaV" />
+    </node>
   </node>
 </model>
 

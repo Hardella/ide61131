@@ -103,6 +103,12 @@ Install mbeddr, clone ide61131, hack as required.
 Changelog
 ---------
 
+v1.6.2: 24 January 2017
+- Case-insensitive mode for autocomplete
+- Removed extra braces from `NOT` expressions
+- PRU: `MemoryTransfer` programs was split into `MemoryRead` and `MemoryWrite`
+- PRU: `pruAccessLib.lib` is no longer required
+
 v1.6.1: 25 December 2016
 - Arguments are no longer red when replacing one FB call with another (e.g. TON(...) -> TOF(...))
 - Implemented automatic updates, so updates will be small and fast

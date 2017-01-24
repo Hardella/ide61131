@@ -143,6 +143,9 @@
       <concept id="5279705229678483897" name="jetbrains.mps.baseLanguage.structure.FloatingPointFloatConstant" flags="nn" index="2$xPTn">
         <property id="5279705229678483899" name="value" index="2$xPTl" />
       </concept>
+      <concept id="1239714755177" name="jetbrains.mps.baseLanguage.structure.AbstractUnaryNumberOperation" flags="nn" index="2$Kvd9">
+        <child id="1239714902950" name="expression" index="2$L3a6" />
+      </concept>
       <concept id="1173175405605" name="jetbrains.mps.baseLanguage.structure.ArrayAccessExpression" flags="nn" index="AH0OO">
         <child id="1173175577737" name="index" index="AHEQo" />
         <child id="1173175590490" name="array" index="AHHXb" />
@@ -330,6 +333,7 @@
         <child id="1081773367579" name="rightExpression" index="3uHU7w" />
         <child id="1081773367580" name="leftExpression" index="3uHU7B" />
       </concept>
+      <concept id="1214918800624" name="jetbrains.mps.baseLanguage.structure.PostfixIncrementExpression" flags="nn" index="3uNrnE" />
       <concept id="1073239437375" name="jetbrains.mps.baseLanguage.structure.NotEqualsExpression" flags="nn" index="3y3z36" />
       <concept id="1184950988562" name="jetbrains.mps.baseLanguage.structure.ArrayCreator" flags="nn" index="3$_iS1">
         <child id="1184951007469" name="componentType" index="3$_nBY" />
@@ -6350,7 +6354,15 @@
                                                 </node>
                                               </node>
                                             </node>
-                                            <node concept="3clFbH" id="5m_LCZkbwXQ" role="3cqZAp" />
+                                            <node concept="3cpWs8" id="7IxAaVjwx11" role="3cqZAp">
+                                              <node concept="3cpWsn" id="7IxAaVjwx14" role="3cpWs9">
+                                                <property role="TrG5h" value="iodetected" />
+                                                <node concept="10Oyi0" id="7IxAaVjwFRX" role="1tU5fm" />
+                                                <node concept="3cmrfG" id="7IxAaVjwHJ1" role="33vP2m">
+                                                  <property role="3cmrfH" value="0" />
+                                                </node>
+                                              </node>
+                                            </node>
                                             <node concept="Jncv_" id="5m_LCZkcnEi" role="3cqZAp">
                                               <ref role="JncvD" to="933e:3cChPJc1inS" resolve="BitChannel" />
                                               <node concept="JncvC" id="5m_LCZkcnEm" role="JncvA">
@@ -6380,6 +6392,13 @@
                                                       <node concept="3TrEf2" id="5m_LCZkcwl3" role="2OqNvi">
                                                         <ref role="3Tt5mk" to="933e:4FDhPh$VB2u" resolve="variable" />
                                                       </node>
+                                                    </node>
+                                                  </node>
+                                                </node>
+                                                <node concept="3clFbF" id="7IxAaVjwE3j" role="3cqZAp">
+                                                  <node concept="3uNrnE" id="7IxAaVjwKqJ" role="3clFbG">
+                                                    <node concept="37vLTw" id="7IxAaVjwKqL" role="2$L3a6">
+                                                      <ref role="3cqZAo" node="7IxAaVjwx14" resolve="iodetected" />
                                                     </node>
                                                   </node>
                                                 </node>
@@ -6482,6 +6501,13 @@
                                                     </node>
                                                   </node>
                                                 </node>
+                                                <node concept="3clFbF" id="7IxAaVjwNXT" role="3cqZAp">
+                                                  <node concept="3uNrnE" id="7IxAaVjwQ8t" role="3clFbG">
+                                                    <node concept="37vLTw" id="7IxAaVjwQ8v" role="2$L3a6">
+                                                      <ref role="3cqZAo" node="7IxAaVjwx14" resolve="iodetected" />
+                                                    </node>
+                                                  </node>
+                                                </node>
                                               </node>
                                               <node concept="2OqwBi" id="5m_LCZkcJxH" role="JncvB">
                                                 <node concept="2OqwBi" id="5m_LCZkcJxI" role="2Oq$k0">
@@ -6549,7 +6575,29 @@
                                                 <node concept="1uHKPH" id="5m_LCZkdtL4" role="2OqNvi" />
                                               </node>
                                             </node>
-                                            <node concept="3clFbH" id="5m_LCZkc744" role="3cqZAp" />
+                                            <node concept="3clFbJ" id="7IxAaVjwS9B" role="3cqZAp">
+                                              <node concept="3clFbS" id="7IxAaVjwS9D" role="3clFbx">
+                                                <node concept="34ab3g" id="7IxAaVjx7ly" role="3cqZAp">
+                                                  <property role="35gtTG" value="error" />
+                                                  <node concept="3cpWs3" id="7IxAaVjxYV0" role="34bqiv">
+                                                    <node concept="Xl_RD" id="7IxAaVjxYV6" role="3uHU7B">
+                                                      <property role="Xl_RC" value="Unable to detect 'discrete input' and 'discrete output' in the PLC configuration." />
+                                                    </node>
+                                                    <node concept="Xl_RD" id="7IxAaVjxYV8" role="3uHU7w">
+                                                      <property role="Xl_RC" value=" Please report PLC target you are trying to use" />
+                                                    </node>
+                                                  </node>
+                                                </node>
+                                              </node>
+                                              <node concept="3eOVzh" id="7IxAaVjx1k3" role="3clFbw">
+                                                <node concept="3cmrfG" id="7IxAaVjx1y5" role="3uHU7w">
+                                                  <property role="3cmrfH" value="2" />
+                                                </node>
+                                                <node concept="37vLTw" id="7IxAaVjwUh1" role="3uHU7B">
+                                                  <ref role="3cqZAo" node="7IxAaVjwx14" resolve="iodetected" />
+                                                </node>
+                                              </node>
+                                            </node>
                                             <node concept="3cpWs8" id="4gPriRq3nyw" role="3cqZAp">
                                               <node concept="3cpWsn" id="4gPriRq3nyx" role="3cpWs9">
                                                 <property role="TrG5h" value="plc_prg" />

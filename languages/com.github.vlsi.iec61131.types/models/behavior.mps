@@ -4188,5 +4188,43 @@
       <node concept="10Oyi0" id="4iJnKFEqZ3A" role="3clF45" />
     </node>
   </node>
+  <node concept="13h7C7" id="3zigNlakZ7B">
+    <property role="3GE5qa" value="types" />
+    <ref role="13h7C2" to="933e:3zigNlakZ7a" resolve="ULINT" />
+    <node concept="13hLZK" id="3zigNlakZ7C" role="13h7CW">
+      <node concept="3clFbS" id="3zigNlakZ7D" role="2VODD2" />
+    </node>
+    <node concept="13i0hz" id="3zigNlakZ7M" role="13h7CS">
+      <property role="13i0iv" value="false" />
+      <property role="13i0it" value="false" />
+      <property role="TrG5h" value="getMinValue" />
+      <ref role="13i0hy" node="1scnkI2C9$Z" resolve="getMinValue" />
+      <node concept="3Tm1VV" id="3zigNlakZ7N" role="1B3o_S" />
+      <node concept="3clFbS" id="3zigNlakZ7Q" role="3clF47">
+        <node concept="3clFbF" id="3zigNlakZ8n" role="3cqZAp">
+          <node concept="3cmrfG" id="3zigNlakZ8m" role="3clFbG">
+            <property role="3cmrfH" value="0" />
+          </node>
+        </node>
+      </node>
+      <node concept="3cpWsb" id="3zigNlakZ7R" role="3clF45" />
+    </node>
+    <node concept="13i0hz" id="3zigNlakZ7S" role="13h7CS">
+      <property role="13i0iv" value="false" />
+      <property role="13i0it" value="false" />
+      <property role="TrG5h" value="getMaxValue" />
+      <ref role="13i0hy" node="1scnkI2C9_a" resolve="getMaxValue" />
+      <node concept="3Tm1VV" id="3zigNlakZ7T" role="1B3o_S" />
+      <node concept="3clFbS" id="3zigNlakZ7W" role="3clF47">
+        <node concept="3clFbF" id="3zigNlakZ9o" role="3cqZAp">
+          <node concept="10M0yZ" id="3zigNlakZ9n" role="3clFbG">
+            <ref role="1PxDUh" to="wyt6:~Long" resolve="Long" />
+            <ref role="3cqZAo" to="wyt6:~Long.MIN_VALUE" resolve="MIN_VALUE" />
+          </node>
+        </node>
+      </node>
+      <node concept="3cpWsb" id="3zigNlakZ7X" role="3clF45" />
+    </node>
+  </node>
 </model>
 

@@ -14,7 +14,7 @@
         </modelRoot>
       </models>
       <external-templates>
-        <generator generatorUID="57516f25-a2b9-42fd-b0f1-dfc62d043b8d(com.github.vlsi.iec61131.st2ti1808#124800662050860764)" />
+        <generator generatorUID="9491699f-2a09-46df-a84a-1f082bb471d4(com.github.vlsi.iec61131.st2ti1808.compiler#4094408907309099567)" />
       </external-templates>
       <dependencies>
         <dependency reexport="false">d7601ad3-513b-4e38-a483-fb62b3afe145(com.github.vlsi.iec61131.ti1808)</dependency>
@@ -50,9 +50,7 @@
         <module reference="498d89d2-c2e9-11e2-ad49-6cf049e62fe5(MPS.IDEA)" version="0" />
         <module reference="8865b7a8-5271-43d3-884c-6fd1d9cfdd34(MPS.OpenAPI)" version="0" />
         <module reference="742f6602-5a2f-4313-aa6e-ae1cd4ffdc61(MPS.Platform)" version="0" />
-        <module reference="b256c427-925f-4cf8-9040-e99564f9cb91(com.github.vlsi.iec61131.st#6039408957479237362)" version="0" />
-        <module reference="11ac135d-4816-4a63-aafd-9c101bf938b5(com.github.vlsi.iec61131.st.ext.implicitfb#4082534695945163422)" version="0" />
-        <module reference="57516f25-a2b9-42fd-b0f1-dfc62d043b8d(com.github.vlsi.iec61131.st2ti1808#124800662050860764)" version="0" />
+        <module reference="9491699f-2a09-46df-a84a-1f082bb471d4(com.github.vlsi.iec61131.st2ti1808.compiler#4094408907309099567)" version="0" />
         <module reference="d7601ad3-513b-4e38-a483-fb62b3afe145(com.github.vlsi.iec61131.ti1808)" version="0" />
         <module reference="44ae5b95-6c91-4767-a63c-505721ea4c11(com.github.vlsi.iec61131.ti1808.libcompiler)" version="0" />
         <module reference="8be64a62-fc9c-4c90-a832-507f291073fd(com.github.vlsi.iec61131.ti1808.toemulator)" version="0" />
@@ -75,7 +73,7 @@
             </external-mapping>
           </greater-priority-mapping>
           <lesser-priority-mapping>
-            <generator generatorUID="57516f25-a2b9-42fd-b0f1-dfc62d043b8d(com.github.vlsi.iec61131.st2ti1808#124800662050860764)" />
+            <generator generatorUID="9491699f-2a09-46df-a84a-1f082bb471d4(com.github.vlsi.iec61131.st2ti1808.compiler#4094408907309099567)" />
             <external-mapping>
               <all-local-mappings />
             </external-mapping>

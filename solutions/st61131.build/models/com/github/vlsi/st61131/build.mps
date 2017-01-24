@@ -200,6 +200,10 @@
         <child id="781140262677906402" name="url" index="IuM$c" />
         <child id="781140262677906401" name="name" index="IuM$f" />
       </concept>
+      <concept id="781140262677762159" name="jetbrains.mps.build.mps.structure.BuildMps_BrandingStats" flags="ng" index="IvJE1">
+        <child id="781140262677779096" name="service" index="IvjxQ" />
+        <child id="781140262677779095" name="settings" index="IvjxT" />
+      </concept>
       <concept id="868032131020265945" name="jetbrains.mps.build.mps.structure.BuildMPSPlugin" flags="ng" index="3b7kt6" />
       <concept id="5253498789149381388" name="jetbrains.mps.build.mps.structure.BuildMps_Module" flags="ng" index="3bQrTs">
         <property id="1500819558096356884" name="doNotCompile" index="2GAjPV" />
@@ -232,6 +236,7 @@
         <child id="8795525031433238889" name="textColor" index="HFo83" />
         <child id="781140262677914381" name="company" index="IuKBz" />
         <child id="781140262677906594" name="whatsnew" index="IuMTc" />
+        <child id="781140262677951053" name="stats" index="IuTyz" />
         <child id="781140262677761022" name="icon128" index="IvI4g" />
         <child id="8877724874822185910" name="feedbackUrl" index="2Mmf0a" />
         <child id="3497141547781549827" name="codename" index="2OjNyQ" />
@@ -480,6 +485,18 @@
         <node concept="NbPM2" id="5ZeBDx1wPfk" role="HFWMp">
           <node concept="3Mxwew" id="5ZeBDx1wPhN" role="3MwsjC">
             <property role="3MwjfP" value="Hardella_release" />
+          </node>
+        </node>
+      </node>
+      <node concept="IvJE1" id="sN6ElX0qrM" role="IuTyz">
+        <node concept="3_J27D" id="sN6ElX0qrN" role="IvjxT">
+          <node concept="3Mxwew" id="sN6ElX0qx4" role="3MwsjC">
+            <property role="3MwjfP" value="https://hardella.com/statistics/stat-assistant.xml" />
+          </node>
+        </node>
+        <node concept="3_J27D" id="sN6ElX0qrO" role="IvjxQ">
+          <node concept="3Mxwew" id="sN6ElX0qx6" role="3MwsjC">
+            <property role="3MwjfP" value="https://stats.hardella.com/statistics/post" />
           </node>
         </node>
       </node>
@@ -1211,12 +1228,6 @@
             </node>
           </node>
         </node>
-        <node concept="1SiIV0" id="2Za7gvFoSQc" role="3bR37C">
-          <node concept="3bR9La" id="2Za7gvFoSQd" role="1SiIV1">
-            <property role="3bR36h" value="false" />
-            <ref role="3bR37D" to="ffeo:1H905DlDUSw" resolve="MPS.OpenAPI" />
-          </node>
-        </node>
         <node concept="1SiIV0" id="2Za7gvFoSQe" role="3bR37C">
           <node concept="3bR9La" id="2Za7gvFoSQf" role="1SiIV1">
             <property role="3bR36h" value="false" />
@@ -1251,17 +1262,11 @@
           <property role="TrG5h" value="com.github.vlsi.iec61131.ti1808#124800662050748518" />
           <property role="3LESm3" value="285720f7-eaf4-4915-8e9c-25db4f75098e" />
           <property role="2GAjPV" value="false" />
-          <node concept="1SiIV0" id="2Za7gvFoSQp" role="3bR37C">
-            <node concept="3bR9La" id="2Za7gvFoSQq" role="1SiIV1">
-              <property role="3bR36h" value="false" />
-              <ref role="3bR37D" to="ffeo:7Kfy9QB6L6C" resolve="jetbrains.mps.lang.generator" />
-            </node>
-          </node>
-          <node concept="1SiIV0" id="2Za7gvFoSQr" role="3bR37C">
-            <node concept="3bR9La" id="2Za7gvFoSQs" role="1SiIV1">
-              <property role="3bR36h" value="false" />
-              <ref role="3bR37D" node="5EBmM4DM4FE" resolve="com.github.vlsi.iec61131.types" />
-            </node>
+        </node>
+        <node concept="1SiIV0" id="5jXokEWiiBN" role="3bR37C">
+          <node concept="3bR9La" id="5jXokEWiiBO" role="1SiIV1">
+            <property role="3bR36h" value="false" />
+            <ref role="3bR37D" to="ffeo:mXGwHwhVPj" resolve="JDK" />
           </node>
         </node>
       </node>
@@ -1374,12 +1379,6 @@
             <ref role="3bR37D" to="ffeo:7Kfy9QB6LaO" resolve="jetbrains.mps.lang.structure" />
           </node>
         </node>
-        <node concept="1SiIV0" id="3yC4UO2aski" role="3bR37C">
-          <node concept="3bR9La" id="3yC4UO2askj" role="1SiIV1">
-            <property role="3bR36h" value="false" />
-            <ref role="3bR37D" node="2Za7gvFoSti" resolve="com.github.vlsi.iec61131.ti1808" />
-          </node>
-        </node>
         <node concept="1E0d5M" id="3yC4UO2atkU" role="1E1XAP">
           <ref role="1E0d5P" node="3yC4UO2asrL" resolve="com.github.vlsi.iec61131.st2ti1808.runtime" />
         </node>
@@ -1393,54 +1392,71 @@
             <ref role="1Busuk" node="2Za7gvFoSti" resolve="com.github.vlsi.iec61131.ti1808" />
           </node>
         </node>
-        <node concept="1yeLz9" id="3yC4UO2atkZ" role="1TViLv">
-          <property role="TrG5h" value="com.github.vlsi.iec61131.st2ti1808#124800662050860764" />
-          <property role="3LESm3" value="57516f25-a2b9-42fd-b0f1-dfc62d043b8d" />
+      </node>
+      <node concept="1E1JtD" id="5Zoe0rbcieV" role="2G$12L">
+        <property role="BnDLt" value="true" />
+        <property role="TrG5h" value="com.github.vlsi.iec61131.st2ti1808.compiler" />
+        <property role="3LESm3" value="0383b534-9cec-4950-936a-497758112ac5" />
+        <property role="2GAjPV" value="false" />
+        <node concept="55IIr" id="5Zoe0rbcieY" role="3LF7KH">
+          <node concept="2Ry0Ak" id="5Zoe0rbciqH" role="iGT6I">
+            <property role="2Ry0Am" value="languages" />
+            <node concept="2Ry0Ak" id="5Zoe0rbci$y" role="2Ry0An">
+              <property role="2Ry0Am" value="com.github.vlsi.iec61131.st2ti1808.compiler" />
+              <node concept="2Ry0Ak" id="5Zoe0rbciDv" role="2Ry0An">
+                <property role="2Ry0Am" value="com.github.vlsi.iec61131.st2ti1808.compiler.mpl" />
+              </node>
+            </node>
+          </node>
+        </node>
+        <node concept="1SiIV0" id="5Zoe0rbciFX" role="3bR37C">
+          <node concept="3bR9La" id="5Zoe0rbciFY" role="1SiIV1">
+            <property role="3bR36h" value="false" />
+            <ref role="3bR37D" node="3yC4UO2as5k" resolve="com.github.vlsi.iec61131.st2ti1808" />
+          </node>
+        </node>
+        <node concept="1yeLz9" id="5Zoe0rbciFZ" role="1TViLv">
+          <property role="TrG5h" value="com.github.vlsi.iec61131.st2ti1808.compiler#4094408907309099567" />
+          <property role="3LESm3" value="9491699f-2a09-46df-a84a-1f082bb471d4" />
           <property role="2GAjPV" value="false" />
-          <node concept="1SiIV0" id="3yC4UO2atl0" role="3bR37C">
-            <node concept="3bR9La" id="3yC4UO2atl1" role="1SiIV1">
+          <node concept="1SiIV0" id="5Zoe0rbciG0" role="3bR37C">
+            <node concept="3bR9La" id="5Zoe0rbciG1" role="1SiIV1">
               <property role="3bR36h" value="false" />
               <ref role="3bR37D" node="3yC4UO2asrL" resolve="com.github.vlsi.iec61131.st2ti1808.runtime" />
             </node>
           </node>
-          <node concept="1SiIV0" id="3yC4UO2atl2" role="3bR37C">
-            <node concept="3bR9La" id="3yC4UO2atl3" role="1SiIV1">
-              <property role="3bR36h" value="false" />
-              <ref role="3bR37D" to="ffeo:1H905DlDUSw" resolve="MPS.OpenAPI" />
-            </node>
-          </node>
-          <node concept="1SiIV0" id="3yC4UO2atl4" role="3bR37C">
-            <node concept="3bR9La" id="3yC4UO2atl5" role="1SiIV1">
-              <property role="3bR36h" value="false" />
-              <ref role="3bR37D" to="ffeo:mXGwHwhVPj" resolve="JDK" />
-            </node>
-          </node>
-          <node concept="1SiIV0" id="3yC4UO2atl6" role="3bR37C">
-            <node concept="3bR9La" id="3yC4UO2atl7" role="1SiIV1">
+          <node concept="1SiIV0" id="5Zoe0rbciG2" role="3bR37C">
+            <node concept="3bR9La" id="5Zoe0rbciG3" role="1SiIV1">
               <property role="3bR36h" value="false" />
               <ref role="3bR37D" node="3yC4UO29t5N" resolve="com.github.vlsi.iec61131.ti1808.stdlib" />
             </node>
           </node>
-          <node concept="1SiIV0" id="3yC4UO2atl8" role="3bR37C">
-            <node concept="3bR9La" id="3yC4UO2atl9" role="1SiIV1">
+          <node concept="1SiIV0" id="5Zoe0rbciG4" role="3bR37C">
+            <node concept="3bR9La" id="5Zoe0rbciG5" role="1SiIV1">
               <property role="3bR36h" value="false" />
-              <ref role="3bR37D" node="5EBmM4DXjAY" resolve="com.github.vlsi.iec61131.st" />
+              <ref role="3bR37D" node="5EBmM4DXjJQ" resolve="com.github.vlsi.iec61131.st#6039408957479237362" />
             </node>
           </node>
-          <node concept="1SiIV0" id="3yC4UO2atla" role="3bR37C">
-            <node concept="3bR9La" id="3yC4UO2atlb" role="1SiIV1">
+          <node concept="1SiIV0" id="5Zoe0rbciG6" role="3bR37C">
+            <node concept="3bR9La" id="5Zoe0rbciG7" role="1SiIV1">
               <property role="3bR36h" value="false" />
-              <ref role="3bR37D" node="5EBmM4DM4FE" resolve="com.github.vlsi.iec61131.types" />
+              <ref role="3bR37D" node="3yC4UO29sSX" resolve="com.github.vlsi.iec61131.st.ext.implicitfb#4082534695945163422" />
             </node>
           </node>
-          <node concept="1SiIV0" id="3yC4UO2atle" role="3bR37C">
-            <node concept="3bR9La" id="3yC4UO2atlf" role="1SiIV1">
+          <node concept="1SiIV0" id="5Zoe0rbciG8" role="3bR37C">
+            <node concept="3bR9La" id="5Zoe0rbciG9" role="1SiIV1">
               <property role="3bR36h" value="false" />
-              <ref role="3bR37D" node="2Za7gvFoSti" resolve="com.github.vlsi.iec61131.ti1808" />
+              <ref role="3bR37D" node="5EBmM4DM4H6" resolve="com.github.vlsi.iec61131.types#5202852658697191353" />
             </node>
           </node>
-          <node concept="1SiIV0" id="3yC4UO2atlg" role="3bR37C">
-            <node concept="3bR9La" id="3yC4UO2atlh" role="1SiIV1">
+          <node concept="1SiIV0" id="5Zoe0rbciGa" role="3bR37C">
+            <node concept="3bR9La" id="5Zoe0rbciGb" role="1SiIV1">
+              <property role="3bR36h" value="false" />
+              <ref role="3bR37D" node="3yC4UO2as5k" resolve="com.github.vlsi.iec61131.st2ti1808" />
+            </node>
+          </node>
+          <node concept="1SiIV0" id="5Zoe0rbciGc" role="3bR37C">
+            <node concept="3bR9La" id="5Zoe0rbciGd" role="1SiIV1">
               <property role="3bR36h" value="false" />
               <ref role="3bR37D" to="ffeo:3MI1gu0QouH" resolve="jetbrains.mps.editor.runtime" />
             </node>

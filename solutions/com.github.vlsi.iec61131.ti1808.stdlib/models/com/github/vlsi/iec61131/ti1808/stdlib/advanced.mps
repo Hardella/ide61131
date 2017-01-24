@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<model ref="r:98db8fde-3b48-4291-b981-6e8e7e528862(com.github.vlsi.iec61131.ti1808.stdlib.advanced)">
+<model ref="r:98db8fde-3b48-4291-b981-6e8e7e528862(com.github.vlsi.iec61131.ti1808.stdlib.advanced)" doNotGenerate="true">
   <persistence version="9" />
   <languages>
     <use id="d1aef6cd-5477-486f-bcbd-34728b246566" name="com.github.vlsi.iec61131.st2ti1808" version="0" />
@@ -690,6 +690,12 @@
       </node>
       <node concept="2wbjgD" id="65nzZIgns5y" role="2wbjpV">
         <property role="TrG5h" value="PRU_READWRITE" />
+      </node>
+      <node concept="2wbjgD" id="5jXokEU_Efs" role="2wbjpV">
+        <property role="TrG5h" value="PRU_READ" />
+      </node>
+      <node concept="2wbjgD" id="5jXokEU_Efw" role="2wbjpV">
+        <property role="TrG5h" value="PRU_WRITE" />
       </node>
     </node>
   </node>

@@ -99,6 +99,8 @@
     <property role="34LRSv" value="PRU configuration" />
     <property role="EcuMT" value="7811067774773015501" />
     <property role="R4oN_" value="configuration of a single PRU core" />
+    <property role="R5$K7" value="false" />
+    <property role="R5$K2" value="false" />
     <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
     <node concept="1TJgyj" id="1I83mA9_fW5" role="1TKVEi">
       <property role="IQ2ns" value="1983850382787673861" />
@@ -109,9 +111,6 @@
     </node>
     <node concept="PrWs8" id="63FqFSdp8u0" role="PzmwI">
       <ref role="PrY4T" to="tpck:hLJPP0O" resolve="IWrapper" />
-    </node>
-    <node concept="PrWs8" id="63FqFSdp8u5" role="PzmwI">
-      <ref role="PrY4T" to="tpck:1_TrU5E6oyb" resolve="IDontSubstituteByDefault" />
     </node>
   </node>
   <node concept="1TIwiD" id="6ed$ieEW2$f">
