@@ -4,6 +4,24 @@
 		<code>HD</code>
 		<code></code>
 
+		<channel id="Hardella_eap" name="Hardella IDE" status="eap" url="https://hardella.com/download"
+				 feedback="https://github.com/Hardella/ide61131" majorVersion="1">
+			<build number="162.2067" version="1.6.2" releaseDate="20170124">
+				<message><![CDATA[
+<p>Hardella 1.6.2 is now available.</p>
+<ul>Case-insensitive mode for autocomplete</li>
+<li>Removed extra braces from NOT expressions</li>
+<li>PRU: MemoryTransfer programs was split into MemoryRead and MemoryWrite</li>
+<li>PRU: pruAccessLib.lib is no longer required</li>
+</ul>
+<p></p>
+]]></message>
+				<button name="More Information" url="https://hardella.com/en/blog/2017/01/24/hardella-1.6.2-released/"/>
+				<button name="Download" url="https://hardella.com/download" download="true"/>
+				<patch from="162.2066" size="1"/>
+			</build>
+		</channel>
+
 		<channel id="Hardella_release" name="Hardella IDE" status="release" url="https://hardella.com/download"
 				 feedback="https://github.com/Hardella/ide61131" majorVersion="1">
 			<build number="162.2066" version="1.6.1" releaseDate="20161225">
