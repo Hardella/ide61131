@@ -5,10 +5,10 @@
     <use id="18bc6592-03a6-4e29-a83a-7ff23bde13ba" name="jetbrains.mps.lang.editor" version="4" />
     <use id="aee9cad2-acd4-4608-aef2-0004f6a1cdbd" name="jetbrains.mps.lang.actions" version="3" />
     <use id="9d69e719-78c8-4286-90db-fb19c107d049" name="com.mbeddr.mpsutil.grammarcells" version="0" />
+    <use id="f89904fb-9486-43a1-865e-5ad0375a8a88" name="de.itemis.mps.editor.bool" version="0" />
     <devkit ref="fbc25dd2-5da4-483a-8b19-70928e1b62d7(jetbrains.mps.devkit.general-purpose)" />
   </languages>
   <imports>
-    <import index="ic7y" ref="r:8ea4f830-f7cd-439f-b719-214608b9c8b7(com.github.vlsi.iec61131.types.editor)" />
     <import index="ocpr" ref="r:559bb865-4f6c-4d13-9298-a01687fa843f(com.github.vlsi.iec61131.st2ti1808.structure)" />
     <import index="tpch" ref="r:00000000-0000-4000-0000-011c8959028d(jetbrains.mps.lang.structure.editor)" implicit="true" />
     <import index="tpck" ref="r:00000000-0000-4000-0000-011c89590288(jetbrains.mps.lang.core.structure)" implicit="true" />
@@ -208,6 +208,9 @@
       <concept id="5979988948250981289" name="jetbrains.mps.lang.actions.structure.SNodeCreatorAndInitializer" flags="nn" index="2fJWfE" />
       <concept id="5480835971642155304" name="jetbrains.mps.lang.actions.structure.NF_Model_CreateNewNodeOperation" flags="nn" index="15TzpJ" />
     </language>
+    <language id="f89904fb-9486-43a1-865e-5ad0375a8a88" name="de.itemis.mps.editor.bool">
+      <concept id="4900677560559655527" name="de.itemis.mps.editor.bool.structure.CellModel_Checkbox" flags="sg" stub="416014060004381438" index="27S6Sx" />
+    </language>
     <language id="7866978e-a0f0-4cc7-81bc-4d213d9375e1" name="jetbrains.mps.lang.smodel">
       <concept id="1177026924588" name="jetbrains.mps.lang.smodel.structure.RefConcept_Reference" flags="nn" index="chp4Y">
         <reference id="1177026940964" name="conceptDeclaration" index="cht4Q" />
@@ -297,10 +300,31 @@
   </node>
   <node concept="24kQdi" id="6LAvc6vQbfH">
     <ref role="1XX52x" to="ocpr:6LAvc6vQbfd" resolve="PruConfiguration" />
-    <node concept="1kIj98" id="63FqFSdoBxQ" role="2wV5jI">
-      <node concept="3F1sOY" id="1I83mA9_hlZ" role="1kIj9b">
-        <ref role="1NtTu8" to="ocpr:1I83mA9_fW5" resolve="taskConfiguration" />
+    <node concept="3EZMnI" id="6c4GXuPIcIA" role="2wV5jI">
+      <node concept="1kIj98" id="63FqFSdoBxQ" role="3EZMnx">
+        <node concept="3F1sOY" id="1I83mA9_hlZ" role="1kIj9b">
+          <ref role="1NtTu8" to="ocpr:1I83mA9_fW5" resolve="taskConfiguration" />
+        </node>
       </node>
+      <node concept="3F0ifn" id="6c4GXuPIcIR" role="3EZMnx">
+        <property role="3F0ifm" value="," />
+        <node concept="11L4FC" id="6c4GXuPIewF" role="3F10Kt">
+          <property role="VOm3f" value="true" />
+        </node>
+      </node>
+      <node concept="3F0ifn" id="6c4GXuPIesf" role="3EZMnx">
+        <property role="3F0ifm" value="report statistics" />
+      </node>
+      <node concept="3F0ifn" id="6c4GXuPIexa" role="3EZMnx">
+        <property role="3F0ifm" value=":" />
+        <node concept="11L4FC" id="6c4GXuPIe_E" role="3F10Kt">
+          <property role="VOm3f" value="true" />
+        </node>
+      </node>
+      <node concept="27S6Sx" id="6c4GXuPIdOE" role="3EZMnx">
+        <ref role="1NtTu8" to="ocpr:6c4GXuPIcIz" resolve="reportStatistics" />
+      </node>
+      <node concept="l2Vlx" id="6c4GXuPIcIB" role="2iSdaV" />
     </node>
   </node>
   <node concept="3p309x" id="2Za7gvF0BNX">

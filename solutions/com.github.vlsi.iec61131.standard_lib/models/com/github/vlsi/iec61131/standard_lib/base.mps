@@ -2,9 +2,8 @@
 <model ref="r:f3b45004-620c-4cf8-a97d-f2ef80350d2c(com.github.vlsi.iec61131.standard_lib.base)">
   <persistence version="9" />
   <languages>
-    <use id="4d1c59f7-8f87-4192-a752-a98136f0b57c" name="com.github.vlsi.iec61131.types" version="0" />
-    <use id="d28e7e4d-b627-42fa-82d5-c7472b85c5f6" name="com.github.vlsi.iec61131.st" version="0" />
-    <use id="d7a92d38-f7db-40d0-8431-763b0c3c9f20" name="jetbrains.mps.lang.intentions" version="0" />
+    <use id="4d1c59f7-8f87-4192-a752-a98136f0b57c" name="com.github.vlsi.iec61131.types" version="1" />
+    <use id="d28e7e4d-b627-42fa-82d5-c7472b85c5f6" name="com.github.vlsi.iec61131.st" version="1" />
     <use id="d4280a54-f6df-4383-aa41-d1b2bffa7eb1" name="com.mbeddr.core.base" version="3" />
   </languages>
   <imports />
@@ -71,6 +70,7 @@
       </concept>
       <concept id="6039408957483257731" name="com.github.vlsi.iec61131.types.structure.AndExpression" flags="ng" index="2fM$nL" />
       <concept id="6039408957483261720" name="com.github.vlsi.iec61131.types.structure.LessOrEqualExpression" flags="ng" index="2fM_lE" />
+      <concept id="6039408957483258826" name="com.github.vlsi.iec61131.types.structure.LessThanExpression" flags="ng" index="2fM_AS" />
       <concept id="6039408957483258244" name="com.github.vlsi.iec61131.types.structure.OrExpression" flags="ng" index="2fM_JQ" />
       <concept id="6039408957483263093" name="com.github.vlsi.iec61131.types.structure.GreaterOrEqualExpression" flags="ng" index="2fMAS7" />
       <concept id="6039408957482290544" name="com.github.vlsi.iec61131.types.structure.DWORD" flags="ng" index="2fQKs2" />
@@ -92,9 +92,12 @@
         <child id="5202852658696458671" name="expression" index="kuaX2" />
       </concept>
       <concept id="123060273427541007" name="com.github.vlsi.iec61131.types.structure.ICommentable" flags="ng" index="2EalU_">
-        <property id="123060273427541008" name="comment" index="2EalUU" />
+        <child id="7135025448697818814" name="commentNode" index="3m1tPD" />
       </concept>
       <concept id="3750039987448159535" name="com.github.vlsi.iec61131.types.structure.BoolType" flags="ng" index="PkkMJ" />
+      <concept id="7135025448695848440" name="com.github.vlsi.iec61131.types.structure.CommentNode" flags="ng" index="3nTYSJ">
+        <property id="7135025448698220830" name="comment" index="3m0Mb9" />
+      </concept>
       <concept id="5097456207316512517" name="com.github.vlsi.iec61131.types.structure.FunctionRefCall" flags="ng" index="3Ty29G">
         <child id="5097456207316515146" name="expression" index="3Ty3gz" />
       </concept>
@@ -123,18 +126,21 @@
   </registry>
   <node concept="283fMa" id="6mj7nr1NDnq">
     <property role="TrG5h" value="F_TRIG" />
-    <property role="2EalUU" value="¯¯\__ detector" />
     <node concept="283aBN" id="6mj7nr1NDnr" role="2fQKEM">
       <property role="2fKTFS" value="true" />
       <property role="TrG5h" value="CLK" />
-      <property role="2EalUU" value="Input clock" />
       <node concept="PkkMJ" id="6mj7nr1NDns" role="2fQRkO" />
+      <node concept="3nTYSJ" id="6c4GXuPhmN7" role="3m1tPD">
+        <property role="3m0Mb9" value="Input clock" />
+      </node>
     </node>
     <node concept="283aBN" id="6mj7nr1NDnt" role="2fQKEM">
       <property role="TrG5h" value="Q" />
       <property role="2fKTFZ" value="true" />
-      <property role="2EalUU" value="TRUE when falling edge is detected: ¯¯\__" />
       <node concept="PkkMJ" id="6mj7nr1NDnu" role="2fQRkO" />
+      <node concept="3nTYSJ" id="6c4GXuPhmNb" role="3m1tPD">
+        <property role="3m0Mb9" value="TRUE when falling edge is detected: ¯¯\__" />
+      </node>
     </node>
     <node concept="283aBN" id="6mj7nr1NDnv" role="2fQKEM">
       <property role="TrG5h" value="mem" />
@@ -191,10 +197,12 @@
         </node>
       </node>
     </node>
+    <node concept="3nTYSJ" id="6c4GXuPhmN8" role="3m1tPD">
+      <property role="3m0Mb9" value="¯¯\__ detector" />
+    </node>
   </node>
   <node concept="283fMa" id="6mj7nr1Oyur">
     <property role="TrG5h" value="RS" />
-    <property role="2EalUU" value="reset-set trigger" />
     <node concept="283aBN" id="6mj7nr1Oyus" role="2fQKEM">
       <property role="TrG5h" value="S" />
       <property role="2fKTFZ" value="false" />
@@ -254,21 +262,27 @@
         </node>
       </node>
     </node>
+    <node concept="3nTYSJ" id="6c4GXuPhmN3" role="3m1tPD">
+      <property role="3m0Mb9" value="reset-set trigger" />
+    </node>
   </node>
   <node concept="283fMa" id="5qOIvv2kWHx">
     <property role="TrG5h" value="R_TRIG" />
-    <property role="2EalUU" value="__/¯¯ detector" />
     <node concept="283aBN" id="5qOIvv2kWJy" role="2fQKEM">
       <property role="2fKTFS" value="true" />
       <property role="TrG5h" value="CLK" />
-      <property role="2EalUU" value="Input clock" />
       <node concept="PkkMJ" id="5qOIvv2kWLN" role="2fQRkO" />
+      <node concept="3nTYSJ" id="6c4GXuPhmNa" role="3m1tPD">
+        <property role="3m0Mb9" value="Input clock" />
+      </node>
     </node>
     <node concept="283aBN" id="5qOIvv2kWJ_" role="2fQKEM">
       <property role="TrG5h" value="Q" />
       <property role="2fKTFZ" value="true" />
-      <property role="2EalUU" value="TRUE when rising edge is detected: __/¯¯" />
       <node concept="PkkMJ" id="5qOIvv2kWM0" role="2fQRkO" />
+      <node concept="3nTYSJ" id="6c4GXuPhmNc" role="3m1tPD">
+        <property role="3m0Mb9" value="TRUE when rising edge is detected: __/¯¯" />
+      </node>
     </node>
     <node concept="283aBN" id="5qOIvv2lune" role="2fQKEM">
       <property role="TrG5h" value="mem" />
@@ -313,10 +327,12 @@
         </node>
       </node>
     </node>
+    <node concept="3nTYSJ" id="6c4GXuPhmN6" role="3m1tPD">
+      <property role="3m0Mb9" value="__/¯¯ detector" />
+    </node>
   </node>
   <node concept="283fMa" id="5qOIvv2qumF">
     <property role="TrG5h" value="SR" />
-    <property role="2EalUU" value="set-reset trigger" />
     <node concept="283aBN" id="5qOIvv2qumP" role="2fQKEM">
       <property role="TrG5h" value="S" />
       <property role="2fKTFZ" value="false" />
@@ -376,20 +392,27 @@
         </node>
       </node>
     </node>
+    <node concept="3nTYSJ" id="6c4GXuPhmN4" role="3m1tPD">
+      <property role="3m0Mb9" value="set-reset trigger" />
+    </node>
   </node>
   <node concept="283fMa" id="5qOIvv2jrDF">
     <property role="TrG5h" value="CTU_WORD" />
     <node concept="283aBN" id="5qOIvv2jrE5" role="2fQKEM">
       <property role="2fKTFS" value="true" />
       <property role="TrG5h" value="CU" />
-      <property role="2EalUU" value="counter input" />
       <node concept="PkkMJ" id="1l2OrOThE4r" role="2fQRkO" />
+      <node concept="3nTYSJ" id="6c4GXuPhmN9" role="3m1tPD">
+        <property role="3m0Mb9" value="counter input" />
+      </node>
     </node>
     <node concept="283aBN" id="1l2OrOTiuu4" role="2fQKEM">
       <property role="TrG5h" value="R" />
       <property role="2fKTFS" value="true" />
-      <property role="2EalUU" value="reset" />
       <node concept="PkkMJ" id="1l2OrOTiuur" role="2fQRkO" />
+      <node concept="3nTYSJ" id="6c4GXuPhmN5" role="3m1tPD">
+        <property role="3m0Mb9" value="reset" />
+      </node>
     </node>
     <node concept="283aBN" id="1l2OrOTiuuS" role="2fQKEM">
       <property role="TrG5h" value="PV" />
@@ -399,15 +422,19 @@
     <node concept="283aBN" id="1l2OrOTiuv$" role="2fQKEM">
       <property role="TrG5h" value="Q" />
       <property role="2fKTFZ" value="true" />
-      <property role="2EalUU" value="TRUE when CV &gt;= PV" />
       <node concept="PkkMJ" id="1l2OrOTiuvZ" role="2fQRkO" />
+      <node concept="3nTYSJ" id="6c4GXuPhmNe" role="3m1tPD">
+        <property role="3m0Mb9" value="TRUE when CV &gt;= PV" />
+      </node>
     </node>
     <node concept="283aBN" id="1l2OrOTiuwc" role="2fQKEM">
       <property role="TrG5h" value="CV" />
       <property role="2fKTFZ" value="true" />
       <property role="2fKTC_" value="true" />
-      <property role="2EalUU" value="current counter value" />
       <node concept="2fQKt7" id="1l2OrOTiuwP" role="2fQRkO" />
+      <node concept="3nTYSJ" id="6c4GXuPhmNd" role="3m1tPD">
+        <property role="3m0Mb9" value="current counter value" />
+      </node>
     </node>
     <node concept="283aBN" id="1l2OrOTiuEC" role="2fQKEM">
       <property role="TrG5h" value="tmp" />
@@ -490,7 +517,6 @@
   </node>
   <node concept="283fMa" id="58WclwlFTrf">
     <property role="TrG5h" value="PWM_DW" />
-    <property role="2EalUU" value="Pulse Width Modulation generator" />
     <node concept="283aBN" id="58WclwlFTrC" role="2fQKEM">
       <property role="TrG5h" value="value" />
       <property role="2fKTFS" value="true" />
@@ -561,10 +587,12 @@
         </node>
       </node>
     </node>
+    <node concept="3nTYSJ" id="6c4GXuPhmNg" role="3m1tPD">
+      <property role="3m0Mb9" value="Pulse Width Modulation generator" />
+    </node>
   </node>
   <node concept="283fMa" id="13fQtt5dVVu">
     <property role="TrG5h" value="PDM_DW" />
-    <property role="2EalUU" value="Pulse Density Modulation generator" />
     <node concept="283aBN" id="13fQtt5dVVv" role="2fQKEM">
       <property role="TrG5h" value="value" />
       <property role="2fKTFS" value="true" />
@@ -599,7 +627,7 @@
         </node>
       </node>
       <node concept="2fLe5g" id="13fQtt5dWN5" role="283bkg">
-        <node concept="2fM_lE" id="13fQtt5dWT6" role="2fLe4k">
+        <node concept="2fM_AS" id="6c4GXuQ7v6t" role="2fLe4k">
           <node concept="2fRjeW" id="13fQtt5dWNS" role="2fMgUl">
             <ref role="2fRto5" node="13fQtt5dVV_" resolve="pos" />
           </node>
@@ -609,8 +637,8 @@
         </node>
         <node concept="283aBJ" id="13fQtt5dWN9" role="2fLe4q">
           <node concept="2fKkDk" id="13fQtt5dWVs" role="283bkg">
-            <node concept="2fLVyO" id="13fQtt5dWXR" role="2fKkDe">
-              <property role="2fLV_C" value="true" />
+            <node concept="2fLVyO" id="6c4GXuQ7v8k" role="2fKkDe">
+              <property role="2fLV_C" value="false" />
             </node>
             <node concept="2fRjeW" id="13fQtt5dWVh" role="2fKkDa">
               <ref role="2fRto5" node="13fQtt5dVVz" resolve="Q" />
@@ -619,8 +647,8 @@
         </node>
         <node concept="283aBJ" id="13fQtt5dX0q" role="2fL9lL">
           <node concept="2fKkDk" id="13fQtt5dX2Y" role="283bkg">
-            <node concept="2fLVyO" id="13fQtt5dX5C" role="2fKkDe">
-              <property role="2fLV_C" value="false" />
+            <node concept="2fLVyO" id="6c4GXuQ7v95" role="2fKkDe">
+              <property role="2fLV_C" value="true" />
             </node>
             <node concept="2fRjeW" id="13fQtt5dX2N" role="2fKkDa">
               <ref role="2fRto5" node="13fQtt5dVVz" resolve="Q" />
@@ -641,6 +669,9 @@
           </node>
         </node>
       </node>
+    </node>
+    <node concept="3nTYSJ" id="6c4GXuPhmNf" role="3m1tPD">
+      <property role="3m0Mb9" value="Pulse Density Modulation generator" />
     </node>
   </node>
 </model>

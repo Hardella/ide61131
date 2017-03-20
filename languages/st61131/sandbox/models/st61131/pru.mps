@@ -2,18 +2,14 @@
 <model ref="r:2c8ec547-e21e-44db-bd30-7f693ae402cc(st61131.pru)">
   <persistence version="9" />
   <languages>
-    <use id="d28e7e4d-b627-42fa-82d5-c7472b85c5f6" name="com.github.vlsi.iec61131.st" version="0" />
-    <use id="4d1c59f7-8f87-4192-a752-a98136f0b57c" name="com.github.vlsi.iec61131.types" version="0" />
+    <use id="d28e7e4d-b627-42fa-82d5-c7472b85c5f6" name="com.github.vlsi.iec61131.st" version="1" />
+    <use id="4d1c59f7-8f87-4192-a752-a98136f0b57c" name="com.github.vlsi.iec61131.types" version="1" />
     <use id="d7601ad3-513b-4e38-a483-fb62b3afe145" name="com.github.vlsi.iec61131.ti1808" version="0" />
     <use id="d1aef6cd-5477-486f-bcbd-34728b246566" name="com.github.vlsi.iec61131.st2ti1808" version="0" />
-    <use id="0c570d36-bf70-48a5-9f6a-2285d6b3b400" name="com.github.vlsi.iec61131.ti1808.cfc" version="0" />
-    <use id="8ca79d43-eb45-4791-bdd4-0d6130ff895b" name="de.itemis.mps.editor.diagram.layout" version="0" />
     <engage id="d1aef6cd-5477-486f-bcbd-34728b246566" name="com.github.vlsi.iec61131.st2ti1808" />
     <engage id="8be64a62-fc9c-4c90-a832-507f291073fd" name="com.github.vlsi.iec61131.ti1808.toemulator" />
   </languages>
-  <imports>
-    <import index="ocpr" ref="r:559bb865-4f6c-4d13-9298-a01687fa843f(com.github.vlsi.iec61131.st2ti1808.structure)" />
-  </imports>
+  <imports />
   <registry>
     <language id="d7601ad3-513b-4e38-a483-fb62b3afe145" name="com.github.vlsi.iec61131.ti1808">
       <concept id="6247823056832017505" name="com.github.vlsi.iec61131.ti1808.structure.VariableReference" flags="ng" index="2ngKQm">
@@ -102,7 +98,9 @@
         <child id="4476613817798351469" name="values" index="2CmvFx" />
         <child id="4476613817798351471" name="statements" index="2CmvFz" />
       </concept>
-      <concept id="4949279015990068094" name="com.github.vlsi.iec61131.st.structure.CommentStatement" flags="ng" index="2INlLO" />
+      <concept id="4949279015990068094" name="com.github.vlsi.iec61131.st.structure.CommentStatement" flags="ng" index="2INlLO">
+        <child id="7135025448699623455" name="commentNd" index="3m64J8" />
+      </concept>
       <concept id="6669248405421166308" name="com.github.vlsi.iec61131.st.structure.LoopStatement" flags="ng" index="2Rtu3M">
         <child id="6039408957486399673" name="body" index="2fA$Fb" />
       </concept>
@@ -187,12 +185,15 @@
         <reference id="4476613817796190554" name="typeAlias" index="2Cuc7m" />
       </concept>
       <concept id="123060273427541007" name="com.github.vlsi.iec61131.types.structure.ICommentable" flags="ng" index="2EalU_">
-        <property id="123060273427541008" name="comment" index="2EalUU" />
+        <child id="7135025448697818814" name="commentNode" index="3m1tPD" />
       </concept>
       <concept id="6669248405421858998" name="com.github.vlsi.iec61131.types.structure.ReferenceToType" flags="ng" index="2KzOUw">
         <reference id="6669248405421860085" name="type" index="2KzOFz" />
       </concept>
       <concept id="3750039987448159535" name="com.github.vlsi.iec61131.types.structure.BoolType" flags="ng" index="PkkMJ" />
+      <concept id="7135025448695848440" name="com.github.vlsi.iec61131.types.structure.CommentNode" flags="ng" index="3nTYSJ">
+        <property id="7135025448698220830" name="comment" index="3m0Mb9" />
+      </concept>
       <concept id="5097456207316512517" name="com.github.vlsi.iec61131.types.structure.FunctionRefCall" flags="ng" index="3Ty29G">
         <child id="5097456207316515146" name="expression" index="3Ty3gz" />
       </concept>
@@ -261,7 +262,9 @@
           <node concept="2fLe5g" id="6VooDTcVFy" role="283bkg">
             <node concept="283aBJ" id="6VooDTcVF$" role="2fLe4q">
               <node concept="2INlLO" id="6VooDTcVCb" role="283bkg">
-                <property role="2EalUU" value="Идёт генерация" />
+                <node concept="3nTYSJ" id="6c4GXuPhmHm" role="3m64J8">
+                  <property role="3m0Mb9" value="Идёт генерация" />
+                </node>
               </node>
               <node concept="2fKkDk" id="6VooDTcVOk" role="283bkg">
                 <node concept="2fA4kt" id="6VooDTcVSI" role="2fKkDe">
@@ -291,13 +294,17 @@
               </node>
               <node concept="283aBJ" id="6VooDTgRAg" role="2fLaxP">
                 <node concept="2INlLO" id="6VooDTgREZ" role="283bkg">
-                  <property role="2EalUU" value="Всё сгенерировали, ждём пока передёрнут enable для следующего включения" />
+                  <node concept="3nTYSJ" id="6c4GXuPhmIK" role="3m64J8">
+                    <property role="3m0Mb9" value="Всё сгенерировали, ждём пока передёрнут enable для следующего включения" />
+                  </node>
                 </node>
               </node>
             </node>
             <node concept="283aBJ" id="6VooDTcXSs" role="2fL9lL">
               <node concept="2INlLO" id="6VooDTcXqv" role="283bkg">
-                <property role="2EalUU" value="Поступила команда на включение" />
+                <node concept="3nTYSJ" id="6c4GXuPhmJw" role="3m64J8">
+                  <property role="3m0Mb9" value="Поступила команда на включение" />
+                </node>
               </node>
               <node concept="2fKkDk" id="6VooDTcXqw" role="283bkg">
                 <node concept="2fRjeW" id="6VooDTcXq$" role="2fKkDa">
@@ -346,7 +353,9 @@
         </node>
         <node concept="283aBJ" id="6VooDTcVLa" role="2fL9lL">
           <node concept="2INlLO" id="6VooDTcVLI" role="283bkg">
-            <property role="2EalUU" value="Выключаемся" />
+            <node concept="3nTYSJ" id="6c4GXuPhmIL" role="3m64J8">
+              <property role="3m0Mb9" value="Выключаемся" />
+            </node>
           </node>
           <node concept="2fKkDk" id="6VooDTgSq$" role="283bkg">
             <node concept="2fQMEq" id="6VooDTgSuA" role="2fKkDe">
@@ -367,7 +376,9 @@
         </node>
       </node>
       <node concept="2INlLO" id="6VooDTgPwP" role="283bkg">
-        <property role="2EalUU" value="Если всё сделали, то out выключится. Если пачка ещё генерируется, то младший бит и есть меандр" />
+        <node concept="3nTYSJ" id="6c4GXuPhmHS" role="3m64J8">
+          <property role="3m0Mb9" value="Если всё сделали, то out выключится. Если пачка ещё генерируется, то младший бит и есть меандр" />
+        </node>
       </node>
       <node concept="2fKkDk" id="6VooDTcW1q" role="283bkg">
         <node concept="2gtbcv" id="6VooDTcW3b" role="2fKkDe">
@@ -1045,7 +1056,9 @@
     </node>
     <node concept="283aBJ" id="7l3WX474Zko" role="283bkm">
       <node concept="2INlLO" id="312iJfFmmba" role="283bkg">
-        <property role="2EalUU" value="безопасные значения" />
+        <node concept="3nTYSJ" id="6c4GXuPhmIF" role="3m64J8">
+          <property role="3m0Mb9" value="безопасные значения" />
+        </node>
       </node>
       <node concept="2fKkDk" id="312iJfFmlWP" role="283bkg">
         <node concept="2fLVyO" id="312iJfFmlZ4" role="2fKkDe">
@@ -1077,7 +1090,9 @@
         </node>
         <node concept="283aBJ" id="1l2OrOTevb6" role="2fA$Fb">
           <node concept="2INlLO" id="1l2OrOTevhd" role="283bkg">
-            <property role="2EalUU" value="собственно полезная работа" />
+            <node concept="3nTYSJ" id="6c4GXuPhmHw" role="3m64J8">
+              <property role="3m0Mb9" value="собственно полезная работа" />
+            </node>
           </node>
           <node concept="2fRoqJ" id="74nadn96BLi" role="283bkg">
             <node concept="3Ty29G" id="74nadn96BLO" role="2fRomS">
@@ -1143,7 +1158,9 @@
                 </node>
                 <node concept="283aBJ" id="7zyqQwys4QU" role="2fLe4q">
                   <node concept="2INlLO" id="312iJfFmn2k" role="283bkg">
-                    <property role="2EalUU" value="Загружаем параметры" />
+                    <node concept="3nTYSJ" id="6c4GXuPhmIg" role="3m64J8">
+                      <property role="3m0Mb9" value="Загружаем параметры" />
+                    </node>
                   </node>
                   <node concept="3NXZbc" id="312iJfFmmTe" role="283bkg">
                     <node concept="1SZpTx" id="312iJfFmmTf" role="3NXZbf">
@@ -1196,7 +1213,9 @@
                   </node>
                   <node concept="283b7K" id="2a2pyiqPD0M" role="283bkg" />
                   <node concept="2INlLO" id="312iJfFmn59" role="283bkg">
-                    <property role="2EalUU" value="Выводим выгружаем состояние в ПЛК" />
+                    <node concept="3nTYSJ" id="6c4GXuPhmJC" role="3m64J8">
+                      <property role="3m0Mb9" value="Выводим выгружаем состояние в ПЛК" />
+                    </node>
                   </node>
                   <node concept="3NXZbc" id="312iJfFmm4D" role="283bkg">
                     <node concept="1SZpTx" id="312iJfFmm4E" role="3NXZbf">
@@ -1367,7 +1386,9 @@
     </node>
     <node concept="283aBJ" id="6LAvc6v$piL" role="283bkm">
       <node concept="2INlLO" id="1l2OrOTew5a" role="283bkg">
-        <property role="2EalUU" value="Ага, ассемблерные вставки" />
+        <node concept="3nTYSJ" id="6c4GXuPhmHH" role="3m64J8">
+          <property role="3m0Mb9" value="Ага, ассемблерные вставки" />
+        </node>
       </node>
       <node concept="2fLe5g" id="74nadn96JIU" role="283bkg">
         <node concept="283aBJ" id="74nadn96JIW" role="2fLe4q">
@@ -1534,7 +1555,9 @@
       <node concept="2fLe5g" id="1l2OrOTgOTA" role="283bkg">
         <node concept="283aBJ" id="1l2OrOTgOTC" role="2fLe4q">
           <node concept="2INlLO" id="1l2OrOThC1t" role="283bkg">
-            <property role="2EalUU" value="Сложение курильщика" />
+            <node concept="3nTYSJ" id="6c4GXuPhmJn" role="3m64J8">
+              <property role="3m0Mb9" value="Сложение курильщика" />
+            </node>
           </node>
           <node concept="3NXZbc" id="1l2OrOTgOXH" role="283bkg">
             <node concept="1SZpTx" id="1l2OrOTgOXI" role="3NXZbf">
@@ -1563,7 +1586,9 @@
         </node>
         <node concept="283aBJ" id="1l2OrOTgP0p" role="2fL9lL">
           <node concept="2INlLO" id="1l2OrOThC1O" role="283bkg">
-            <property role="2EalUU" value="Сложение здорового человека" />
+            <node concept="3nTYSJ" id="6c4GXuPhmJl" role="3m64J8">
+              <property role="3m0Mb9" value="Сложение здорового человека" />
+            </node>
           </node>
           <node concept="2fKkDk" id="1l2OrOTgP2f" role="283bkg">
             <node concept="2fRjeW" id="1l2OrOTgP1p" role="2fKkDa">
@@ -1692,7 +1717,9 @@
     </node>
     <node concept="283aBJ" id="74nadn8RS4l" role="283bkm">
       <node concept="2INlLO" id="74nadn8TYlN" role="283bkg">
-        <property role="2EalUU" value="0x00007000..0x00007FFF -- PRU0 Control Registers, 0xC -- cycle count register" />
+        <node concept="3nTYSJ" id="6c4GXuPhmI2" role="3m64J8">
+          <property role="3m0Mb9" value="0x00007000..0x00007FFF -- PRU0 Control Registers, 0xC -- cycle count register" />
+        </node>
       </node>
       <node concept="2fKkDk" id="74nadn8RUZx" role="283bkg">
         <node concept="2fR3E5" id="74nadn8RV2i" role="2fKkDe">
@@ -1919,7 +1946,9 @@
           <node concept="2fLe5g" id="74nadn9jrB8" role="283bkg">
             <node concept="283aBJ" id="74nadn9jrB9" role="2fLe4q">
               <node concept="2INlLO" id="74nadn9jrBa" role="283bkg">
-                <property role="2EalUU" value="Идёт генерация" />
+                <node concept="3nTYSJ" id="6c4GXuPhmHE" role="3m64J8">
+                  <property role="3m0Mb9" value="Идёт генерация" />
+                </node>
               </node>
               <node concept="2fKkDk" id="74nadn9jrBb" role="283bkg">
                 <node concept="2fA4kt" id="74nadn9jrBc" role="2fKkDe">
@@ -1949,13 +1978,17 @@
               </node>
               <node concept="283aBJ" id="74nadn9jrBl" role="2fLaxP">
                 <node concept="2INlLO" id="74nadn9jrBm" role="283bkg">
-                  <property role="2EalUU" value="Всё сгенерировали, ждём пока передёрнут enable для следующего включения" />
+                  <node concept="3nTYSJ" id="6c4GXuPhmJv" role="3m64J8">
+                    <property role="3m0Mb9" value="Всё сгенерировали, ждём пока передёрнут enable для следующего включения" />
+                  </node>
                 </node>
               </node>
             </node>
             <node concept="283aBJ" id="74nadn9jrBn" role="2fL9lL">
               <node concept="2INlLO" id="74nadn9jrBo" role="283bkg">
-                <property role="2EalUU" value="Поступила команда на включение" />
+                <node concept="3nTYSJ" id="6c4GXuPhmJF" role="3m64J8">
+                  <property role="3m0Mb9" value="Поступила команда на включение" />
+                </node>
               </node>
               <node concept="2fKkDk" id="74nadn9jrBp" role="283bkg">
                 <node concept="2fRjeW" id="74nadn9jrBq" role="2fKkDa">
@@ -2004,7 +2037,9 @@
         </node>
         <node concept="283aBJ" id="74nadn9jrBD" role="2fL9lL">
           <node concept="2INlLO" id="74nadn9jrBE" role="283bkg">
-            <property role="2EalUU" value="Выключаемся" />
+            <node concept="3nTYSJ" id="6c4GXuPhmHl" role="3m64J8">
+              <property role="3m0Mb9" value="Выключаемся" />
+            </node>
           </node>
           <node concept="2fKkDk" id="74nadn9jrBF" role="283bkg">
             <node concept="2fQMEq" id="74nadn9jrBG" role="2fKkDe">
@@ -2025,7 +2060,9 @@
         </node>
       </node>
       <node concept="2INlLO" id="74nadn9jrBL" role="283bkg">
-        <property role="2EalUU" value="Если всё сделали, то out выключится. Если пачка ещё генерируется, то младший бит и есть меандр" />
+        <node concept="3nTYSJ" id="6c4GXuPhmHP" role="3m64J8">
+          <property role="3m0Mb9" value="Если всё сделали, то out выключится. Если пачка ещё генерируется, то младший бит и есть меандр" />
+        </node>
       </node>
       <node concept="2fKkDk" id="74nadn9jrBM" role="283bkg">
         <node concept="2gtbcv" id="74nadn9jrBN" role="2fKkDe">
@@ -2110,9 +2147,11 @@
     <node concept="283aBN" id="2a2pyirg8h7" role="2fQKEM">
       <property role="TrG5h" value="min_delay" />
       <property role="2fKTFS" value="false" />
-      <property role="2EalUU" value="макс частота (имп/сек)" />
       <property role="2fKTC_" value="false" />
       <node concept="2fQKs2" id="2a2pyirg8hU" role="2fQRkO" />
+      <node concept="3nTYSJ" id="6c4GXuPhmIR" role="3m1tPD">
+        <property role="3m0Mb9" value="макс частота (имп/сек)" />
+      </node>
     </node>
     <node concept="283aBN" id="2a2pyirgcik" role="2fQKEM">
       <property role="TrG5h" value="state" />
@@ -2141,9 +2180,11 @@
     <node concept="283aBN" id="2a2pyirg8i1" role="2fQKEM">
       <property role="TrG5h" value="v_decel_start" />
       <property role="2fKTFS" value="false" />
-      <property role="2EalUU" value="номер импульса, после которого начинаем торможение" />
       <property role="2fKTC_" value="false" />
       <node concept="2fQKs2" id="2a2pyirg8iL" role="2fQRkO" />
+      <node concept="3nTYSJ" id="6c4GXuPhmIN" role="3m1tPD">
+        <property role="3m0Mb9" value="номер импульса, после которого начинаем торможение" />
+      </node>
     </node>
     <node concept="283aBN" id="2a2pyisqDqp" role="2fQKEM">
       <property role="TrG5h" value="new_step_delay" />
@@ -2173,7 +2214,9 @@
           </node>
           <node concept="283aBJ" id="2a2pyisqNtC" role="2CmvFz">
             <node concept="2INlLO" id="2a2pyisrAOk" role="283bkg">
-              <property role="2EalUU" value="Ждём нового цикла" />
+              <node concept="3nTYSJ" id="6c4GXuPhmI3" role="3m64J8">
+                <property role="3m0Mb9" value="Ждём нового цикла" />
+              </node>
             </node>
             <node concept="2fKkDk" id="2a2pyisGvyL" role="283bkg">
               <node concept="2fQMEq" id="2a2pyisGv_T" role="2fKkDe">
@@ -2342,7 +2385,9 @@
                   <node concept="2fLaI7" id="2a2pyiteBa3" role="2fL9lP">
                     <node concept="283aBJ" id="2a2pyiteBa5" role="2fLaxP">
                       <node concept="2INlLO" id="2a2pyisrX6P" role="283bkg">
-                        <property role="2EalUU" value="TODO: добавить вычисление v_decel_start" />
+                        <node concept="3nTYSJ" id="6c4GXuPhmJo" role="3m64J8">
+                          <property role="3m0Mb9" value="TODO: добавить вычисление v_decel_start" />
+                        </node>
                       </node>
                       <node concept="2fKkDk" id="2a2pyisrLa9" role="283bkg">
                         <node concept="2Cu2YD" id="2a2pyisrLdU" role="2fKkDe">
@@ -2410,22 +2455,34 @@
                       </node>
                       <node concept="283aBJ" id="6ed$ieFtJo9" role="2fLe4q">
                         <node concept="2INlLO" id="2a2pyisrXeo" role="283bkg">
-                          <property role="2EalUU" value="Вычисление accel_start " />
+                          <node concept="3nTYSJ" id="6c4GXuPhmHQ" role="3m64J8">
+                            <property role="3m0Mb9" value="Вычисление accel_start " />
+                          </node>
                         </node>
                         <node concept="2INlLO" id="2a2pyisrXe_" role="283bkg">
-                          <property role="2EalUU" value="c0 &lt;- sqrt(2/accel_ramp)*0.676*freq; freq=150e6" />
+                          <node concept="3nTYSJ" id="6c4GXuPhmH9" role="3m64J8">
+                            <property role="3m0Mb9" value="c0 &lt;- sqrt(2/accel_ramp)*0.676*freq; freq=150e6" />
+                          </node>
                         </node>
                         <node concept="2INlLO" id="2a2pyisrXeL" role="283bkg">
-                          <property role="2EalUU" value="c0 &lt;- sqrt(2/accel_ramp)*101.4e6; 101.4e6 = 24755.86*4096" />
+                          <node concept="3nTYSJ" id="6c4GXuPhmIs" role="3m64J8">
+                            <property role="3m0Mb9" value="c0 &lt;- sqrt(2/accel_ramp)*101.4e6; 101.4e6 = 24755.86*4096" />
+                          </node>
                         </node>
                         <node concept="2INlLO" id="2a2pyisrXeV" role="283bkg">
-                          <property role="2EalUU" value="c0 &lt;- sqrt(1225705208.6792002/accel_ramp)*4096; " />
+                          <node concept="3nTYSJ" id="6c4GXuPhmIE" role="3m64J8">
+                            <property role="3m0Mb9" value="c0 &lt;- sqrt(1225705208.6792002/accel_ramp)*4096; " />
+                          </node>
                         </node>
                         <node concept="2INlLO" id="2a2pyisshpO" role="283bkg">
-                          <property role="2EalUU" value="c0 &lt;- sqrt(4294967294/accel_ramp)*2188.1295 == sqrt(4294967294*4787911/accel_ramp);" />
+                          <node concept="3nTYSJ" id="6c4GXuPhmIp" role="3m64J8">
+                            <property role="3m0Mb9" value="c0 &lt;- sqrt(4294967294/accel_ramp)*2188.1295 == sqrt(4294967294*4787911/accel_ramp);" />
+                          </node>
                         </node>
                         <node concept="2INlLO" id="2a2pyisx0QP" role="283bkg">
-                          <property role="2EalUU" value="2188 == freq*0.676/sqrt(4294967294/2)" />
+                          <node concept="3nTYSJ" id="6c4GXuPhmJh" role="3m64J8">
+                            <property role="3m0Mb9" value="2188 == freq*0.676/sqrt(4294967294/2)" />
+                          </node>
                         </node>
                         <node concept="2fRoqJ" id="2a2pyisrXfe" role="283bkg">
                           <node concept="kub3E" id="2a2pyisrXfc" role="2fRomS">
@@ -2453,7 +2510,9 @@
                       </node>
                       <node concept="283aBJ" id="6ed$ieFtKwI" role="2fL9lL">
                         <node concept="2INlLO" id="6ed$ieFtKxU" role="283bkg">
-                          <property role="2EalUU" value="c0 &lt;- freq*2/(min_speed+sqrt(min_speed**2+2*w))" />
+                          <node concept="3nTYSJ" id="6c4GXuPhmJs" role="3m64J8">
+                            <property role="3m0Mb9" value="c0 &lt;- freq*2/(min_speed+sqrt(min_speed**2+2*w))" />
+                          </node>
                         </node>
                         <node concept="2fRoqJ" id="6ed$ieFtLNn" role="283bkg">
                           <node concept="kub3E" id="6ed$ieFtLNl" role="2fRomS">
@@ -2561,7 +2620,9 @@
                       </node>
                       <node concept="283aBJ" id="535c6c_dcXH" role="2fL9lL">
                         <node concept="2INlLO" id="535c6c_dcXI" role="283bkg">
-                          <property role="2EalUU" value="c0 &lt;- freq*2/(min_speed+sqrt(min_speed**2+2*w))" />
+                          <node concept="3nTYSJ" id="6c4GXuPhmJ7" role="3m64J8">
+                            <property role="3m0Mb9" value="c0 &lt;- freq*2/(min_speed+sqrt(min_speed**2+2*w))" />
+                          </node>
                         </node>
                         <node concept="2fKkDk" id="535c6c_dcY7" role="283bkg">
                           <node concept="2fA4ie" id="535c6c_dcY8" role="2fKkDe">
@@ -2637,10 +2698,14 @@
                     </node>
                     <node concept="283b7K" id="535c6c_dcOZ" role="283bkg" />
                     <node concept="2INlLO" id="2a2pyisx1OK" role="283bkg">
-                      <property role="2EalUU" value="speed &lt;- freq/min_delay" />
+                      <node concept="3nTYSJ" id="6c4GXuPhmJd" role="3m64J8">
+                        <property role="3m0Mb9" value="speed &lt;- freq/min_delay" />
+                      </node>
                     </node>
                     <node concept="2INlLO" id="2a2pyisx1Q1" role="283bkg">
-                      <property role="2EalUU" value="n &lt;- v^2/2a == muldiv(v,v,2a)" />
+                      <node concept="3nTYSJ" id="6c4GXuPhmIY" role="3m64J8">
+                        <property role="3m0Mb9" value="n &lt;- v^2/2a == muldiv(v,v,2a)" />
+                      </node>
                     </node>
                     <node concept="2fLe5g" id="6ed$ieFNrcI" role="283bkg">
                       <node concept="2fMAVK" id="6ed$ieFNrfZ" role="2fLe4k">
@@ -2968,7 +3033,9 @@
                   </node>
                   <node concept="283aBJ" id="535c6c$PraM" role="2fLe4q">
                     <node concept="2INlLO" id="535c6cBclkf" role="283bkg">
-                      <property role="2EalUU" value="Если только только перешли к замедлению, то настроим блок accelCalc на вычисление замедления" />
+                      <node concept="3nTYSJ" id="6c4GXuPhmIl" role="3m64J8">
+                        <property role="3m0Mb9" value="Если только только перешли к замедлению, то настроим блок accelCalc на вычисление замедления" />
+                      </node>
                     </node>
                     <node concept="2fKkDk" id="535c6c$PtGi" role="283bkg">
                       <node concept="2fRjeW" id="535c6c$Pu2X" role="2fKkDe">
@@ -3066,7 +3133,9 @@
               </node>
               <node concept="283aBJ" id="2a2pyirKsfr" role="2fLe4q">
                 <node concept="2INlLO" id="535c6c_gkIM" role="283bkg">
-                  <property role="2EalUU" value="Если замедление" />
+                  <node concept="3nTYSJ" id="6c4GXuPhmHr" role="3m64J8">
+                    <property role="3m0Mb9" value="Если замедление" />
+                  </node>
                 </node>
                 <node concept="2fLe5g" id="6ed$ieFUNWb" role="283bkg">
                   <node concept="2fM_JQ" id="535c6c_gikH" role="2fLe4k">
@@ -3089,7 +3158,9 @@
                   </node>
                   <node concept="283aBJ" id="6ed$ieFUNWf" role="2fLe4q">
                     <node concept="2INlLO" id="535c6c_gjEB" role="283bkg">
-                      <property role="2EalUU" value="Если замедление закончилось" />
+                      <node concept="3nTYSJ" id="6c4GXuPhmJi" role="3m64J8">
+                        <property role="3m0Mb9" value="Если замедление закончилось" />
+                      </node>
                     </node>
                     <node concept="2fLe5g" id="535c6c_afXC" role="283bkg">
                       <node concept="2fRjeW" id="535c6c_afY7" role="2fLe4k">
@@ -3097,7 +3168,9 @@
                       </node>
                       <node concept="283aBJ" id="535c6c_afXG" role="2fLe4q">
                         <node concept="2INlLO" id="535c6c_gjEV" role="283bkg">
-                          <property role="2EalUU" value="Продолжаем на минимальной скорости" />
+                          <node concept="3nTYSJ" id="6c4GXuPhmJA" role="3m64J8">
+                            <property role="3m0Mb9" value="Продолжаем на минимальной скорости" />
+                          </node>
                         </node>
                         <node concept="2fKkDk" id="6ed$ieFUOC5" role="283bkg">
                           <node concept="2Cu2YD" id="6ed$ieFUOXw" role="2fKkDe">
@@ -3119,7 +3192,9 @@
                       </node>
                       <node concept="283aBJ" id="535c6c_aglF" role="2fL9lL">
                         <node concept="2INlLO" id="535c6c_gkHW" role="283bkg">
-                          <property role="2EalUU" value="Останавливаемся" />
+                          <node concept="3nTYSJ" id="6c4GXuPhmJp" role="3m64J8">
+                            <property role="3m0Mb9" value="Останавливаемся" />
+                          </node>
                         </node>
                         <node concept="2fKkDk" id="535c6c_agn1" role="283bkg">
                           <node concept="2Cu2YD" id="535c6c_agIc" role="2fKkDe">
@@ -3174,7 +3249,9 @@
               </node>
               <node concept="283aBJ" id="2a2pyirKsTh" role="2fL9lL">
                 <node concept="2INlLO" id="535c6c_gkJx" role="283bkg">
-                  <property role="2EalUU" value="Если ускорение" />
+                  <node concept="3nTYSJ" id="6c4GXuPhmJ_" role="3m64J8">
+                    <property role="3m0Mb9" value="Если ускорение" />
+                  </node>
                 </node>
                 <node concept="2fKkDk" id="535c6c$M9fG" role="283bkg">
                   <node concept="2fRjeW" id="535c6c$NNgG" role="2fKkDe">
@@ -3187,7 +3264,9 @@
                 <node concept="2fLe5g" id="6ed$ieEjUyd" role="283bkg">
                   <node concept="283aBJ" id="6ed$ieEjUyh" role="2fLe4q">
                     <node concept="2INlLO" id="6ed$ieEnxRs" role="283bkg">
-                      <property role="2EalUU" value="Если достигли максимальную скорость, то начинаем равномерное движение" />
+                      <node concept="3nTYSJ" id="6c4GXuPhmH$" role="3m64J8">
+                        <property role="3m0Mb9" value="Если достигли максимальную скорость, то начинаем равномерное движение" />
+                      </node>
                     </node>
                     <node concept="2fKkDk" id="6ed$ieEjUzy" role="283bkg">
                       <node concept="2fRjeW" id="6ed$ieEjUzz" role="2fKkDe">
@@ -3253,7 +3332,9 @@
                   </node>
                   <node concept="283aBJ" id="535c6c_fxzb" role="2fLe4q">
                     <node concept="2INlLO" id="535c6c_gkKb" role="283bkg">
-                      <property role="2EalUU" value="Можно тормозить резко -- тормозим" />
+                      <node concept="3nTYSJ" id="6c4GXuPhmIf" role="3m64J8">
+                        <property role="3m0Mb9" value="Можно тормозить резко -- тормозим" />
+                      </node>
                     </node>
                     <node concept="2fKkDk" id="535c6c_fxzc" role="283bkg">
                       <node concept="2Cu2YD" id="535c6c_fxzd" role="2fKkDe">
@@ -3275,7 +3356,9 @@
                   </node>
                   <node concept="283aBJ" id="535c6c_fxzf" role="2fL9lL">
                     <node concept="2INlLO" id="535c6c_gkK$" role="283bkg">
-                      <property role="2EalUU" value="Нужно замедляться -- планируем замедление" />
+                      <node concept="3nTYSJ" id="6c4GXuPhmIC" role="3m64J8">
+                        <property role="3m0Mb9" value="Нужно замедляться -- планируем замедление" />
+                      </node>
                     </node>
                     <node concept="2fKkDk" id="535c6c_fzMv" role="283bkg">
                       <node concept="2fA4kt" id="535c6c_f_n4" role="2fKkDe">
@@ -3322,7 +3405,9 @@
                   </node>
                   <node concept="283aBJ" id="535c6c_fxzL" role="2fLe4q">
                     <node concept="2INlLO" id="535c6c_fxzM" role="283bkg">
-                      <property role="2EalUU" value="Если тормозим без замедления, то просто останавливаемся" />
+                      <node concept="3nTYSJ" id="6c4GXuPhmHi" role="3m64J8">
+                        <property role="3m0Mb9" value="Если тормозим без замедления, то просто останавливаемся" />
+                      </node>
                     </node>
                     <node concept="2fKkDk" id="535c6c_fxzN" role="283bkg">
                       <node concept="2Cu2YD" id="535c6c_fxzO" role="2fKkDe">
@@ -3344,7 +3429,9 @@
                   </node>
                   <node concept="283aBJ" id="535c6c_fxzQ" role="2fL9lL">
                     <node concept="2INlLO" id="535c6c_fxzR" role="283bkg">
-                      <property role="2EalUU" value="Если замедление на участке &quot;макс скорости&quot;, то включаем тормоз по запланированому в начале графику" />
+                      <node concept="3nTYSJ" id="6c4GXuPhmJy" role="3m64J8">
+                        <property role="3m0Mb9" value="Если замедление на участке &quot;макс скорости&quot;, то включаем тормоз по запланированому в начале графику" />
+                      </node>
                     </node>
                     <node concept="2fKkDk" id="535c6c_fA05" role="283bkg">
                       <node concept="2fA4kt" id="535c6c_fA06" role="2fKkDe">
@@ -3374,12 +3461,16 @@
       </node>
       <node concept="283b7K" id="535c6cBw_ZJ" role="283bkg" />
       <node concept="2INlLO" id="535c6cBcjUy" role="283bkg">
-        <property role="2EalUU" value="Если идёт генерация, то проверим не пора ли останавливаться" />
+        <node concept="3nTYSJ" id="6c4GXuPhmIq" role="3m64J8">
+          <property role="3m0Mb9" value="Если идёт генерация, то проверим не пора ли останавливаться" />
+        </node>
       </node>
       <node concept="2fLe5g" id="2a2pyirKsqO" role="283bkg">
         <node concept="283aBJ" id="2a2pyirKsqQ" role="2fLe4q">
           <node concept="2INlLO" id="6ed$ieEnxVW" role="283bkg">
-            <property role="2EalUU" value="Если все импульсы сделаны, то останавливаемся" />
+            <node concept="3nTYSJ" id="6c4GXuPhmHB" role="3m64J8">
+              <property role="3m0Mb9" value="Если все импульсы сделаны, то останавливаемся" />
+            </node>
           </node>
           <node concept="2fKkDk" id="2a2pyirKsLU" role="283bkg">
             <node concept="2fRjeW" id="2a2pyisqDhD" role="2fKkDa">
@@ -3418,7 +3509,9 @@
         <node concept="2fLaI7" id="535c6c_eKaR" role="2fL9lP">
           <node concept="283aBJ" id="535c6c_eKaU" role="2fLaxP">
             <node concept="2INlLO" id="535c6c_eKaV" role="283bkg">
-              <property role="2EalUU" value="Если пора замедляться, то начинаем замедление" />
+              <node concept="3nTYSJ" id="6c4GXuPhmIT" role="3m64J8">
+                <property role="3m0Mb9" value="Если пора замедляться, то начинаем замедление" />
+              </node>
             </node>
             <node concept="2fKkDk" id="535c6c_eKaW" role="283bkg">
               <node concept="2Cu2YD" id="535c6c_eKaX" role="2fKkDe">
@@ -3440,7 +3533,9 @@
               </node>
               <node concept="283aBJ" id="535c6c_ggS9" role="2fLe4q">
                 <node concept="2INlLO" id="535c6c_gld6" role="283bkg">
-                  <property role="2EalUU" value="Если есть мин скорость, то вычисляем макс интервал" />
+                  <node concept="3nTYSJ" id="6c4GXuPhmIu" role="3m64J8">
+                    <property role="3m0Mb9" value="Если есть мин скорость, то вычисляем макс интервал" />
+                  </node>
                 </node>
                 <node concept="2fRoqJ" id="535c6c_ghzD" role="283bkg">
                   <node concept="kub3E" id="535c6c_ghzE" role="2fRomS">
@@ -3468,7 +3563,9 @@
               </node>
               <node concept="283aBJ" id="535c6c_gldW" role="2fL9lL">
                 <node concept="2INlLO" id="535c6c_goh4" role="283bkg">
-                  <property role="2EalUU" value="Минимум -- 10 Гц" />
+                  <node concept="3nTYSJ" id="6c4GXuPhmIj" role="3m64J8">
+                    <property role="3m0Mb9" value="Минимум -- 10 Гц" />
+                  </node>
                 </node>
                 <node concept="2fKkDk" id="535c6c_gl$u" role="283bkg">
                   <node concept="2fQMEq" id="535c6c_glU8" role="2fKkDe">
@@ -4038,7 +4135,9 @@
     </node>
     <node concept="283aBJ" id="2a2pyirKLa5" role="283bkm">
       <node concept="2INlLO" id="2a2pyirKLbF" role="283bkg">
-        <property role="2EalUU" value="безопасные значения" />
+        <node concept="3nTYSJ" id="6c4GXuPhmHg" role="3m64J8">
+          <property role="3m0Mb9" value="безопасные значения" />
+        </node>
       </node>
       <node concept="2fKkDk" id="6ed$ieFbXX2" role="283bkg">
         <node concept="2fLVyO" id="6ed$ieFbY1$" role="2fKkDe">
@@ -4218,7 +4317,9 @@
         </node>
         <node concept="283aBJ" id="2a2pyirKLbR" role="2fA$Fb">
           <node concept="2INlLO" id="2a2pyirKLbS" role="283bkg">
-            <property role="2EalUU" value="собственно полезная работа" />
+            <node concept="3nTYSJ" id="6c4GXuPhmIH" role="3m64J8">
+              <property role="3m0Mb9" value="собственно полезная работа" />
+            </node>
           </node>
           <node concept="2fLe5g" id="6ed$ieEyjHU" role="283bkg">
             <node concept="2fRjeW" id="6ed$ieEyjKA" role="2fLe4k">
@@ -4433,7 +4534,9 @@
                 <node concept="283aBJ" id="2a2pyirKLck" role="2fLe4q">
                   <node concept="283b7K" id="535c6c$X_Nj" role="283bkg" />
                   <node concept="2INlLO" id="2a2pyirKLcl" role="283bkg">
-                    <property role="2EalUU" value="Загружаем параметры" />
+                    <node concept="3nTYSJ" id="6c4GXuPhmI4" role="3m64J8">
+                      <property role="3m0Mb9" value="Загружаем параметры" />
+                    </node>
                   </node>
                   <node concept="3NXZbc" id="2a2pyirKLcm" role="283bkg">
                     <node concept="1SZpTx" id="2a2pyirKLcn" role="3NXZbf">
@@ -4724,10 +4827,14 @@
     </node>
     <node concept="283aBJ" id="2a2pyisu3yx" role="283bkm">
       <node concept="2INlLO" id="2a2pyisx0Ds" role="283bkg">
-        <property role="2EalUU" value="https://en.wikipedia.org/wiki/Methods_of_computing_square_roots#cite_ref-3" />
+        <node concept="3nTYSJ" id="6c4GXuPhmI8" role="3m64J8">
+          <property role="3m0Mb9" value="https://en.wikipedia.org/wiki/Methods_of_computing_square_roots#cite_ref-3" />
+        </node>
       </node>
       <node concept="2INlLO" id="2a2pyisx0FH" role="283bkg">
-        <property role="2EalUU" value="Fast integer square root by Mr. Woo's abacus algorithm (archived)" />
+        <node concept="3nTYSJ" id="6c4GXuPhmJ$" role="3m64J8">
+          <property role="3m0Mb9" value="Fast integer square root by Mr. Woo's abacus algorithm (archived)" />
+        </node>
       </node>
       <node concept="2fKkDk" id="2a2pyisu3yE" role="283bkg">
         <node concept="2fR3E5" id="2a2pyisu3yF" role="2fKkDe">
@@ -4967,7 +5074,9 @@
         </node>
         <node concept="283aBJ" id="2a2pyisufV1" role="2fA$Fb">
           <node concept="2INlLO" id="6ed$ieEyjie" role="283bkg">
-            <property role="2EalUU" value="LMBD?" />
+            <node concept="3nTYSJ" id="6c4GXuPhmJt" role="3m64J8">
+              <property role="3m0Mb9" value="LMBD?" />
+            </node>
           </node>
           <node concept="2fLe5g" id="2a2pyisufXr" role="283bkg">
             <node concept="2gtbcv" id="2a2pyisug2n" role="2fLe4k">
@@ -5067,7 +5176,9 @@
     </node>
     <node concept="283aBJ" id="2a2pyisx1Sy" role="283bkm">
       <node concept="2INlLO" id="2a2pyisxmik" role="283bkg">
-        <property role="2EalUU" value="http://stackoverflow.com/a/4144956/1261287" />
+        <node concept="3nTYSJ" id="6c4GXuPhmHx" role="3m64J8">
+          <property role="3m0Mb9" value="http://stackoverflow.com/a/4144956/1261287" />
+        </node>
       </node>
       <node concept="2fKkDk" id="2a2pyisx1Tt" role="283bkg">
         <node concept="2fQMEq" id="2a2pyisx1TJ" role="2fKkDe">
@@ -5314,7 +5425,9 @@
     </node>
     <node concept="283aBJ" id="6ed$ieEykKx" role="283bkm">
       <node concept="2INlLO" id="6ed$ieEykKy" role="283bkg">
-        <property role="2EalUU" value="0x00007000..0x00007FFF -- PRU0 Control Registers, 0xC -- cycle count register" />
+        <node concept="3nTYSJ" id="6c4GXuPhmJm" role="3m64J8">
+          <property role="3m0Mb9" value="0x00007000..0x00007FFF -- PRU0 Control Registers, 0xC -- cycle count register" />
+        </node>
       </node>
       <node concept="2fKkDk" id="6ed$ieEykKz" role="283bkg">
         <node concept="2fR3E5" id="6ed$ieEykK$" role="2fKkDe">
@@ -5912,7 +6025,9 @@
         </node>
         <node concept="283aBJ" id="6ed$ieFtM67" role="2fA$Fb">
           <node concept="2INlLO" id="6ed$ieFtM68" role="283bkg">
-            <property role="2EalUU" value="LMBD?" />
+            <node concept="3nTYSJ" id="6c4GXuPhmH8" role="3m64J8">
+              <property role="3m0Mb9" value="LMBD?" />
+            </node>
           </node>
           <node concept="2fLe5g" id="6ed$ieFtM69" role="283bkg">
             <node concept="2gtbcv" id="6ed$ieFtM6a" role="2fLe4k">
@@ -8185,7 +8300,9 @@
             </node>
             <node concept="283aBJ" id="65nzZIfsoiO" role="2fLe4q">
               <node concept="2INlLO" id="65nzZIfw3SQ" role="283bkg">
-                <property role="2EalUU" value="Выгружаем параметры" />
+                <node concept="3nTYSJ" id="6c4GXuPhmIP" role="3m64J8">
+                  <property role="3m0Mb9" value="Выгружаем параметры" />
+                </node>
               </node>
               <node concept="3NXZbc" id="65nzZIfw3QU" role="283bkg">
                 <node concept="1SZpTx" id="65nzZIfw3QV" role="3NXZbf">
@@ -8302,7 +8419,9 @@
                 </node>
               </node>
               <node concept="2INlLO" id="65nzZIfsoiQ" role="283bkg">
-                <property role="2EalUU" value="Загружаем параметры" />
+                <node concept="3nTYSJ" id="6c4GXuPhmI0" role="3m64J8">
+                  <property role="3m0Mb9" value="Загружаем параметры" />
+                </node>
               </node>
               <node concept="3NXZbc" id="65nzZIfsoiR" role="283bkg">
                 <node concept="1SZpTx" id="65nzZIfsoiS" role="3NXZbf">
@@ -8706,7 +8825,9 @@
         </node>
         <node concept="283aBJ" id="65nzZIfJkRM" role="2fLe4q">
           <node concept="2INlLO" id="65nzZIfJl66" role="283bkg">
-            <property role="2EalUU" value="Update position when a or b has changed" />
+            <node concept="3nTYSJ" id="6c4GXuPhmIV" role="3m64J8">
+              <property role="3m0Mb9" value="Update position when a or b has changed" />
+            </node>
           </node>
           <node concept="2fKkDk" id="65nzZIfw3H3" role="283bkg">
             <node concept="2fA4ie" id="65nzZIfw3IS" role="2fKkDe">
@@ -9383,6 +9504,90 @@
           </node>
         </node>
       </node>
+    </node>
+  </node>
+  <node concept="283fMa" id="13fQtt5dVVu">
+    <property role="TrG5h" value="PDM_DW" />
+    <node concept="283aBN" id="13fQtt5dVVv" role="2fQKEM">
+      <property role="TrG5h" value="value" />
+      <property role="2fKTFS" value="true" />
+      <node concept="2fQKs2" id="13fQtt5dVVw" role="2fQRkO" />
+    </node>
+    <node concept="283aBN" id="13fQtt5dVVx" role="2fQKEM">
+      <property role="TrG5h" value="period" />
+      <property role="2fKTFS" value="true" />
+      <node concept="2fQKs2" id="13fQtt5dVVy" role="2fQRkO" />
+    </node>
+    <node concept="283aBN" id="13fQtt5dVVz" role="2fQKEM">
+      <property role="TrG5h" value="Q" />
+      <property role="2fKTFZ" value="true" />
+      <node concept="PkkMJ" id="13fQtt5dVV$" role="2fQRkO" />
+    </node>
+    <node concept="283aBN" id="13fQtt5dVV_" role="2fQKEM">
+      <property role="TrG5h" value="pos" />
+      <node concept="2fQKs2" id="13fQtt5dVVA" role="2fQRkO" />
+    </node>
+    <node concept="283aBJ" id="13fQtt5dVVB" role="283bkm">
+      <node concept="2fKkDk" id="13fQtt5dVZz" role="283bkg">
+        <node concept="2fA4ie" id="13fQtt5dW4Y" role="2fKkDe">
+          <node concept="2fRjeW" id="13fQtt5dW7x" role="2fMgUi">
+            <ref role="2fRto5" node="13fQtt5dVVv" resolve="value" />
+          </node>
+          <node concept="2fRjeW" id="13fQtt5dW2a" role="2fMgUl">
+            <ref role="2fRto5" node="13fQtt5dVV_" resolve="pos" />
+          </node>
+        </node>
+        <node concept="2fRjeW" id="13fQtt5dVY$" role="2fKkDa">
+          <ref role="2fRto5" node="13fQtt5dVV_" resolve="pos" />
+        </node>
+      </node>
+      <node concept="2fLe5g" id="13fQtt5dWN5" role="283bkg">
+        <node concept="2fM_AS" id="4o8uk$lmNPl" role="2fLe4k">
+          <node concept="2fRjeW" id="13fQtt5dWNS" role="2fMgUl">
+            <ref role="2fRto5" node="13fQtt5dVV_" resolve="pos" />
+          </node>
+          <node concept="2fRjeW" id="13fQtt5dWR2" role="2fMgUi">
+            <ref role="2fRto5" node="13fQtt5dVVx" resolve="period" />
+          </node>
+        </node>
+        <node concept="283aBJ" id="13fQtt5dWN9" role="2fLe4q">
+          <node concept="2fKkDk" id="13fQtt5dWVs" role="283bkg">
+            <node concept="2fLVyO" id="4o8uk$llJTs" role="2fKkDe">
+              <property role="2fLV_C" value="false" />
+            </node>
+            <node concept="2fRjeW" id="13fQtt5dWVh" role="2fKkDa">
+              <ref role="2fRto5" node="13fQtt5dVVz" resolve="Q" />
+            </node>
+          </node>
+        </node>
+        <node concept="283aBJ" id="13fQtt5dX0q" role="2fL9lL">
+          <node concept="2fKkDk" id="13fQtt5dX2Y" role="283bkg">
+            <node concept="2fLVyO" id="4o8uk$llJU8" role="2fKkDe">
+              <property role="2fLV_C" value="true" />
+            </node>
+            <node concept="2fRjeW" id="13fQtt5dX2N" role="2fKkDa">
+              <ref role="2fRto5" node="13fQtt5dVVz" resolve="Q" />
+            </node>
+          </node>
+          <node concept="2fKkDk" id="13fQtt5dWvq" role="283bkg">
+            <node concept="2fA4kt" id="13fQtt5dWAs" role="2fKkDe">
+              <node concept="2fRjeW" id="13fQtt5dWDV" role="2fMgUi">
+                <ref role="2fRto5" node="13fQtt5dVVx" resolve="period" />
+              </node>
+              <node concept="2fRjeW" id="13fQtt5dWyL" role="2fMgUl">
+                <ref role="2fRto5" node="13fQtt5dVV_" resolve="pos" />
+              </node>
+            </node>
+            <node concept="2fRjeW" id="13fQtt5dWuE" role="2fKkDa">
+              <ref role="2fRto5" node="13fQtt5dVV_" resolve="pos" />
+            </node>
+          </node>
+        </node>
+      </node>
+      <node concept="283b7K" id="4o8uk$lnRLy" role="283bkg" />
+    </node>
+    <node concept="3nTYSJ" id="6c4GXuPhmJD" role="3m1tPD">
+      <property role="3m0Mb9" value="Pulse Density Modulation generator" />
     </node>
   </node>
 </model>

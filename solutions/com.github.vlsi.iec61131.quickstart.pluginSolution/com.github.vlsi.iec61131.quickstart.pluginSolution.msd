@@ -24,22 +24,18 @@
     <dependency reexport="false">8865b7a8-5271-43d3-884c-6fd1d9cfdd34(MPS.OpenAPI)</dependency>
     <dependency reexport="false">2d0dbc0b-d4bb-4df5-a7cb-431e4177f1e9(com.github.vlsi.iec61131.libimport)</dependency>
     <dependency reexport="false">4d1c59f7-8f87-4192-a752-a98136f0b57c(com.github.vlsi.iec61131.types)</dependency>
-    <dependency reexport="false">d28e7e4d-b627-42fa-82d5-c7472b85c5f6(com.github.vlsi.iec61131.st)</dependency>
     <dependency reexport="false">ceab5195-25ea-4f22-9b92-103b95ca8c0c(jetbrains.mps.lang.core)</dependency>
     <dependency reexport="false">df1f98e7-cf94-4627-979f-8c615791cbf3(com.github.vlsi.iec61131.executors)</dependency>
     <dependency reexport="false">0041b19a-d72e-4eff-909f-c9935bfd4e88(com.github.vlsi.iec61131.standard_lib)</dependency>
     <dependency reexport="false">6ad9d944-fc50-4dd6-b81c-6ccc934e5eb0(com.github.vlsi.iec61131.parser)</dependency>
-    <dependency reexport="false">249ae1e5-4c5b-43b7-b0a2-a1f3f947a2d9(com.github.vlsi.iec61131.ti1808.stdlib)</dependency>
     <dependency reexport="false">d1aef6cd-5477-486f-bcbd-34728b246566(com.github.vlsi.iec61131.st2ti1808)</dependency>
   </dependencies>
   <usedDevKits>
     <usedDevKit>508c56cf-0851-4930-8aac-ed733da47058(jetbrains.mps.execution.devkit)</usedDevKit>
   </usedDevKits>
   <languageVersions>
-    <language slang="l:d28e7e4d-b627-42fa-82d5-c7472b85c5f6:com.github.vlsi.iec61131.st" version="0" />
-    <language slang="l:d1aef6cd-5477-486f-bcbd-34728b246566:com.github.vlsi.iec61131.st2ti1808" version="0" />
-    <language slang="l:d7601ad3-513b-4e38-a483-fb62b3afe145:com.github.vlsi.iec61131.ti1808" version="0" />
-    <language slang="l:4d1c59f7-8f87-4192-a752-a98136f0b57c:com.github.vlsi.iec61131.types" version="0" />
+    <language slang="l:d28e7e4d-b627-42fa-82d5-c7472b85c5f6:com.github.vlsi.iec61131.st" version="1" />
+    <language slang="l:4d1c59f7-8f87-4192-a752-a98136f0b57c:com.github.vlsi.iec61131.types" version="1" />
     <language slang="l:306d7456-29e2-4ea3-9c46-e7b830b08481:com.mbeddr.mpsutil.process" version="0" />
     <language slang="l:3eada220-3310-4fd3-b794-ff924add7d8a:com.mbeddr.mpsutil.smodule" version="0" />
     <language slang="l:f3061a53-9226-4cc5-a443-f952ceaf5816:jetbrains.mps.baseLanguage" version="4" />
@@ -85,7 +81,6 @@
     <module reference="d1aef6cd-5477-486f-bcbd-34728b246566(com.github.vlsi.iec61131.st2ti1808)" version="0" />
     <module reference="0041b19a-d72e-4eff-909f-c9935bfd4e88(com.github.vlsi.iec61131.standard_lib)" version="0" />
     <module reference="d7601ad3-513b-4e38-a483-fb62b3afe145(com.github.vlsi.iec61131.ti1808)" version="0" />
-    <module reference="249ae1e5-4c5b-43b7-b0a2-a1f3f947a2d9(com.github.vlsi.iec61131.ti1808.stdlib)" version="0" />
     <module reference="4d1c59f7-8f87-4192-a752-a98136f0b57c(com.github.vlsi.iec61131.types)" version="0" />
     <module reference="f3061a53-9226-4cc5-a443-f952ceaf5816(jetbrains.mps.baseLanguage)" version="0" />
     <module reference="ed6d7656-532c-4bc2-81d1-af945aeb8280(jetbrains.mps.baseLanguage.blTypes)" version="0" />

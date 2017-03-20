@@ -2,9 +2,9 @@
 <model ref="r:ce2450a8-9d37-4646-b206-51338109fd95(com.hardella.examples.ti1808.material_cutter)">
   <persistence version="9" />
   <languages>
-    <use id="4d1c59f7-8f87-4192-a752-a98136f0b57c" name="com.github.vlsi.iec61131.types" version="0" />
+    <use id="4d1c59f7-8f87-4192-a752-a98136f0b57c" name="com.github.vlsi.iec61131.types" version="1" />
     <use id="d1aef6cd-5477-486f-bcbd-34728b246566" name="com.github.vlsi.iec61131.st2ti1808" version="0" />
-    <use id="d28e7e4d-b627-42fa-82d5-c7472b85c5f6" name="com.github.vlsi.iec61131.st" version="0" />
+    <use id="d28e7e4d-b627-42fa-82d5-c7472b85c5f6" name="com.github.vlsi.iec61131.st" version="1" />
     <engage id="8be64a62-fc9c-4c90-a832-507f291073fd" name="com.github.vlsi.iec61131.ti1808.toemulator" />
   </languages>
   <imports>
@@ -115,12 +115,15 @@
         <reference id="4476613817796190554" name="typeAlias" index="2Cuc7m" />
       </concept>
       <concept id="123060273427541007" name="com.github.vlsi.iec61131.types.structure.ICommentable" flags="ng" index="2EalU_">
-        <property id="123060273427541008" name="comment" index="2EalUU" />
+        <child id="7135025448697818814" name="commentNode" index="3m1tPD" />
       </concept>
       <concept id="6669248405421858998" name="com.github.vlsi.iec61131.types.structure.ReferenceToType" flags="ng" index="2KzOUw">
         <reference id="6669248405421860085" name="type" index="2KzOFz" />
       </concept>
       <concept id="3750039987448159535" name="com.github.vlsi.iec61131.types.structure.BoolType" flags="ng" index="PkkMJ" />
+      <concept id="7135025448695848440" name="com.github.vlsi.iec61131.types.structure.CommentNode" flags="ng" index="3nTYSJ">
+        <property id="7135025448698220830" name="comment" index="3m0Mb9" />
+      </concept>
       <concept id="5097456207316512517" name="com.github.vlsi.iec61131.types.structure.FunctionRefCall" flags="ng" index="3Ty29G">
         <child id="5097456207316515146" name="expression" index="3Ty3gz" />
       </concept>
@@ -315,41 +318,53 @@
     <node concept="283aBN" id="65nzZIfsorU" role="2fQKEM">
       <property role="TrG5h" value="enable" />
       <property role="2fKTFS" value="true" />
-      <property role="2EalUU" value="out is activated when runLength&gt;0 AND enable=TRUE" />
       <node concept="PkkMJ" id="65nzZIfsosb" role="2fQRkO" />
+      <node concept="3nTYSJ" id="6c4GXuPhmMm" role="3m1tPD">
+        <property role="3m0Mb9" value="out is activated when runLength&gt;0 AND enable=TRUE" />
+      </node>
     </node>
     <node concept="283aBN" id="65nzZIfspf9" role="2fQKEM">
       <property role="TrG5h" value="runLength" />
       <property role="2fKTFS" value="true" />
-      <property role="2EalUU" value="when total run length exceeds given value, output is disabled" />
       <node concept="2fQKs2" id="65nzZIfw47q" role="2fQRkO" />
+      <node concept="3nTYSJ" id="6c4GXuPhmMl" role="3m1tPD">
+        <property role="3m0Mb9" value="when total run length exceeds given value, output is disabled" />
+      </node>
     </node>
     <node concept="283aBN" id="65nzZIfspj6" role="2fQKEM">
       <property role="TrG5h" value="cntr" />
       <property role="2fKTFZ" value="false" />
       <property role="2fKTFS" value="true" />
-      <property role="2EalUU" value="input counter" />
       <node concept="2fQKt7" id="65nzZIfspJ5" role="2fQRkO" />
+      <node concept="3nTYSJ" id="6c4GXuPhmMh" role="3m1tPD">
+        <property role="3m0Mb9" value="input counter" />
+      </node>
     </node>
     <node concept="283aBN" id="65nzZIfsor9" role="2fQKEM">
       <property role="TrG5h" value="state" />
       <property role="2fKTFZ" value="true" />
-      <property role="2EalUU" value="Block state: stop, init, run" />
       <node concept="2KzOUw" id="65nzZIgnrTB" role="2fQRkO">
         <ref role="2KzOFz" node="65nzZIfsoqU" resolve="PRU_CUTTER_STATE" />
+      </node>
+      <node concept="3nTYSJ" id="6c4GXuPhmMo" role="3m1tPD">
+        <property role="3m0Mb9" value="Block state: stop, init, run" />
       </node>
     </node>
     <node concept="283aBN" id="65nzZIfspiH" role="2fQKEM">
       <property role="TrG5h" value="offset" />
       <property role="2fKTFZ" value="true" />
-      <property role="2EalUU" value="Total run length since last start" />
       <node concept="2fQKs2" id="65nzZIfspmc" role="2fQRkO" />
+      <node concept="3nTYSJ" id="6c4GXuPhmMi" role="3m1tPD">
+        <property role="3m0Mb9" value="Total run length since last start" />
+      </node>
     </node>
     <node concept="283aBN" id="65nzZIfspqJ" role="2fQKEM">
       <property role="TrG5h" value="out" />
       <property role="2fKTFZ" value="true" />
-      <property role="2EalUU" value="TRUE when enable=TRUE AND offset&lt;runLength" />
       <node concept="PkkMJ" id="65nzZIfspr8" role="2fQRkO" />
+      <node concept="3nTYSJ" id="6c4GXuPhmMk" role="3m1tPD">
+        <property role="3m0Mb9" value="TRUE when enable=TRUE AND offset&lt;runLength" />
+      </node>
     </node>
     <node concept="283aBN" id="65nzZIfsp$8" role="2fQKEM">
       <property role="TrG5h" value="prevCntr" />

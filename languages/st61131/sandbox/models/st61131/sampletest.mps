@@ -3,7 +3,7 @@
   <persistence version="9" />
   <languages>
     <use id="3439bd3b-eb74-4688-8e1a-f30479479a8f" name="com.github.vlsi.iec61131.unittest" version="0" />
-    <use id="d28e7e4d-b627-42fa-82d5-c7472b85c5f6" name="com.github.vlsi.iec61131.st" version="0" />
+    <use id="d28e7e4d-b627-42fa-82d5-c7472b85c5f6" name="com.github.vlsi.iec61131.st" version="1" />
   </languages>
   <imports>
     <import index="2wyf" ref="r:7c41e04e-4743-46c1-9063-a4724d0011aa(st61131.sample)" />

@@ -2,7 +2,7 @@
 <model ref="r:93fb98f2-7437-4cf9-b9ef-09914008e1b2(st61131.plc110)">
   <persistence version="9" />
   <languages>
-    <use id="4d1c59f7-8f87-4192-a752-a98136f0b57c" name="com.github.vlsi.iec61131.types" version="0" />
+    <use id="4d1c59f7-8f87-4192-a752-a98136f0b57c" name="com.github.vlsi.iec61131.types" version="1" />
   </languages>
   <imports />
   <registry>

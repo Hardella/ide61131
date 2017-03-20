@@ -2,9 +2,9 @@
 <model ref="r:7c41e04e-4743-46c1-9063-a4724d0011aa(st61131.sample)">
   <persistence version="9" />
   <languages>
-    <use id="d28e7e4d-b627-42fa-82d5-c7472b85c5f6" name="com.github.vlsi.iec61131.st" version="0" />
+    <use id="d28e7e4d-b627-42fa-82d5-c7472b85c5f6" name="com.github.vlsi.iec61131.st" version="1" />
     <use id="df1f98e7-cf94-4627-979f-8c615791cbf3" name="com.github.vlsi.iec61131.executors" version="0" />
-    <use id="4d1c59f7-8f87-4192-a752-a98136f0b57c" name="com.github.vlsi.iec61131.types" version="0" />
+    <use id="4d1c59f7-8f87-4192-a752-a98136f0b57c" name="com.github.vlsi.iec61131.types" version="1" />
   </languages>
   <imports>
     <import index="ax34" ref="r:d8febb6d-d954-4896-8399-1dcd00d04a36(com.github.vlsi.iec61131.standard_lib.lib)" />
@@ -61,12 +61,15 @@
         <child id="4800663726689709914" name="value" index="LVwPz" />
       </concept>
       <concept id="123060273427541007" name="com.github.vlsi.iec61131.types.structure.ICommentable" flags="ng" index="2EalU_">
-        <property id="123060273427541008" name="comment" index="2EalUU" />
+        <child id="7135025448697818814" name="commentNode" index="3m1tPD" />
       </concept>
       <concept id="4800663726691011251" name="com.github.vlsi.iec61131.types.structure.EnumParameterValue" flags="ng" index="L6yya">
         <reference id="4800663726691502741" name="value" index="L4UyG" />
       </concept>
       <concept id="3750039987448159535" name="com.github.vlsi.iec61131.types.structure.BoolType" flags="ng" index="PkkMJ" />
+      <concept id="7135025448695848440" name="com.github.vlsi.iec61131.types.structure.CommentNode" flags="ng" index="3nTYSJ">
+        <property id="7135025448698220830" name="comment" index="3m0Mb9" />
+      </concept>
       <concept id="2407636829927449489" name="com.github.vlsi.iec61131.types.structure.ConfigModule" flags="ng" index="3E$8tx">
         <reference id="3686274754592787063" name="submoduleKlass" index="3SPwOG" />
         <reference id="3686274754590667757" name="klass" index="3SXriQ" />
@@ -174,27 +177,29 @@
     <property role="TrG5h" value="PLC110_32M" />
     <node concept="3E$8tx" id="4FDhPh_kEKM" role="3SXv0I">
       <ref role="3SXriQ" to="cjs8:6PcEEG3Z3B" resolve="Root" />
-      <node concept="3E$8tx" id="65nzZIfsnRa" role="3E$8ty">
-        <ref role="3SXriQ" to="cjs8:6PcEEG3YZA" resolve="ID562" />
+      <node concept="3E$8tx" id="3E96UhsaN3p" role="3E$8ty">
+        <ref role="3SXriQ" to="cjs8:6PcEEG3Z1J" resolve="I_SIMPLE_INPUT" />
         <ref role="3SPwOG" to="cjs8:6PcEEG3Z3D" />
-        <node concept="3Zbmay" id="65nzZIfsnRb" role="3SPwdy">
-          <property role="2EalUU" value="Encoder 1" />
-          <ref role="3ZblU3" to="cjs8:6PcEEG3YZC" />
-        </node>
-        <node concept="vkDt5" id="65nzZIfsnRc" role="vkI8F">
-          <property role="vk_EZ" value="Fast Encoders" />
-          <ref role="vkDt4" to="cjs8:6PcEEG3YZD" />
-        </node>
-        <node concept="vya3J" id="65nzZIfsnRd" role="vkI8F">
-          <ref role="vkDt4" to="cjs8:6PcEEG3YZE" />
-          <node concept="2fQMEq" id="65nzZIfsnRe" role="LVwPz">
-            <property role="2fVhNJ" value="255" />
+        <node concept="3Zbmay" id="3E96UhsaN3q" role="3SPwdy">
+          <ref role="3ZblU3" to="cjs8:6PcEEG3Z1K" />
+          <node concept="3nTYSJ" id="6c4GXuPhmJ6" role="3m1tPD">
+            <property role="3m0Mb9" value="Discrete input 1" />
           </node>
         </node>
-        <node concept="vya3J" id="65nzZIfsnRf" role="vkI8F">
-          <ref role="vkDt4" to="cjs8:6PcEEG3YZF" />
-          <node concept="2fQMEq" id="65nzZIfsnRg" role="LVwPz">
-            <property role="2fVhNJ" value="0" />
+        <node concept="3Zbmay" id="3E96UhsaN3r" role="3SPwdy">
+          <ref role="3ZblU3" to="cjs8:6PcEEG3Z1L" />
+          <node concept="3nTYSJ" id="6c4GXuPhmID" role="3m1tPD">
+            <property role="3m0Mb9" value="Discrete input 2" />
+          </node>
+        </node>
+        <node concept="vkDt5" id="3E96UhsaN3s" role="vkI8F">
+          <property role="vk_EZ" value="Fast discrete inputs" />
+          <ref role="vkDt4" to="cjs8:6PcEEG3Z1M" />
+        </node>
+        <node concept="vya3J" id="3E96UhsaN3t" role="vkI8F">
+          <ref role="vkDt4" to="cjs8:6PcEEG3Z1N" />
+          <node concept="2fQMEq" id="3E96UhsaN3u" role="LVwPz">
+            <property role="2fVhNJ" value="10000" />
           </node>
         </node>
       </node>
@@ -202,62 +207,98 @@
         <ref role="3SXriQ" to="cjs8:6PcEEG3YHZ" resolve="ID130" />
         <ref role="3SPwOG" to="cjs8:6PcEEG3Z3F" />
         <node concept="3Zbmay" id="4FDhPh_kEKV" role="3SPwdy">
-          <property role="2EalUU" value="8 discrete inputs" />
           <ref role="3ZblU3" to="cjs8:6PcEEG3YI0" />
           <node concept="3Zbmaz" id="4FDhPh_kEKW" role="3SPwcr">
-            <property role="2EalUU" value="Bit 0" />
             <node concept="2fRjeW" id="4FDhPh_kEVQ" role="I1Nva">
               <ref role="2fRto5" node="4FDhPh_kEcl" resolve="button" />
             </node>
+            <node concept="3nTYSJ" id="6c4GXuPhmIb" role="3m1tPD">
+              <property role="3m0Mb9" value="Bit 0" />
+            </node>
           </node>
           <node concept="3Zbmaz" id="4FDhPh_kEKX" role="3SPwcr">
-            <property role="2EalUU" value="Bit 1" />
+            <node concept="3nTYSJ" id="6c4GXuPhmHJ" role="3m1tPD">
+              <property role="3m0Mb9" value="Bit 1" />
+            </node>
           </node>
           <node concept="3Zbmaz" id="4FDhPh_kEKY" role="3SPwcr">
-            <property role="2EalUU" value="Bit 2" />
+            <node concept="3nTYSJ" id="6c4GXuPhmHX" role="3m1tPD">
+              <property role="3m0Mb9" value="Bit 2" />
+            </node>
           </node>
           <node concept="3Zbmaz" id="4FDhPh_kEKZ" role="3SPwcr">
-            <property role="2EalUU" value="Bit 3" />
+            <node concept="3nTYSJ" id="6c4GXuPhmJ0" role="3m1tPD">
+              <property role="3m0Mb9" value="Bit 3" />
+            </node>
           </node>
           <node concept="3Zbmaz" id="4FDhPh_kEL0" role="3SPwcr">
-            <property role="2EalUU" value="Bit 4" />
+            <node concept="3nTYSJ" id="6c4GXuPhmHk" role="3m1tPD">
+              <property role="3m0Mb9" value="Bit 4" />
+            </node>
           </node>
           <node concept="3Zbmaz" id="4FDhPh_kEL1" role="3SPwcr">
-            <property role="2EalUU" value="Bit 5" />
+            <node concept="3nTYSJ" id="6c4GXuPhmHq" role="3m1tPD">
+              <property role="3m0Mb9" value="Bit 5" />
+            </node>
           </node>
           <node concept="3Zbmaz" id="4FDhPh_kEL2" role="3SPwcr">
-            <property role="2EalUU" value="Bit 6" />
+            <node concept="3nTYSJ" id="6c4GXuPhmHL" role="3m1tPD">
+              <property role="3m0Mb9" value="Bit 6" />
+            </node>
           </node>
           <node concept="3Zbmaz" id="4FDhPh_kEL3" role="3SPwcr">
-            <property role="2EalUU" value="Bit 7" />
+            <node concept="3nTYSJ" id="6c4GXuPhmHh" role="3m1tPD">
+              <property role="3m0Mb9" value="Bit 7" />
+            </node>
+          </node>
+          <node concept="3nTYSJ" id="6c4GXuPhmJ1" role="3m1tPD">
+            <property role="3m0Mb9" value="8 discrete inputs" />
           </node>
         </node>
         <node concept="3Zbmay" id="4FDhPh_kEL4" role="3SPwdy">
-          <property role="2EalUU" value="8 discrete inputs" />
           <ref role="3ZblU3" to="cjs8:6PcEEG3YI1" />
           <node concept="3Zbmaz" id="4FDhPh_kEL5" role="3SPwcr">
-            <property role="2EalUU" value="Bit 0" />
+            <node concept="3nTYSJ" id="6c4GXuPhmIy" role="3m1tPD">
+              <property role="3m0Mb9" value="Bit 0" />
+            </node>
           </node>
           <node concept="3Zbmaz" id="4FDhPh_kEL6" role="3SPwcr">
-            <property role="2EalUU" value="Bit 1" />
+            <node concept="3nTYSJ" id="6c4GXuPhmHp" role="3m1tPD">
+              <property role="3m0Mb9" value="Bit 1" />
+            </node>
           </node>
           <node concept="3Zbmaz" id="4FDhPh_kEL7" role="3SPwcr">
-            <property role="2EalUU" value="Bit 2" />
+            <node concept="3nTYSJ" id="6c4GXuPhmJr" role="3m1tPD">
+              <property role="3m0Mb9" value="Bit 2" />
+            </node>
           </node>
           <node concept="3Zbmaz" id="4FDhPh_kEL8" role="3SPwcr">
-            <property role="2EalUU" value="Bit 3" />
+            <node concept="3nTYSJ" id="6c4GXuPhmHM" role="3m1tPD">
+              <property role="3m0Mb9" value="Bit 3" />
+            </node>
           </node>
           <node concept="3Zbmaz" id="4FDhPh_kEL9" role="3SPwcr">
-            <property role="2EalUU" value="Bit 4" />
+            <node concept="3nTYSJ" id="6c4GXuPhmH_" role="3m1tPD">
+              <property role="3m0Mb9" value="Bit 4" />
+            </node>
           </node>
           <node concept="3Zbmaz" id="4FDhPh_kELa" role="3SPwcr">
-            <property role="2EalUU" value="Bit 5" />
+            <node concept="3nTYSJ" id="6c4GXuPhmIO" role="3m1tPD">
+              <property role="3m0Mb9" value="Bit 5" />
+            </node>
           </node>
           <node concept="3Zbmaz" id="4FDhPh_kELb" role="3SPwcr">
-            <property role="2EalUU" value="Bit 6" />
+            <node concept="3nTYSJ" id="6c4GXuPhmIU" role="3m1tPD">
+              <property role="3m0Mb9" value="Bit 6" />
+            </node>
           </node>
           <node concept="3Zbmaz" id="4FDhPh_kELc" role="3SPwcr">
-            <property role="2EalUU" value="Bit 7" />
+            <node concept="3nTYSJ" id="6c4GXuPhmHt" role="3m1tPD">
+              <property role="3m0Mb9" value="Bit 7" />
+            </node>
+          </node>
+          <node concept="3nTYSJ" id="6c4GXuPhmHA" role="3m1tPD">
+            <property role="3m0Mb9" value="8 discrete inputs" />
           </node>
         </node>
         <node concept="vkDt5" id="4FDhPh_kELd" role="vkI8F">
@@ -281,36 +322,52 @@
         <ref role="3SXriQ" to="cjs8:6PcEEG3YZG" resolve="ID571" />
         <ref role="3SPwOG" to="cjs8:6PcEEG3Z3H" />
         <node concept="3Zbmay" id="5fRwzr9DLQn" role="3SPwdy">
-          <property role="2EalUU" value="PWM 1 power" />
           <ref role="3ZblU3" to="cjs8:6PcEEG3YZH" />
+          <node concept="3nTYSJ" id="6c4GXuPhmJB" role="3m1tPD">
+            <property role="3m0Mb9" value="PWM 1 power" />
+          </node>
         </node>
         <node concept="3Zbmay" id="5fRwzr9DLQo" role="3SPwdy">
-          <property role="2EalUU" value="PWM 2 power" />
           <ref role="3ZblU3" to="cjs8:6PcEEG3YZI" />
+          <node concept="3nTYSJ" id="6c4GXuPhmHG" role="3m1tPD">
+            <property role="3m0Mb9" value="PWM 2 power" />
+          </node>
         </node>
         <node concept="3Zbmay" id="5fRwzr9DLQp" role="3SPwdy">
-          <property role="2EalUU" value="PWM 3 power" />
           <ref role="3ZblU3" to="cjs8:6PcEEG3YZJ" />
+          <node concept="3nTYSJ" id="6c4GXuPhmI_" role="3m1tPD">
+            <property role="3m0Mb9" value="PWM 3 power" />
+          </node>
         </node>
         <node concept="3Zbmay" id="5fRwzr9DLQq" role="3SPwdy">
-          <property role="2EalUU" value="PWM 4 power" />
           <ref role="3ZblU3" to="cjs8:6PcEEG3YZK" />
+          <node concept="3nTYSJ" id="6c4GXuPhmIM" role="3m1tPD">
+            <property role="3m0Mb9" value="PWM 4 power" />
+          </node>
         </node>
         <node concept="3Zbmay" id="5fRwzr9DLQr" role="3SPwdy">
-          <property role="2EalUU" value="PWM 1 period, in mks" />
           <ref role="3ZblU3" to="cjs8:6PcEEG3YZL" />
+          <node concept="3nTYSJ" id="6c4GXuPhmJ8" role="3m1tPD">
+            <property role="3m0Mb9" value="PWM 1 period, in mks" />
+          </node>
         </node>
         <node concept="3Zbmay" id="5fRwzr9DLQs" role="3SPwdy">
-          <property role="2EalUU" value="PWM 2 period, in mks" />
           <ref role="3ZblU3" to="cjs8:6PcEEG3YZM" />
+          <node concept="3nTYSJ" id="6c4GXuPhmJx" role="3m1tPD">
+            <property role="3m0Mb9" value="PWM 2 period, in mks" />
+          </node>
         </node>
         <node concept="3Zbmay" id="5fRwzr9DLQt" role="3SPwdy">
-          <property role="2EalUU" value="PWM 3 period, in mks" />
           <ref role="3ZblU3" to="cjs8:6PcEEG3YZN" />
+          <node concept="3nTYSJ" id="6c4GXuPhmIZ" role="3m1tPD">
+            <property role="3m0Mb9" value="PWM 3 period, in mks" />
+          </node>
         </node>
         <node concept="3Zbmay" id="5fRwzr9DLQu" role="3SPwdy">
-          <property role="2EalUU" value="PWM 4 period, in mks" />
           <ref role="3ZblU3" to="cjs8:6PcEEG3YZO" />
+          <node concept="3nTYSJ" id="6c4GXuPhmHv" role="3m1tPD">
+            <property role="3m0Mb9" value="PWM 4 period, in mks" />
+          </node>
         </node>
         <node concept="vkDt5" id="5fRwzr9DLQv" role="vkI8F">
           <property role="vk_EZ" value="PWM" />
@@ -369,62 +426,98 @@
         <ref role="3SXriQ" to="cjs8:6PcEEG3YI7" resolve="ID131" />
         <ref role="3SPwOG" to="cjs8:6PcEEG3Z3J" />
         <node concept="3Zbmay" id="4FDhPh_kELt" role="3SPwdy">
-          <property role="2EalUU" value="8 discrete outputs" />
           <ref role="3ZblU3" to="cjs8:6PcEEG3YI8" />
           <node concept="3Zbmaz" id="4FDhPh_kELu" role="3SPwcr">
-            <property role="2EalUU" value="Bit 0" />
             <node concept="2fRjeW" id="4FDhPh_kEW9" role="I1Nva">
               <ref role="2fRto5" node="4FDhPh_kEcO" resolve="lamp" />
             </node>
+            <node concept="3nTYSJ" id="6c4GXuPhmI5" role="3m1tPD">
+              <property role="3m0Mb9" value="Bit 0" />
+            </node>
           </node>
           <node concept="3Zbmaz" id="4FDhPh_kELv" role="3SPwcr">
-            <property role="2EalUU" value="Bit 1" />
+            <node concept="3nTYSJ" id="6c4GXuPhmIz" role="3m1tPD">
+              <property role="3m0Mb9" value="Bit 1" />
+            </node>
           </node>
           <node concept="3Zbmaz" id="4FDhPh_kELw" role="3SPwcr">
-            <property role="2EalUU" value="Bit 2" />
+            <node concept="3nTYSJ" id="6c4GXuPhmJb" role="3m1tPD">
+              <property role="3m0Mb9" value="Bit 2" />
+            </node>
           </node>
           <node concept="3Zbmaz" id="4FDhPh_kELx" role="3SPwcr">
-            <property role="2EalUU" value="Bit 3" />
+            <node concept="3nTYSJ" id="6c4GXuPhmJc" role="3m1tPD">
+              <property role="3m0Mb9" value="Bit 3" />
+            </node>
           </node>
           <node concept="3Zbmaz" id="4FDhPh_kELy" role="3SPwcr">
-            <property role="2EalUU" value="Bit 4" />
+            <node concept="3nTYSJ" id="6c4GXuPhmJz" role="3m1tPD">
+              <property role="3m0Mb9" value="Bit 4" />
+            </node>
           </node>
           <node concept="3Zbmaz" id="4FDhPh_kELz" role="3SPwcr">
-            <property role="2EalUU" value="Bit 5" />
+            <node concept="3nTYSJ" id="6c4GXuPhmHK" role="3m1tPD">
+              <property role="3m0Mb9" value="Bit 5" />
+            </node>
           </node>
           <node concept="3Zbmaz" id="4FDhPh_kEL$" role="3SPwcr">
-            <property role="2EalUU" value="Bit 6" />
+            <node concept="3nTYSJ" id="6c4GXuPhmIc" role="3m1tPD">
+              <property role="3m0Mb9" value="Bit 6" />
+            </node>
           </node>
           <node concept="3Zbmaz" id="4FDhPh_kEL_" role="3SPwcr">
-            <property role="2EalUU" value="Bit 7" />
+            <node concept="3nTYSJ" id="6c4GXuPhmIW" role="3m1tPD">
+              <property role="3m0Mb9" value="Bit 7" />
+            </node>
+          </node>
+          <node concept="3nTYSJ" id="6c4GXuPhmJj" role="3m1tPD">
+            <property role="3m0Mb9" value="8 discrete outputs" />
           </node>
         </node>
         <node concept="3Zbmay" id="4FDhPh_kELA" role="3SPwdy">
-          <property role="2EalUU" value="8 discrete outputs" />
           <ref role="3ZblU3" to="cjs8:6PcEEG3YI9" />
           <node concept="3Zbmaz" id="4FDhPh_kELB" role="3SPwcr">
-            <property role="2EalUU" value="Bit 0" />
+            <node concept="3nTYSJ" id="6c4GXuPhmHW" role="3m1tPD">
+              <property role="3m0Mb9" value="Bit 0" />
+            </node>
           </node>
           <node concept="3Zbmaz" id="4FDhPh_kELC" role="3SPwcr">
-            <property role="2EalUU" value="Bit 1" />
+            <node concept="3nTYSJ" id="6c4GXuPhmHI" role="3m1tPD">
+              <property role="3m0Mb9" value="Bit 1" />
+            </node>
           </node>
           <node concept="3Zbmaz" id="4FDhPh_kELD" role="3SPwcr">
-            <property role="2EalUU" value="Bit 2" />
+            <node concept="3nTYSJ" id="6c4GXuPhmHN" role="3m1tPD">
+              <property role="3m0Mb9" value="Bit 2" />
+            </node>
           </node>
           <node concept="3Zbmaz" id="4FDhPh_kELE" role="3SPwcr">
-            <property role="2EalUU" value="Bit 3" />
+            <node concept="3nTYSJ" id="6c4GXuPhmI7" role="3m1tPD">
+              <property role="3m0Mb9" value="Bit 3" />
+            </node>
           </node>
           <node concept="3Zbmaz" id="4FDhPh_kELF" role="3SPwcr">
-            <property role="2EalUU" value="Bit 4" />
+            <node concept="3nTYSJ" id="6c4GXuPhmI6" role="3m1tPD">
+              <property role="3m0Mb9" value="Bit 4" />
+            </node>
           </node>
           <node concept="3Zbmaz" id="4FDhPh_kELG" role="3SPwcr">
-            <property role="2EalUU" value="Bit 5" />
+            <node concept="3nTYSJ" id="6c4GXuPhmIe" role="3m1tPD">
+              <property role="3m0Mb9" value="Bit 5" />
+            </node>
           </node>
           <node concept="3Zbmaz" id="4FDhPh_kELH" role="3SPwcr">
-            <property role="2EalUU" value="Bit 6" />
+            <node concept="3nTYSJ" id="6c4GXuPhmIh" role="3m1tPD">
+              <property role="3m0Mb9" value="Bit 6" />
+            </node>
           </node>
           <node concept="3Zbmaz" id="4FDhPh_kELI" role="3SPwcr">
-            <property role="2EalUU" value="Bit 7" />
+            <node concept="3nTYSJ" id="6c4GXuPhmJ5" role="3m1tPD">
+              <property role="3m0Mb9" value="Bit 7" />
+            </node>
+          </node>
+          <node concept="3nTYSJ" id="6c4GXuPhmH7" role="3m1tPD">
+            <property role="3m0Mb9" value="8 discrete outputs" />
           </node>
         </node>
         <node concept="vkDt5" id="4FDhPh_kELJ" role="vkI8F">
@@ -460,8 +553,10 @@
         <ref role="3SXriQ" to="cjs8:6PcEEG3YHP" resolve="ID103" />
         <ref role="3SPwOG" to="cjs8:6PcEEG3Z3L" />
         <node concept="3Zbmay" id="4FDhPh_kELT" role="3SPwdy">
-          <property role="2EalUU" value="Special input" />
           <ref role="3ZblU3" to="cjs8:6PcEEG3YHR" />
+          <node concept="3nTYSJ" id="6c4GXuPhmHT" role="3m1tPD">
+            <property role="3m0Mb9" value="Special input" />
+          </node>
         </node>
         <node concept="vkDt5" id="4FDhPh_kELU" role="vkI8F">
           <property role="vk_EZ" value="Special input" />
@@ -472,8 +567,10 @@
         <ref role="3SXriQ" to="cjs8:6PcEEG3YHT" resolve="ID104" />
         <ref role="3SPwOG" to="cjs8:6PcEEG3Z3N" />
         <node concept="3Zbmay" id="4FDhPh_kELW" role="3SPwdy">
-          <property role="2EalUU" value="Special output" />
           <ref role="3ZblU3" to="cjs8:6PcEEG3YHU" />
+          <node concept="3nTYSJ" id="6c4GXuPhmIw" role="3m1tPD">
+            <property role="3m0Mb9" value="Special output" />
+          </node>
         </node>
         <node concept="vkDt5" id="4FDhPh_kELX" role="vkI8F">
           <property role="vk_EZ" value="Special output" />
@@ -484,12 +581,16 @@
         <ref role="3SXriQ" to="cjs8:6PcEEG3Z23" resolve="MODBUS_MASTER_ID450" />
         <ref role="3SPwOG" to="cjs8:6PcEEG3Z3P" />
         <node concept="3Zbmay" id="4FDhPh_kES6" role="3SPwdy">
-          <property role="2EalUU" value="Last address" />
           <ref role="3ZblU3" to="cjs8:6PcEEG3Z24" />
+          <node concept="3nTYSJ" id="6c4GXuPhmIX" role="3m1tPD">
+            <property role="3m0Mb9" value="Last address" />
+          </node>
         </node>
         <node concept="3Zbmay" id="4FDhPh_kES7" role="3SPwdy">
-          <property role="2EalUU" value="Last error" />
           <ref role="3ZblU3" to="cjs8:6PcEEG3Z25" />
+          <node concept="3nTYSJ" id="6c4GXuPhmHc" role="3m1tPD">
+            <property role="3m0Mb9" value="Last error" />
+          </node>
         </node>
         <node concept="3E$8tx" id="4FDhPh_kESU" role="3E$8ty">
           <ref role="3SXriQ" to="cjs8:6PcEEG3YFZ" resolve="COM1_USART" />
@@ -568,8 +669,10 @@
             </node>
           </node>
           <node concept="3Zbmay" id="4FDhPh_kETX" role="3SPwdy">
-            <property role="2EalUU" value="Command (0xff - Start)" />
             <ref role="3ZblU3" to="cjs8:6PcEEG3YMF" />
+            <node concept="3nTYSJ" id="6c4GXuPhmHV" role="3m1tPD">
+              <property role="3m0Mb9" value="Command (0xff - Start)" />
+            </node>
           </node>
           <node concept="vkDt5" id="4FDhPh_kETY" role="vkI8F">
             <property role="vk_EZ" value="Universal Modbus device" />

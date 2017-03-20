@@ -2,9 +2,8 @@
 <model ref="r:bac03eb6-fb9e-48db-8e6f-79d27afe9caf(com.hardella.examples.ti1808.fast_encoder)">
   <persistence version="9" />
   <languages>
-    <use id="8be64a62-fc9c-4c90-a832-507f291073fd" name="com.github.vlsi.iec61131.ti1808.toemulator" version="0" />
-    <use id="4d1c59f7-8f87-4192-a752-a98136f0b57c" name="com.github.vlsi.iec61131.types" version="0" />
-    <use id="d28e7e4d-b627-42fa-82d5-c7472b85c5f6" name="com.github.vlsi.iec61131.st" version="0" />
+    <use id="4d1c59f7-8f87-4192-a752-a98136f0b57c" name="com.github.vlsi.iec61131.types" version="1" />
+    <use id="d28e7e4d-b627-42fa-82d5-c7472b85c5f6" name="com.github.vlsi.iec61131.st" version="1" />
     <use id="d1aef6cd-5477-486f-bcbd-34728b246566" name="com.github.vlsi.iec61131.st2ti1808" version="0" />
     <engage id="8be64a62-fc9c-4c90-a832-507f291073fd" name="com.github.vlsi.iec61131.ti1808.toemulator" />
   </languages>
@@ -96,10 +95,10 @@
           <ref role="2fRto5" to="gzb9:65nzZIfsqxB" resolve="position" />
         </node>
         <node concept="2fRjeW" id="58WclwlFHZO" role="3L59S7">
-          <ref role="2fRto5" to="gzb9:65nzZIfw3E$" resolve="counter" />
+          <ref role="2fRto5" to="gzb9:65nzZIfw3E$" resolve="initialOffset" />
         </node>
         <node concept="2fRjeW" id="58WclwlFI0P" role="3L59S7">
-          <ref role="2fRto5" to="gzb9:65nzZIfsqyu" resolve="zeroDetected" />
+          <ref role="2fRto5" to="gzb9:65nzZIfsqyu" resolve="zCount" />
         </node>
       </node>
     </node>

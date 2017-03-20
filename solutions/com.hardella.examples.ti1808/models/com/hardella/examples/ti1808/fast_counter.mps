@@ -2,9 +2,9 @@
 <model ref="r:baebc184-c187-480d-b964-5b4447f7768e(com.hardella.examples.ti1808.fast_counter)">
   <persistence version="9" />
   <languages>
-    <use id="4d1c59f7-8f87-4192-a752-a98136f0b57c" name="com.github.vlsi.iec61131.types" version="0" />
+    <use id="4d1c59f7-8f87-4192-a752-a98136f0b57c" name="com.github.vlsi.iec61131.types" version="1" />
     <use id="d1aef6cd-5477-486f-bcbd-34728b246566" name="com.github.vlsi.iec61131.st2ti1808" version="0" />
-    <use id="d28e7e4d-b627-42fa-82d5-c7472b85c5f6" name="com.github.vlsi.iec61131.st" version="0" />
+    <use id="d28e7e4d-b627-42fa-82d5-c7472b85c5f6" name="com.github.vlsi.iec61131.st" version="1" />
     <engage id="8be64a62-fc9c-4c90-a832-507f291073fd" name="com.github.vlsi.iec61131.ti1808.toemulator" />
   </languages>
   <imports>
@@ -42,7 +42,9 @@
         <child id="6039408957482904422" name="condition" index="2fLe4k" />
         <child id="6039408957482904424" name="ifTrue" index="2fLe4q" />
       </concept>
-      <concept id="4949279015990068094" name="com.github.vlsi.iec61131.st.structure.CommentStatement" flags="ng" index="2INlLO" />
+      <concept id="4949279015990068094" name="com.github.vlsi.iec61131.st.structure.CommentStatement" flags="ng" index="2INlLO">
+        <child id="7135025448699623455" name="commentNd" index="3m64J8" />
+      </concept>
     </language>
     <language id="4d1c59f7-8f87-4192-a752-a98136f0b57c" name="com.github.vlsi.iec61131.types">
       <concept id="6039408957479248769" name="com.github.vlsi.iec61131.types.structure.VariableDeclaration" flags="ng" index="283aBN">
@@ -76,7 +78,10 @@
         <reference id="5202852658696457741" name="function" index="kub3w" />
       </concept>
       <concept id="123060273427541007" name="com.github.vlsi.iec61131.types.structure.ICommentable" flags="ng" index="2EalU_">
-        <property id="123060273427541008" name="comment" index="2EalUU" />
+        <child id="7135025448697818814" name="commentNode" index="3m1tPD" />
+      </concept>
+      <concept id="7135025448695848440" name="com.github.vlsi.iec61131.types.structure.CommentNode" flags="ng" index="3nTYSJ">
+        <property id="7135025448698220830" name="comment" index="3m0Mb9" />
       </concept>
       <concept id="5097456207316549595" name="com.github.vlsi.iec61131.types.structure.IFunctionCallLike" flags="ng" index="3TyVaM">
         <child id="5097456207316515151" name="args" index="3Ty3gA" />
@@ -106,11 +111,13 @@
     <property role="TrG5h" value="FAST_COUNTER" />
     <node concept="283aBN" id="58WclwlFIbq" role="2fQKEM">
       <property role="TrG5h" value="counter" />
-      <property role="2EalUU" value="This variable will be visible in CoDeSys program" />
       <property role="2fKTFS" value="false" />
       <property role="2fKTFZ" value="true" />
       <node concept="2fQKt7" id="58WclwlFIbF" role="2fQRkO" />
       <node concept="3LqZAk" id="58WclwlFIl6" role="lGtFl" />
+      <node concept="3nTYSJ" id="6c4GXuPhmMj" role="3m1tPD">
+        <property role="3m0Mb9" value="This variable will be visible in CoDeSys program" />
+      </node>
     </node>
     <node concept="283aBN" id="58WclwlFIaU" role="2fQKEM">
       <property role="TrG5h" value="inputs" />
@@ -141,7 +148,9 @@
         </node>
         <node concept="283aBJ" id="58WclwlFIc2" role="2fLe4q">
           <node concept="2INlLO" id="13fQtt5bXhc" role="283bkg">
-            <property role="2EalUU" value="Count rising edges of FAST INPUT 1" />
+            <node concept="3nTYSJ" id="6c4GXuPhmMn" role="3m64J8">
+              <property role="3m0Mb9" value="Count rising edges of FAST INPUT 1" />
+            </node>
           </node>
           <node concept="2fKkDk" id="58WclwlFIhd" role="283bkg">
             <node concept="2fA4ie" id="58WclwlFIiF" role="2fKkDe">

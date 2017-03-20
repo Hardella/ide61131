@@ -3,8 +3,6 @@
   <persistence version="9" />
   <languages>
     <use id="c72da2b9-7cce-4447-8389-f407dc1158b7" name="jetbrains.mps.lang.structure" version="3" />
-    <use id="982eb8df-2c96-4bd7-9963-11712ea622e5" name="jetbrains.mps.lang.resources" version="2" />
-    <devkit ref="fbc25dd2-5da4-483a-8b19-70928e1b62d7(jetbrains.mps.devkit.general-purpose)" />
   </languages>
   <imports>
     <import index="933e" ref="r:18dd54ba-c7e4-4f7b-951e-411e5bff3335(com.github.vlsi.iec61131.types.structure)" />
@@ -72,6 +70,9 @@
     <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
     <node concept="PrWs8" id="5fgiBbs4ch2" role="PzmwI">
       <ref role="PrY4T" to="tpck:1_TrU5E6oyb" resolve="IDontSubstituteByDefault" />
+    </node>
+    <node concept="PrWs8" id="6c4GXuOe8Bu" role="PzmwI">
+      <ref role="PrY4T" to="933e:6PcEEFB6Kf" resolve="ICommentable" />
     </node>
   </node>
   <node concept="1TIwiD" id="5fgiBbs3sNt">
@@ -168,6 +169,9 @@
       <property role="20lbJX" value="1" />
       <property role="IQ2ns" value="6039408957482918407" />
       <ref role="20lvS9" node="5fgiBbrReet" resolve="StatementList" />
+    </node>
+    <node concept="PrWs8" id="6c4GXuPBTGf" role="PzmwI">
+      <ref role="PrY4T" to="933e:6PcEEFB6Kf" resolve="ICommentable" />
     </node>
   </node>
   <node concept="1TIwiD" id="5fgiBbsdqRf">
@@ -326,8 +330,15 @@
     <property role="R4oN_" value="comment" />
     <property role="EcuMT" value="4949279015990068094" />
     <ref role="1TJDcQ" node="5fgiBbrRfI2" resolve="Statement" />
-    <node concept="PrWs8" id="4iJnKFEplkH" role="PzmwI">
-      <ref role="PrY4T" to="933e:6PcEEFB6Kf" resolve="ICommentable" />
+    <node concept="1TJgyj" id="6c4GXuP7fwv" role="1TKVEi">
+      <property role="IQ2ns" value="7135025448699623455" />
+      <property role="20lmBu" value="aggregation" />
+      <property role="20kJfa" value="commentNd" />
+      <property role="20lbJX" value="1" />
+      <ref role="20lvS9" to="933e:6c4GXuOSPRS" resolve="CommentNode" />
+    </node>
+    <node concept="PrWs8" id="6c4GXuPhn5q" role="PzmwI">
+      <ref role="PrY4T" to="tpck:hLJPP0O" resolve="IWrapper" />
     </node>
   </node>
   <node concept="1TIwiD" id="mi8fP_nGmW">

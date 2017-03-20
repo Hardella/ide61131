@@ -2,13 +2,10 @@
 <model ref="r:ae2a1e00-0d4e-4028-aa88-2567c03318d0(st61131.flat)">
   <persistence version="9" />
   <languages>
-    <use id="d28e7e4d-b627-42fa-82d5-c7472b85c5f6" name="com.github.vlsi.iec61131.st" version="0" />
-    <use id="4d1c59f7-8f87-4192-a752-a98136f0b57c" name="com.github.vlsi.iec61131.types" version="0" />
-    <use id="df1f98e7-cf94-4627-979f-8c615791cbf3" name="com.github.vlsi.iec61131.executors" version="0" />
+    <use id="d28e7e4d-b627-42fa-82d5-c7472b85c5f6" name="com.github.vlsi.iec61131.st" version="1" />
+    <use id="4d1c59f7-8f87-4192-a752-a98136f0b57c" name="com.github.vlsi.iec61131.types" version="1" />
   </languages>
   <imports>
-    <import index="cjs8" ref="r:93fb98f2-7437-4cf9-b9ef-09914008e1b2(st61131.plc110)" />
-    <import index="ax34" ref="r:d8febb6d-d954-4896-8399-1dcd00d04a36(com.github.vlsi.iec61131.standard_lib.lib)" />
     <import index="7lmn" ref="r:f3b45004-620c-4cf8-a97d-f2ef80350d2c(com.github.vlsi.iec61131.standard_lib.base)" />
   </imports>
   <registry>
@@ -24,7 +21,9 @@
         <child id="6039408957482904422" name="condition" index="2fLe4k" />
         <child id="6039408957482904424" name="ifTrue" index="2fLe4q" />
       </concept>
-      <concept id="4949279015990068094" name="com.github.vlsi.iec61131.st.structure.CommentStatement" flags="ng" index="2INlLO" />
+      <concept id="4949279015990068094" name="com.github.vlsi.iec61131.st.structure.CommentStatement" flags="ng" index="2INlLO">
+        <child id="7135025448699623455" name="commentNd" index="3m64J8" />
+      </concept>
     </language>
     <language id="4d1c59f7-8f87-4192-a752-a98136f0b57c" name="com.github.vlsi.iec61131.types">
       <concept id="6039408957479248769" name="com.github.vlsi.iec61131.types.structure.VariableDeclaration" flags="ng" index="283aBN">
@@ -62,9 +61,12 @@
       </concept>
       <concept id="2839352626200938331" name="com.github.vlsi.iec61131.types.structure.XorExpression" flags="ng" index="2zCeXK" />
       <concept id="123060273427541007" name="com.github.vlsi.iec61131.types.structure.ICommentable" flags="ng" index="2EalU_">
-        <property id="123060273427541008" name="comment" index="2EalUU" />
+        <child id="7135025448697818814" name="commentNode" index="3m1tPD" />
       </concept>
       <concept id="3750039987448159535" name="com.github.vlsi.iec61131.types.structure.BoolType" flags="ng" index="PkkMJ" />
+      <concept id="7135025448695848440" name="com.github.vlsi.iec61131.types.structure.CommentNode" flags="ng" index="3nTYSJ">
+        <property id="7135025448698220830" name="comment" index="3m0Mb9" />
+      </concept>
       <concept id="2407636829921600129" name="com.github.vlsi.iec61131.types.structure.GlobalVariables" flags="ng" index="3EX$pL" />
       <concept id="212435093035477284" name="com.github.vlsi.iec61131.types.structure.TaskConfiguration" flags="ng" index="1KL_6N" />
       <concept id="5097456207316549595" name="com.github.vlsi.iec61131.types.structure.IFunctionCallLike" flags="ng" index="3TyVaM">
@@ -89,8 +91,10 @@
     <property role="TrG5h" value="GlobalVariables" />
     <node concept="283aBN" id="5pj1WKf07kg" role="2fQKEM">
       <property role="TrG5h" value="out1" />
-      <property role="2EalUU" value="output pin 1" />
       <node concept="PkkMJ" id="5pj1WKf07ks" role="2fQRkO" />
+      <node concept="3nTYSJ" id="6c4GXuPhmHR" role="3m1tPD">
+        <property role="3m0Mb9" value="output pin 1" />
+      </node>
     </node>
   </node>
   <node concept="1KL_6N" id="2tBq2I4LRZ$" />
@@ -169,7 +173,9 @@
     </node>
     <node concept="283aBJ" id="3yC4UNZ6m3G" role="283bkm">
       <node concept="2INlLO" id="3yC4UNZ6m40" role="283bkg">
-        <property role="2EalUU" value="test " />
+        <node concept="3nTYSJ" id="6c4GXuPhmIS" role="3m64J8">
+          <property role="3m0Mb9" value="test " />
+        </node>
       </node>
       <node concept="2fLe5g" id="3yC4UNZ6ssw" role="283bkg">
         <node concept="2fRjeW" id="3yC4UNZ6ssO" role="2fLe4k">

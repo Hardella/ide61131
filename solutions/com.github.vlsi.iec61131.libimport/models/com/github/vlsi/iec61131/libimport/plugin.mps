@@ -40,8 +40,6 @@
     <import index="7x5y" ref="6354ebe7-c22a-4a0f-ac54-50b52ab9b065/java:java.nio.charset(JDK/)" />
     <import index="tpck" ref="r:00000000-0000-4000-0000-011c89590288(jetbrains.mps.lang.core.structure)" />
     <import index="mhbf" ref="8865b7a8-5271-43d3-884c-6fd1d9cfdd34/java:org.jetbrains.mps.openapi.model(MPS.OpenAPI/)" />
-    <import index="xlxw" ref="6354ebe7-c22a-4a0f-ac54-50b52ab9b065/java:java.math(JDK/)" />
-    <import index="81cd" ref="r:eebfdff3-c49e-4b41-bc84-4fca50ab4eb5(com.github.vlsi.iec61131.types.behavior)" />
     <import index="z60i" ref="6354ebe7-c22a-4a0f-ac54-50b52ab9b065/java:java.awt(JDK/)" />
     <import index="mk90" ref="6ed54515-acc8-4d1e-a16c-9fd6cfe951ea/java:jetbrains.mps.progress(MPS.Core/)" implicit="true" />
   </imports>
@@ -8282,7 +8280,7 @@
                 <ref role="1shVQp" to="933e:25DDf3cxFa3" resolve="RealLiteral" />
               </node>
               <node concept="1snrkl" id="25DDf3cAiom" role="1sne05">
-                <ref role="1snrk2" to="933e:25DDf3cxFa4" resolve="vaule" />
+                <ref role="1snrk2" to="933e:25DDf3cxFa4" resolve="value" />
                 <node concept="37vLTw" id="25DDf3cGMkx" role="1snq_E">
                   <ref role="3cqZAo" node="25DDf3cGLAD" resolve="value" />
                 </node>
