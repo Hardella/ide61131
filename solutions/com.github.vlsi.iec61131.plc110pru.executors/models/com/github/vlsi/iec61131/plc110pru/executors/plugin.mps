@@ -28,6 +28,7 @@
     <import index="p7wq" ref="r:0b04b0c2-1b29-44e3-9fd7-093723e9b05c(com.github.vlsi.iec61131.st2ti1808.runtime.compiler)" />
     <import index="fpme" ref="86441d7a-e194-42da-81a5-2161ec62a379/java:jetbrains.mps.workbench.dialogs.project.newproject(MPS.Workbench/)" />
     <import index="guwi" ref="6354ebe7-c22a-4a0f-ac54-50b52ab9b065/java:java.io(JDK/)" />
+    <import index="f061" ref="498d89d2-c2e9-11e2-ad49-6cf049e62fe5/java:com.intellij.openapi.application.ex(MPS.IDEA/)" />
     <import index="ic0f" ref="r:76273c4a-4818-4f7c-8673-bfc2aeb6debb(jetbrains.mps.execution.api.settings)" implicit="true" />
     <import index="v23q" ref="498d89d2-c2e9-11e2-ad49-6cf049e62fe5/java:com.intellij.openapi(MPS.IDEA/)" implicit="true" />
     <import index="wyt6" ref="6354ebe7-c22a-4a0f-ac54-50b52ab9b065/java:java.lang(JDK/)" implicit="true" />
@@ -153,6 +154,9 @@
       </concept>
       <concept id="1116615150612" name="jetbrains.mps.baseLanguage.structure.ClassifierClassExpression" flags="nn" index="3VsKOn">
         <reference id="1116615189566" name="classifier" index="3VsUkX" />
+      </concept>
+      <concept id="1200397529627" name="jetbrains.mps.baseLanguage.structure.CharConstant" flags="nn" index="1Xhbcc">
+        <property id="1200397540847" name="charConstant" index="1XhdNS" />
       </concept>
     </language>
     <language id="63650c59-16c8-498a-99c8-005c7ee9515d" name="jetbrains.mps.lang.access">
@@ -966,6 +970,32 @@
             </node>
           </node>
         </node>
+        <node concept="3cpWs8" id="6c4GXuQg7Z8" role="3cqZAp">
+          <node concept="3cpWsn" id="6c4GXuQg7Zb" role="3cpWs9">
+            <property role="TrG5h" value="appName" />
+            <node concept="17QB3L" id="6c4GXuQg7Z6" role="1tU5fm" />
+            <node concept="2OqwBi" id="6c4GXuQoiue" role="33vP2m">
+              <node concept="2OqwBi" id="6c4GXuQnR8n" role="2Oq$k0">
+                <node concept="2YIFZM" id="6c4GXuQnQAo" role="2Oq$k0">
+                  <ref role="37wK5l" to="f061:~ApplicationInfoEx.getInstanceEx():com.intellij.openapi.application.ex.ApplicationInfoEx" resolve="getInstanceEx" />
+                  <ref role="1Pybhc" to="f061:~ApplicationInfoEx" resolve="ApplicationInfoEx" />
+                </node>
+                <node concept="liA8E" id="6c4GXuQnRJd" role="2OqNvi">
+                  <ref role="37wK5l" to="f061:~ApplicationInfoEx.getFullApplicationName():java.lang.String" resolve="getFullApplicationName" />
+                </node>
+              </node>
+              <node concept="liA8E" id="6c4GXuQokcz" role="2OqNvi">
+                <ref role="37wK5l" to="wyt6:~String.replace(char,char):java.lang.String" resolve="replace" />
+                <node concept="1Xhbcc" id="6c4GXuQokzT" role="37wK5m">
+                  <property role="1XhdNS" value=" " />
+                </node>
+                <node concept="1Xhbcc" id="6c4GXuQom4P" role="37wK5m">
+                  <property role="1XhdNS" value="_" />
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
         <node concept="3clFbH" id="63FqFScK3GF" role="3cqZAp" />
         <node concept="yIgYw" id="5gyVhZ17Jm$" role="3cqZAp">
           <node concept="2LYoGx" id="5gyVhZ17Jm_" role="3cqZAk">
@@ -989,6 +1019,9 @@
                   <node concept="yHkDZ" id="3yC4UO1r$cp" role="2OqNvi">
                     <ref role="yHkDY" node="3yC4UO1qiKT" resolve="outPath" />
                   </node>
+                </node>
+                <node concept="37vLTw" id="6c4GXuQgaMc" role="1r8FgC">
+                  <ref role="3cqZAo" node="6c4GXuQg7Zb" resolve="appName" />
                 </node>
                 <node concept="37vLTw" id="63FqFScMWGn" role="1r8FgC">
                   <ref role="3cqZAo" node="63FqFScJUwk" resolve="modelName" />
