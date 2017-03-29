@@ -103,6 +103,9 @@ Install mbeddr, clone ide61131, hack as required.
 Changelog
 ---------
 
+Next:
+- Fixed: compilation errors when project is stored in a path with spaces
+
 v1.7.0: 20 March 2017
 - Fixed: PRU-host communication (it was broken in 1.6.2)
 - Fixed: PDM_DW output was inversed
