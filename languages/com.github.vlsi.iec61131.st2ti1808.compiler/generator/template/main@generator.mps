@@ -1519,28 +1519,6 @@
       <property role="2fKTFZ" value="true" />
       <node concept="2fQKs2" id="3yC4UO1nC8p" role="2fQRkO" />
     </node>
-    <node concept="283aBN" id="3yC4UO1a1C5" role="2fQKEM">
-      <property role="TrG5h" value="tmp" />
-      <node concept="2fL2c1" id="3yC4UO1a1C6" role="2fQRkO">
-        <node concept="2fQKs2" id="3yC4UO1a1C7" role="2fL2f6" />
-      </node>
-    </node>
-    <node concept="283aBN" id="3yC4UO1a1C8" role="2fQKEM">
-      <property role="TrG5h" value="dst" />
-      <node concept="2fL2c1" id="3yC4UO1a1C9" role="2fQRkO">
-        <node concept="2fQKs2" id="3yC4UO1a1Ca" role="2fL2f6" />
-      </node>
-    </node>
-    <node concept="283aBN" id="3yC4UO1nDFM" role="2fQKEM">
-      <property role="TrG5h" value="iter" />
-      <node concept="2fQKs2" id="3yC4UO1nFfx" role="2fQRkO" />
-    </node>
-    <node concept="283aBN" id="3yC4UO1a1Cb" role="2fQKEM">
-      <property role="TrG5h" value="ramState" />
-      <node concept="2KzOUw" id="3yC4UO1a1Cc" role="2fQRkO">
-        <ref role="2KzOFz" to="dj8j:65nzZIgns5m" resolve="PRU_RAM_TRANSFER_STATE" />
-      </node>
-    </node>
     <node concept="283aBN" id="3yC4UO1a1Cd" role="2fQKEM">
       <property role="TrG5h" value="vars" />
       <property role="2fKTFS" value="true" />
