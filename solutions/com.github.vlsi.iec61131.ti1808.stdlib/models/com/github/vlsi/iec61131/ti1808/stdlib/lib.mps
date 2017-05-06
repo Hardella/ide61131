@@ -1700,11 +1700,11 @@
       </node>
     </node>
     <node concept="283aBN" id="65nzZIfw3E$" role="2fQKEM">
-      <property role="TrG5h" value="initialOffset" />
+      <property role="TrG5h" value="positionOfLastZ" />
       <property role="2fKTFZ" value="true" />
       <node concept="2fQKt7" id="65nzZIfw3F1" role="2fQRkO" />
       <node concept="3nTYSJ" id="6c4GXuPhmF1" role="3m1tPD">
-        <property role="3m0Mb9" value="likePosition, but it is number of encoder pulses processed" />
+        <property role="3m0Mb9" value="the value of position when Z mark was detected" />
       </node>
     </node>
     <node concept="283aBN" id="65nzZIfsqyu" role="2fQKEM">
@@ -1861,7 +1861,7 @@
               <ref role="2fRto5" node="65nzZIfsqxB" resolve="position" />
             </node>
             <node concept="2fRjeW" id="5jXokEW8X8R" role="2fKkDa">
-              <ref role="2fRto5" node="65nzZIfw3E$" resolve="initialOffset" />
+              <ref role="2fRto5" node="65nzZIfw3E$" resolve="positionOfLastZ" />
             </node>
           </node>
         </node>
