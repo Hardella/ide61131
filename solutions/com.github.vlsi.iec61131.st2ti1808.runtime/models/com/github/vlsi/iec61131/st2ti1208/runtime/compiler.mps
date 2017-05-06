@@ -19154,6 +19154,45 @@
       </node>
       <node concept="3Tm6S6" id="3yC4UNYBudq" role="1B3o_S" />
     </node>
+    <node concept="2tJIrI" id="43ZT41NhJgk" role="jymVt" />
+    <node concept="2YIFZL" id="43ZT41NhKdr" role="jymVt">
+      <property role="TrG5h" value="initName" />
+      <property role="od$2w" value="false" />
+      <property role="DiZV1" value="false" />
+      <property role="2aFKle" value="false" />
+      <node concept="3clFbS" id="43ZT41NhKdu" role="3clF47">
+        <node concept="3clFbF" id="43ZT41NhKFe" role="3cqZAp">
+          <node concept="3cpWs3" id="43ZT41NhR1_" role="3clFbG">
+            <node concept="Xl_RD" id="43ZT41NhR2o" role="3uHU7w">
+              <property role="Xl_RC" value="Init" />
+            </node>
+            <node concept="3cpWs3" id="43ZT41NhLNh" role="3uHU7B">
+              <node concept="3cpWs3" id="43ZT41NhLk5" role="3uHU7B">
+                <node concept="37vLTw" id="43ZT41NhKYe" role="3uHU7B">
+                  <ref role="3cqZAo" node="43ZT41NhKDm" resolve="modelName" />
+                </node>
+                <node concept="Xl_RD" id="43ZT41NhLkO" role="3uHU7w">
+                  <property role="Xl_RC" value="_Pru" />
+                </node>
+              </node>
+              <node concept="37vLTw" id="43ZT41NhLTr" role="3uHU7w">
+                <ref role="3cqZAo" node="43ZT41NhKCW" resolve="pru" />
+              </node>
+            </node>
+          </node>
+        </node>
+      </node>
+      <node concept="3Tm6S6" id="43ZT41NhJMh" role="1B3o_S" />
+      <node concept="17QB3L" id="43ZT41NhKC_" role="3clF45" />
+      <node concept="37vLTG" id="43ZT41NhKDm" role="3clF46">
+        <property role="TrG5h" value="modelName" />
+        <node concept="17QB3L" id="43ZT41NhKDO" role="1tU5fm" />
+      </node>
+      <node concept="37vLTG" id="43ZT41NhKCW" role="3clF46">
+        <property role="TrG5h" value="pru" />
+        <node concept="10Oyi0" id="43ZT41NhKCV" role="1tU5fm" />
+      </node>
+    </node>
     <node concept="2tJIrI" id="63FqFScMRKp" role="jymVt" />
     <node concept="2YIFZL" id="3yC4UNY6M1S" role="jymVt">
       <property role="TrG5h" value="main" />
@@ -19577,14 +19616,20 @@
                   <node concept="3cpWs3" id="3yC4UNZUImu" role="3uHU7B">
                     <node concept="3cpWs3" id="3yC4UNZUDV5" role="3uHU7B">
                       <node concept="Xl_RD" id="3yC4UNZUCN7" role="3uHU7B">
-                        <property role="Xl_RC" value="(* Use 'Init_" />
+                        <property role="Xl_RC" value="(* Use '" />
                       </node>
-                      <node concept="37vLTw" id="63FqFScNRqG" role="3uHU7w">
-                        <ref role="3cqZAo" node="63FqFScN04K" resolve="modelName" />
+                      <node concept="1rXfSq" id="43ZT41NhRkM" role="3uHU7w">
+                        <ref role="37wK5l" node="43ZT41NhKdr" resolve="initName" />
+                        <node concept="37vLTw" id="43ZT41NhRuP" role="37wK5m">
+                          <ref role="3cqZAo" node="63FqFScN04K" resolve="modelName" />
+                        </node>
+                        <node concept="3cmrfG" id="43ZT41NhR_R" role="37wK5m">
+                          <property role="3cmrfH" value="0" />
+                        </node>
                       </node>
                     </node>
                     <node concept="Xl_RD" id="3yC4UNZUMtJ" role="3uHU7w">
-                      <property role="Xl_RC" value="_Pru0' function block to upload program to PRU0, then use '" />
+                      <property role="Xl_RC" value="' function block to upload program to PRU0, then use '" />
                     </node>
                   </node>
                   <node concept="37vLTw" id="63FqFScNRJJ" role="3uHU7w">
@@ -19613,14 +19658,20 @@
                       <node concept="3cpWs3" id="63FqFScNT7Y" role="3uHU7B">
                         <node concept="3cpWs3" id="63FqFScNT7Z" role="3uHU7B">
                           <node concept="Xl_RD" id="63FqFScNT80" role="3uHU7B">
-                            <property role="Xl_RC" value="(* Use 'Init_" />
+                            <property role="Xl_RC" value="(* Use '" />
                           </node>
-                          <node concept="37vLTw" id="63FqFScNT81" role="3uHU7w">
-                            <ref role="3cqZAo" node="63FqFScN04K" resolve="modelName" />
+                          <node concept="1rXfSq" id="43ZT41NhRLY" role="3uHU7w">
+                            <ref role="37wK5l" node="43ZT41NhKdr" resolve="initName" />
+                            <node concept="37vLTw" id="43ZT41NhRLZ" role="37wK5m">
+                              <ref role="3cqZAo" node="63FqFScN04K" resolve="modelName" />
+                            </node>
+                            <node concept="3cmrfG" id="43ZT41NhRM0" role="37wK5m">
+                              <property role="3cmrfH" value="1" />
+                            </node>
                           </node>
                         </node>
                         <node concept="Xl_RD" id="63FqFScNT82" role="3uHU7w">
-                          <property role="Xl_RC" value="_Pru1' function block to upload program to PRU1, then use '" />
+                          <property role="Xl_RC" value="' function block to upload program to PRU1, then use '" />
                         </node>
                       </node>
                       <node concept="37vLTw" id="63FqFScNT83" role="3uHU7w">
@@ -19813,6 +19864,9 @@
               <node concept="liA8E" id="63FqFScOIVW" role="2OqNvi">
                 <ref role="37wK5l" to="guwi:~File.getParentFile():java.io.File" resolve="getParentFile" />
               </node>
+            </node>
+            <node concept="37vLTw" id="43ZT41NhM6m" role="37wK5m">
+              <ref role="3cqZAo" node="63FqFScN04K" resolve="modelName" />
             </node>
           </node>
         </node>
@@ -20144,12 +20198,57 @@
                   <node concept="3clFbS" id="63FqFScOwoM" role="2LFqv$">
                     <node concept="3clFbJ" id="63FqFScOwoN" role="3cqZAp">
                       <node concept="3clFbS" id="63FqFScOwoO" role="3clFbx">
-                        <node concept="3clFbF" id="63FqFScOwoP" role="3cqZAp">
-                          <node concept="2YIFZM" id="63FqFScOwoQ" role="3clFbG">
-                            <ref role="37wK5l" node="3yC4UO0bf7I" resolve="addCheckSimulationMode" />
-                            <ref role="1Pybhc" node="3yC4UNY6LOI" resolve="CreateLibrary" />
-                            <node concept="37vLTw" id="63FqFScOwoR" role="37wK5m">
+                        <node concept="3cpWs8" id="43ZT41NhTuC" role="3cqZAp">
+                          <node concept="3cpWsn" id="43ZT41NhTuF" role="3cpWs9">
+                            <property role="TrG5h" value="pru" />
+                            <node concept="10Oyi0" id="43ZT41NhTuA" role="1tU5fm" />
+                            <node concept="3K4zz7" id="43ZT41NhZ4B" role="33vP2m">
+                              <node concept="3cmrfG" id="43ZT41Ni44x" role="3K4E3e">
+                                <property role="3cmrfH" value="0" />
+                              </node>
+                              <node concept="3cmrfG" id="43ZT41Ni4bn" role="3K4GZi">
+                                <property role="3cmrfH" value="1" />
+                              </node>
+                              <node concept="2OqwBi" id="43ZT41NhV7l" role="3K4Cdx">
+                                <node concept="37vLTw" id="43ZT41NhULE" role="2Oq$k0">
+                                  <ref role="3cqZAo" node="sN6ElWLX3H" resolve="fileName" />
+                                </node>
+                                <node concept="liA8E" id="43ZT41NhV_6" role="2OqNvi">
+                                  <ref role="37wK5l" to="wyt6:~String.contains(java.lang.CharSequence):boolean" resolve="contains" />
+                                  <node concept="Xl_RD" id="43ZT41NhV_T" role="37wK5m">
+                                    <property role="Xl_RC" value="_pru0memory" />
+                                  </node>
+                                </node>
+                              </node>
+                            </node>
+                          </node>
+                        </node>
+                        <node concept="3clFbF" id="43ZT41NhIB7" role="3cqZAp">
+                          <node concept="2OqwBi" id="43ZT41NhIU8" role="3clFbG">
+                            <node concept="37vLTw" id="43ZT41NhIB5" role="2Oq$k0">
                               <ref role="3cqZAo" node="63FqFScOwls" resolve="out" />
+                            </node>
+                            <node concept="liA8E" id="43ZT41NhNe9" role="2OqNvi">
+                              <ref role="37wK5l" to="guwi:~PrintWriter.println(java.lang.String):void" resolve="println" />
+                              <node concept="3cpWs3" id="43ZT41NhPD5" role="37wK5m">
+                                <node concept="Xl_RD" id="43ZT41NhPDS" role="3uHU7w">
+                                  <property role="Xl_RC" value=".running THEN RETURN; END_IF;" />
+                                </node>
+                                <node concept="3cpWs3" id="43ZT41NhONN" role="3uHU7B">
+                                  <node concept="Xl_RD" id="43ZT41NhNhs" role="3uHU7B">
+                                    <property role="Xl_RC" value="  IF NOT " />
+                                  </node>
+                                  <node concept="1rXfSq" id="43ZT41NhOTA" role="3uHU7w">
+                                    <ref role="37wK5l" node="43ZT41NhKdr" resolve="initName" />
+                                    <node concept="37vLTw" id="43ZT41NhP2b" role="37wK5m">
+                                      <ref role="3cqZAo" node="43ZT41NhM9p" resolve="modelName" />
+                                    </node>
+                                    <node concept="37vLTw" id="43ZT41Ni4Ug" role="37wK5m">
+                                      <ref role="3cqZAo" node="43ZT41NhTuF" resolve="pru" />
+                                    </node>
+                                  </node>
+                                </node>
+                              </node>
                             </node>
                           </node>
                         </node>
@@ -20238,6 +20337,10 @@
         <node concept="3uibUv" id="63FqFScOliG" role="1tU5fm">
           <ref role="3uigEE" to="guwi:~File" resolve="File" />
         </node>
+      </node>
+      <node concept="37vLTG" id="43ZT41NhM9p" role="3clF46">
+        <property role="TrG5h" value="modelName" />
+        <node concept="17QB3L" id="43ZT41NhMIE" role="1tU5fm" />
       </node>
     </node>
     <node concept="2tJIrI" id="3yC4UO2bf0r" role="jymVt" />
@@ -21102,6 +21205,47 @@
               <node concept="Xl_RD" id="3yC4UNYpDdI" role="37wK5m">
                 <property role="Xl_RC" value="END_VAR" />
               </node>
+            </node>
+          </node>
+        </node>
+        <node concept="3clFbJ" id="43ZT41Ni8_D" role="3cqZAp">
+          <node concept="3clFbS" id="43ZT41Ni8_F" role="3clFbx">
+            <node concept="3clFbF" id="43ZT41Ni5$k" role="3cqZAp">
+              <node concept="2OqwBi" id="43ZT41Ni5$l" role="3clFbG">
+                <node concept="37vLTw" id="43ZT41Ni5$m" role="2Oq$k0">
+                  <ref role="3cqZAo" node="63FqFScNaah" resolve="out" />
+                </node>
+                <node concept="liA8E" id="43ZT41Ni5$n" role="2OqNvi">
+                  <ref role="37wK5l" to="guwi:~PrintWriter.println(java.lang.String):void" resolve="println" />
+                  <node concept="3cpWs3" id="43ZT41Ni5$o" role="37wK5m">
+                    <node concept="Xl_RD" id="43ZT41Ni5$p" role="3uHU7w">
+                      <property role="Xl_RC" value=".running THEN RETURN; END_IF;" />
+                    </node>
+                    <node concept="3cpWs3" id="43ZT41Ni5$q" role="3uHU7B">
+                      <node concept="Xl_RD" id="43ZT41Ni5$r" role="3uHU7B">
+                        <property role="Xl_RC" value="  IF NOT " />
+                      </node>
+                      <node concept="1rXfSq" id="43ZT41Ni5$s" role="3uHU7w">
+                        <ref role="37wK5l" node="43ZT41NhKdr" resolve="initName" />
+                        <node concept="37vLTw" id="43ZT41Ni5$t" role="37wK5m">
+                          <ref role="3cqZAo" node="63FqFScPnWh" resolve="modelName" />
+                        </node>
+                        <node concept="3cmrfG" id="43ZT41NieLv" role="37wK5m">
+                          <property role="3cmrfH" value="0" />
+                        </node>
+                      </node>
+                    </node>
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
+          <node concept="3clFbC" id="43ZT41NicmU" role="3clFbw">
+            <node concept="3cmrfG" id="43ZT41Nid3N" role="3uHU7w">
+              <property role="3cmrfH" value="1" />
+            </node>
+            <node concept="37vLTw" id="43ZT41NiaRW" role="3uHU7B">
+              <ref role="3cqZAo" node="63FqFScKmvd" resolve="pruIndex" />
             </node>
           </node>
         </node>

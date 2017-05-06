@@ -111,6 +111,7 @@ v1.7.1: 6 May 2017
 - Fixed: added a compilation error when FAST_INPUTS is used in PRU1 program (only PRU0 programs can access fast inputs for now)
 - Fixed: PRU_ABZ_ENCODER.initialOffset was renamed to positionOfLastZ
 - Fixed: support for VAR_IN_OUT (for PRU and for CoDeSys)
+- Fixed: PRU1 programs (init, memory read/write) will not run if PRU0 init was skipped
 
 v1.7.0: 20 March 2017
 - Fixed: PRU-host communication (it was broken in 1.6.2)
