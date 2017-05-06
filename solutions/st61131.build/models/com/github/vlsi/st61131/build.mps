@@ -1493,12 +1493,6 @@
             </node>
           </node>
         </node>
-        <node concept="1SiIV0" id="3yC4UO2asFi" role="3bR37C">
-          <node concept="3bR9La" id="3yC4UO2asFj" role="1SiIV1">
-            <property role="3bR36h" value="false" />
-            <ref role="3bR37D" to="ffeo:5xa9wY2vh9z" resolve="jetbrains.mps.execution.library" />
-          </node>
-        </node>
         <node concept="1SiIV0" id="3yC4UO2asFk" role="3bR37C">
           <node concept="3bR9La" id="3yC4UO2asFl" role="1SiIV1">
             <property role="3bR36h" value="false" />
@@ -1509,18 +1503,6 @@
           <node concept="3bR9La" id="3yC4UO2asFn" role="1SiIV1">
             <property role="3bR36h" value="false" />
             <ref role="3bR37D" node="3yC4UO29t5N" resolve="com.github.vlsi.iec61131.ti1808.stdlib" />
-          </node>
-        </node>
-        <node concept="1SiIV0" id="3yC4UO2asFo" role="3bR37C">
-          <node concept="3bR9La" id="3yC4UO2asFp" role="1SiIV1">
-            <property role="3bR36h" value="false" />
-            <ref role="3bR37D" to="ffeo:1TaHNgiIbJb" resolve="MPS.Platform" />
-          </node>
-        </node>
-        <node concept="1SiIV0" id="3yC4UO2asFq" role="3bR37C">
-          <node concept="3bR9La" id="3yC4UO2asFr" role="1SiIV1">
-            <property role="3bR36h" value="false" />
-            <ref role="3bR37D" to="ffeo:5xa9wY2vh8W" resolve="jetbrains.mps.execution.configurations" />
           </node>
         </node>
         <node concept="1SiIV0" id="3yC4UO2asFs" role="3bR37C">
@@ -1555,7 +1537,7 @@
         </node>
         <node concept="1SiIV0" id="3yC4UO2ati8" role="3bR37C">
           <node concept="3bR9La" id="3yC4UO2ati9" role="1SiIV1">
-            <property role="3bR36h" value="false" />
+            <property role="3bR36h" value="true" />
             <ref role="3bR37D" node="3yC4UO2asNC" resolve="com.github.vlsi.iec61131.ti1808.libcompiler" />
           </node>
         </node>
@@ -1563,12 +1545,6 @@
           <node concept="3bR9La" id="3yC4UO2atib" role="1SiIV1">
             <property role="3bR36h" value="false" />
             <ref role="3bR37D" node="5EBmM4DXjAY" resolve="com.github.vlsi.iec61131.st" />
-          </node>
-        </node>
-        <node concept="1SiIV0" id="3yC4UO2atic" role="3bR37C">
-          <node concept="3bR9La" id="3yC4UO2atid" role="1SiIV1">
-            <property role="3bR36h" value="false" />
-            <ref role="3bR37D" node="5EBmM4DXjOv" resolve="com.github.vlsi.iec61131.executors.runtime" />
           </node>
         </node>
         <node concept="1SiIV0" id="3yC4UO2atie" role="3bR37C">
@@ -1599,12 +1575,6 @@
           <node concept="3bR9La" id="3yC4UO2atin" role="1SiIV1">
             <property role="3bR36h" value="false" />
             <ref role="3bR37D" to="ffeo:1TaHNgiIbIQ" resolve="MPS.Core" />
-          </node>
-        </node>
-        <node concept="1SiIV0" id="3yC4UO2atio" role="3bR37C">
-          <node concept="3bR9La" id="3yC4UO2atip" role="1SiIV1">
-            <property role="3bR36h" value="false" />
-            <ref role="3bR37D" node="5EBmM4DXjUE" resolve="com.github.vlsi.iec61131.executors" />
           </node>
         </node>
         <node concept="1SiIV0" id="3yC4UO2atiq" role="3bR37C">

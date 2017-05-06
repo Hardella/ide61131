@@ -95,7 +95,7 @@
           <ref role="2fRto5" to="gzb9:65nzZIfsqxB" resolve="position" />
         </node>
         <node concept="2fRjeW" id="58WclwlFHZO" role="3L59S7">
-          <ref role="2fRto5" to="gzb9:65nzZIfw3E$" resolve="initialOffset" />
+          <ref role="2fRto5" to="gzb9:65nzZIfw3E$" resolve="positionOfLastZ" />
         </node>
         <node concept="2fRjeW" id="58WclwlFI0P" role="3L59S7">
           <ref role="2fRto5" to="gzb9:65nzZIfsqyu" resolve="zCount" />

@@ -88,6 +88,7 @@
       <concept id="1068498886296" name="jetbrains.mps.baseLanguage.structure.VariableReference" flags="nn" index="37vLTw">
         <reference id="1068581517664" name="variableDeclaration" index="3cqZAo" />
       </concept>
+      <concept id="1068498886292" name="jetbrains.mps.baseLanguage.structure.ParameterDeclaration" flags="ir" index="37vLTG" />
       <concept id="1068498886294" name="jetbrains.mps.baseLanguage.structure.AssignmentExpression" flags="nn" index="37vLTI" />
       <concept id="1225271177708" name="jetbrains.mps.baseLanguage.structure.StringType" flags="in" index="17QB3L" />
       <concept id="1225271283259" name="jetbrains.mps.baseLanguage.structure.NPEEqualsExpression" flags="nn" index="17R0WA" />
@@ -4874,25 +4875,84 @@
             </node>
           </node>
         </node>
-        <node concept="3clFbF" id="6mj7nr40U2L" role="3cqZAp">
-          <node concept="2OqwBi" id="6mj7nr40Uun" role="3clFbG">
-            <node concept="2ShNRf" id="6mj7nr40U2H" role="2Oq$k0">
-              <node concept="1pGfFk" id="6mj7nr40UdA" role="2ShVmc">
+        <node concept="3cpWs8" id="43ZT41N2M57" role="3cqZAp">
+          <node concept="3cpWsn" id="43ZT41N2M58" role="3cpWs9">
+            <property role="TrG5h" value="replacer" />
+            <node concept="3uibUv" id="43ZT41N2M54" role="1tU5fm">
+              <ref role="3uigEE" to="p7wq:6mj7nr40MYZ" resolve="PouReplacer" />
+            </node>
+            <node concept="2ShNRf" id="43ZT41N2M59" role="33vP2m">
+              <node concept="1pGfFk" id="43ZT41N2M5a" role="2ShVmc">
                 <ref role="37wK5l" to="p7wq:6mj7nr40MZa" resolve="PouReplacer" />
-                <node concept="1iwH7S" id="6mj7nr40UdS" role="37wK5m" />
-                <node concept="1Q6Npb" id="6mj7nr40UfY" role="37wK5m" />
-                <node concept="37vLTw" id="6mj7nr40Ug_" role="37wK5m">
+                <node concept="1iwH7S" id="43ZT41N2M5b" role="37wK5m" />
+                <node concept="1Q6Npb" id="43ZT41N2M5c" role="37wK5m" />
+                <node concept="37vLTw" id="43ZT41N2M5d" role="37wK5m">
                   <ref role="3cqZAo" node="6mj7nr3DYC1" resolve="processInputs" />
                 </node>
-                <node concept="1N_AGu" id="6mj7nr2UCKo" role="37wK5m">
+                <node concept="1N_AGu" id="43ZT41N2M5e" role="37wK5m">
                   <ref role="1N_AGt" to="gzb9:6mj7nr2aFs0" resolve="FAST_INPUTS" />
                 </node>
-                <node concept="1N_AGu" id="6mj7nr2UpWj" role="37wK5m">
+                <node concept="1N_AGu" id="43ZT41N2M5f" role="37wK5m">
                   <ref role="1N_AGt" node="6mj7nr3DDtH" resolve="SYS_PRU0_PROCESS_INPUTS" />
                 </node>
               </node>
             </node>
-            <node concept="liA8E" id="6mj7nr40UEb" role="2OqNvi">
+          </node>
+        </node>
+        <node concept="3clFbF" id="6mj7nr40U2L" role="3cqZAp">
+          <node concept="2OqwBi" id="43ZT41MZpln" role="3clFbG">
+            <node concept="37vLTw" id="43ZT41N2M5g" role="2Oq$k0">
+              <ref role="3cqZAo" node="43ZT41N2M58" resolve="replacer" />
+            </node>
+            <node concept="liA8E" id="43ZT41MZps0" role="2OqNvi">
+              <ref role="37wK5l" to="p7wq:43ZT41MXREe" resolve="failOnNoReplacement" />
+              <node concept="1bVj0M" id="43ZT41N2D5y" role="37wK5m">
+                <node concept="3clFbS" id="43ZT41N2D5z" role="1bW5cS">
+                  <node concept="3clFbF" id="43ZT41N2Dxi" role="3cqZAp">
+                    <node concept="3K4zz7" id="43ZT41N2JW0" role="3clFbG">
+                      <node concept="Xl_RD" id="43ZT41N2K7u" role="3K4E3e">
+                        <property role="Xl_RC" value="" />
+                      </node>
+                      <node concept="Xl_RD" id="43ZT41N2Khp" role="3K4GZi">
+                        <property role="Xl_RC" value="Fast inputs are supported for PRU0 programs only" />
+                      </node>
+                      <node concept="3fqX7Q" id="43ZT41N2LWP" role="3K4Cdx">
+                        <node concept="2OqwBi" id="43ZT41N2LWR" role="3fr31v">
+                          <node concept="2OqwBi" id="43ZT41N2LWS" role="2Oq$k0">
+                            <node concept="37vLTw" id="43ZT41N2LWT" role="2Oq$k0">
+                              <ref role="3cqZAo" node="43ZT41N2DlF" resolve="pou" />
+                            </node>
+                            <node concept="3TrcHB" id="43ZT41N2LWU" role="2OqNvi">
+                              <ref role="3TsBF5" to="tpck:h0TrG11" resolve="name" />
+                            </node>
+                          </node>
+                          <node concept="liA8E" id="43ZT41N2LWV" role="2OqNvi">
+                            <ref role="37wK5l" to="wyt6:~String.endsWith(java.lang.String):boolean" resolve="endsWith" />
+                            <node concept="Xl_RD" id="43ZT41N2LWW" role="37wK5m">
+                              <property role="Xl_RC" value="Pru1Program" />
+                            </node>
+                          </node>
+                        </node>
+                      </node>
+                    </node>
+                  </node>
+                </node>
+                <node concept="37vLTG" id="43ZT41N2DlF" role="1bW2Oz">
+                  <property role="TrG5h" value="pou" />
+                  <node concept="3Tqbb2" id="43ZT41N2DlE" role="1tU5fm">
+                    <ref role="ehGHo" to="933e:7Bb7ds4OrWV" resolve="POU" />
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+        <node concept="3clFbF" id="43ZT41N2MPL" role="3cqZAp">
+          <node concept="2OqwBi" id="43ZT41N2MXZ" role="3clFbG">
+            <node concept="37vLTw" id="43ZT41N2MPJ" role="2Oq$k0">
+              <ref role="3cqZAo" node="43ZT41N2M58" resolve="replacer" />
+            </node>
+            <node concept="liA8E" id="43ZT41N2N8d" role="2OqNvi">
               <ref role="37wK5l" to="p7wq:6mj7nr40MZx" resolve="process" />
             </node>
           </node>

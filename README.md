@@ -104,8 +104,11 @@ Changelog
 ---------
 
 Next:
+
+v1.7.1: 6 May 2017
 - Fixed: compilation errors when project is stored in a path with spaces
 - Fixed: remove unused variables in generated PruMemoryTransfer program
+- Fixed: added a compilation error when FAST_INPUTS is used in PRU1 program (only PRU0 programs can access fast inputs for now)
 
 v1.7.0: 20 March 2017
 - Fixed: PRU-host communication (it was broken in 1.6.2)
