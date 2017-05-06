@@ -1788,7 +1788,7 @@
                     <node concept="2OqwBi" id="5jXokEVXYlw" role="3clFbG">
                       <node concept="1iwH7S" id="5jXokEVXXTK" role="2Oq$k0" />
                       <node concept="1iwH70" id="5jXokEVXYyk" role="2OqNvi">
-                        <ref role="1iwH77" node="6mj7nr5kkgp" resolve="transferVar" />
+                        <ref role="1iwH77" node="43ZT41NanJE" resolve="transferVarWrite" />
                         <node concept="30H73N" id="5jXokEVXYS_" role="1iwH7V" />
                       </node>
                     </node>
@@ -1963,7 +1963,7 @@
                     <node concept="2OqwBi" id="5jXokEVYj38" role="3clFbG">
                       <node concept="1iwH7S" id="5jXokEVYj39" role="2Oq$k0" />
                       <node concept="1iwH70" id="5jXokEVYj3a" role="2OqNvi">
-                        <ref role="1iwH77" node="6mj7nr5kkgp" resolve="transferVar" />
+                        <ref role="1iwH77" node="6mj7nr5kkgp" resolve="transferVarRead" />
                         <node concept="30H73N" id="5jXokEVYj3b" role="1iwH7V" />
                       </node>
                     </node>
@@ -4645,7 +4645,12 @@
       <ref role="1puQsG" node="2a2pyirG20N" resolve="enumReplacer" />
     </node>
     <node concept="2rT7sh" id="6mj7nr5kkgp" role="2rTMjI">
-      <property role="TrG5h" value="transferVar" />
+      <property role="TrG5h" value="transferVarRead" />
+      <ref role="2rTdP9" to="933e:5fgiBbrRee1" resolve="VariableDeclaration" />
+      <ref role="2rZz_L" to="933e:5fgiBbrRee1" resolve="VariableDeclaration" />
+    </node>
+    <node concept="2rT7sh" id="43ZT41NanJE" role="2rTMjI">
+      <property role="TrG5h" value="transferVarWrite" />
       <ref role="2rTdP9" to="933e:5fgiBbrRee1" resolve="VariableDeclaration" />
       <ref role="2rZz_L" to="933e:5fgiBbrRee1" resolve="VariableDeclaration" />
     </node>
@@ -5298,7 +5303,7 @@
         </node>
       </node>
       <node concept="3ejVUv" id="5jXokEU_qnK" role="lGtFl">
-        <ref role="2rW$FS" node="6mj7nr5kkgp" resolve="transferVar" />
+        <ref role="2rW$FS" node="6mj7nr5kkgp" resolve="transferVarRead" />
         <node concept="3JmXsc" id="5jXokEU_qnL" role="3_Rtg">
           <node concept="3clFbS" id="5jXokEU_qnM" role="2VODD2">
             <node concept="3clFbF" id="5jXokEU_qnN" role="3cqZAp">
@@ -5394,24 +5399,6 @@
                     <node concept="3CFYIy" id="5jXokEU_qon" role="3CFYIz">
                       <ref role="3CFYIx" to="ocpr:6mj7nr595uP" resolve="ExchangeParams" />
                     </node>
-                  </node>
-                </node>
-              </node>
-            </node>
-            <node concept="3clFbF" id="5jXokEU_qoo" role="3cqZAp">
-              <node concept="37vLTI" id="5jXokEU_qop" role="3clFbG">
-                <node concept="2OqwBi" id="5jXokEU_qoq" role="37vLTx">
-                  <node concept="37vLTw" id="5jXokEU_qor" role="2Oq$k0">
-                    <ref role="3cqZAo" node="5jXokEU_qoi" resolve="exch" />
-                  </node>
-                  <node concept="3TrcHB" id="5jXokEU_qos" role="2OqNvi">
-                    <ref role="3TsBF5" to="ocpr:6mj7nr595uV" resolve="input" />
-                  </node>
-                </node>
-                <node concept="2OqwBi" id="5jXokEU_qot" role="37vLTJ">
-                  <node concept="3l3mFP" id="5jXokEU_qou" role="2Oq$k0" />
-                  <node concept="3TrcHB" id="5jXokEU_qov" role="2OqNvi">
-                    <ref role="3TsBF5" to="933e:5fgiBbs4X2a" resolve="input" />
                   </node>
                 </node>
               </node>
@@ -5918,7 +5905,7 @@
                       <node concept="2OqwBi" id="5jXokEU_qsD" role="3clFbG">
                         <node concept="1iwH7S" id="5jXokEU_qsE" role="2Oq$k0" />
                         <node concept="1iwH70" id="5jXokEU_qsF" role="2OqNvi">
-                          <ref role="1iwH77" node="6mj7nr5kkgp" resolve="transferVar" />
+                          <ref role="1iwH77" node="6mj7nr5kkgp" resolve="transferVarRead" />
                           <node concept="30H73N" id="5jXokEU_qsG" role="1iwH7V" />
                         </node>
                       </node>
@@ -6078,7 +6065,7 @@
                     <node concept="2OqwBi" id="6c4GXuPMfYs" role="3clFbG">
                       <node concept="1iwH7S" id="6c4GXuPMfYt" role="2Oq$k0" />
                       <node concept="1iwH70" id="6c4GXuPMfYu" role="2OqNvi">
-                        <ref role="1iwH77" node="6mj7nr5kkgp" resolve="transferVar" />
+                        <ref role="1iwH77" node="6mj7nr5kkgp" resolve="transferVarRead" />
                         <node concept="30H73N" id="6c4GXuPMfYv" role="1iwH7V" />
                       </node>
                     </node>
@@ -6109,7 +6096,7 @@
                       <node concept="2OqwBi" id="6c4GXuPVFdY" role="3clFbG">
                         <node concept="1iwH7S" id="6c4GXuPVFdZ" role="2Oq$k0" />
                         <node concept="1iwH70" id="6c4GXuPVFe0" role="2OqNvi">
-                          <ref role="1iwH77" node="6mj7nr5kkgp" resolve="transferVar" />
+                          <ref role="1iwH77" node="6mj7nr5kkgp" resolve="transferVarRead" />
                           <node concept="30H73N" id="6c4GXuPVFe1" role="1iwH7V" />
                         </node>
                       </node>
@@ -6225,7 +6212,7 @@
                     <node concept="2OqwBi" id="6c4GXuPXExd" role="3clFbG">
                       <node concept="1iwH7S" id="6c4GXuPXExe" role="2Oq$k0" />
                       <node concept="1iwH70" id="6c4GXuPXExf" role="2OqNvi">
-                        <ref role="1iwH77" node="6mj7nr5kkgp" resolve="transferVar" />
+                        <ref role="1iwH77" node="6mj7nr5kkgp" resolve="transferVarRead" />
                         <node concept="30H73N" id="6c4GXuPXExg" role="1iwH7V" />
                       </node>
                     </node>
@@ -6256,7 +6243,7 @@
                       <node concept="2OqwBi" id="6c4GXuPXI7b" role="3clFbG">
                         <node concept="1iwH7S" id="6c4GXuPXI7c" role="2Oq$k0" />
                         <node concept="1iwH70" id="6c4GXuPXI7d" role="2OqNvi">
-                          <ref role="1iwH77" node="6mj7nr5kkgp" resolve="transferVar" />
+                          <ref role="1iwH77" node="6mj7nr5kkgp" resolve="transferVarRead" />
                           <node concept="30H73N" id="6c4GXuPXI7e" role="1iwH7V" />
                         </node>
                       </node>
@@ -6412,7 +6399,7 @@
         </node>
       </node>
       <node concept="3ejVUv" id="5jXokEU_v$t" role="lGtFl">
-        <ref role="2rW$FS" node="6mj7nr5kkgp" resolve="transferVar" />
+        <ref role="2rW$FS" node="43ZT41NanJE" resolve="transferVarWrite" />
         <node concept="3JmXsc" id="5jXokEU_v$u" role="3_Rtg">
           <node concept="3clFbS" id="5jXokEU_v$v" role="2VODD2">
             <node concept="3clFbF" id="5jXokEU_v$w" role="3cqZAp">
@@ -6526,24 +6513,6 @@
                   <node concept="3l3mFP" id="5jXokEU_v_b" role="2Oq$k0" />
                   <node concept="3TrcHB" id="5jXokEU_v_c" role="2OqNvi">
                     <ref role="3TsBF5" to="933e:5fgiBbs4X2a" resolve="input" />
-                  </node>
-                </node>
-              </node>
-            </node>
-            <node concept="3clFbF" id="5jXokEU_v_d" role="3cqZAp">
-              <node concept="37vLTI" id="5jXokEU_v_e" role="3clFbG">
-                <node concept="2OqwBi" id="5jXokEU_v_f" role="37vLTx">
-                  <node concept="37vLTw" id="5jXokEU_v_g" role="2Oq$k0">
-                    <ref role="3cqZAo" node="5jXokEU_v$Z" resolve="exch" />
-                  </node>
-                  <node concept="3TrcHB" id="5jXokEU_v_h" role="2OqNvi">
-                    <ref role="3TsBF5" to="ocpr:6mj7nr595uX" resolve="output" />
-                  </node>
-                </node>
-                <node concept="2OqwBi" id="5jXokEU_v_i" role="37vLTJ">
-                  <node concept="3l3mFP" id="5jXokEU_v_j" role="2Oq$k0" />
-                  <node concept="3TrcHB" id="5jXokEU_v_k" role="2OqNvi">
-                    <ref role="3TsBF5" to="933e:5fgiBbs4X2d" resolve="output" />
                   </node>
                 </node>
               </node>
@@ -6848,7 +6817,7 @@
                         <node concept="2OqwBi" id="5jXokEU_vAY" role="3clFbG">
                           <node concept="1iwH7S" id="5jXokEU_vAZ" role="2Oq$k0" />
                           <node concept="1iwH70" id="5jXokEU_vB0" role="2OqNvi">
-                            <ref role="1iwH77" node="6mj7nr5kkgp" resolve="transferVar" />
+                            <ref role="1iwH77" node="43ZT41NanJE" resolve="transferVarWrite" />
                             <node concept="30H73N" id="5jXokEU_vB1" role="1iwH7V" />
                           </node>
                         </node>
