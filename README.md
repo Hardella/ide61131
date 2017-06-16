@@ -104,6 +104,8 @@ Changelog
 ---------
 
 Next:
+
+v1.7.2: 16 June 2017
 - Fixed: variable initializers are executed in PRU programs
 
 v1.7.1: 6 May 2017

@@ -7,8 +7,8 @@
     <format property="date" pattern="yyyyMMdd" />
   </tstamp>
   <property name="codename" value="HD" />
-  <property name="build.number" value="${codename}-162.2069" />
-  <property name="version" value="1.7.1" />
+  <property name="build.number" value="${codename}-162.2070" />
+  <property name="version" value="1.7.2" />
   <property name="path.selector" value="IDE61131-15" />
   <property name="appName" value="Hardella" />
   <property name="mps_home" location="${basedir}/../../Documents/work/MPS 3.4.2" />
@@ -88,7 +88,7 @@
     <mkdir dir="${build.tmp}/default/branding.jar/idea" />
     <echoxml file="${build.tmp}/default/branding.jar/idea/IdeaApplicationInfo.xml">
       <component>
-        <version codename="${codename}" major="1" minor="7.1" eap="false" update-channel="Hardella_release" />
+        <version codename="${codename}" major="1" minor="7.2" eap="false" update-channel="Hardella_release" />
         <company name="Vladimir Sitnikov" url="https://twitter.com/VladimirSitnikv" />
         <build number="${build.number}" date="${date}" />
         <logo url="/splash.png" textcolor="002387" progressColor="4269bc" progressY="394" progressHeight="3" />
