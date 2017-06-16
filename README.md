@@ -104,6 +104,7 @@ Changelog
 ---------
 
 Next:
+- Fixed: variable initializers are executed in PRU programs
 
 v1.7.1: 6 May 2017
 - Fixed: compilation errors when project is stored in a path with spaces
