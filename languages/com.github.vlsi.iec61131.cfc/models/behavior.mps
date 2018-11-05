@@ -2,7 +2,7 @@
 <model ref="r:4bd77ff0-4eb1-4724-8dcf-6e063648ec40(com.github.vlsi.iec61131.cfc.behavior)">
   <persistence version="9" />
   <languages>
-    <use id="af65afd8-f0dd-4942-87d9-63a55f2a9db1" name="jetbrains.mps.lang.behavior" version="0" />
+    <use id="af65afd8-f0dd-4942-87d9-63a55f2a9db1" name="jetbrains.mps.lang.behavior" version="1" />
     <devkit ref="fbc25dd2-5da4-483a-8b19-70928e1b62d7(jetbrains.mps.devkit.general-purpose)" />
   </languages>
   <imports>
@@ -121,7 +121,7 @@
                 </node>
               </node>
               <node concept="3Tsc0h" id="1GwckiU6M5t" role="2OqNvi">
-                <ref role="3TtcxE" to="kyps:1GwckiU5Rn_" />
+                <ref role="3TtcxE" to="kyps:1GwckiU5Rn_" resolve="connections" />
               </node>
             </node>
             <node concept="2HwmR7" id="1GwckiU6Nhx" role="2OqNvi">
@@ -137,7 +137,7 @@
                               <ref role="3cqZAo" node="1GwckiU6Nh_" resolve="it" />
                             </node>
                             <node concept="3TrEf2" id="1GwckiU6OQJ" role="2OqNvi">
-                              <ref role="3Tt5mk" to="kyps:1GwckiU13C2" />
+                              <ref role="3Tt5mk" to="kyps:1GwckiU13C2" resolve="to" />
                             </node>
                           </node>
                         </node>
@@ -162,7 +162,7 @@
                               <ref role="3cqZAo" node="1GwckiU6Nh_" resolve="it" />
                             </node>
                             <node concept="3TrEf2" id="1GwckiU6NrO" role="2OqNvi">
-                              <ref role="3Tt5mk" to="kyps:1GwckiU13C0" />
+                              <ref role="3Tt5mk" to="kyps:1GwckiU13C0" resolve="from" />
                             </node>
                           </node>
                           <node concept="13iPFW" id="1GwckiU6NyD" role="3uHU7w" />

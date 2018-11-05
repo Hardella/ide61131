@@ -2,8 +2,7 @@
 <model ref="r:18dd54ba-c7e4-4f7b-951e-411e5bff3335(com.github.vlsi.iec61131.types.structure)">
   <persistence version="9" />
   <languages>
-    <use id="c72da2b9-7cce-4447-8389-f407dc1158b7" name="jetbrains.mps.lang.structure" version="3" />
-    <use id="982eb8df-2c96-4bd7-9963-11712ea622e5" name="jetbrains.mps.lang.resources" version="2" />
+    <devkit ref="78434eb8-b0e5-444b-850d-e7c4ad2da9ab(jetbrains.mps.devkit.aspect.structure)" />
   </languages>
   <imports>
     <import index="tpck" ref="r:00000000-0000-4000-0000-011c89590288(jetbrains.mps.lang.core.structure)" />
@@ -852,7 +851,7 @@
     </node>
   </node>
   <node concept="1TIwiD" id="5fgiBbs5Zb6">
-    <property role="3GE5qa" value="expressions" />
+    <property role="3GE5qa" value="expressions.literals" />
     <property role="TrG5h" value="BooleanConstant" />
     <property role="34LRSv" value="boolean constant" />
     <property role="R4oN_" value="boolean constant" />

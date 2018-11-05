@@ -2,7 +2,7 @@
 <model ref="r:5168fd82-3963-4800-8c11-fa05b68a7cb3(com.github.vlsi.iec61131.executors.behavior)">
   <persistence version="9" />
   <languages>
-    <use id="af65afd8-f0dd-4942-87d9-63a55f2a9db1" name="jetbrains.mps.lang.behavior" version="0" />
+    <use id="af65afd8-f0dd-4942-87d9-63a55f2a9db1" name="jetbrains.mps.lang.behavior" version="1" />
     <devkit ref="fbc25dd2-5da4-483a-8b19-70928e1b62d7(jetbrains.mps.devkit.general-purpose)" />
   </languages>
   <imports>
@@ -135,7 +135,7 @@
             <node concept="2OqwBi" id="4qXNmAZqMXW" role="2Oq$k0">
               <node concept="13iPFW" id="4qXNmAZqMVV" role="2Oq$k0" />
               <node concept="3Tsc0h" id="4qXNmAZqN1L" role="2OqNvi">
-                <ref role="3TtcxE" to="r757:4qXNmAZpxcC" />
+                <ref role="3TtcxE" to="r757:4qXNmAZpxcC" resolve="types" />
               </node>
             </node>
             <node concept="1v1jN8" id="4qXNmAZqO_Z" role="2OqNvi" />
@@ -151,7 +151,7 @@
                     <node concept="2OqwBi" id="4qXNmAZqUmj" role="25WWJ7">
                       <node concept="13iPFW" id="4qXNmAZqUdY" role="2Oq$k0" />
                       <node concept="3Tsc0h" id="4qXNmAZqUIK" role="2OqNvi">
-                        <ref role="3TtcxE" to="r757:4qXNmAZpxcC" />
+                        <ref role="3TtcxE" to="r757:4qXNmAZpxcC" resolve="types" />
                       </node>
                     </node>
                   </node>
@@ -185,7 +185,7 @@
             <node concept="2OqwBi" id="4qXNmAZqWhd" role="2Oq$k0">
               <node concept="13iPFW" id="4qXNmAZqWhe" role="2Oq$k0" />
               <node concept="3Tsc0h" id="4qXNmAZqZzf" role="2OqNvi">
-                <ref role="3TtcxE" to="r757:4qXNmAZpx9M" />
+                <ref role="3TtcxE" to="r757:4qXNmAZpx9M" resolve="pous" />
               </node>
             </node>
             <node concept="1v1jN8" id="4qXNmAZqWhg" role="2OqNvi" />
@@ -201,7 +201,7 @@
                     <node concept="2OqwBi" id="4qXNmAZqWhn" role="25WWJ7">
                       <node concept="13iPFW" id="4qXNmAZqWho" role="2Oq$k0" />
                       <node concept="3Tsc0h" id="4qXNmAZqZQI" role="2OqNvi">
-                        <ref role="3TtcxE" to="r757:4qXNmAZpx9M" />
+                        <ref role="3TtcxE" to="r757:4qXNmAZpx9M" resolve="pous" />
                       </node>
                     </node>
                   </node>

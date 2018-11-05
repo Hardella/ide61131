@@ -2,7 +2,7 @@
 <model ref="r:e69e41a8-9ce0-49b6-ac9c-bb46feec4e5b(com.github.vlsi.iec61131.ti1808.pasm.structure)">
   <persistence version="9" />
   <languages>
-    <use id="c72da2b9-7cce-4447-8389-f407dc1158b7" name="jetbrains.mps.lang.structure" version="3" />
+    <devkit ref="78434eb8-b0e5-444b-850d-e7c4ad2da9ab(jetbrains.mps.devkit.aspect.structure)" />
   </languages>
   <imports />
   <registry />

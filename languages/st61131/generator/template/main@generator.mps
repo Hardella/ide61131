@@ -59,20 +59,26 @@
         <child id="6039408957482904422" name="condition" index="2fLe4k" />
         <child id="6039408957482904424" name="ifTrue" index="2fLe4q" />
       </concept>
-      <concept id="4949279015990068094" name="com.github.vlsi.iec61131.st.structure.CommentStatement" flags="ng" index="2INlLO" />
+      <concept id="4949279015990068094" name="com.github.vlsi.iec61131.st.structure.CommentStatement" flags="ng" index="2INlLO">
+        <child id="7135025448699623455" name="commentNd" index="3m64J8" />
+      </concept>
     </language>
     <language id="4d1c59f7-8f87-4192-a752-a98136f0b57c" name="com.github.vlsi.iec61131.types">
       <concept id="6039408957483119302" name="com.github.vlsi.iec61131.types.structure.BooleanConstant" flags="ng" index="2fLVyO">
         <property id="6039408957483119386" name="value" index="2fLV_C" />
       </concept>
+      <concept id="7135025448695848440" name="com.github.vlsi.iec61131.types.structure.CommentNode" flags="ng" index="3nTYSJ" />
     </language>
     <language id="7866978e-a0f0-4cc7-81bc-4d213d9375e1" name="jetbrains.mps.lang.smodel">
+      <concept id="1177026924588" name="jetbrains.mps.lang.smodel.structure.RefConcept_Reference" flags="nn" index="chp4Y">
+        <reference id="1177026940964" name="conceptDeclaration" index="cht4Q" />
+      </concept>
       <concept id="1138676077309" name="jetbrains.mps.lang.smodel.structure.EnumMemberReference" flags="nn" index="uoxfO">
         <reference id="1138676095763" name="enumMember" index="uo_Cq" />
       </concept>
       <concept id="2396822768958367367" name="jetbrains.mps.lang.smodel.structure.AbstractTypeCastExpression" flags="nn" index="$5XWr">
-        <reference id="6733348108486823428" name="concept" index="1m5ApE" />
         <child id="6733348108486823193" name="leftExpression" index="1m5AlR" />
+        <child id="3906496115198199033" name="conceptArgument" index="3oSUPX" />
       </concept>
       <concept id="1146171026731" name="jetbrains.mps.lang.smodel.structure.Property_HasValue_Enum" flags="nn" index="3t7uKx">
         <child id="1146171026732" name="value" index="3t7uKA" />
@@ -110,12 +116,14 @@
               <node concept="2OqwBi" id="3yC4UNZcf2X" role="2Oq$k0">
                 <node concept="1PxgMI" id="3yC4UNZcdXI" role="2Oq$k0">
                   <property role="1BlNFB" value="true" />
-                  <ref role="1m5ApE" to="933e:5fgiBbs5Zb6" resolve="BooleanConstant" />
                   <node concept="2OqwBi" id="3yC4UNZb$tY" role="1m5AlR">
                     <node concept="30H73N" id="3yC4UNZb$hY" role="2Oq$k0" />
                     <node concept="3TrEf2" id="3yC4UNZb$HS" role="2OqNvi">
                       <ref role="3Tt5mk" to="jzle:5fgiBbs5aHA" resolve="condition" />
                     </node>
+                  </node>
+                  <node concept="chp4Y" id="5ZrtsQuqMFm" role="3oSUPX">
+                    <ref role="cht4Q" to="933e:5fgiBbs5Zb6" resolve="BooleanConstant" />
                   </node>
                 </node>
                 <node concept="3TrcHB" id="3yC4UNZcflq" role="2OqNvi">
@@ -158,6 +166,7 @@
                   </node>
                 </node>
               </node>
+              <node concept="3nTYSJ" id="7y0sKN5FULT" role="3m64J8" />
             </node>
           </node>
         </node>

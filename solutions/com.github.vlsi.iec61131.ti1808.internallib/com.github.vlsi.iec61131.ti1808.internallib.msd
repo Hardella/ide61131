@@ -6,9 +6,7 @@
     </modelRoot>
   </models>
   <sourcePath />
-  <languageVersions>
-    <language slang="l:ceab5195-25ea-4f22-9b92-103b95ca8c0c:jetbrains.mps.lang.core" version="1" />
-  </languageVersions>
+  <languageVersions />
   <dependencyVersions>
     <module reference="69c2fdc0-aacd-40e1-b5cf-8e604decb5cc(com.github.vlsi.iec61131.ti1808.internallib)" version="0" />
   </dependencyVersions>

@@ -19,6 +19,10 @@
         <child id="6039408957482663992" name="lValue" index="2fKkDa" />
         <child id="6039408957482663996" name="rValue" index="2fKkDe" />
       </concept>
+      <concept id="6039408957482904354" name="com.github.vlsi.iec61131.st.structure.IfStatement" flags="ng" index="2fLe5g">
+        <child id="6039408957482904422" name="condition" index="2fLe4k" />
+        <child id="6039408957482904424" name="ifTrue" index="2fLe4q" />
+      </concept>
     </language>
     <language id="df1f98e7-cf94-4627-979f-8c615791cbf3" name="com.github.vlsi.iec61131.executors">
       <concept id="5097456207319667256" name="com.github.vlsi.iec61131.executors.structure.CoDeSysExportConfiguration" flags="ng" index="3TQXXh">
@@ -31,6 +35,10 @@
         <property id="6039408957482848394" name="input" index="2fKTFS" />
         <property id="6039408957482848397" name="output" index="2fKTFZ" />
         <child id="6039408957482286918" name="typeDecl" index="2fQRkO" />
+      </concept>
+      <concept id="6039408957479237368" name="com.github.vlsi.iec61131.types.structure.FunctionBlockPOU" flags="ng" index="283fMa" />
+      <concept id="6039408957483119302" name="com.github.vlsi.iec61131.types.structure.BooleanConstant" flags="ng" index="2fLVyO">
+        <property id="6039408957483119386" name="value" index="2fLV_C" />
       </concept>
       <concept id="6039408957482295528" name="com.github.vlsi.iec61131.types.structure.IntegerConstant" flags="ng" index="2fQMEq">
         <property id="6039408957485569693" name="value" index="2fVhNJ" />
@@ -773,6 +781,48 @@
       <node concept="1KNgP9" id="2tBq2I4Kxke" role="1KNgP7">
         <node concept="3TBdpO" id="2tBq2I4Kxkf" role="1KNgPM">
           <property role="3TBdp1" value="5s" />
+        </node>
+      </node>
+    </node>
+  </node>
+  <node concept="283fMa" id="4xrOMLUo8zq">
+    <property role="TrG5h" value="tst" />
+    <node concept="283aBN" id="4xrOMLUo8zx" role="2fQKEM">
+      <property role="TrG5h" value="x" />
+      <property role="2fKTFS" value="true" />
+      <node concept="PkkMJ" id="4xrOMLUo8zK" role="2fQRkO" />
+    </node>
+    <node concept="283aBN" id="4xrOMLUo8zR" role="2fQKEM">
+      <property role="TrG5h" value="y" />
+      <property role="2fKTFZ" value="true" />
+      <node concept="PkkMJ" id="4xrOMLUo8$8" role="2fQRkO" />
+    </node>
+    <node concept="283aBN" id="4xrOMLUo8$f" role="2fQKEM">
+      <property role="TrG5h" value="z" />
+      <node concept="PkkMJ" id="4xrOMLUo8$W" role="2fQRkO" />
+    </node>
+    <node concept="283aBJ" id="4xrOMLUo8_n" role="283bkm">
+      <node concept="2fKkDk" id="4xrOMLUo8BR" role="283bkg">
+        <node concept="2fRjeW" id="4xrOMLUo8C7" role="2fKkDa">
+          <ref role="2fRto5" node="4xrOMLUo8zR" resolve="y" />
+        </node>
+        <node concept="2fRjeW" id="4xrOMLUo8Cf" role="2fKkDe">
+          <ref role="2fRto5" node="4xrOMLUo8zx" resolve="x" />
+        </node>
+      </node>
+      <node concept="2fLe5g" id="4xrOMLUo8_j" role="283bkg">
+        <node concept="283aBJ" id="4xrOMLUo8_l" role="2fLe4q">
+          <node concept="2fKkDk" id="4xrOMLUo8Am" role="283bkg">
+            <node concept="2fLVyO" id="4xrOMLUo8AF" role="2fKkDe">
+              <property role="2fLV_C" value="true" />
+            </node>
+            <node concept="2fRjeW" id="4xrOMLUo8Ex" role="2fKkDa">
+              <ref role="2fRto5" node="4xrOMLUo8$f" resolve="z" />
+            </node>
+          </node>
+        </node>
+        <node concept="2fRjeW" id="4xrOMLUo8Dn" role="2fLe4k">
+          <ref role="2fRto5" node="4xrOMLUo8zR" resolve="y" />
         </node>
       </node>
     </node>

@@ -41,6 +41,7 @@
     </language>
     <language id="4d1c59f7-8f87-4192-a752-a98136f0b57c" name="com.github.vlsi.iec61131.types">
       <concept id="6039408957479248769" name="com.github.vlsi.iec61131.types.structure.VariableDeclaration" flags="ng" index="283aBN">
+        <property id="6039408957482848343" name="retain" index="2fKTC_" />
         <child id="6039408957482286918" name="typeDecl" index="2fQRkO" />
       </concept>
       <concept id="6039408957482432974" name="com.github.vlsi.iec61131.types.structure.VariableReference" flags="ng" index="2fRjeW">
@@ -87,6 +88,7 @@
     <property role="TrG5h" value="PROCESS_ENCODER" />
     <node concept="283aBN" id="58WclwlFnRW" role="2fQKEM">
       <property role="TrG5h" value="encoder" />
+      <property role="2fKTC_" value="true" />
       <node concept="3T_mE7" id="58WclwlFtyx" role="2fQRkO">
         <ref role="3T_mE6" to="gzb9:65nzZIfsqvQ" resolve="PRU_ABZ_ENCODER" />
       </node>

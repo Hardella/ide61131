@@ -3,6 +3,9 @@
   <component name="MPSProject">
     <projectModules>
       <modulePath path="$PROJECT_DIR$/_spreferences/CodeReviewPreferences/module.msd" folder="_spreferences" />
+      <modulePath path="$PROJECT_DIR$/languages/com.github.vlsi.drakon.lang.st/com.github.vlsi.drakon.lang.st.mpl" folder="" />
+      <modulePath path="$PROJECT_DIR$/languages/com.github.vlsi.drakon/com.github.vlsi.drakon.mpl" folder="" />
+      <modulePath path="$PROJECT_DIR$/languages/com.github.vlsi.drakon/sandbox/com.github.vlsi.drakon.sandbox.msd" folder="" />
       <modulePath path="$PROJECT_DIR$/languages/com.github.vlsi.iec61131.cfc/com.github.vlsi.iec61131.cfc.mpl" folder="" />
       <modulePath path="$PROJECT_DIR$/languages/com.github.vlsi.iec61131.executors/com.github.vlsi.iec61131.executors.mpl" folder="" />
       <modulePath path="$PROJECT_DIR$/languages/com.github.vlsi.iec61131.executors/runtime/com.github.vlsi.iec61131.executors.runtime.msd" folder="" />
@@ -18,6 +21,7 @@
       <modulePath path="$PROJECT_DIR$/languages/st61131/runtime/st61131.runtime.msd" folder="st" />
       <modulePath path="$PROJECT_DIR$/languages/st61131/sandbox/st61131.sandbox.msd" folder="" />
       <modulePath path="$PROJECT_DIR$/languages/st61131/st61131.mpl" folder="st" />
+      <modulePath path="$PROJECT_DIR$/solutions/com.github.vlsi.drakon.runtime/com.github.vlsi.drakon.runtime.msd" folder="" />
       <modulePath path="$PROJECT_DIR$/solutions/com.github.vlsi.iec61131.libimport/com.github.vlsi.iec61131.libimport.msd" folder="" />
       <modulePath path="$PROJECT_DIR$/solutions/com.github.vlsi.iec61131.parser/com.github.vlsi.iec61131.parser.msd" folder="" />
       <modulePath path="$PROJECT_DIR$/solutions/com.github.vlsi.iec61131.plc110pru.executors/com.github.vlsi.iec61131.plc110pru.executors.msd" folder="" />

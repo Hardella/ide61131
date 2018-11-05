@@ -121,32 +121,6 @@
       <node concept="3T_mE7" id="63FqFSejC_H" role="2fQRkO">
         <ref role="3T_mE6" to="gzb9:63FqFSejyFg" resolve="PRU_STEPPER" />
       </node>
-      <node concept="3LqZAk" id="63FqFSdpdEP" role="lGtFl">
-        <node concept="2fRjeW" id="63FqFSejC_V" role="3L59S7">
-          <ref role="2fRto5" to="gzb9:63FqFSejyFh" resolve="enable" />
-        </node>
-        <node concept="2fRjeW" id="63FqFSejCAm" role="3L59S7">
-          <ref role="2fRto5" to="gzb9:63FqFSejyFj" resolve="quantity" />
-        </node>
-        <node concept="2fRjeW" id="63FqFSejCAL" role="3L59S7">
-          <ref role="2fRto5" to="gzb9:63FqFSejyFl" resolve="accel_ramp" />
-        </node>
-        <node concept="2fRjeW" id="63FqFSejCBc" role="3L59S7">
-          <ref role="2fRto5" to="gzb9:63FqFSejyFn" resolve="decel_ramp" />
-        </node>
-        <node concept="2fRjeW" id="63FqFSejCBB" role="3L59S7">
-          <ref role="2fRto5" to="gzb9:63FqFSejyFr" resolve="max_speed" />
-        </node>
-        <node concept="2fRjeW" id="63FqFSejCCS" role="3L59S7">
-          <ref role="2fRto5" to="gzb9:63FqFSejyFp" resolve="min_speed" />
-        </node>
-        <node concept="2fRjeW" id="63FqFSejCDj" role="3L59S7">
-          <ref role="2fRto5" to="gzb9:63FqFSejyFx" resolve="state" />
-        </node>
-        <node concept="2fRjeW" id="mi8fP_mwvc" role="3L59S7">
-          <ref role="2fRto5" to="gzb9:63FqFSejyFz" resolve="step_count" />
-        </node>
-      </node>
     </node>
     <node concept="283aBJ" id="63FqFSdpdEo" role="283bkm">
       <node concept="2fRoqJ" id="63FqFSdpdEw" role="283bkg">
@@ -172,7 +146,7 @@
           </node>
           <node concept="kub3x" id="13fQtt5c2q1" role="3Ty3gA">
             <ref role="kuaWX" to="gzb9:6mj7nr2aFuJ" resolve="out4" />
-            <node concept="2fRjeW" id="13fQtt5c2qz" role="kuaX2">
+            <node concept="2fRjeW" id="7y0sKN5G6tq" role="kuaX2">
               <ref role="2fRto5" node="13fQtt5c2na" resolve="dir" />
             </node>
           </node>

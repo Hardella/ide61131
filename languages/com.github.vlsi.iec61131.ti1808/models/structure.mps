@@ -2,7 +2,7 @@
 <model ref="r:e0d14335-60e4-477c-a927-13c1cccae4f1(com.github.vlsi.iec61131.ti1808.structure)">
   <persistence version="9" />
   <languages>
-    <use id="c72da2b9-7cce-4447-8389-f407dc1158b7" name="jetbrains.mps.lang.structure" version="3" />
+    <devkit ref="78434eb8-b0e5-444b-850d-e7c4ad2da9ab(jetbrains.mps.devkit.aspect.structure)" />
   </languages>
   <imports>
     <import index="tpck" ref="r:00000000-0000-4000-0000-011c89590288(jetbrains.mps.lang.core.structure)" />
@@ -260,6 +260,10 @@
       <property role="1uS6qo" value="JMP" />
       <property role="1uS6qv" value="JMP" />
     </node>
+    <node concept="M4N5e" id="5lVqnTIEfV9" role="M5hS2">
+      <property role="1uS6qo" value="JAL" />
+      <property role="1uS6qv" value="JAL" />
+    </node>
   </node>
   <node concept="1TIwiD" id="6VooDThId5">
     <property role="TrG5h" value="LabelDeclaration" />
@@ -482,6 +486,25 @@
       <property role="IQ2nx" value="4094408907358160012" />
       <property role="TrG5h" value="field" />
       <ref role="AX2Wp" node="3gk5sx3tQg6" resolve="RegisterField" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="4hqmBQPkFaJ">
+    <property role="EcuMT" value="4925348638442566319" />
+    <property role="TrG5h" value="LoadStoreInstruction" />
+    <ref role="1TJDcQ" node="6VooDThcD4" resolve="Instruction" />
+    <node concept="1TJgyj" id="4hqmBQPkFaO" role="1TKVEi">
+      <property role="IQ2ns" value="4925348638442566324" />
+      <property role="20lmBu" value="aggregation" />
+      <property role="20kJfa" value="addr" />
+      <property role="20lbJX" value="1" />
+      <ref role="20lvS9" node="6LAvc6vDZl1" resolve="IntegerLiteral" />
+    </node>
+    <node concept="1TJgyj" id="4hqmBQPkFaM" role="1TKVEi">
+      <property role="IQ2ns" value="4925348638442566322" />
+      <property role="20lmBu" value="aggregation" />
+      <property role="20kJfa" value="vars" />
+      <property role="20lbJX" value="1..n" />
+      <ref role="20lvS9" node="5qOIvv1XVhx" resolve="VariableReference" />
     </node>
   </node>
 </model>
