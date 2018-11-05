@@ -1,0 +1,42 @@
+ext.mpsMajor = "2018.2"
+ext.mpsMinor = "5"
+ext.mbeddrBuildNumber = "1.0.20889.dda1296"
+
+repositories {
+    maven { url 'https://projects.itemis.de/nexus/content/repositories/mbeddr' }
+    mavenCentral()
+    ivy {
+        url "https://download.jetbrains.com/mps/$mpsMajor/"
+        layout 'pattern', {
+            artifact "[module]-[revision].[ext]"
+        }
+        metadataSources { // skip downloading ivy.xml
+            artifact()
+        }
+    }
+}
+
+configurations {
+    mps
+    mpsPlugins
+}
+
+dependencies {
+    mps "com.jetbrains:MPS:$mpsMajor.${mpsMinor}@zip"
+    mpsPlugins "de.itemis.mps:extensions:$mpsMajor.+"
+    mpsPlugins "com.mbeddr:platform:$mbeddrBuildNumber"
+}
+
+task downloadDependencies(type: Copy) {
+    dependsOn configurations.mps
+    dependsOn configurations.mpsPlugins
+    from(zipTree(configurations.mps.singleFile)) {
+        eachFile {
+            // Replace "MPS 2018.2/abc/..." with "mps/abc/..." for predictable folder locations
+            it.path = "mps/" + it.path.substring(it.relativePath.segments[0].length())
+        }
+    } into "lib"
+    from {
+        configurations.mpsPlugins.collect { zipTree(it) }
+    } into "lib"
+}

@@ -98,12 +98,16 @@ This IDE is distributed under terms of MIT license.
 Development
 -----------
 
-Install mbeddr, clone ide61131, hack as required.
+1. Download Hardella sources (e.g. `git clone https://github.com/Hardella/ide61131.git`)
+2. Download dependencies: `./gradlew downloadDependencies`
+3. Download MPS 2018.2.+ (see https://www.jetbrains.com/mps/download/ )
+4. Open ide61131 project in MPS
 
 Changelog
 ---------
 
 Next:
+- MPS updated to 2018.2.5
 
 v1.7.2: 16 June 2017
 - Fixed: variable initializers are executed in PRU programs
