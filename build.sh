@@ -1,6 +1,7 @@
 #!/bin/sh
 rm -rf build/artifacts
 rm -rf build/tmp
+mkdir build
 
 # See https://youtrack.jetbrains.com/issue/MPS-25087
 sed '\|dir="[^"]*.iec61131.types" includes="icons/\\*\\*|a\
