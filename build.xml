@@ -1705,7 +1705,7 @@
       </chunk>
       <chunk />
       <jvmargs>
-        <arg value="-Xmx512m" />
+        <arg value="-Xmx2048m" />
       </jvmargs>
       <macro name="mps_home" path="${mps_home}" />
       <macro name="mbeddr.github.core.home" path="${mbeddr.github.core.home}" />
