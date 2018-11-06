@@ -5,8 +5,8 @@ language: java
 install: true
 
 script:
- -./gradlew downloadDependencies
- - ./build.sh
+  - ./gradlew downloadDependencies
+  - ./build.sh
 
 jdk:
   - oraclejdk8
