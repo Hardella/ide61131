@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/Hardella/ide61131.svg?branch=master)](https://travis-ci.org/Hardella/ide61131)
+
 <img src="icons/logo_with_text_436x206.png" width="218" height="103" alt="Hardella IDE logo"/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 <a href="https://flattr.com/submit/auto?fid=gzrox5&url=http%3A%2F%2Fgithub.com%2Fvlsi%2Fide61131" target="_blank"><img src="https://button.flattr.com/flattr-badge-large.png" alt="Flattr this" title="Flattr this" border="0"></a>
 

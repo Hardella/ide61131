@@ -1,0 +1,19 @@
+language: java
+
+# Skip default "mvn install" issued by Travis
+# Root project cannot be compiled with older JDKs, so it makes sense to just skip the step
+install: true
+
+script: ./gradlew
+
+jdk:
+  - oraclejdk8
+
+before_cache:
+  - rm -f  $HOME/.gradle/caches/modules-2/modules-2.lock
+  - rm -fr $HOME/.gradle/caches/*/plugin-resolution/
+
+cache:
+  directories:
+    - $HOME/.gradle/caches/
+    - $HOME/.gradle/wrapper/

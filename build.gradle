@@ -2,6 +2,16 @@ ext.mpsMajor = "2018.2"
 ext.mpsMinor = "5"
 ext.mbeddrBuildNumber = "1.0.20889.dda1296"
 
+buildscript {
+    repositories {
+        maven { url 'https://projects.itemis.de/nexus/content/repositories/mbeddr' }
+        mavenCentral()
+    }
+    dependencies {
+        classpath 'de.itemis.mps:mps-gradle-plugin:1.0.+'
+    }
+}
+
 repositories {
     maven { url 'https://projects.itemis.de/nexus/content/repositories/mbeddr' }
     mavenCentral()
@@ -16,16 +26,33 @@ repositories {
     }
 }
 
+// Detect jdk location, required to start ant with tools.jar on classpath otherwise javac and tests will fail
+def java_home = System.properties['java.home']
+def jdk_home = java_home
+if (!file("$jdk_home/lib/tools.jar").isFile()) {
+    jdk_home = jdk_home + "/.."
+}
+if (!file("$jdk_home/lib/tools.jar").isFile()) {
+    throw new GradleException("Was not able to locate jdk home folder. Use 'jdk_home' project variable to specify JDK location explicitly. Current JAVA_HOME is: $java_home")
+}
+ext.jdk_home = jdk_home
+
 configurations {
+    ant_lib
     mps
     mpsPlugins
 }
 
 dependencies {
+    ant_lib "org.apache.ant:ant-junit:1.10.1"
     mps "com.jetbrains:MPS:$mpsMajor.${mpsMinor}@zip"
     mpsPlugins "de.itemis.mps:extensions:$mpsMajor.+"
     mpsPlugins "com.mbeddr:platform:$mbeddrBuildNumber"
 }
+
+ext.buildScriptClasspath = project.configurations.ant_lib.fileCollection({
+    true
+}) + project.files("$project.jdk_home/lib/tools.jar")
 
 task downloadDependencies(type: Copy) {
     dependsOn configurations.mps
@@ -40,3 +67,17 @@ task downloadDependencies(type: Copy) {
         configurations.mpsPlugins.collect { zipTree(it) }
     } into "lib"
 }
+
+task build_languages(type: de.itemis.mps.gradle.BuildLanguages, dependsOn: [downloadDependencies]) {
+    script 'build.xml'
+    scriptArgs = []
+    scriptClasspath = buildScriptClasspath
+}
+
+task build_distribution(type: de.itemis.mps.gradle.BuildLanguages, dependsOn: [build_languages]) {
+    script 'buildDistribution.xml'
+    scriptArgs = []
+    scriptClasspath = buildScriptClasspath
+}
+
+defaultTasks 'build_distribution'
