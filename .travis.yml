@@ -4,9 +4,7 @@ language: java
 # Root project cannot be compiled with older JDKs, so it makes sense to just skip the step
 install: true
 
-script:
-  - ./gradlew downloadDependencies
-  - ./build.sh
+script: ./gradlew
 
 jdk:
   - oraclejdk8
