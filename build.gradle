@@ -1,6 +1,7 @@
 ext.mpsMajor = "2018.2"
 ext.mpsMinor = "5"
-ext.mbeddrBuildNumber = "1.0.20889.dda1296"
+ext.mbeddrBuildNumber = "1.1.+"
+ext.mpsExtensionsVersion = "$mpsMajor.+"
 
 buildscript {
     repositories {
@@ -46,7 +47,7 @@ configurations {
 dependencies {
     ant_lib "org.apache.ant:ant-junit:1.10.1"
     mps "com.jetbrains:MPS:$mpsMajor.${mpsMinor}@zip"
-    mpsPlugins "de.itemis.mps:extensions:$mpsMajor.+"
+    mpsPlugins "de.itemis.mps:extensions:$mpsExtensionsVersion"
     mpsPlugins "com.mbeddr:platform:$mbeddrBuildNumber"
 }
 
