@@ -14,6 +14,6 @@ sed '\|dir="[^"]*.iec61131.st2ti1808" includes="icons/\\*\\*|a\
 # See https://youtrack.jetbrains.com/issue/MPS-25108
 sed 's/update="/patches="/' build.xml.2 > build.xml.3
 
-ant -f build.xml.3 && ant -f buildDistribution.xml
+ant -f build.xml.3 clean generate assemble && ant -f buildDistribution.xml clean generate assemble
 
 #cd  build/artifacts/st61131Distribution && unzip *-mac.zip
