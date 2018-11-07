@@ -27,33 +27,16 @@ repositories {
     }
 }
 
-// Detect jdk location, required to start ant with tools.jar on classpath otherwise javac and tests will fail
-def java_home = System.properties['java.home']
-def jdk_home = java_home
-if (!file("$jdk_home/lib/tools.jar").isFile()) {
-    jdk_home = jdk_home + "/.."
-}
-if (!file("$jdk_home/lib/tools.jar").isFile()) {
-    throw new GradleException("Was not able to locate jdk home folder. Use 'jdk_home' project variable to specify JDK location explicitly. Current JAVA_HOME is: $java_home")
-}
-ext.jdk_home = jdk_home
-
 configurations {
-    ant_lib
     mps
     mpsPlugins
 }
 
 dependencies {
-    ant_lib "org.apache.ant:ant-junit:1.10.1"
     mps "com.jetbrains:MPS:$mpsMajor.${mpsMinor}@zip"
     mpsPlugins "de.itemis.mps:extensions:$mpsExtensionsVersion"
     mpsPlugins "com.mbeddr:platform:$mbeddrBuildNumber"
 }
-
-ext.buildScriptClasspath = project.configurations.ant_lib.fileCollection({
-    true
-}) + project.files("$project.jdk_home/lib/tools.jar")
 
 task downloadDependencies(type: Copy) {
     dependsOn configurations.mps
@@ -69,16 +52,29 @@ task downloadDependencies(type: Copy) {
     } into "lib"
 }
 
-task build_languages(type: de.itemis.mps.gradle.BuildLanguages, dependsOn: [downloadDependencies]) {
-    script 'build.xml'
-    scriptArgs = []
-    scriptClasspath = buildScriptClasspath
+task clean() {
 }
 
-task build_distribution(type: de.itemis.mps.gradle.BuildLanguages, dependsOn: [build_languages]) {
-    script 'buildDistribution.xml'
-    scriptArgs = []
-    scriptClasspath = buildScriptClasspath
+def importMpsBuild(fileName, taskPrefix) {
+  def antBuilder = antBuilderFactory.create()
+  antBuilder.importBuild(fileName) { antTargetName ->
+    taskPrefix + antTargetName
+  }
+  tasks.clean.dependsOn tasks[taskPrefix+'clean']
+  antBuilder
 }
 
-defaultTasks 'build_distribution'
+def languages = importMpsBuild('build.xml', 'languages-')
+importMpsBuild('buildDistribution.xml', 'distribution-')
+
+def languages_generate = tasks.'languages-generate'
+tasks.'languages-compileJava'.dependsOn.forEach { task ->
+  task.getDependencies(tasks.'languages-compileJava').forEach { t ->
+    t.dependsOn languages_generate
+  }
+}
+
+tasks.'languages-declare-mps-tasks'.dependsOn downloadDependencies
+tasks.'distribution-fetchDependencies'.dependsOn tasks.'languages-build'
+
+defaultTasks 'distribution-build'
