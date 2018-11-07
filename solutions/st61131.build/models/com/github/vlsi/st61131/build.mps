@@ -3507,18 +3507,9 @@
       <property role="TrG5h" value="mps_home" />
       <node concept="55IIr" id="3$sDymgJPWE" role="398pKh">
         <node concept="2Ry0Ak" id="3$sDymgJPWF" role="iGT6I">
-          <property role="2Ry0Am" value=".." />
-          <node concept="2Ry0Ak" id="3$sDymgJPWG" role="2Ry0An">
-            <property role="2Ry0Am" value=".." />
-            <node concept="2Ry0Ak" id="3$sDymgJPWH" role="2Ry0An">
-              <property role="2Ry0Am" value="Documents" />
-              <node concept="2Ry0Ak" id="3$sDymgJPWI" role="2Ry0An">
-                <property role="2Ry0Am" value="work" />
-                <node concept="2Ry0Ak" id="5ZrtsQvlVKf" role="2Ry0An">
-                  <property role="2Ry0Am" value="MPS 2017.2" />
-                </node>
-              </node>
-            </node>
+          <property role="2Ry0Am" value="lib" />
+          <node concept="2Ry0Ak" id="7VghLgTkuqH" role="2Ry0An">
+            <property role="2Ry0Am" value="mps" />
           </node>
         </node>
       </node>
