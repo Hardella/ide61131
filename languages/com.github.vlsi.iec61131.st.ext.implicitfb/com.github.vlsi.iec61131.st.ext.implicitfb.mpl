@@ -7,7 +7,7 @@
   </models>
   <accessoryModels />
   <generators>
-    <generator namespace="com.github.vlsi.iec61131.st.ext.implicitfb#4082534695945163422" uuid="11ac135d-4816-4a63-aafd-9c101bf938b5">
+    <generator alias="" namespace="com.github.vlsi.iec61131.st.ext.implicitfb#4082534695945163422" uuid="11ac135d-4816-4a63-aafd-9c101bf938b5">
       <models>
         <modelRoot contentPath="${module}" type="default">
           <sourceRoot location="generator/template" />
@@ -16,9 +16,9 @@
       <external-templates />
       <dependencies>
         <dependency reexport="false">4d1c59f7-8f87-4192-a752-a98136f0b57c(com.github.vlsi.iec61131.types)</dependency>
+        <dependency reexport="false">2c8c64a4-f9aa-40e4-b40a-dfb65fda99c4(com.hardella.st.ext.implicitfb)</dependency>
       </dependencies>
       <languageVersions>
-        <language slang="l:f0477f3b-607f-43c4-9d20-5df800e13599:com.github.vlsi.iec61131.st.ext.implicitfb" version="-1" />
         <language slang="l:f3061a53-9226-4cc5-a443-f952ceaf5816:jetbrains.mps.baseLanguage" version="6" />
         <language slang="l:fd392034-7849-419d-9071-12563d152375:jetbrains.mps.baseLanguage.closures" version="0" />
         <language slang="l:83888646-71ce-4f1c-9c53-c54016f6ad4f:jetbrains.mps.baseLanguage.collections" version="0" />

@@ -23,6 +23,7 @@
     <dependency reexport="false">2c8c64a4-f9aa-40e4-b40a-dfb65fda99c4(com.hardella.st.ext.implicitfb)</dependency>
     <dependency reexport="false">d1aef6cd-5477-486f-bcbd-34728b246566(com.github.vlsi.iec61131.st2ti1808)</dependency>
     <dependency reexport="false">498d89d2-c2e9-11e2-ad49-6cf049e62fe5(MPS.IDEA)</dependency>
+    <dependency reexport="false">c6420b75-4569-420d-aaf7-9bc590ad7b2a(com.mbeddr.mpsutil.comparator)</dependency>
   </dependencies>
   <languageVersions>
     <language slang="l:d28e7e4d-b627-42fa-82d5-c7472b85c5f6:com.github.vlsi.iec61131.st" version="1" />
@@ -64,6 +65,7 @@
     <module reference="249ae1e5-4c5b-43b7-b0a2-a1f3f947a2d9(com.github.vlsi.iec61131.ti1808.stdlib)" version="0" />
     <module reference="4d1c59f7-8f87-4192-a752-a98136f0b57c(com.github.vlsi.iec61131.types)" version="0" />
     <module reference="2c8c64a4-f9aa-40e4-b40a-dfb65fda99c4(com.hardella.st.ext.implicitfb)" version="0" />
+    <module reference="c6420b75-4569-420d-aaf7-9bc590ad7b2a(com.mbeddr.mpsutil.comparator)" version="0" />
     <module reference="f3061a53-9226-4cc5-a443-f952ceaf5816(jetbrains.mps.baseLanguage)" version="0" />
     <module reference="e39e4a59-8cb6-498e-860e-8fa8361c0d90(jetbrains.mps.baseLanguage.scopes)" version="0" />
     <module reference="2af156ab-65c1-4a62-bd0d-ea734f71eab6(jetbrains.mps.dataFlow.runtime)" version="0" />

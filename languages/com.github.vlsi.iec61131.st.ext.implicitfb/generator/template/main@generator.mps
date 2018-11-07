@@ -2,7 +2,6 @@
 <model ref="r:4002921d-28d2-4bb6-9abe-866b7a06de77(com.github.vlsi.iec61131.st.ext.implicitfb.generator.template.main@generator)">
   <persistence version="9" />
   <languages>
-    <use id="f0477f3b-607f-43c4-9d20-5df800e13599" name="com.github.vlsi.iec61131.st.ext.implicitfb" version="-1" />
     <use id="b401a680-8325-4110-8fd3-84331ff25bef" name="jetbrains.mps.lang.generator" version="0" />
     <use id="f3061a53-9226-4cc5-a443-f952ceaf5816" name="jetbrains.mps.baseLanguage" version="6" />
     <use id="83888646-71ce-4f1c-9c53-c54016f6ad4f" name="jetbrains.mps.baseLanguage.collections" version="0" />
@@ -138,7 +137,7 @@
                 </node>
                 <node concept="liA8E" id="63FqFSd_t9O" role="2OqNvi">
                   <ref role="37wK5l" to="nyt4:63FqFSd_aSl" resolve="moveImplictFBs" />
-                  <node concept="2GrUjf" id="63FqFSd_taI" role="37wK5m">
+                  <node concept="2GrUjf" id="1tG6cXS3pWJ" role="37wK5m">
                     <ref role="2Gs0qQ" node="63FqFSd_hp8" resolve="f" />
                   </node>
                 </node>
