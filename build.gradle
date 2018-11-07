@@ -60,13 +60,15 @@ task clean() {
     ant.ant(antfile: 'build.xml') {
       target(name: 'clean')
     }
-    ant.ant(antfile: 'buildBoostrap.xml') {
+    ant.ant(antfile: 'buildBootstrap.xml') {
       target(name: 'clean')
     }
   }
 }
 
 task bootstrapBuild(dependsOn: [downloadDependencies]) {
+  inputs.files(file("solutions/com.hardella.build.bootstrap"))
+  outputs.files([file("build.xml"), file("buildDistribution.xml")])
   doLast {
     ant.ant(antfile: 'buildBootstrap.xml') {
       target(name: 'generate')
@@ -88,7 +90,7 @@ task buildLanguages(dependsOn: [bootstrapBuild]) {
 task buildRcp(dependsOn: [buildLanguages]) {
   doLast {
     ant.ant(antfile: 'buildDistribution.xml') {
-      target(name: 'build')
+      target(name: 'layout.macOS')
     }
   }
 }

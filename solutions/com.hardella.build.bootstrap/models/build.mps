@@ -130,42 +130,10 @@
     <node concept="2igEWh" id="7VghLgTknT1" role="1hWBAP">
       <property role="3UIfUI" value="1024" />
     </node>
-    <node concept="2sgV4H" id="1fuuH1fgkxq" role="1l3spa">
-      <ref role="1l3spb" to="ffeo:1diLdO26mQ6" resolve="mpsStandalone" />
-      <node concept="398BVA" id="1fuuH1fgkxr" role="2JcizS">
-        <ref role="398BVh" node="3$sDymgFgwr" resolve="mps_home" />
-      </node>
-    </node>
-    <node concept="2sgV4H" id="3$sDymgFgws" role="1l3spa">
-      <ref role="1l3spb" to="ffeo:2eDSGe9d1ot" resolve="mpsWorkbench" />
-      <node concept="398BVA" id="3$sDymgFgwt" role="2JcizS">
-        <ref role="398BVh" node="3$sDymgFgwr" resolve="mps_home" />
-      </node>
-    </node>
-    <node concept="2sgV4H" id="3$sDymgFgwu" role="1l3spa">
-      <ref role="1l3spb" to="ffeo:5rNMDvYzelV" resolve="mpsMakePlugin" />
-      <node concept="398BVA" id="3$sDymgFgwv" role="2JcizS">
-        <ref role="398BVh" node="3$sDymgFgwr" resolve="mps_home" />
-        <node concept="2Ry0Ak" id="3$sDymgFgww" role="iGT6I">
-          <property role="2Ry0Am" value="plugins" />
-        </node>
-      </node>
-    </node>
     <node concept="2sgV4H" id="3$sDymgIcBY" role="1l3spa">
       <ref role="1l3spb" to="ffeo:3IKDaVZmzS6" resolve="mps" />
       <node concept="398BVA" id="3$sDymgIcCi" role="2JcizS">
         <ref role="398BVh" node="3$sDymgFgwr" resolve="mps_home" />
-      </node>
-    </node>
-    <node concept="2sgV4H" id="3$sDymgJwcT" role="1l3spa">
-      <ref role="1l3spb" to="90a9:2Xjt3l56m0V" resolve="de.itemis.mps.extensions" />
-      <node concept="55IIr" id="7y0sKN62gPz" role="2JcizS">
-        <node concept="2Ry0Ak" id="7y0sKN62gSb" role="iGT6I">
-          <property role="2Ry0Am" value="lib" />
-          <node concept="2Ry0Ak" id="7y0sKN62gSg" role="2Ry0An">
-            <property role="2Ry0Am" value="de.itemis.mps.extensions" />
-          </node>
-        </node>
       </node>
     </node>
     <node concept="2sgV4H" id="3$sDymgJx2I" role="1l3spa">
@@ -176,21 +144,6 @@
           <node concept="2Ry0Ak" id="7y0sKN61PKV" role="2Ry0An">
             <property role="2Ry0Am" value="com.mbeddr.platform" />
           </node>
-        </node>
-      </node>
-    </node>
-    <node concept="2sgV4H" id="5Z_5VvhkBJy" role="1l3spa">
-      <ref role="1l3spb" to="ffeo:1lMM4owFq4Y" resolve="mpsVcs" />
-      <node concept="398BVA" id="5Z_5VvhkBKX" role="2JcizS">
-        <ref role="398BVh" node="3$sDymgFgwr" resolve="mps_home" />
-      </node>
-    </node>
-    <node concept="2sgV4H" id="6c4GXuPGGNO" role="1l3spa">
-      <ref role="1l3spb" to="ffeo:5yMuYWFN8P1" resolve="mpsPlugins" />
-      <node concept="398BVA" id="6c4GXuPGGR3" role="2JcizS">
-        <ref role="398BVh" node="3$sDymgFgwr" resolve="mps_home" />
-        <node concept="2Ry0Ak" id="6c4GXuPHbwo" role="iGT6I">
-          <property role="2Ry0Am" value="plugins" />
         </node>
       </node>
     </node>
