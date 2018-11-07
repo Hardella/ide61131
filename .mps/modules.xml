@@ -31,6 +31,7 @@
       <modulePath path="$PROJECT_DIR$/solutions/com.github.vlsi.iec61131.ti1808.internallib/com.github.vlsi.iec61131.ti1808.internallib.msd" folder="ti1808" />
       <modulePath path="$PROJECT_DIR$/solutions/com.github.vlsi.iec61131.ti1808.libcompiler/com.github.vlsi.iec61131.ti1808.libcompiler.msd" folder="ti1808.compiler" />
       <modulePath path="$PROJECT_DIR$/solutions/com.github.vlsi.iec61131.ti1808.stdlib/com.github.vlsi.iec61131.ti1808.stdlib.msd" folder="ti1808" />
+      <modulePath path="$PROJECT_DIR$/solutions/com.hardella.build.bootstrap/com.hardella.build.bootstrap.msd" folder="" />
       <modulePath path="$PROJECT_DIR$/solutions/com.hardella.examples.ti1808/com.hardella.examples.ti1808.msd" folder="ti1808" />
       <modulePath path="$PROJECT_DIR$/solutions/com.hardella.st.ext.implicitfb/com.hardella.st.ext.implicitfb.msd" folder="st" />
       <modulePath path="$PROJECT_DIR$/solutions/st61131.build/st61131.build.msd" folder="" />

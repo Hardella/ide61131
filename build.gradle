@@ -53,6 +53,28 @@ task downloadDependencies(type: Copy) {
 }
 
 task clean() {
+  doLast {
+    def buildFiles = ['buildDistribution.xml', 'build.xml', 'buildBootstrap.xml']
+
+    for (f in buildFiles) {
+      if (!file(f).exists()) {
+        continue;
+      }
+      ant.ant(antfile: f) {
+        target(name: 'clean')
+      }
+    }
+  }
+}
+
+task bootstrap(dependsOn: [downloadDependencies]) {
+  inputs.files(file("solutions/com.hardella.build.bootstrap"))
+  outputs.files([file("build.xml"), file("buildDistribution.xml")])
+  doLast {
+    ant.ant(antfile: 'buildBootstrap.xml') {
+      target(name: 'generate')
+    }
+  }
 }
 
 def importMpsBuild(fileName, taskPrefix) {
@@ -60,21 +82,38 @@ def importMpsBuild(fileName, taskPrefix) {
   antBuilder.importBuild(fileName) { antTargetName ->
     taskPrefix + antTargetName
   }
-  tasks.clean.dependsOn tasks[taskPrefix+'clean']
   antBuilder
 }
 
-def languages = importMpsBuild('build.xml', 'languages-')
-importMpsBuild('buildDistribution.xml', 'distribution-')
-
-def languages_generate = tasks.'languages-generate'
-tasks.'languages-compileJava'.dependsOn.forEach { task ->
-  task.getDependencies(tasks.'languages-compileJava').forEach { t ->
-    t.dependsOn languages_generate
+task languagesGenerate(dependsOn: [downloadDependencies]) {
+  doLast {
+    ant.ant(antfile: 'build.xml') {
+      target(name: 'generate')
+    }
   }
 }
 
-tasks.'languages-declare-mps-tasks'.dependsOn downloadDependencies
-tasks.'distribution-fetchDependencies'.dependsOn tasks.'languages-build'
+if (file('build.xml').exists() && file('buildDistribution.xml').exists()) {
+  def languages = importMpsBuild('build.xml', 'languages-')
 
-defaultTasks 'distribution-build'
+  tasks.'languages-fetchDependencies'.dependsOn languagesGenerate
+
+  task buildRcp {
+  }
+
+  def distr = ['macOS', 'Linux', 'Windows']
+
+  for (os in distr) {
+    def t = task("build-$os", dependsOn: [tasks.'languages-build']) {
+      doLast {
+        ant.ant(antfile: 'buildDistribution.xml') {
+          target(name: "layout.$os")
+          property(name: "build.layout.$os", value: 'build/artifacts/st61131Distribution')
+        }
+      }
+    }
+    buildRcp.dependsOn t
+  }
+
+  defaultTasks 'buildRcp'
+}

@@ -23,6 +23,7 @@
         <dependency reexport="false">b256c427-925f-4cf8-9040-e99564f9cb91(com.github.vlsi.iec61131.st#6039408957479237362)</dependency>
         <dependency reexport="false">87a2bdd6-02f8-4646-b39b-c77ff58ad5b1(com.github.vlsi.iec61131.types#5202852658697191353)</dependency>
         <dependency reexport="false">d7601ad3-513b-4e38-a483-fb62b3afe145(com.github.vlsi.iec61131.ti1808)</dependency>
+        <dependency reexport="false">194c0f29-9416-42e3-ba87-ee7a8014e3f7(com.github.vlsi.iec61131.st.runtime)</dependency>
       </dependencies>
       <languageVersions>
         <language slang="l:d28e7e4d-b627-42fa-82d5-c7472b85c5f6:com.github.vlsi.iec61131.st" version="1" />

@@ -6,6 +6,9 @@
 /lib
 /.gradle
 
+/build.xml
+/buildDistribution.xml
+
 _spreferences
 
 # -----------------------------------------------------------
