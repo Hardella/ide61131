@@ -53,28 +53,44 @@ task downloadDependencies(type: Copy) {
 }
 
 task clean() {
-}
-
-def importMpsBuild(fileName, taskPrefix) {
-  def antBuilder = antBuilderFactory.create()
-  antBuilder.importBuild(fileName) { antTargetName ->
-    taskPrefix + antTargetName
-  }
-  tasks.clean.dependsOn tasks[taskPrefix+'clean']
-  antBuilder
-}
-
-def languages = importMpsBuild('build.xml', 'languages-')
-importMpsBuild('buildDistribution.xml', 'distribution-')
-
-def languages_generate = tasks.'languages-generate'
-tasks.'languages-compileJava'.dependsOn.forEach { task ->
-  task.getDependencies(tasks.'languages-compileJava').forEach { t ->
-    t.dependsOn languages_generate
+  doLast {
+    ant.ant(antfile: 'buildDistribution.xml') {
+      target(name: 'clean')
+    }
+    ant.ant(antfile: 'build.xml') {
+      target(name: 'clean')
+    }
+    ant.ant(antfile: 'buildBoostrap.xml') {
+      target(name: 'clean')
+    }
   }
 }
 
-tasks.'languages-declare-mps-tasks'.dependsOn downloadDependencies
-tasks.'distribution-fetchDependencies'.dependsOn tasks.'languages-build'
+task bootstrapBuild(dependsOn: [downloadDependencies]) {
+  doLast {
+    ant.ant(antfile: 'buildBootstrap.xml') {
+      target(name: 'generate')
+    }
+  }
+}
 
-defaultTasks 'distribution-build'
+task buildLanguages(dependsOn: [bootstrapBuild]) {
+  doLast {
+    ant.ant(antfile: 'build.xml') {
+      target(name: 'generate')
+    }
+    ant.ant(antfile: 'build.xml') {
+      target(name: 'build')
+    }
+  }
+}
+
+task buildRcp(dependsOn: [buildLanguages]) {
+  doLast {
+    ant.ant(antfile: 'buildDistribution.xml') {
+      target(name: 'build')
+    }
+  }
+}
+
+defaultTasks 'buildRcp'
