@@ -66,7 +66,7 @@ task clean() {
   }
 }
 
-task bootstrapBuild(dependsOn: [downloadDependencies]) {
+task bootstrap(dependsOn: [downloadDependencies]) {
   inputs.files(file("solutions/com.hardella.build.bootstrap"))
   outputs.files([file("build.xml"), file("buildDistribution.xml")])
   doLast {
@@ -76,23 +76,35 @@ task bootstrapBuild(dependsOn: [downloadDependencies]) {
   }
 }
 
-task buildLanguages(dependsOn: [bootstrapBuild]) {
+def importMpsBuild(fileName, taskPrefix) {
+  def antBuilder = antBuilderFactory.create()
+  antBuilder.importBuild(fileName) { antTargetName ->
+    taskPrefix + antTargetName
+  }
+  antBuilder
+}
+
+task languagesGenerate(dependsOn: [downloadDependencies]) {
   doLast {
     ant.ant(antfile: 'build.xml') {
       target(name: 'generate')
     }
-    ant.ant(antfile: 'build.xml') {
-      target(name: 'build')
-    }
   }
 }
 
-task buildRcp(dependsOn: [buildLanguages]) {
-  doLast {
-    ant.ant(antfile: 'buildDistribution.xml') {
-      target(name: 'layout.macOS')
-    }
-  }
-}
+if (file('build.xml').exists() && file('buildDistribution.xml').exists()) {
+  def languages = importMpsBuild('build.xml', 'languages-')
 
-defaultTasks 'buildRcp'
+  tasks.'languages-fetchDependencies'.dependsOn languagesGenerate
+
+  importMpsBuild('buildDistribution.xml', 'distribution-')
+
+  [tasks.'distribution-layout.Windows', tasks.'distribution-layout.Linux', tasks.'distribution-layout.macOS'].forEach { t ->
+    t.dependsOn tasks.'languages-build'
+  }
+
+  task buildRcp(dependsOn: [tasks.'distribution-layout.Windows', tasks.'distribution-layout.Linux', tasks.'distribution-layout.macOS']) {
+  }
+
+  defaultTasks 'buildRcp'
+}
