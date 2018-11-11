@@ -1537,6 +1537,12 @@
               <ref role="3bR37D" node="2Za7gvFoSti" resolve="com.github.vlsi.iec61131.ti1808" />
             </node>
           </node>
+          <node concept="1SiIV0" id="18kjUKaZHyl" role="3bR37C">
+            <node concept="3bR9La" id="18kjUKaZHym" role="1SiIV1">
+              <property role="3bR36h" value="false" />
+              <ref role="3bR37D" node="5EBmM4DXjGH" resolve="com.github.vlsi.iec61131.st.runtime" />
+            </node>
+          </node>
         </node>
         <node concept="3rtmxn" id="3NeVkBRoLIg" role="3bR31x">
           <node concept="3LXTmp" id="3NeVkBRoLIh" role="3rtmxm">
@@ -2064,6 +2070,12 @@
                 </node>
               </node>
             </node>
+          </node>
+        </node>
+        <node concept="1SiIV0" id="18kjUKaZHzc" role="3bR37C">
+          <node concept="3bR9La" id="18kjUKaZHzd" role="1SiIV1">
+            <property role="3bR36h" value="false" />
+            <ref role="3bR37D" to="ffeo:1ia2VB5guYy" resolve="MPS.IDEA" />
           </node>
         </node>
       </node>
