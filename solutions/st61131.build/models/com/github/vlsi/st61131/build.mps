@@ -278,6 +278,9 @@
         <child id="3189788309731917348" name="runtime" index="1E1XAP" />
         <child id="9200313594498201639" name="generator" index="1TViLv" />
       </concept>
+      <concept id="3189788309731928315" name="jetbrains.mps.build.mps.structure.BuildMps_ModuleDependencyOnJavaModule" flags="ng" index="1E1SXE">
+        <reference id="3189788309731928317" name="module" index="1E1SXG" />
+      </concept>
       <concept id="322010710375871467" name="jetbrains.mps.build.mps.structure.BuildMps_AbstractModule" flags="ng" index="3LEN3z">
         <property id="8369506495128725901" name="compact" index="BnDLt" />
         <property id="322010710375892619" name="uuid" index="3LESm3" />
@@ -2071,6 +2074,9 @@
               </node>
             </node>
           </node>
+        </node>
+        <node concept="1E1SXE" id="18kjUKb6Hxs" role="3bR37C">
+          <ref role="1E1SXG" to="ffeo:TfcoydlQ6W" resolve="idea-platform" />
         </node>
         <node concept="1SiIV0" id="18kjUKaZHzc" role="3bR37C">
           <node concept="3bR9La" id="18kjUKaZHzd" role="1SiIV1">
